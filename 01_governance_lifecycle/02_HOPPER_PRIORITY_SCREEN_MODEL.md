@@ -17,14 +17,24 @@ It answers one question:
 ```text
 Hopper consolidation complete
 ↓
-Candidate item ready for light priority scoring
+Candidate item ready for light priority screening
 ↓
 Hopper Priority Screen
 ↓
 DRB priority discussion
 ↓
-Progress / clarify / defer / reject / BAU / merge
+Canonical DRB Priority Decision recorded
 ```
+
+## Controlled Vocabulary
+
+Use `00_system_control/CONTROLLED_VOCABULARY.md` for:
+
+- Canonical DRB Priority Decisions
+- Business Priority Signal labels
+- current Jira status labels
+
+Do not invent variants.
 
 ## Input Required
 
@@ -48,9 +58,13 @@ For each item, use available information:
 
 ## Scoring Role
 
-Priority scoring supports DRB discussion.
+Priority screening supports DRB discussion.
 
 It must not automatically approve or reject an item.
+
+Business Priority Signal is qualitative only and must follow `CONTROLLED_VOCABULARY.md`.
+
+Claude must not invent numeric scores, weightings, or a 1-5 scale.
 
 Recommended priority dimensions:
 
@@ -68,11 +82,12 @@ Optional contextual factors:
 
 ## Valid Recommended DRB Decisions
 
+Use the canonical DRB priority decision set from `00_system_control/CONTROLLED_VOCABULARY.md`.
+
 | Decision | Meaning |
 |---|---|
 | Progress to Initiation Form | Item deserves formal due diligence |
-| Clarify Before DRB | Missing basic information prevents priority discussion |
-| Clarify After DRB | DRB sees relevance but requires targeted answers before progression |
+| Clarify Before Progression | Targeted clarification is required before progression |
 | Merge / Duplicate | Item should be joined to another Hopper item or initiative |
 | Defer | Relevant but not for current programme window |
 | Reject | No sufficient business case to progress |
@@ -88,7 +103,7 @@ Use this format:
 
 ## Business Priority Signal
 
-Use one of:
+Use the labels from `CONTROLLED_VOCABULARY.md`:
 
 - High
 - Medium
@@ -128,7 +143,7 @@ For items going to DRB, produce:
 ```markdown
 ### [Initiative / Hopper Item]
 
-**Decision required:** Progress / clarify / defer / reject / BAU / merge
+**Decision required:** [canonical DRB priority decision]
 
 **Why this matters:** [short business reason]
 

@@ -8,6 +8,12 @@ This file defines the behavioural rules for AI coworker support inside the Strat
 
 The AI coworker prepares governance artefacts. The Digital Lead and governance bodies make decisions.
 
+## Current Active Scope
+
+The current active scope is Hopper consolidation through Initiation Form handoff.
+
+Adoption Review and Benefits Review are recognised lifecycle stages, but they are future scope for this repository until their own model files are created.
+
 ## Authority Boundaries
 
 ### AI Coworker May
@@ -15,7 +21,7 @@ The AI coworker prepares governance artefacts. The Digital Lead and governance b
 - structure Hopper data
 - group duplicates and related items
 - identify missing information
-- challenge unclear priority scoring
+- challenge unclear priority signals
 - recommend a governance route for review
 - draft DRB briefs
 - draft initiation form shells
@@ -43,9 +49,9 @@ Initiation Form is formal due diligence.
 
 PEP / Development Execution is controlled delivery.
 
-Adoption Review confirms controlled use after go-live.
+Adoption Review confirms controlled use after go-live and is future scope until modelled.
 
-Benefits Review confirms realised value and residual gaps.
+Benefits Review confirms realised value and residual gaps and is future scope until modelled.
 
 These stages must not be collapsed.
 

@@ -4,6 +4,10 @@
 
 This file defines the working interface between the AI coworker and the Digital Lead during Hopper consolidation and priority screening.
 
+## Controlled Vocabulary
+
+Use `00_system_control/CONTROLLED_VOCABULARY.md` for consolidation outcomes, DRB priority decisions, priority signal labels, and current Jira status labels.
+
 ## Standard Loop
 
 ```text
@@ -24,21 +28,21 @@ AI prepares Jira-ready updates and next-stage artefacts
 
 - Jira export or pasted Hopper list
 - known comments
-- available scores
+- available qualitative priority information
 - screenshots or attached notes where relevant
 
 ### AI Output
 
 Hopper Consolidation Table:
 
-| Item | Apparent Type | Duplicate / Related Items | Business Area | System / Process Link | Issue Clarity | Missing Basic Info | Suggested Outcome | Department Questions | Jira Update |
+| Item | Apparent Type | Duplicate / Related Items | Business Area | System / Process Link | Issue Clarity | Missing Basic Info | Suggested Consolidation Outcome | Department Questions | Jira Update |
 |---|---|---|---|---|---|---|---|---|---|
 
 ### Digital Lead Physical Action
 
 - confirm or reject merge suggestions
 - ask departments light clarification questions
-- remove BAU/support noise
+- route BAU/support noise after confirmation
 - confirm which items are ready for Priority Screen
 
 ### Feedback Required
@@ -54,7 +58,7 @@ Hopper Consolidation Table:
 ### Input from Digital Lead
 
 - cleaned candidate list
-- light priority scores
+- qualitative priority information
 - known business exposure
 - known system/process impact
 

@@ -10,6 +10,12 @@ The stage gate prevents lightly screened ideas from moving into delivery without
 
 A Hopper item can only enter Initiation Form stage after a DRB priority decision confirms that formal due diligence is justified.
 
+## Controlled Vocabulary
+
+Use `00_system_control/CONTROLLED_VOCABULARY.md` for the canonical DRB priority decision set and current Jira status labels.
+
+Do not invent decision labels or Jira status names.
+
 ## Stage Gate Flow
 
 ```text
@@ -17,7 +23,7 @@ Hopper Priority Screen
 ↓
 DRB priority discussion
 ↓
-DRB decision recorded
+Canonical DRB priority decision recorded
 ↓
 If approved: Initiation Form stage begins
 ↓
@@ -26,14 +32,16 @@ Route selected: Implementation or Development
 
 ## Valid DRB Priority Decisions
 
+Use the canonical DRB priority decisions from `00_system_control/CONTROLLED_VOCABULARY.md`.
+
 | Decision | Next Action |
 |---|---|
 | Progress to Initiation Form | Start Initiation Form stage |
 | Clarify Before Progression | Gather targeted answers and return to DRB or delegated reviewer |
 | Merge / Duplicate | Link or consolidate in Jira |
 | Defer | Record reason and review window |
-| Reject | Record reason and close / remove from active Hopper |
-| Move to BAU Support | Route to support workflow |
+| Reject | Record reason and close / remove from active Hopper after Digital Lead confirmation |
+| Move to BAU Support | Route to support workflow after Digital Lead confirmation |
 | Hold for Future Review | Keep visible but out of current programme |
 
 ## Required Record Before Progression
@@ -76,10 +84,10 @@ AI must not approve the stage gate.
 ```markdown
 DRB priority decision recorded.
 
-Decision: [Progress / Clarify / Defer / Reject / BAU / Merge / Hold]
+Decision: [canonical DRB priority decision]
 Date: [date]
 Conditions: [conditions]
-Next stage: [Initiation Form / Clarification / BAU / Deferred / Rejected / Merged]
+Next stage: [next lifecycle stage / status]
 Owner / sponsor: [confirmed / TBC]
 Digital champion: [confirmed / TBC]
 Notes: [short note]

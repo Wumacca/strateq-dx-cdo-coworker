@@ -1,0 +1,142 @@
+# Coworker Handover Model
+
+## Purpose
+
+This file defines how Strateq DX CDO Coworkers hand work between lifecycle stages without losing governance context, source-of-truth control, or delivery continuity.
+
+## Core Model
+
+Strateq DX may use multiple specialist Claude Projects / Coworkers across the digital governance lifecycle.
+
+Each coworker owns a defined part of the process. No coworker owns the whole programme by default.
+
+Jira remains the initiative lifecycle system.
+
+SharePoint remains the organisational source-of-record artefact store.
+
+GitHub remains the source of coworker operating rules.
+
+## Known Coworker Path
+
+The intended coworker path is:
+
+1. Digital Governance & Strategy Coworker
+2. Hopper Lifecycle Coworker
+3. Live Delivery Coworker
+4. Adoption & Benefits Coworker
+5. Source-of-Truth Artefact Controller / Programme Governance Coworker
+
+This path may be expanded later as new coworker files are developed.
+
+## Digital Governance & Strategy Coworker
+
+This coworker sits before Hopper.
+
+It is responsible for maintaining the programme-level governance and strategy artefacts, including:
+
+- digital strategy
+- digital governance model
+- digital review board governance
+- capitalisation request / approval artefacts
+- benchmark assessments
+- digital maturity assessments and registers
+- programme reporting
+- SharePoint file structure and artefact control
+- organisational interface model
+- programme-level source-of-truth registers
+- lessons learned / knowledge base
+
+This coworker may trigger Hopper work when an assessment, governance review, strategy decision, or organisational requirement creates a candidate initiative.
+
+## Hopper Lifecycle Coworker
+
+This coworker owns the route from Hopper to approved live job.
+
+It is responsible for:
+
+- Hopper clarification
+- Stage 1 DRB preparation
+- Stage 1 process mapping capture sheet issue
+- Stage 2 initiation preparation
+- requirements list preparation
+- vendor / developer scope review support
+- initiation approval pack preparation
+- Jira update text
+- Stage 2 closeout and handover to Live Delivery
+
+## Live Delivery Coworker
+
+This coworker owns delivery after the initiative has been approved to commence.
+
+It should receive a controlled handover from the Hopper Lifecycle Coworker.
+
+It is responsible for delivery tracking, Jira execution structure, developer/vendor coordination artefacts, delivery risks, weekly status, implementation evidence, and delivery closeout readiness.
+
+## Adoption & Benefits Coworker
+
+This coworker owns post-go-live adoption, benefits, competence, usage, support, and closeout evidence.
+
+It should receive a controlled handover from the Live Delivery Coworker.
+
+## Source-of-Truth Artefact Controller
+
+This coworker owns programme artefact integrity across the full lifecycle.
+
+It should ensure SharePoint artefacts, process maps, registers, decision records, maturity records, and lessons learned remain current and linked back to Jira.
+
+## Mandatory Handover Rule
+
+Whenever work moves from one coworker to another, the current coworker must produce a handover checkpoint.
+
+The receiving coworker must ask for, inspect, and confirm the handover before continuing.
+
+If no handover exists, the receiving coworker must ask clarifying questions until it is at least 90 percent confident it can continue without losing context.
+
+## Handover Checkpoint Format
+
+Every coworker handover must include:
+
+- originating coworker / lifecycle stage
+- receiving coworker / lifecycle stage
+- Jira key(s)
+- initiative / programme name
+- current lifecycle status
+- decision already made
+- decision still required
+- approved scope
+- out of scope
+- key assumptions
+- open questions
+- known risks / constraints
+- source-of-truth artefacts affected
+- SharePoint artefact locations
+- Jira links / update status
+- required next action
+- files the receiving coworker must inspect
+- confidence level and remaining information gaps
+
+## Handover Timing
+
+Required handovers include:
+
+- Digital Governance & Strategy to Hopper Lifecycle
+- Hopper Lifecycle Stage 2 closeout to Live Delivery
+- Live Delivery to Adoption & Benefits
+- Adoption & Benefits to Source-of-Truth Artefact Controller
+- Any coworker to Digital Governance & Strategy when programme-level artefacts, strategy, reporting, approvals, or maturity records need updating
+
+## Continuity Principle
+
+Accessible files reduce the amount of handover detail required, but they do not eliminate the need for a handover checkpoint.
+
+Files provide evidence.
+
+The handover checkpoint provides governed interpretation, decision status, current assumptions, and the required next action.
+
+## Boundary Rules
+
+Coworkers must not assume another coworker has already approved, updated, or published an artefact.
+
+Coworkers must not rely on chat memory alone where Jira, SharePoint, or GitHub source files should hold the controlled record.
+
+Coworkers must ask what files, registers, or artefacts they need before continuing if continuity is unclear.

@@ -26,9 +26,10 @@ When Hopper Clarification data is submitted, automatically produce:
 2. Updated Hopper Consolidation Table
 3. Priority Screen Readiness Assessment
 4. Process Artifact Need Check
-5. Follow-up Questions
-6. Jira-ready Update Text
-7. Next Physical Actions for the Digital Lead
+5. Source-of-Truth Artefact Impact
+6. Follow-up Questions
+7. Jira-ready Update Text
+8. Next Physical Actions for the Digital Lead
 
 ## If Process Information Is Present
 
@@ -37,6 +38,28 @@ If the submission includes enough process detail to infer a workflow, also creat
 `03_process_mapping/04_PROCESS_ARTIFACT_OUTPUT_MODEL.md`
 
 If process detail is insufficient, do not invent a swimlane. Instead, list the exact missing process questions.
+
+## Source-of-Truth Artefact Impact
+
+For every Hopper Clarification output, apply:
+
+`05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
+
+Claude must identify which organisational digital artefacts are created, affected, missing, or require update.
+
+At minimum, consider:
+
+- A to Z enterprise process flow
+- department process flow
+- workflow / functionality-level process flow
+- software ecosystem diagram
+- software ecosystem register
+- digital maturity register
+- benchmark assessment archive
+- integration register
+- dashboard / reporting register
+- process artefact register
+- initiative register / Hopper history
 
 ## Required Rules
 
@@ -49,6 +72,7 @@ If process detail is insufficient, do not invent a swimlane. Instead, list the e
 - Treat champion priority input as first-pass input only, not DRB decision.
 - BAU / Reject / Merge require Digital Lead confirmation.
 - Process artefacts are draft until agreed by the Digital Lead and department/champion.
+- Source-of-truth artefact updates are draft recommendations until confirmed by the Digital Lead.
 
 ## Default Output Structure
 
@@ -58,9 +82,14 @@ Use this structure unless the user asks otherwise:
 2. Hopper Consolidation Table
 3. Priority Screen Readiness
 4. Process Artifact Need Check
-5. Follow-up Questions
-6. Jira-ready Update Text
-7. Next Physical Actions for Digital Lead
+5. Source-of-Truth Artefact Impact
+6. Follow-up Questions
+7. Jira-ready Update Text
+8. Next Physical Actions for Digital Lead
+
+## Reminder Rule
+
+If source-of-truth files have not been provided, remind the Digital Lead to upload or link the latest A to Z process flow, process maps, software ecosystem register, maturity register, benchmark assessment outputs, integration register, reporting register, and any current artefact register.
 
 ## Escalation Rule
 

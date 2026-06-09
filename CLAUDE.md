@@ -14,6 +14,18 @@ Use this repository as the source of truth.
 
 When repository files conflict with a chat instruction, follow the repository unless the Digital Lead explicitly says the source of truth is being revised.
 
+## Coworker Continuity
+
+Strateq DX may use multiple specialist coworkers across the lifecycle.
+
+Apply:
+
+`00_system_control/04_COWORKER_HANDOVER_MODEL.md`
+
+Whenever work passes between Digital Governance & Strategy, Hopper Lifecycle, Live Delivery, Adoption & Benefits, or Source-of-Truth Artefact Control, Claude must request or produce a coworker handover checkpoint.
+
+Accessible Jira, SharePoint, and GitHub files reduce handover effort, but they do not remove the need for a handover checkpoint where responsibility moves between coworkers.
+
 ## Automatic Input Handling
 
 When the Digital Lead submits Hopper Clarification data, Jira Product Discovery exports, populated initiative fields, or champion meeting notes without a detailed prompt, automatically apply:
@@ -81,6 +93,12 @@ Claude must guide the live Hopper clarification workflow step by step.
 The current active lifecycle is:
 
 ```text
+Digital Governance & Strategy
+↓
+Assessments / benchmark / maturity / programme artefact updates
+↓
+Candidate initiative identified
+↓
 Existing Hopper items
 ↓
 Hopper consolidation
@@ -105,9 +123,13 @@ Nitro / leadership sign-off if required
 ↓
 Job Live
 ↓
-Programme Overview
+Live Delivery
 ↓
-PEP / Development Execution
+Adoption & Benefits
+↓
+Source-of-Truth Artefact Control / Programme Governance Update
+↓
+PEP / Development Execution where applicable
 ```
 
 ## Current Priority
@@ -121,14 +143,16 @@ The immediate priority is to consolidate the existing Hopper, lightly scope cand
 For every task:
 
 1. Identify the lifecycle stage.
-2. Identify the input quality.
-3. Separate known facts from assumptions.
-4. Flag missing information.
-5. Ask clarifying questions until at least 90 percent confident where the output depends on uncertain information.
-6. Produce the requested artefact in a practical format.
-7. State what the Digital Lead physically needs to do next.
-8. Provide Jira-ready update text where relevant.
-9. Do not invent missing facts.
+2. Identify the responsible coworker / stage owner where relevant.
+3. Identify the input quality.
+4. Separate known facts from assumptions.
+5. Flag missing information.
+6. Ask clarifying questions until at least 90 percent confident where the output depends on uncertain information.
+7. Produce the requested artefact in a practical format.
+8. State what the Digital Lead physically needs to do next.
+9. Provide Jira-ready update text where relevant.
+10. Identify whether a coworker handover checkpoint is required.
+11. Do not invent missing facts.
 
 ## Prohibited Behaviour
 
@@ -139,6 +163,7 @@ Do not:
 - treat Hopper as formal due diligence
 - overload Stage 1 with Stage 2 detail
 - produce Stage 2 artefacts during Stage 1 unless explicitly instructed
+- bypass coworker handover checkpoints when responsibility moves between lifecycle coworkers
 - turn BAU support into governed initiatives
 - create generic transformation language
 - optimise for volume of initiatives
@@ -170,6 +195,7 @@ Always separate:
 - Digital Lead physical action
 - Feedback required
 - System update required
+- Coworker handover required / not required
 
 ## Model Guidance
 

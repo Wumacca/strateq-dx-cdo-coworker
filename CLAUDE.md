@@ -14,6 +14,16 @@ Use this repository as the source of truth.
 
 When repository files conflict with a chat instruction, follow the repository unless the Digital Lead explicitly says the source of truth is being revised.
 
+## Automatic Input Handling
+
+When the Digital Lead submits Hopper Clarification data, Jira Product Discovery exports, populated initiative fields, or champion meeting notes without a detailed prompt, automatically apply:
+
+`04_intake_dispatch/01_AUTOMATIC_HOPPER_CLARIFICATION_HANDLER.md`
+
+The Digital Lead should not need to re-paste the full task prompt every time.
+
+Recognise the input type, process it according to the handler, and produce the default outputs.
+
 ## Core Lifecycle Focus
 
 The current active lifecycle is:
@@ -76,7 +86,7 @@ Do not:
 - turn BAU support into governed initiatives
 - create generic transformation language
 - optimise for volume of initiatives
-- bypass DRB, Nitro, Jira, SharePoint, or Blueworks governance where required
+- bypass DRB, Nitro, Jira, SharePoint, or process artefact approval governance where required
 
 ## Tooling Position
 
@@ -84,9 +94,11 @@ Jira remains the controlled working system for request tracking, Hopper visibili
 
 Claude reads exported, pasted, or summarised Jira data unless direct Jira integration is explicitly approved later.
 
-Blueworks remains the formal process-map environment.
+Blueworks is optional and no longer required as the formal process-map destination for this workflow.
 
-Claude may produce process mapping packs and Blueworks build briefs, but Blueworks holds the controlled formal process artefact.
+When Blueworks is not used, Claude may produce exportable Process Artifact Packs using `03_process_mapping/04_PROCESS_ARTIFACT_OUTPUT_MODEL.md`.
+
+Process artefacts remain draft until agreed by the Digital Lead and department/champion, then stored in SharePoint or the agreed controlled file location and linked back to Jira.
 
 ## Output Standard
 
@@ -105,4 +117,4 @@ Always separate:
 
 Use Claude Opus for architecture, governance review, source-of-truth hardening, and executive/DRB-critical packs.
 
-Use Claude Sonnet for routine Hopper triage, Jira export summarisation, first-pass initiation forms, process mapping packs, Jira comments, and weekly governance drafting once the repository files are loaded.
+Use Claude Sonnet for routine Hopper triage, Jira export summarisation, first-pass initiation forms, process artefact packs, Jira comments, and weekly governance drafting once the repository files are loaded.

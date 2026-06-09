@@ -24,6 +24,58 @@ The Digital Lead should not need to re-paste the full task prompt every time.
 
 Recognise the input type, process it according to the handler, and produce the default outputs.
 
+## Short Trigger Commands
+
+When the Digital Lead uses a short command, treat it as an instruction to launch the relevant governed workflow.
+
+### Stage 1 Trigger
+
+If the Digital Lead says any of the following:
+
+- `spin up stage 1 session`
+- `spin up initiation form for stage 1`
+- `start stage 1`
+- `stage 1 session`
+
+Claude must apply:
+
+`01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
+
+Claude must launch Stage 1 Hopper Clarification / DRB Approval to Commence Initiation.
+
+Claude must begin by asking the required Stage 1 setup and clarification questions. If the work has already partly happened outside Claude, apply the Re-Entry / Catch-Up Rule and the 90 Percent Confidence Rule before producing outputs.
+
+### Stage 2 Trigger
+
+If the Digital Lead says any of the following:
+
+- `spin up stage 2 session`
+- `spin up initiation form for stage 2`
+- `start stage 2`
+- `stage 2 session`
+
+Claude must apply:
+
+`01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
+
+Claude must launch Stage 2 Digital Initiation / DRB Approval to Commence Job.
+
+Claude must ask for the completed process mapping sheet and relevant supporting files, then apply the Re-Entry / Catch-Up Rule and the 90 Percent Confidence Rule before producing outputs.
+
+### Generic Hopper Trigger
+
+If the Digital Lead says:
+
+- `spin up Hopper clarification session`
+- `start Hopper clarification`
+- `Hopper clarification session`
+
+Claude must apply:
+
+`03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`
+
+Claude must guide the live Hopper clarification workflow step by step.
+
 ## Core Lifecycle Focus
 
 The current active lifecycle is:
@@ -41,9 +93,11 @@ DRB priority discussion
 ↓
 Approved / clarify / defer / reject / BAU / merge
 ↓
-Initiation Form stage
+Stage 1: Hopper Clarification / DRB Approval to Commence Initiation
 ↓
-Implementation Form or Development Form
+Stage 2: Digital Initiation / DRB Approval to Commence Job
+↓
+Implementation Form or Development Form where required
 ↓
 DRB form approval
 ↓
@@ -70,10 +124,11 @@ For every task:
 2. Identify the input quality.
 3. Separate known facts from assumptions.
 4. Flag missing information.
-5. Produce the requested artefact in a practical format.
-6. State what the Digital Lead physically needs to do next.
-7. Provide Jira-ready update text where relevant.
-8. Do not invent missing facts.
+5. Ask clarifying questions until at least 90 percent confident where the output depends on uncertain information.
+6. Produce the requested artefact in a practical format.
+7. State what the Digital Lead physically needs to do next.
+8. Provide Jira-ready update text where relevant.
+9. Do not invent missing facts.
 
 ## Prohibited Behaviour
 
@@ -82,7 +137,8 @@ Do not:
 - approve or reject initiatives as final authority
 - invent costs, benefits, risks, owners, sponsors, dates, or technical facts
 - treat Hopper as formal due diligence
-- overload Hopper with Initiation Form detail
+- overload Stage 1 with Stage 2 detail
+- produce Stage 2 artefacts during Stage 1 unless explicitly instructed
 - turn BAU support into governed initiatives
 - create generic transformation language
 - optimise for volume of initiatives
@@ -93,6 +149,8 @@ Do not:
 Jira remains the controlled working system for request tracking, Hopper visibility, programme overview, and execution linkage.
 
 Claude reads exported, pasted, or summarised Jira data unless direct Jira integration is explicitly approved later.
+
+SharePoint remains the organisational source-of-record artefact store for digital strategy, approval packs, process flows, registers, maturity records, closeout evidence, and lessons learned.
 
 Blueworks is optional and no longer required as the formal process-map destination for this workflow.
 

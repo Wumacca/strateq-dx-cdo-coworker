@@ -16,13 +16,21 @@ When repository files conflict with a chat instruction, follow the repository un
 
 Project instructions are only a thin role pointer. The repository files define the operating requirements, workflow rules, output formats, boundaries, and cross-file dependencies.
 
+## Programme Lifecycle Authority
+
+The full digital governance programme lifecycle, coworker path, stage responsibilities, handover points, and Hopper Lifecycle reference point are governed by:
+
+`00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
+
+Before running any governed workflow, Claude must identify where the task sits in that lifecycle and then apply the current repository file(s) that govern the relevant stage.
+
 ## Repository-Wide File Awareness
 
 Claude must consider all currently synced repository files that are relevant to the user's task, not only files named in a fixed list.
 
 If new files are added to the repository later, Claude must treat them as part of the operating source of truth once synced and accessible.
 
-Before running a governed workflow, Claude should use `CLAUDE.md`, `README.md`, folder maps, controlled vocabulary, and relevant lifecycle / process / source-of-truth files to identify which files govern the task.
+Before running a governed workflow, Claude should use `CLAUDE.md`, `README.md`, folder maps, controlled vocabulary, the programme lifecycle map, and relevant lifecycle / process / source-of-truth files to identify which files govern the task.
 
 If Claude is unsure which file applies, it must ask the Digital Lead or state which files it can see and which file it needs.
 
@@ -42,103 +50,23 @@ Accessible Jira, SharePoint, and GitHub files reduce handover effort, but they d
 
 ## Automatic Input Handling
 
-When the Digital Lead submits Hopper Clarification data, Jira Product Discovery exports, populated initiative fields, or champion meeting notes without a detailed prompt, automatically apply:
-
-`04_intake_dispatch/01_AUTOMATIC_HOPPER_CLARIFICATION_HANDLER.md`
+When the Digital Lead submits Hopper Clarification data, Jira Product Discovery exports, populated initiative fields, or champion meeting notes without a detailed prompt, automatically apply the relevant current repository files for intake and Hopper clarification.
 
 The Digital Lead should not need to re-paste the full task prompt every time.
 
-Recognise the input type, process it according to the handler, and produce the default outputs.
+Recognise the input type, identify the relevant current repository file(s), process the input according to those files, and produce the default governed outputs.
 
 ## Short Trigger Commands
 
-When the Digital Lead uses a short command, treat it as an instruction to launch the relevant governed workflow.
+Short trigger commands are governed by the current repository workflow files, not by project instructions or chat memory.
 
-### Stage 1 Trigger
+When the Digital Lead uses a short command, Claude must:
 
-If the Digital Lead says any of the following:
-
-- `spin up stage 1 session`
-- `spin up initiation form for stage 1`
-- `start stage 1`
-- `stage 1 session`
-
-Claude must apply the relevant current repository files for Stage 1, especially the current two-stage initiation model.
-
-Claude must launch Stage 1 Hopper Clarification / DRB Approval to Commence Initiation.
-
-Claude must begin by asking the required Stage 1 setup and clarification questions. If the work has already partly happened outside Claude, apply the Re-Entry / Catch-Up Rule and the 90 Percent Confidence Rule before producing outputs.
-
-### Stage 2 Trigger
-
-If the Digital Lead says any of the following:
-
-- `spin up stage 2 session`
-- `spin up initiation form for stage 2`
-- `start stage 2`
-- `stage 2 session`
-
-Claude must apply the relevant current repository files for Stage 2, especially the current two-stage initiation model.
-
-Claude must launch Stage 2 Digital Initiation / DRB Approval to Commence Job.
-
-Claude must ask for the completed process mapping sheet and relevant supporting files, then apply the Re-Entry / Catch-Up Rule and the 90 Percent Confidence Rule before producing outputs.
-
-### Generic Hopper Trigger
-
-If the Digital Lead says:
-
-- `spin up Hopper clarification session`
-- `start Hopper clarification`
-- `Hopper clarification session`
-
-Claude must apply the relevant current repository files for the Hopper clarification workflow.
-
-Claude must guide the live Hopper clarification workflow step by step.
-
-## Core Lifecycle Focus
-
-The current active lifecycle is:
-
-```text
-Digital Governance & Strategy
-↓
-Assessments / benchmark / maturity / programme artefact updates
-↓
-Candidate initiative identified
-↓
-Existing Hopper items
-↓
-Hopper consolidation
-↓
-Light-touch scoping with departments
-↓
-Hopper Priority Screen
-↓
-DRB priority discussion
-↓
-Approved / clarify / defer / reject / BAU / merge
-↓
-Stage 1: Hopper Clarification / DRB Approval to Commence Initiation
-↓
-Stage 2: Digital Initiation / DRB Approval to Commence Job
-↓
-Implementation Form or Development Form where required
-↓
-DRB form approval
-↓
-Nitro / leadership sign-off if required
-↓
-Job Live
-↓
-Live Delivery
-↓
-Adoption & Benefits
-↓
-Source-of-Truth Artefact Control / Programme Governance Update
-↓
-PEP / Development Execution where applicable
-```
+1. Identify the lifecycle stage using the programme lifecycle map.
+2. Identify the relevant current repository files for that stage.
+3. Apply the relevant workflow exactly as defined in those files.
+4. Ask clarifying questions where required by the governing file.
+5. Produce only the outputs allowed for that lifecycle stage.
 
 ## Current Priority
 
@@ -179,6 +107,7 @@ Do not:
 - bypass DRB, Nitro, Jira, SharePoint, or process artefact approval governance where required
 - treat project instructions as a parallel source of truth over the repository files
 - ignore newer synced repository files because they are not named in a prompt
+- duplicate detailed workflow logic in chat where a repository file already governs it
 
 ## Tooling Position
 

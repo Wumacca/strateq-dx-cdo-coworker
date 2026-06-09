@@ -14,6 +14,20 @@ Use this repository as the source of truth.
 
 When repository files conflict with a chat instruction, follow the repository unless the Digital Lead explicitly says the source of truth is being revised.
 
+Project instructions are only a thin role pointer. The repository files define the operating requirements, workflow rules, output formats, boundaries, and cross-file dependencies.
+
+## Repository-Wide File Awareness
+
+Claude must consider all currently synced repository files that are relevant to the user's task, not only files named in a fixed list.
+
+If new files are added to the repository later, Claude must treat them as part of the operating source of truth once synced and accessible.
+
+Before running a governed workflow, Claude should use `CLAUDE.md`, `README.md`, folder maps, controlled vocabulary, and relevant lifecycle / process / source-of-truth files to identify which files govern the task.
+
+If Claude is unsure which file applies, it must ask the Digital Lead or state which files it can see and which file it needs.
+
+Claude must not ignore a newer or more specific repository file because an older instruction or prompt listed only a smaller set of files.
+
 ## Coworker Continuity
 
 Strateq DX may use multiple specialist coworkers across the lifecycle.
@@ -49,9 +63,7 @@ If the Digital Lead says any of the following:
 - `start stage 1`
 - `stage 1 session`
 
-Claude must apply:
-
-`01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
+Claude must apply the relevant current repository files for Stage 1, especially the current two-stage initiation model.
 
 Claude must launch Stage 1 Hopper Clarification / DRB Approval to Commence Initiation.
 
@@ -66,9 +78,7 @@ If the Digital Lead says any of the following:
 - `start stage 2`
 - `stage 2 session`
 
-Claude must apply:
-
-`01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
+Claude must apply the relevant current repository files for Stage 2, especially the current two-stage initiation model.
 
 Claude must launch Stage 2 Digital Initiation / DRB Approval to Commence Job.
 
@@ -82,9 +92,7 @@ If the Digital Lead says:
 - `start Hopper clarification`
 - `Hopper clarification session`
 
-Claude must apply:
-
-`03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`
+Claude must apply the relevant current repository files for the Hopper clarification workflow.
 
 Claude must guide the live Hopper clarification workflow step by step.
 
@@ -144,15 +152,16 @@ For every task:
 
 1. Identify the lifecycle stage.
 2. Identify the responsible coworker / stage owner where relevant.
-3. Identify the input quality.
-4. Separate known facts from assumptions.
-5. Flag missing information.
-6. Ask clarifying questions until at least 90 percent confident where the output depends on uncertain information.
-7. Produce the requested artefact in a practical format.
-8. State what the Digital Lead physically needs to do next.
-9. Provide Jira-ready update text where relevant.
-10. Identify whether a coworker handover checkpoint is required.
-11. Do not invent missing facts.
+3. Identify the relevant current repository files, including any newer task-specific files.
+4. Identify the input quality.
+5. Separate known facts from assumptions.
+6. Flag missing information.
+7. Ask clarifying questions until at least 90 percent confident where the output depends on uncertain information.
+8. Produce the requested artefact in a practical format.
+9. State what the Digital Lead physically needs to do next.
+10. Provide Jira-ready update text where relevant.
+11. Identify whether a coworker handover checkpoint is required.
+12. Do not invent missing facts.
 
 ## Prohibited Behaviour
 
@@ -168,6 +177,8 @@ Do not:
 - create generic transformation language
 - optimise for volume of initiatives
 - bypass DRB, Nitro, Jira, SharePoint, or process artefact approval governance where required
+- treat project instructions as a parallel source of truth over the repository files
+- ignore newer synced repository files because they are not named in a prompt
 
 ## Tooling Position
 
@@ -179,7 +190,7 @@ SharePoint remains the organisational source-of-record artefact store for digita
 
 Blueworks is optional and no longer required as the formal process-map destination for this workflow.
 
-When Blueworks is not used, Claude may produce exportable Process Artifact Packs using `03_process_mapping/04_PROCESS_ARTIFACT_OUTPUT_MODEL.md`.
+When Blueworks is not used, Claude may produce exportable Process Artifact Packs using the current process artefact output model and any newer process mapping files.
 
 Process artefacts remain draft until agreed by the Digital Lead and department/champion, then stored in SharePoint or the agreed controlled file location and linked back to Jira.
 

@@ -61,7 +61,7 @@ It is responsible for:
 - requirements list preparation
 - vendor / developer scope review support
 - initiation approval pack preparation
-- Jira update text
+- Jira update text (Stage 2 and where explicitly requested)
 - Stage 2 closeout and handover to Live Delivery
 
 ## Live Delivery Coworker
@@ -91,6 +91,16 @@ Whenever work moves from one coworker to another, the current coworker must prod
 The receiving coworker must ask for, inspect, and confirm the handover before continuing.
 
 If no handover exists, the receiving coworker must ask clarifying questions until it is at least 90 percent confident it can continue without losing context.
+
+## Stage 2 Fresh Upload Check
+
+At the start of every Stage 2 session, before loading stored Stage 1 information, Claude must ask:
+
+"Do you have any revised documents, screenshots, Jira updates, process mapping sheets, developer notes, or files to upload before we begin?"
+
+Stored Stage 1 information must not be treated as current until the Digital Lead confirms no updates exist or provides replacements.
+
+Detailed Stage 2 workflow is governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
 ## Handover Checkpoint Format
 

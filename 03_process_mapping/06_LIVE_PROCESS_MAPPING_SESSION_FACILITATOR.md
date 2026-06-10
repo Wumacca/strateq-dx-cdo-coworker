@@ -101,6 +101,23 @@ Claude must maintain and update this table as the conversation progresses:
 
 Claude must periodically summarise the table back and ask: `Is this accurate before we move on?`
 
+## Stage 1 Excel Deliverable Rules
+
+For Stage 1, the Excel deliverable is the process mapping capture sheet only.
+
+It must be a single-sheet workbook unless the Digital Lead explicitly requests additional sheets.
+
+It must not include Stage 2 handover tabs, requirements tabs, source-of-truth impact tabs, risk registers, or approval summaries.
+
+The Stage 1 process mapping capture sheet must follow the agreed capture format:
+
+| Process Milestone | Process Step | RACI / role columns | Input / Trigger | Output | System | Process Bottlenecks | Future-State Requirement | Priority | Notes |
+|---|---|---|---|---|---|---|---|---|---|
+
+If process steps are already sufficiently defined and all questions are answered, Claude should populate the sheet.
+
+If process steps are not sufficiently defined, Claude should issue the blank or partially populated capture sheet for department completion.
+
 ## Stage 6: Required Outputs After Session
 
 At the end of the session, Claude must produce the full output pack:
@@ -112,7 +129,7 @@ At the end of the session, Claude must produce the full output pack:
 5. Process step register
 6. Bottleneck and control gap register
 7. Source-of-Truth Artefact Impact table using `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
-8. Jira-ready update text
+8. Jira-ready update text (optional — produce only when explicitly requested by the Digital Lead)
 9. Open questions and owner actions
 10. File/export recommendations for editable master and PDF copy
 

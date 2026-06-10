@@ -6,16 +6,33 @@ This file defines the standard DRB Brief format for Jira initiative descriptions
 
 ## Core Rule
 
+The DRB Brief is a Leadership Team approval document, not a working-session document.
+
 The DRB Brief must be executive, decision-ready, and suitable for pasting into the Jira initiative description field.
 
 It must not look like raw markdown notes, internal AI analysis, or a technical dump.
+
+Open questions must not appear in the final DRB Brief.
+
+If scope, ownership, system, process, delivery, risk, cost, timing, or approval questions remain unresolved, Claude must withhold the final DRB Brief and return a questions-only output to the Digital Lead.
+
+The final DRB Brief may only be produced when all questions are answered, excluded, or explicitly deferred outside the approval decision.
+
+## DRB Brief Formats
+
+Claude must produce the DRB Brief in one of two formats:
+
+1. Jira description version — clean paste-ready format for Jira description fields.
+2. Word-friendly version — inline formatted version with headings, tables, and bullets suitable for copy/paste into Word.
+
+Claude must ask which format is required unless the target is already clear from context.
 
 ## Output Modes
 
 Claude should produce two versions when preparing a DRB brief:
 
 1. Jira Description Version
-2. Working Notes Version
+2. Word-Friendly Version
 
 The Jira Description Version is the primary output.
 

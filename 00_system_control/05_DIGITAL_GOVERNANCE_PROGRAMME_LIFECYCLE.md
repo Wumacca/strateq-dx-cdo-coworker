@@ -34,7 +34,7 @@ Every lifecycle transition between coworkers requires a handover checkpoint unde
 | 6 | Hopper Priority Screen | Hopper Lifecycle Coworker | Prepare candidate initiatives for DRB prioritisation across the next programme window. | Priority screen, Jira fields, scoring notes, department summary. | Internal Hopper continuity note into DRB priority discussion. |
 | 7 | DRB Priority Discussion | Hopper Lifecycle Coworker + DRB | Decide whether an item is approved for Stage 1D or Stage 1, requires clarification, is deferred, rejected, BAU, or merged. | DRB notes, Jira status, decision record. | DRB decision checkpoint required before Stage 1D or Stage 1. |
 | 7A | Route Classification | Hopper Lifecycle Coworker | Classify the initiative as Development Route or Implementation / Support Route from the Jira Initiative Type field or screenshot before launching Stage 1D or Stage 1. | Initiative Type field, Jira screenshot. | Route confirmed before session opens. |
-| 7B | Stage 1D: Development Route Hopper Clarification / DRB Approval to Commence Development Job | Hopper Lifecycle Coworker | Clarify the internal development initiative enough for DRB to approve commencement of the live development job. Stage 2 exception gate must be tested before final pack production. | Jira field values, DRB Brief (Development Approval variant), Scope Brief, single-sheet Process Flow Capture Sheet if required. | Stage 1D closeout / Live Delivery handover required if no Stage 2 exception. Stage 1D to Stage 2 if exception gate triggered. |
+| 7B | Stage 1D: Development Route Hopper Clarification / DRB Approval to Commence Development Job | Hopper Lifecycle Coworker | Clarify the internal development initiative enough for DRB to approve commencement of the live development job. Stage 2 exception gate must be tested before final pack production. | Jira field values, DRB Brief (Development Approval variant), Scope Brief, process flow swimlane specification where process mapping required, source-of-truth artefact impact check and handover note where artefacts impacted. | Stage 1D closeout / Live Delivery handover required if no Stage 2 exception. Stage 1D to Stage 2 if exception gate triggered. Stage 1D to Source-of-Truth Artefact Controller where controlled artefacts are impacted. |
 | 8 | Stage 1: Hopper Clarification / DRB Approval to Commence Initiation (Implementation / Support Route) | Hopper Lifecycle Coworker | Clarify the Hopper item enough for DRB to decide whether formal digital initiation should commence. Applies to Implementation / Support Route. | Jira field values, Stage 1 DRB brief, process mapping required decision, process mapping capture sheet if required. | Stage 1 closeout / Stage 2 readiness checkpoint required. |
 | 9 | Process Mapping Capture | Hopper Lifecycle Coworker | Capture current and required process logic when process mapping is required. This is a capture sheet, not a final process flow. | Excel process mapping capture sheet, department notes, RACI, bottlenecks, future-state needs. | Feeds Stage 2. |
 | 10 | Stage 2: Digital Initiation / DRB Approval to Commence Job | Hopper Lifecycle Coworker | Build the formal initiation pack required for DRB to approve the initiative to become a live job. Applies to Implementation / Support Route, and to Development Route where Stage 2 exception gate is triggered. | Requirements list, vendor/developer review, process-flow specification, source-of-truth impact report, initiation approval summary, Jira update text. | Hopper-to-Live Delivery handover required at Stage 2 closeout. |
@@ -69,6 +69,7 @@ Responsible for:
 - programme-level source-of-truth registers
 - lessons learned and governance improvements
 - creation of candidate initiatives from governance, assessment, strategy, or organisational signals
+- receiving Stage 1D source-of-truth artefact handovers where controlled artefacts are impacted
 
 Must hand over to the Hopper Lifecycle Coworker when a candidate initiative enters the Hopper.
 
@@ -84,7 +85,9 @@ Responsible for:
 - DRB priority discussion support
 - route classification (Development Route or Implementation / Support Route)
 - Stage 1D Development Route Hopper Clarification / DRB Approval to Commence Development Job
-- Stage 1D Scope Brief and Process Flow Capture Sheet
+- Stage 1D Scope Brief and Process Flow Capture Sheet issue
+- Stage 1D swimlane specification production from returned capture sheet
+- Stage 1D source-of-truth artefact impact check and handover note
 - Stage 1D pack gate and Stage 2 exception gate
 - Stage 1D closeout and handover to Live Delivery (Development Route, no Stage 2 exception)
 - Stage 1 Hopper Clarification / DRB Approval to Commence Initiation (Implementation / Support Route)
@@ -157,6 +160,7 @@ Responsible for:
 - lessons learned
 - programme reporting updates
 - routing new issues back to Digital Governance & Strategy or Hopper where required
+- receiving and actioning Stage 1D source-of-truth artefact handovers
 
 ## Hopper Lifecycle Reference Point
 
@@ -165,6 +169,12 @@ The Hopper Lifecycle Coworker must not operate from project instructions alone.
 When handling Hopper, Stage 1D, Stage 1, Stage 2, process mapping, DRB brief preparation, Jira field updates, source-of-truth impact checks, or handover to Live Delivery, it must identify and apply the relevant current repository files.
 
 The Development Route Stage 1D model is the primary authority for Development Route initiatives.
+
+For Development Route Stage 1D sessions:
+
+- Always load: `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
+- If process mapping is required: also load `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md` and `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
+- If controlled artefacts are impacted: also load `00_system_control/04_COWORKER_HANDOVER_MODEL.md` and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
 
 The two-stage initiation model is the primary authority for Stage 1 and Stage 2 (Implementation / Support Route, and Development Route Stage 2 exceptions).
 
@@ -179,11 +189,12 @@ The following handovers are mandatory:
 1. Digital Governance & Strategy to Hopper Lifecycle
 2. Hopper Lifecycle Stage 1D closeout to Live Delivery (Development Route, no Stage 2 exception)
 3. Hopper Lifecycle Stage 1D to Stage 2 (Development Route, Stage 2 exception triggered)
-4. Hopper Lifecycle Stage 1 closeout to Stage 2 readiness (Implementation / Support Route)
-5. Hopper Lifecycle Stage 2 closeout to Live Delivery
-6. Live Delivery to Adoption & Benefits
-7. Adoption & Benefits to Source-of-Truth Artefact Control
-8. Any coworker back to Digital Governance & Strategy where programme strategy, governance, reporting, maturity, capitalisation, or source-of-truth artefacts need updating
+4. Hopper Lifecycle Stage 1D to Digital Governance & Strategy / Source-of-Truth Artefact Controller where controlled artefacts are impacted
+5. Hopper Lifecycle Stage 1 closeout to Stage 2 readiness (Implementation / Support Route)
+6. Hopper Lifecycle Stage 2 closeout to Live Delivery
+7. Live Delivery to Adoption & Benefits
+8. Adoption & Benefits to Source-of-Truth Artefact Control
+9. Any coworker back to Digital Governance & Strategy where programme strategy, governance, reporting, maturity, capitalisation, or source-of-truth artefacts need updating
 
 Handover format is governed by:
 

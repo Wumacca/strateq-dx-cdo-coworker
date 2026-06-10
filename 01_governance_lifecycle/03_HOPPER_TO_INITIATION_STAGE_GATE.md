@@ -117,6 +117,6 @@ Notes: [short note]
 
 ## Next Lifecycle Trigger
 
-**Development Route:** The next stage begins when the item status is set to Stage 1D In Progress and the Digital Lead confirms the route. Load `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
+**Development Route:** The next stage begins when the item status is set to Stage 1D In Progress and the Digital Lead confirms the route. Load `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. If process mapping is required, also load `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md` and `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`. If the initiative affects controlled artefacts, also load `00_system_control/04_COWORKER_HANDOVER_MODEL.md` and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`.
 
 **Implementation / Support Route:** The next stage begins when the item status is changed to Initiation Form In Progress or equivalent, and the correct route is selected or prepared. Load `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.

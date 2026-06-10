@@ -6,7 +6,7 @@ The Initiation Form stage is the formal due diligence stage after Hopper priorit
 
 It is used to prove that the correct delivery route has been selected before the initiative becomes live.
 
-> **Development Route note:** If the approved initiative is an internal development item (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool), this model does not apply unless a Stage 2 exception is triggered. Development Route items follow `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. Only apply this file when Stage 2 exception triggers move a Development Route item to the full Stage 1 + Stage 2 process.
+> **Development Route note:** If the approved initiative is an internal development item (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool), this model does not apply unless a Stage 2 exception is triggered. Development Route items follow `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. If process mapping is required for a Stage 1D initiative, also load `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md` and `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`. Only apply this file when Stage 2 exception triggers move a Development Route item to the full Stage 1 + Stage 2 process.
 
 ## Core Rule
 

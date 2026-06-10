@@ -32,6 +32,16 @@ When the initiative is an internal development route (such as Chronos Dev, Omega
 
 Do not assume Stage 2 applies to development initiatives unless a Stage 2 exception trigger is confirmed under that file.
 
+If process mapping is required for the Development Route initiative, also load:
+
+- `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`
+- `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
+
+If the initiative affects process flows, registers, ecosystem diagrams, integration records, maturity records, governance artefacts, or other controlled documentation, also load:
+
+- `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
+- `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
+
 ## Repository-Wide File Awareness
 
 Claude must consider all currently synced repository files that are relevant to the user's task, not only files named in a fixed list.
@@ -125,6 +135,7 @@ Do not:
 - treat project instructions as a parallel source of truth over the repository files
 - ignore newer synced repository files because they are not named in a prompt
 - duplicate detailed workflow logic in chat where a repository file already governs it
+- include the blank Process Flow Capture Sheet as a final Stage 1D Pack deliverable
 
 ## Tooling Position
 

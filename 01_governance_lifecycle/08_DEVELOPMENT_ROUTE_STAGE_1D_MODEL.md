@@ -72,13 +72,23 @@ Claude must ask the Digital Lead to provide or confirm the following:
 - Dependency items or linked initiatives
 - Target date / internal deadline
 - Known exclusions
-- Process Flow Capture Sheet (blank workbook, if process steps are not yet provided)
+- Process Flow Capture Sheet (blank workbook, issued by Claude if process mapping is required or likely required — see Section C)
 
 ### C. Process Flow Capture Sheet
 
-If process steps are missing or incomplete, Claude must provide the blank single-sheet Process Flow Capture Sheet at session opening.
+The Process Flow Capture Sheet is a session input tool, not a pack deliverable.
 
-If process steps are already provided, Claude must populate the sheet once questions are answered and scope is confirmed.
+If process steps are missing or incomplete and process mapping is required or likely required, Claude must issue the blank single-sheet Process Flow Capture Sheet to the Digital Lead at session opening. The Digital Lead completes the sheet and uploads it. Claude then reads the completed sheet and produces the governed Stage 1D outputs from that data.
+
+If process steps are already provided in session documents, notes, or prior uploads, Claude may work from those directly without requiring the capture sheet to be completed separately.
+
+Once the completed sheet is returned, Claude must produce:
+
+- process flow swimlane specification (see Stage 1D Pack Deliverables)
+- Jira scope structure items
+- requirements / scope items
+- process bottlenecks and required enhancements
+- DRB-ready process summary
 
 The Process Flow Capture Sheet must be a single-sheet workbook.
 
@@ -94,7 +104,7 @@ Required capture columns:
 Claude must produce a question ledger covering all information required to reach 95% confidence before pack production.
 
 | # | Question | Source / evidence | Status | Answer |
-|---|---|---|---|---|
+|---|---|---|---|---------|
 
 Claude must cross-check the question ledger against all supplied files, screenshots, prior messages, and attachments before presenting remaining questions.
 
@@ -131,11 +141,14 @@ Claude must produce:
 1. Jira field-ready values for the configured initiative fields (250-character limit per `04_intake_dispatch/02_JIRA_FIELD_LENGTH_RULES.md`)
 2. DRB Brief — Development Approval variant (using `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`)
 3. Scope Brief (see Scope Brief section below)
-4. Single-sheet Excel Process Flow Capture Sheet if Process Mapping Required = Yes
+4. Process flow swimlane specification — produced from the completed Process Flow Capture Sheet where Process Mapping Required = Yes. The Digital Lead must have returned the completed capture sheet before Claude produces the swimlane. Apply `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md` and `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`.
+5. Source-of-truth artefact impact check and handover note — required where the initiative affects process flows, registers, ecosystem diagrams, integration records, maturity records, governance artefacts, or other controlled documentation. See Source-of-Truth Artefact Impact Check and Handover section below. Apply `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`.
 
 A separate Jira comment is optional and must only be produced when explicitly requested by the Digital Lead.
 
-Full process artefact outputs (swimlane flow, diagram spec, process step register, bottleneck register, source-of-truth impact table) are Stage 2 and process artefact workflow outputs. They are not default Stage 1D deliverables.
+The Process Flow Capture Sheet is a session input tool, not a pack deliverable. Claude must not include the blank or completed capture sheet as a final Stage 1D Pack output.
+
+Detailed diagram specifications, process step registers, and bottleneck registers beyond the swimlane specification are not default Stage 1D deliverables unless the Digital Lead explicitly requests them.
 
 ## Scope Brief
 
@@ -197,7 +210,7 @@ If no exception trigger applies and the Digital Lead confirms Pack 1 is sufficie
 Claude must not produce the final Development Stage 1D Pack until:
 
 - all blocking questions are answered, excluded, or explicitly deferred outside the approval decision
-- the process flow capture requirement is resolved
+- the process flow capture requirement is resolved (blank sheet issued and completed sheet returned by the Digital Lead, or process mapping confirmed not required)
 - developer / department scope has been reconciled if provided (see Scope Reconciliation below)
 - the Stage 2 exception gate has been answered
 - Claude has cross-checked the question ledger against all session evidence
@@ -222,6 +235,54 @@ If developer, department, or technical scope is provided during Stage 1D, Claude
 
 Claude must not finalise the Stage 1D Pack until the Agreed scope column is confirmed by the Digital Lead.
 
+## Source-of-Truth Artefact Impact Check and Handover
+
+This section is required when the initiative creates or changes any controlled artefact, including:
+
+- process flow
+- parent process map
+- A to Z enterprise process flow
+- software ecosystem diagram
+- software ecosystem register
+- integration record
+- integration register
+- maturity register
+- process artefact register
+- initiative / Hopper history
+- decision / approval record
+- SharePoint controlled document
+- governance register
+
+Claude must produce a Source-of-Truth Artefact Impact Check:
+
+| Artefact | Impact | Status | Required Update | Timing | SharePoint Location | Jira Link / Key |
+|---|---|---|---|---|---|---|
+
+The handover note must identify:
+
+- originating coworker / stage: Hopper Lifecycle Coworker / Stage 1D
+- receiving coworker / stage: Digital Governance & Strategy Coworker / Source-of-Truth Artefact Controller
+- Jira key
+- initiative name
+- lifecycle status
+- decisions already made
+- decisions still required
+- approved scope
+- out of scope
+- impacted artefacts
+- required updates
+- timing
+- assumed or known SharePoint location
+- Jira link / reference
+- known risks / constraints
+- open questions for receiving coworker
+- files or outputs the receiving coworker must inspect
+- required next action
+
+The handover must be generated before or at DRB approval where artefact impacts are known, and updated after go-live where final artefact updates depend on delivery completion.
+
+Apply `00_system_control/04_COWORKER_HANDOVER_MODEL.md` and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` when producing this section.
+
 ## Stage 1D to Stage 2 Exception Route
 
 If any Stage 2 exception trigger applies, Claude must:
@@ -238,6 +299,7 @@ If no Stage 2 exception trigger applies and the Digital Lead confirms Pack 1 is 
 1. Claude produces the final Development Stage 1D Pack.
 2. The Digital Lead takes the pack to DRB for approval to commence the live development job.
 3. On DRB approval, a Stage 1D closeout / Live Delivery handover checkpoint is required under `00_system_control/04_COWORKER_HANDOVER_MODEL.md`.
+4. Where the initiative affects controlled artefacts, Claude must produce a Source-of-Truth Artefact Impact Check and Handover note for the Digital Governance & Strategy Coworker / Source-of-Truth Artefact Controller before or at DRB approval.
 
 ## Boundary Rules
 
@@ -250,5 +312,7 @@ Claude must not assume the route is Implementation / Support if the Initiative T
 Claude must not assume Stage 2 is required for Development Route unless an exception trigger applies.
 
 Claude must not skip the Stage 2 exception gate test before producing the final pack.
+
+Claude must not include the blank Process Flow Capture Sheet as a final Stage 1D Pack deliverable.
 
 Claude must ask the Digital Lead to confirm the route if it is unclear before producing any outputs.

@@ -58,6 +58,8 @@ It is responsible for:
 - route classification (Development Route or Implementation / Support Route)
 - Stage 1D Development Route DRB preparation and Scope Brief
 - Stage 1D process mapping capture sheet issue
+- Stage 1D swimlane specification production from returned capture sheet
+- Stage 1D source-of-truth artefact impact check and handover note
 - Stage 1D pack gate and Stage 2 exception gate
 - Stage 1D closeout and handover to Live Delivery (Development Route, no Stage 2 exception)
 - Stage 1 DRB preparation (Implementation / Support Route)
@@ -99,7 +101,7 @@ If no handover exists, the receiving coworker must ask clarifying questions unti
 
 ## Stage 1D Handover Paths
 
-For Development Route initiatives, two handover paths are possible after Stage 1D.
+For Development Route initiatives, three handover paths are possible after Stage 1D.
 
 ### Path A: Stage 1D to Live Delivery (No Stage 2 Exception)
 
@@ -116,6 +118,16 @@ If any Stage 2 exception trigger applies:
 1. Claude produces a Stage 1D to Stage 2 escalation checkpoint.
 2. The checkpoint must confirm: which exception trigger applies, what evidence supports it, current scope and open questions, and what Stage 2 inputs are required.
 3. Stage 2 is then run under `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+
+### Path C: Stage 1D to Source-of-Truth Artefact Controller
+
+Where a Stage 1D initiative creates or changes controlled artefacts (process flows, registers, ecosystem diagrams, integration records, maturity records, governance documents), a source-of-truth artefact handover is required.
+
+This handover runs from the Hopper Lifecycle Coworker / Stage 1D to the Digital Governance & Strategy Coworker / Source-of-Truth Artefact Controller.
+
+The handover must be generated before or at DRB approval where artefact impacts are known, and updated after go-live where final artefact updates depend on delivery completion.
+
+This path runs alongside Path A or Path B — it is not a replacement for the delivery handover.
 
 Detailed Stage 1D workflow is governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
 
@@ -159,6 +171,7 @@ Required handovers include:
 - Digital Governance & Strategy to Hopper Lifecycle
 - Hopper Lifecycle Stage 1D closeout to Live Delivery (Development Route, no Stage 2 exception)
 - Hopper Lifecycle Stage 1D to Stage 2 (Development Route, exception triggered)
+- Hopper Lifecycle Stage 1D to Digital Governance & Strategy Coworker / Source-of-Truth Artefact Controller where controlled artefacts are impacted
 - Hopper Lifecycle Stage 2 closeout to Live Delivery
 - Live Delivery to Adoption & Benefits
 - Adoption & Benefits to Source-of-Truth Artefact Controller

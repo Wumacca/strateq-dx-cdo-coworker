@@ -41,6 +41,8 @@ The Development Approval Brief must:
 - include the Scope Brief as a supporting section or attachment
 - confirm the Stage 2 exception gate decision in the Decision readiness section (confirming no exception triggers apply, or listing any the Digital Lead has explicitly accepted and why)
 - not commit to external suppliers, quotes, or vendor selection unless already confirmed
+- where the initiative affects controlled process, system, integration, maturity, or governance artefacts, reference the source-of-truth artefact impact in the brief and confirm that handover to the Digital Governance & Strategy Coworker / Source-of-Truth Artefact Controller is required on DRB approval or go-live, as appropriate
+- do not include the full artefact impact table in the DRB Brief unless explicitly requested; the full table belongs in the Stage 1D Source-of-Truth Artefact Impact Check and Handover section
 
 ### Implementation / Support Initiation Brief
 
@@ -144,7 +146,7 @@ Process flow status:
 [Status statement]
 
 Decision readiness:
-[State that all material questions have been resolved, excluded, or explicitly deferred outside this approval decision.]
+[State that all material questions have been resolved, excluded, or explicitly deferred outside this approval decision. For Development Approval Briefs, confirm the Stage 2 exception gate decision and note any source-of-truth artefact handover requirement.]
 
 Recommended DRB decision:
 [Canonical decision + short reason.]

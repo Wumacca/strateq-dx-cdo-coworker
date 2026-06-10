@@ -26,6 +26,56 @@ If an initiative changes how work is physically done, Claude must produce a draf
 
 If enough process detail is not available, Claude must state that the swimlane cannot yet be drafted and list the missing process questions.
 
+## Development Route Stage 1D Swimlane
+
+For Development Route Stage 1D initiatives where Process Mapping Required = Yes and the Digital Lead has returned a completed Process Flow Capture Sheet, Claude must produce a draft swimlane process flow specification as a Stage 1D pack deliverable.
+
+This is not deferred to Stage 2 by default.
+
+The swimlane specification must be produced from confirmed capture sheet data.
+
+It remains DRAFT until confirmed by the Digital Lead and department / process owner.
+
+If the completed capture sheet has not been returned, Claude must state that the swimlane cannot be drafted until the sheet is received and ask the Digital Lead to complete and upload it.
+
+## Systems Are Not Lanes
+
+Systems, platforms, and software applications must not be represented as swimlane lanes.
+
+A swimlane lane represents a person, role, team, or accountable operational group that performs or owns a step.
+
+The system used to perform a step must be recorded in the System column of the capture table or as a system touchpoint annotation on the relevant activity in the diagram.
+
+Examples of what must not be swimlane lanes:
+
+- Chronos (system)
+- Kefron (system)
+- Amazon S3 (storage service)
+- any other named platform, application, integration, or automated system
+
+If a step is automated or system-triggered with no human actor, place the step in the lane of the role or team responsible for the process area or system governance, and annotate it as a system action.
+
+## Same-Person Role Consolidation
+
+Where the Digital Lead confirms that two named roles are performed by the same person, Claude must consolidate them into one lane and one role column.
+
+Claude must not maintain separate lanes for role titles confirmed to be one person.
+
+This applies to:
+
+- capture sheet RACI columns
+- swimlane specification
+- process step ownership
+- Scope Brief
+- DRB Brief role references
+
+Example:
+If "Materials Controller" and "Materials Coordinator" are confirmed as the same person, use one consolidated role:
+
+Materials Controller / Coordinator
+
+Claude must ask the Digital Lead to confirm role consolidation before applying it if it is not already stated in the session evidence.
+
 ## Required Outputs
 
 For each process flow, produce:

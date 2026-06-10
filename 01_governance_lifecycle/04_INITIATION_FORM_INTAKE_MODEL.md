@@ -2,9 +2,11 @@
 
 ## Purpose
 
-The Initiation Form stage is the formal due diligence stage after Hopper priority approval.
+The Initiation Form stage is the formal due diligence stage after Hopper priority approval **for the Implementation / Support Route**.
 
 It is used to prove that the correct delivery route has been selected before the initiative becomes live.
+
+> **Development Route note:** If the approved initiative is an internal development item (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool), this model does not apply unless a Stage 2 exception is triggered. Development Route items follow `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. Only apply this file when Stage 2 exception triggers move a Development Route item to the full Stage 1 + Stage 2 process.
 
 ## Core Rule
 
@@ -18,8 +20,12 @@ Initiation Form asks:
 
 ## Stage Position
 
+This flow applies to **Implementation / Support Route** items only.
+
 ```text
 DRB priority approval
+↓
+Route confirmed: Implementation / Support Route
 ↓
 Initiation Form In Progress
 ↓
@@ -37,6 +43,8 @@ Nitro / leadership sign-off if required
 ↓
 Job Live
 ```
+
+For Development Route items, see `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
 
 ## Required Inputs
 
@@ -123,6 +131,7 @@ Do not:
 - leave competent people undefined for go-live
 - leave development scope boundaries unclear
 - leave system-of-record impacts unclear
+- apply this model to a Development Route item unless a Stage 2 exception has been confirmed
 
 ## Next Lifecycle Trigger
 

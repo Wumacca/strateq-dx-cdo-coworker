@@ -35,19 +35,22 @@ AI prepares Jira-ready updates and next-stage artefacts
 
 Hopper Consolidation Table:
 
-| Item | Apparent Type | Duplicate / Related Items | Business Area | System / Process Link | Issue Clarity | Missing Basic Info | Suggested Consolidation Outcome | Department Questions | Jira Update |
-|---|---|---|---|---|---|---|---|---|---|
+| Item | Apparent Type | Duplicate / Related Items | Business Area | System / Process Link | Issue Clarity | Missing Basic Info | Recommended Route | Suggested Consolidation Outcome | Department Questions | Jira Update |
+|---|---|---|---|---|---|---|---|---|---|---|
+
+Recommended Route values: `Development Route → Stage 1D`, `Implementation / Support Route → Stage 1 + Stage 2`, or `TBC`.
 
 ### Digital Lead Physical Action
 
 - confirm or reject merge suggestions
+- confirm or correct the Recommended Route for each item
 - ask departments light clarification questions
 - route BAU/support noise after confirmation
 - confirm which items are ready for Priority Screen
 
 ### Feedback Required
 
-- confirmed route
+- confirmed route per item
 - clarified facts
 - owner/champion confirmation
 - duplicates merged
@@ -67,7 +70,7 @@ Hopper Consolidation Table:
 Hopper Priority Screen:
 
 | Item | Request Type | Business Priority Signal | Maturity / System Link | Missing Basic Info | Recommended DRB Decision | Questions Before DRB | Jira Update |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 
 ### Digital Lead Physical Action
 
@@ -83,16 +86,44 @@ Hopper Priority Screen:
 - owner/sponsor/champion updates
 - next status
 
-## Stage 3: Handoff to Initiation Form
+## Stage 3: Handoff by Route
 
-### AI Output
+After DRB priority approval, route each item to the correct initiation stage.
 
-- Jira update text
-- initiation form starter checklist
+### Development Route → Stage 1D
+
+For items confirmed as internal development (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool).
+
+Governed by: `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
+
+**AI Output**
+
+- Jira update text (route confirmed, Stage 1D In Progress)
+- Stage 1D Session Start Checklist
+- route confirmation note
+- Stage 2 exception gate pre-check (flag any known triggers)
+
+**Digital Lead Physical Action**
+
+- update Jira status to Stage 1D In Progress
+- confirm route
+- supply required inputs listed in Stage 1D Session Start Checklist
+- flag any known exception gate triggers before session begins
+
+### Implementation / Support Route → Stage 1 + Stage 2
+
+For items confirmed as third-party implementation, supplier-led, SaaS onboarding, option appraisal, or business case routes.
+
+Governed by: `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
+
+**AI Output**
+
+- Jira update text (route confirmed, Initiation Form In Progress)
+- Initiation Form stage starter checklist
 - route recommendation
 - supporting artefact checklist
 
-### Digital Lead Physical Action
+**Digital Lead Physical Action**
 
 - update Jira
 - start the correct initiation form

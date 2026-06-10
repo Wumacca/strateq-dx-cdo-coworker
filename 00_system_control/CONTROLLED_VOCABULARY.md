@@ -15,4 +15,3 @@ Use these exact labels:
 - Merge / Duplicate
 - Defer
 - Reject
-- Move to BAU Support

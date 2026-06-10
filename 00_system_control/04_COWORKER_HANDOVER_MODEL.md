@@ -55,7 +55,12 @@ This coworker owns the route from Hopper to approved live job.
 It is responsible for:
 
 - Hopper clarification
-- Stage 1 DRB preparation
+- route classification (Development Route or Implementation / Support Route)
+- Stage 1D Development Route DRB preparation and Scope Brief
+- Stage 1D process mapping capture sheet issue
+- Stage 1D pack gate and Stage 2 exception gate
+- Stage 1D closeout and handover to Live Delivery (Development Route, no Stage 2 exception)
+- Stage 1 DRB preparation (Implementation / Support Route)
 - Stage 1 process mapping capture sheet issue
 - Stage 2 initiation preparation
 - requirements list preparation
@@ -91,6 +96,28 @@ Whenever work moves from one coworker to another, the current coworker must prod
 The receiving coworker must ask for, inspect, and confirm the handover before continuing.
 
 If no handover exists, the receiving coworker must ask clarifying questions until it is at least 90 percent confident it can continue without losing context.
+
+## Stage 1D Handover Paths
+
+For Development Route initiatives, two handover paths are possible after Stage 1D.
+
+### Path A: Stage 1D to Live Delivery (No Stage 2 Exception)
+
+If the Stage 2 exception gate is not triggered and DRB approves the Development Stage 1D Pack:
+
+1. Claude produces a Stage 1D closeout / Live Delivery handover checkpoint.
+2. The handover must confirm: DRB approval decision, approved scope (from Scope Brief), Jira ID, owner / champion, developer, target date, known exclusions, and known open items for delivery.
+3. The Live Delivery Coworker receives the handover and confirms before commencing.
+
+### Path B: Stage 1D to Stage 2 (Exception Triggered)
+
+If any Stage 2 exception trigger applies:
+
+1. Claude produces a Stage 1D to Stage 2 escalation checkpoint.
+2. The checkpoint must confirm: which exception trigger applies, what evidence supports it, current scope and open questions, and what Stage 2 inputs are required.
+3. Stage 2 is then run under `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+
+Detailed Stage 1D workflow is governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
 
 ## Stage 2 Fresh Upload Check
 
@@ -130,6 +157,8 @@ Every coworker handover must include:
 Required handovers include:
 
 - Digital Governance & Strategy to Hopper Lifecycle
+- Hopper Lifecycle Stage 1D closeout to Live Delivery (Development Route, no Stage 2 exception)
+- Hopper Lifecycle Stage 1D to Stage 2 (Development Route, exception triggered)
 - Hopper Lifecycle Stage 2 closeout to Live Delivery
 - Live Delivery to Adoption & Benefits
 - Adoption & Benefits to Source-of-Truth Artefact Controller

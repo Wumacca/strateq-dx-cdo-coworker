@@ -11,7 +11,3 @@ Claude must use these exact labels when drafting Hopper consolidation outputs, P
 Use these exact labels:
 
 - Progress to Initiation Form
-- Clarify Before Progression
-- Merge / Duplicate
-- Defer
-- Reject

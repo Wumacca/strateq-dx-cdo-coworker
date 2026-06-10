@@ -67,3 +67,17 @@ Use these current workflow labels unless the Digital Lead provides the actual Ji
 BAU, Reject, and Merge are AI recommendations only.
 
 The Digital Lead confirms before any Jira status change, item removal, or merge action.
+
+## Approved Jira Statuses: Stage 1D
+
+Use this current workflow label for Development Route Stage 1D work:
+
+- Stage 1D In Progress
+
+## Approved Route Labels
+
+Use these exact labels when classifying initiative route:
+
+- Development Route
+- Implementation / Support Route
+- TBC

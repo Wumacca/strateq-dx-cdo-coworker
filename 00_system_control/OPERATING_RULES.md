@@ -45,7 +45,13 @@ Adoption Review and Benefits Review are recognised lifecycle stages, but they ar
 
 Hopper is light-touch priority screening.
 
-Initiation Form is formal due diligence.
+From Hopper, approved items branch into one of two initiation routes:
+
+- **Development Route → Stage 1D** is streamlined scoping and DRB approval for internal development initiatives (Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, in-house tools). Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. Does not progress to Stage 2 unless a Stage 2 exception gate trigger is confirmed.
+
+- **Implementation / Support Route → Stage 1 + Stage 2** is formal two-stage due diligence for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+
+Initiation Form is the Stage 1 formal due diligence artefact for the Implementation / Support Route.
 
 PEP / Development Execution is controlled delivery.
 

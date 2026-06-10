@@ -2,13 +2,20 @@
 
 ## Purpose
 
-This file defines the governed handoff from Hopper Priority Screen into Initiation Form stage.
+This file defines the governed handoff from Hopper Priority Screen into the correct initiation route.
 
 The stage gate prevents lightly screened ideas from moving into delivery without formal due diligence.
 
+From this gate, approved items branch into either:
+
+- **Development Route → Stage 1D** — for internal development initiatives (Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, in-house tools). Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
+- **Implementation / Support Route → Stage 1 + Stage 2** — for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+
 ## Core Rule
 
-A Hopper item can only enter Initiation Form stage after a DRB priority decision confirms that formal due diligence is justified.
+A Hopper item can only proceed past this gate after a DRB priority decision confirms that formal due diligence is justified.
+
+Route selection is made at this gate, not assumed from Hopper data.
 
 ## Controlled Vocabulary
 
@@ -25,10 +32,20 @@ DRB priority discussion
 ↓
 Canonical DRB priority decision recorded
 ↓
-If approved: Initiation Form stage begins
+If approved: Route Classification
 ↓
-Route selected: Implementation or Development
+┌─────────────────────────────────────┬────────────────────────────────────────────────────┐
+│ Development Route                   │ Implementation / Support Route                     │
+│ (internal dev, Chronos, Omega,      │ (third-party, supplier, SaaS, option appraisal,    │
+│  SharePoint build, Power BI build,  │  business case, uncertain architecture,            │
+│  in-house tool)                     │  material cost, supplier selection)                │
+└─────────────────────────────────────┴────────────────────────────────────────────────────┘
+↓                                     ↓
+Stage 1D                              Stage 1 → Stage 2
+(08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL) (07_TWO_STAGE_DIGITAL_INITIATION_MODEL)
 ```
+
+If route is unclear, flag as TBC and ask the Digital Lead before loading any stage-specific rules.
 
 ## Valid DRB Priority Decisions
 
@@ -36,7 +53,7 @@ Use the canonical DRB priority decisions from `00_system_control/CONTROLLED_VOCA
 
 | Decision | Next Action |
 |---|---|
-| Progress to Initiation Form | Start Initiation Form stage |
+| Progress to Initiation Form | Classify route then start Stage 1D or Stage 1 |
 | Clarify Before Progression | Gather targeted answers and return to DRB or delegated reviewer |
 | Merge / Duplicate | Link or consolidate in Jira |
 | Defer | Record reason and review window |
@@ -46,10 +63,11 @@ Use the canonical DRB priority decisions from `00_system_control/CONTROLLED_VOCA
 
 ## Required Record Before Progression
 
-Before moving to Initiation Form stage, Jira should show:
+Before moving past this gate, Jira should show:
 
 - DRB priority decision
 - decision date
+- confirmed route: Development Route or Implementation / Support Route
 - route condition, if known
 - sponsor / owner if known
 - department / digital champion if known
@@ -64,20 +82,23 @@ Do not:
 - treat Priority Screen as approved business case
 - request full delivery mobilisation before initiation approval
 - treat unclear ownership as acceptable for progression
-- move BAU support into Initiation Form
+- move BAU support into Stage 1D or Stage 1
+- apply Stage 1 + Stage 2 rules to a confirmed Development Route item
+- apply Stage 1D rules to a confirmed Implementation / Support Route item
 
 ## AI Coworker Role
 
 AI may produce:
 
 - DRB decision summary
+- Route Classification recommendation (Development Route or Implementation / Support Route)
 - Jira update text
-- Initiation Form stage starter checklist
-- route recommendation: Implementation / Development / unclear
+- Stage 1D Session Start Checklist (Development Route only)
+- Initiation Form stage starter checklist (Implementation / Support Route only)
 - missing information list
 - department / vendor / developer question list
 
-AI must not approve the stage gate.
+AI must not approve the stage gate or assign route without Digital Lead confirmation.
 
 ## Jira Update Template
 
@@ -86,6 +107,7 @@ DRB priority decision recorded.
 
 Decision: [canonical DRB priority decision]
 Date: [date]
+Route: [Development Route → Stage 1D / Implementation / Support Route → Stage 1 + Stage 2 / TBC]
 Conditions: [conditions]
 Next stage: [next lifecycle stage / status]
 Owner / sponsor: [confirmed / TBC]
@@ -95,4 +117,6 @@ Notes: [short note]
 
 ## Next Lifecycle Trigger
 
-The next stage begins when the item status is changed to Initiation Form In Progress or equivalent, and the correct route is selected or prepared.
+**Development Route:** The next stage begins when the item status is set to Stage 1D In Progress and the Digital Lead confirms the route. Load `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
+
+**Implementation / Support Route:** The next stage begins when the item status is changed to Initiation Form In Progress or equivalent, and the correct route is selected or prepared. Load `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.

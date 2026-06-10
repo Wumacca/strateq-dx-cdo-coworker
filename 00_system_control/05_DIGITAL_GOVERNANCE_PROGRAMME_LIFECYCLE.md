@@ -32,10 +32,12 @@ Every lifecycle transition between coworkers requires a handover checkpoint unde
 | 4 | Existing Hopper / Intake Consolidation | Hopper Lifecycle Coworker | Consolidate existing candidate initiatives and remove duplicates, BAU items, merged items, or unclear entries. | Jira Hopper, exported Jira fields, department notes, initiative list. | Internal Hopper continuity note if items move to scoping. |
 | 5 | Light-Touch Department Scoping | Hopper Lifecycle Coworker | Clarify enough context to understand the need, source, likely value, and whether the item deserves DRB prioritisation discussion. | Jira fields, clarification notes, department/champion evidence. | Internal Hopper continuity note if item moves to Priority Screen. |
 | 6 | Hopper Priority Screen | Hopper Lifecycle Coworker | Prepare candidate initiatives for DRB prioritisation across the next programme window. | Priority screen, Jira fields, scoring notes, department summary. | Internal Hopper continuity note into DRB priority discussion. |
-| 7 | DRB Priority Discussion | Hopper Lifecycle Coworker + DRB | Decide whether an item is approved for Stage 1, requires clarification, is deferred, rejected, BAU, or merged. | DRB notes, Jira status, decision record. | DRB decision checkpoint required before Stage 1. |
-| 8 | Stage 1: Hopper Clarification / DRB Approval to Commence Initiation | Hopper Lifecycle Coworker | Clarify the Hopper item enough for DRB to decide whether formal digital initiation should commence. | Jira field values, Stage 1 DRB brief, process mapping required decision, process mapping capture sheet if required. | Stage 1 closeout / Stage 2 readiness checkpoint required. |
+| 7 | DRB Priority Discussion | Hopper Lifecycle Coworker + DRB | Decide whether an item is approved for Stage 1D or Stage 1, requires clarification, is deferred, rejected, BAU, or merged. | DRB notes, Jira status, decision record. | DRB decision checkpoint required before Stage 1D or Stage 1. |
+| 7A | Route Classification | Hopper Lifecycle Coworker | Classify the initiative as Development Route or Implementation / Support Route from the Jira Initiative Type field or screenshot before launching Stage 1D or Stage 1. | Initiative Type field, Jira screenshot. | Route confirmed before session opens. |
+| 7B | Stage 1D: Development Route Hopper Clarification / DRB Approval to Commence Development Job | Hopper Lifecycle Coworker | Clarify the internal development initiative enough for DRB to approve commencement of the live development job. Stage 2 exception gate must be tested before final pack production. | Jira field values, DRB Brief (Development Approval variant), Scope Brief, single-sheet Process Flow Capture Sheet if required. | Stage 1D closeout / Live Delivery handover required if no Stage 2 exception. Stage 1D to Stage 2 if exception gate triggered. |
+| 8 | Stage 1: Hopper Clarification / DRB Approval to Commence Initiation (Implementation / Support Route) | Hopper Lifecycle Coworker | Clarify the Hopper item enough for DRB to decide whether formal digital initiation should commence. Applies to Implementation / Support Route. | Jira field values, Stage 1 DRB brief, process mapping required decision, process mapping capture sheet if required. | Stage 1 closeout / Stage 2 readiness checkpoint required. |
 | 9 | Process Mapping Capture | Hopper Lifecycle Coworker | Capture current and required process logic when process mapping is required. This is a capture sheet, not a final process flow. | Excel process mapping capture sheet, department notes, RACI, bottlenecks, future-state needs. | Feeds Stage 2. |
-| 10 | Stage 2: Digital Initiation / DRB Approval to Commence Job | Hopper Lifecycle Coworker | Build the formal initiation pack required for DRB to approve the initiative to become a live job. | Requirements list, vendor/developer review, process-flow specification, source-of-truth impact report, initiation approval summary, Jira update text. | Hopper-to-Live Delivery handover required at Stage 2 closeout. |
+| 10 | Stage 2: Digital Initiation / DRB Approval to Commence Job | Hopper Lifecycle Coworker | Build the formal initiation pack required for DRB to approve the initiative to become a live job. Applies to Implementation / Support Route, and to Development Route where Stage 2 exception gate is triggered. | Requirements list, vendor/developer review, process-flow specification, source-of-truth impact report, initiation approval summary, Jira update text. | Hopper-to-Live Delivery handover required at Stage 2 closeout. |
 | 11 | Implementation Form / Development Form | Hopper Lifecycle Coworker → Live Delivery Coworker | Convert approved initiation into a delivery-ready implementation or development route where required. | Implementation form, development form, Jira epic / delivery structure, approved requirements. | Handover to Live Delivery required. |
 | 12 | DRB Form Approval | DRB + Live Delivery Coworker | Confirm the delivery route, approved scope, cost, timing, owner, route, and controls before live delivery starts. | Approved form, Jira status, approval record. | Delivery start checkpoint required. |
 | 13 | Nitro / Leadership Sign-Off | Digital Governance & Strategy Coworker + DRB + Leadership | Obtain higher-level approval where required by cost, risk, contract, capitalisation, or leadership threshold. | Nitro pack, leadership approval, capitalisation record. | Leadership decision checkpoint required. |
@@ -80,18 +82,24 @@ Responsible for:
 - light-touch department scoping
 - Hopper Priority Screen preparation
 - DRB priority discussion support
-- Stage 1 Hopper Clarification / DRB Approval to Commence Initiation
+- route classification (Development Route or Implementation / Support Route)
+- Stage 1D Development Route Hopper Clarification / DRB Approval to Commence Development Job
+- Stage 1D Scope Brief and Process Flow Capture Sheet
+- Stage 1D pack gate and Stage 2 exception gate
+- Stage 1D closeout and handover to Live Delivery (Development Route, no Stage 2 exception)
+- Stage 1 Hopper Clarification / DRB Approval to Commence Initiation (Implementation / Support Route)
 - process mapping capture sheet issue when required
 - Stage 2 Digital Initiation / DRB Approval to Commence Job
 - requirements list preparation
 - vendor/developer review support
 - initiation approval pack preparation
 - source-of-truth impact reporting for Stage 2
-- Jira update text
+- Jira update text (Stage 2 and where explicitly requested)
 - handover to Live Delivery
 
 Detailed Hopper Lifecycle execution is governed by:
 
+- `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 - `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
 - `04_intake_dispatch/01_AUTOMATIC_HOPPER_CLARIFICATION_HANDLER.md`
 - `04_intake_dispatch/02_JIRA_FIELD_LENGTH_RULES.md`
@@ -103,7 +111,7 @@ Detailed Hopper Lifecycle execution is governed by:
 
 ### Live Delivery Coworker
 
-Owns the approved live job after Stage 2 / form approval.
+Owns the approved live job after Stage 1D / Stage 2 / form approval.
 
 Responsible for:
 
@@ -154,9 +162,11 @@ Responsible for:
 
 The Hopper Lifecycle Coworker must not operate from project instructions alone.
 
-When handling Hopper, Stage 1, Stage 2, process mapping, DRB brief preparation, Jira field updates, source-of-truth impact checks, or handover to Live Delivery, it must identify and apply the relevant current repository files.
+When handling Hopper, Stage 1D, Stage 1, Stage 2, process mapping, DRB brief preparation, Jira field updates, source-of-truth impact checks, or handover to Live Delivery, it must identify and apply the relevant current repository files.
 
-The two-stage initiation model is the primary authority for Stage 1 and Stage 2.
+The Development Route Stage 1D model is the primary authority for Development Route initiatives.
+
+The two-stage initiation model is the primary authority for Stage 1 and Stage 2 (Implementation / Support Route, and Development Route Stage 2 exceptions).
 
 The coworker handover model is the primary authority for transitions between coworkers.
 
@@ -167,11 +177,13 @@ The artefact governance model is the primary authority for Jira / SharePoint / s
 The following handovers are mandatory:
 
 1. Digital Governance & Strategy to Hopper Lifecycle
-2. Hopper Lifecycle Stage 1 closeout to Stage 2 readiness
-3. Hopper Lifecycle Stage 2 closeout to Live Delivery
-4. Live Delivery to Adoption & Benefits
-5. Adoption & Benefits to Source-of-Truth Artefact Control
-6. Any coworker back to Digital Governance & Strategy where programme strategy, governance, reporting, maturity, capitalisation, or source-of-truth artefacts need updating
+2. Hopper Lifecycle Stage 1D closeout to Live Delivery (Development Route, no Stage 2 exception)
+3. Hopper Lifecycle Stage 1D to Stage 2 (Development Route, Stage 2 exception triggered)
+4. Hopper Lifecycle Stage 1 closeout to Stage 2 readiness (Implementation / Support Route)
+5. Hopper Lifecycle Stage 2 closeout to Live Delivery
+6. Live Delivery to Adoption & Benefits
+7. Adoption & Benefits to Source-of-Truth Artefact Control
+8. Any coworker back to Digital Governance & Strategy where programme strategy, governance, reporting, maturity, capitalisation, or source-of-truth artefacts need updating
 
 Handover format is governed by:
 

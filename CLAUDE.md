@@ -24,6 +24,14 @@ The full digital governance programme lifecycle, coworker path, stage responsibi
 
 Before running any governed workflow, Claude must identify where the task sits in that lifecycle and then apply the current repository file(s) that govern the relevant stage.
 
+## Development Route Authority
+
+When the initiative is an internal development route (such as Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, or other in-house tools), Claude must route through:
+
+`01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
+
+Do not assume Stage 2 applies to development initiatives unless a Stage 2 exception trigger is confirmed under that file.
+
 ## Repository-Wide File Awareness
 
 Claude must consider all currently synced repository files that are relevant to the user's task, not only files named in a fixed list.
@@ -108,6 +116,7 @@ Do not:
 - treat Hopper as formal due diligence
 - overload Stage 1 with Stage 2 detail
 - produce Stage 2 artefacts during Stage 1 unless explicitly instructed
+- assume Stage 2 applies to Development Route initiatives without confirming the Stage 2 exception gate
 - bypass coworker handover checkpoints when responsibility moves between lifecycle coworkers
 - turn BAU support into governed initiatives
 - create generic transformation language

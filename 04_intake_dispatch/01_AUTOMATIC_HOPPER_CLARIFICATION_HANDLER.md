@@ -31,6 +31,22 @@ When Hopper Clarification data is submitted, automatically produce:
 7. Jira-ready Update Text
 8. Next Physical Actions for the Digital Lead
 
+## Route Classification at Intake
+
+For every candidate item that reaches Priority Screen readiness, identify the likely route before producing the Hopper Consolidation Table.
+
+Use the Route Classification table from `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`:
+
+| Signal | Likely Route |
+|---|---|
+| Internal development (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool) | Development Route → Stage 1D |
+| Third-party implementation, supplier-led, SaaS onboarding, option appraisal, business case required | Implementation / Support Route → Stage 1 + Stage 2 |
+| Unclear | Flag as TBC — ask Digital Lead before assigning route |
+
+Record the Recommended Route in the Hopper Consolidation Table.
+
+Do not load Stage 1D workflow rules unless the Digital Lead confirms a Development Route item is ready to proceed to Stage 1D.
+
 ## If Process Information Is Present
 
 If the submission includes enough process detail to infer a workflow, also create a Draft Process Artifact Pack using:
@@ -66,6 +82,7 @@ At minimum, consider:
 - Use exact controlled vocabulary from `00_system_control/CONTROLLED_VOCABULARY.md`.
 - Hopper is light-touch priority screening only.
 - Do not create Initiation Form content unless explicitly requested.
+- Do not create Stage 1D content unless the Digital Lead confirms the route and requests it.
 - Do not invent missing facts.
 - Do not invent numeric scores.
 - Treat Jira Score as source context only, not governed priority scoring.
@@ -86,6 +103,13 @@ Use this structure unless the user asks otherwise:
 6. Follow-up Questions
 7. Jira-ready Update Text
 8. Next Physical Actions for Digital Lead
+
+### Hopper Consolidation Table Format
+
+| Item | Apparent Type | Duplicate / Related Items | Business Area | System / Process Link | Issue Clarity | Missing Basic Info | Recommended Route | Suggested Consolidation Outcome | Department Questions | Jira Update |
+|---|---|---|---|---|---|---|---|---|---|---|
+
+The Recommended Route column uses: `Development Route → Stage 1D`, `Implementation / Support Route → Stage 1 + Stage 2`, or `TBC`.
 
 ## Reminder Rule
 

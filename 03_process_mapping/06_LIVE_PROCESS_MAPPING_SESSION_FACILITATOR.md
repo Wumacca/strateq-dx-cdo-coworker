@@ -101,6 +101,16 @@ Claude must maintain and update this table as the conversation progresses:
 
 Claude must periodically summarise the table back and ask: `Is this accurate before we move on?`
 
+## Development Route Stage 1D Sessions
+
+For Development Route initiatives, the Process Flow Capture Sheet must be offered at session opening as part of the required documentation and attachments checklist, before clarification questions begin.
+
+Apply `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md` for all Development Route Stage 1D sessions.
+
+The Stage 1D process flow capture output follows the same single-sheet rules defined in the Stage 1 Excel Deliverable Rules section below.
+
+Full process artefact outputs (swimlane, diagram spec, registers, source-of-truth impact table) are not default Stage 1D deliverables.
+
 ## Stage 1 Excel Deliverable Rules
 
 For Stage 1, the Excel deliverable is the process mapping capture sheet only.

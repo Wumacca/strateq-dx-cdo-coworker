@@ -27,6 +27,33 @@ Claude must produce the DRB Brief in one of two formats:
 
 Claude must ask which format is required unless the target is already clear from context.
 
+## DRB Brief Variants
+
+Two variants are defined based on the initiative route.
+
+### Development Approval Brief
+
+Used for Development Route Stage 1D initiatives where Pack 1 is sufficient for DRB to approve commencement of the live development job without requiring Stage 2.
+
+The Development Approval Brief must:
+
+- state the decision as approval to commence the live development job
+- include the Scope Brief as a supporting section or attachment
+- confirm the Stage 2 exception gate decision in the Decision readiness section (confirming no exception triggers apply, or listing any the Digital Lead has explicitly accepted and why)
+- not commit to external suppliers, quotes, or vendor selection unless already confirmed
+
+### Implementation / Support Initiation Brief
+
+Used for Implementation / Support Route Stage 1 initiatives.
+
+The Implementation / Support Initiation Brief:
+
+- supports the Stage 1 decision: whether formal initiation should commence
+- does not commit to a solution, cost, or delivery timeline (those belong in Stage 2)
+- supports the fuller Stage 1 + Stage 2 route
+
+If the route is unclear, Claude must ask before selecting the variant.
+
 ## Output Modes
 
 Claude should produce two versions when preparing a DRB brief:

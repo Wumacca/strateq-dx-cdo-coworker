@@ -2,14 +2,12 @@
 
 ## Purpose
 
-This file defines the governed route from Hopper clarification to live initiative approval.
+This file defines the governed two-stage route from Hopper clarification to live initiative approval.
 
-Claude facilitates both stages, produces the required artefacts, identifies missing information, and keeps Jira and SharePoint boundaries clear.
+This file applies primarily to the Implementation / Support Route. For Development Route initiatives (Chronos Dev, Omega Dev, SharePoint internal builds, Power BI internal builds, or other in-house tools), the primary governing file is:
 
-## Core Operating Model
+`01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 
-Jira is the initiative lifecycle system.
+Stage 2 from this file applies to Development Route initiatives only when a Stage 2 exception trigger is confirmed under the Stage 1D model.
 
-SharePoint is the source-of-record artefact store.
-
-Claude is the C
+Claude facilitates both stages, produces the required

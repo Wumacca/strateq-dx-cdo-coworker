@@ -53,9 +53,11 @@ The brief must include:
 - Expected benefit
 - Risk / impact view
 - Process flow status
-- Open questions
+- Decision readiness
 - Recommended DRB decision
 - Next steps if approved
+
+The brief must not include an open questions section. If unresolved material questions exist, Claude must withhold the final brief and return a questions-only output instead.
 
 ## Required DRB Decision Labels
 
@@ -114,8 +116,8 @@ Operational: [Low / Medium / High / Critical / TBC]
 Process flow status:
 [Status statement]
 
-Open questions:
-[List only material open questions. If none, state None identified at this stage.]
+Decision readiness:
+[State that all material questions have been resolved, excluded, or explicitly deferred outside this approval decision.]
 
 Recommended DRB decision:
 [Canonical decision + short reason.]

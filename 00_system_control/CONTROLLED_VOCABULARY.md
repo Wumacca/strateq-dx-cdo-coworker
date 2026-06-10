@@ -10,13 +10,13 @@ Claude must use these exact labels when drafting Hopper consolidation outputs, P
 
 Use these exact labels:
 
-* Progress to Initiation Form
-* Clarify Before Progression
-* Merge / Duplicate
-* Defer
-* Reject
-* Move to BAU Support
-* Hold for Future Review
+- Progress to Initiation Form
+- Clarify Before Progression
+- Merge / Duplicate
+- Defer
+- Reject
+- Move to BAU Support
+- Hold for Future Review
 
 Do not invent variants.
 
@@ -24,21 +24,21 @@ Do not invent variants.
 
 Use these exact labels:
 
-* Ready for Priority Screen
-* Clarify with Department
-* Merge / Duplicate
-* Move to BAU Support
-* Hold for Future Review
-* Reject
+- Ready for Priority Screen
+- Clarify with Department
+- Merge / Duplicate
+- Move to BAU Support
+- Hold for Future Review
+- Reject
 
 ## Business Priority Signal
 
 Use these exact labels:
 
-* High
-* Medium
-* Low
-* Unclear
+- High
+- Medium
+- Low
+- Unclear
 
 Each signal must include a short reason.
 
@@ -52,15 +52,15 @@ Scored fields in `01_governance_lifecycle/00_REQUEST_INTAKE_MODEL_FUTURE.md` are
 
 Use these current workflow labels unless the Digital Lead provides the actual Jira status names:
 
-* Hopper - Unscreened
-* Hopper - Clarify
-* Ready for Priority Screen
-* At DRB
-* Initiation Form In Progress
-* BAU Support
-* Deferred
-* Rejected
-* Merged
+- Hopper - Unscreened
+- Hopper - Clarify
+- Ready for Priority Screen
+- At DRB
+- Initiation Form In Progress
+- BAU Support
+- Deferred
+- Rejected
+- Merged
 
 ## Confirmation Rule
 
@@ -72,12 +72,12 @@ The Digital Lead confirms before any Jira status change, item removal, or merge 
 
 Use this current workflow label for Development Route Stage 1D work:
 
-* Stage 1D In Progress
+- Stage 1D In Progress
 
 ## Approved Route Labels
 
 Use these exact labels when classifying initiative route:
 
-* Development Route
-* Implementation / Support Route
-* TBC
+- Development Route
+- Implementation / Support Route
+- TBC

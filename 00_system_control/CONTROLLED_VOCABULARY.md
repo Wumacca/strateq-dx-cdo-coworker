@@ -78,6 +78,6 @@ Use this current workflow label for Development Route Stage 1D work:
 
 Use these exact labels when classifying initiative route:
 
-- Development Route
-- Implementation / Support Route
-- TBC
+* Development Route
+* Implementation / Support Route
+* TBC

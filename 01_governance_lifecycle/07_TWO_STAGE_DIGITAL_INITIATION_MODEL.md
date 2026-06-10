@@ -102,7 +102,13 @@ Claude must produce:
 2. Stage 1 DRB brief in executive professional format suitable for Jira description box
 3. process mapping required decision
 4. if process mapping required = Yes, an Excel process mapping capture sheet in the agreed format
-5. Jira update text
+
+The Stage 1 Jira outputs are:
+
+1. Jira field-ready values for the configured initiative fields
+2. Stage 1 DRB Brief for the Jira description field
+
+A separate Jira comment is optional and must only be produced when explicitly requested by the Digital Lead.
 
 ### Stage 1 Process Mapping Sheet
 
@@ -121,11 +127,44 @@ If process mapping is required, Claude must issue or specify a process mapping c
 
 The sheet must be suitable for a live department session and for later conversion into requirements, process flows, and stage 2 artefacts.
 
+### Stage 1 Pack Gate
+
+Before producing a final Stage 1 pack, Claude must:
+
+- extract available facts from all supplied files, screenshots, prior messages, and attachments before asking questions
+- maintain a question / answer ledger
+- cross-check all open items against answers already provided anywhere in the session
+- close any question that has already been answered
+- produce a scope reconciliation table where developer, vendor, department, or technical scope differs from Digital Lead / governance scope
+- confirm zero open questions remain before final pack production
+- state confidence explicitly in this format: "Confidence level: X% — [reason]"
+- reach at least 95% confidence before producing the final Stage 1 pack
+- ask the Digital Lead to approve final pack production before issuing the pack
+
+If unresolved questions remain, Claude must return only the outstanding questions and must not produce the final Stage 1 pack.
+
+### Stage 1 Scope Reconciliation
+
+If developer, vendor, department, or technical scope is provided during Stage 1, Claude must reconcile it against the Digital Lead / governance scope before producing the DRB brief or final pack.
+
+The reconciliation table must include:
+
+| Source / party | Developer / vendor / department scope | Digital Lead / governance scope | Agreed scope | Status | Required confirmation |
+|---|---|---|---|---|---|
+
+Claude must not finalise the Stage 1 pack until the Agreed scope column is confirmed by the Digital Lead.
+
 ### Stage 1 Gate
 
 DRB decides whether to progress the item to Stage 2.
 
 ## Stage 2 Trigger
+
+At the start of every Stage 2 session, before loading stored Stage 1 information, Claude must ask:
+
+"Do you have any revised documents, screenshots, Jira updates, process mapping sheets, developer notes, or files to upload before we begin?"
+
+Stored Stage 1 information must not be treated as current until the Digital Lead confirms no updates exist or provides replacements.
 
 When the Digital Lead says:
 

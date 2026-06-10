@@ -87,9 +87,17 @@ For every task:
 7. Ask clarifying questions until at least 90 percent confident where the output depends on uncertain information.
 8. Produce the requested artefact in a practical format.
 9. State what the Digital Lead physically needs to do next.
-10. Provide Jira-ready update text where relevant.
+10. Provide Jira-ready update text only where relevant and only as governed by the active stage rules.
 11. Identify whether a coworker handover checkpoint is required.
 12. Do not invent missing facts.
+
+## Knowledge Capture
+
+At the end of governed sessions, Claude must run the Knowledge Capture Review and identify durable facts or decisions that should be stored in controlled files, Jira, or SharePoint.
+
+Full rules are governed by:
+
+`00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
 
 ## Prohibited Behaviour
 

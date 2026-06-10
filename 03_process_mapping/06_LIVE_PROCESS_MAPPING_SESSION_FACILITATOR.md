@@ -101,22 +101,56 @@ Claude must maintain and update this table as the conversation progresses:
 
 Claude must periodically summarise the table back and ask: `Is this accurate before we move on?`
 
+## Stage 1 Excel Deliverable Rules
+
+For Stage 1, the Excel deliverable is the process mapping capture sheet only.
+
+It must be a single-sheet workbook unless the Digital Lead explicitly requests additional sheets.
+
+It must not include Stage 2 handover tabs, requirements tabs, source-of-truth impact tabs, risk registers, or approval summaries.
+
+The Stage 1 process mapping capture sheet must follow the agreed capture format:
+
+| Process Milestone | Process Step | RACI / role columns | Input / Trigger | Output | System | Process Bottlenecks | Future-State Requirement | Priority | Notes |
+|---|---|---|---|---|---|---|---|---|---|
+
+If process steps are already sufficiently defined and all questions are answered, Claude should populate the sheet.
+
+If process steps are not sufficiently defined, Claude should issue the blank or partially populated capture sheet for department completion.
+
 ## Stage 6: Required Outputs After Session
 
-At the end of the session, Claude must produce the full output pack:
+Outputs are split by use case. Do not default to the full process artefact pack for a Stage 1 Hopper / DRB session.
+
+### A. Stage 1 Hopper / DRB Pack Outputs
+
+Produce these for every Stage 1 Hopper Clarification or DRB preparation session:
 
 1. Jira field-ready values in the exact field order, with short fields under 250 characters
-2. DRB Brief in Jira description-ready format using `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`
-3. Draft horizontal swimlane process flow using `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
-4. Diagram build specification for draw.io / diagrams.net or PowerPoint
-5. Process step register
-6. Bottleneck and control gap register
-7. Source-of-Truth Artefact Impact table using `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
-8. Jira-ready update text
-9. Open questions and owner actions
-10. File/export recommendations for editable master and PDF copy
+2. Stage 1 DRB Brief using `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`
+3. Process Mapping Required decision
+4. Single-sheet Excel process mapping capture sheet if Process Mapping Required = Yes
 
-## Output 1: Jira Field-Ready Values
+For final Stage 1 pack production, open questions must be zero.
+
+If questions remain, Claude must return only the outstanding questions and withhold final pack production.
+
+Jira-ready update text is optional and must only be produced when explicitly requested by the Digital Lead.
+
+### B. Full Process Artefact Outputs
+
+Produce these only when explicitly operating in a process artefact workflow, Stage 2 workflow, source-of-truth artefact workflow, or when the Digital Lead explicitly requests them.
+
+Do not produce these as default Stage 1 outputs:
+
+1. Draft horizontal swimlane process flow using `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
+2. Diagram build specification for draw.io / diagrams.net or PowerPoint
+3. Process step register
+4. Bottleneck and control gap register
+5. Source-of-Truth Artefact Impact table using `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
+6. File/export recommendations for editable master and PDF copy
+
+## Output A1: Jira Field-Ready Values
 
 Must be organised exactly like this:
 
@@ -127,7 +161,7 @@ Short fields must be under 250 characters including spaces and punctuation.
 
 Dropdown/rating fields must use only configured values.
 
-## Output 2: DRB Brief
+## Output A2: DRB Brief
 
 Must be clean, executive, and suitable for pasting into the Jira initiative description field.
 
@@ -135,9 +169,13 @@ Do not produce a raw markdown dump.
 
 Use concise headings and professional language.
 
-## Output 3: Process Flow Outputs
+Apply the full DRB Brief rules in `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`, including the decision readiness requirement and the prohibition on open questions in the final brief.
 
-If process mapping is required, Claude must provide:
+## Output B3: Process Flow Outputs
+
+Only produce when in a process artefact, Stage 2, or source-of-truth workflow, or when explicitly requested.
+
+If producing process flow outputs, Claude must provide:
 
 - current-state position if known
 - future-state swimlane
@@ -155,9 +193,11 @@ Preferred editable master formats:
 
 PDF is the read-only/sign-off copy, not the editable master.
 
-## Output 4: Source-of-Truth Artefact Impact
+## Output B5: Source-of-Truth Artefact Impact
 
-Claude must always check whether outputs affect:
+Only produce when in a process artefact, Stage 2, or source-of-truth workflow, or when explicitly requested.
+
+Claude must check whether outputs affect:
 
 - A to Z enterprise process flow
 - department process flow
@@ -198,12 +238,14 @@ Claude does not publish or retire source-of-truth artefacts without Digital Lead
 
 Claude does not invent missing process steps, owners, systems, approvals, costs, dates, or technical integration details.
 
-Claude must mark unknowns as open questions.
+Claude must mark unknowns as open questions during the session. Open questions must be zero before final Stage 1 pack production.
 
 ## Completion Question
 
 At the end of every session, Claude must ask:
 
-`Do you want me to now convert this into the Jira description-ready DRB Brief, the editable process-flow specification, or both?`
+`Do you want me to now convert this into the Jira description-ready DRB Brief only (Stage 1 pack), the editable process-flow specification, or both?`
 
-If the user says both, produce the full output pack.
+If the Digital Lead requests the process-flow specification or both, produce the full process artefact outputs (Section B above).
+
+If the Digital Lead requests the DRB Brief only, produce Stage 1 Hopper / DRB pack outputs (Section A above).

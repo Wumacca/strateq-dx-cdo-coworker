@@ -6,16 +6,33 @@ This file defines the standard DRB Brief format for Jira initiative descriptions
 
 ## Core Rule
 
+The DRB Brief is a Leadership Team approval document, not a working-session document.
+
 The DRB Brief must be executive, decision-ready, and suitable for pasting into the Jira initiative description field.
 
 It must not look like raw markdown notes, internal AI analysis, or a technical dump.
+
+Open questions must not appear in the final DRB Brief.
+
+If scope, ownership, system, process, delivery, risk, cost, timing, or approval questions remain unresolved, Claude must withhold the final DRB Brief and return a questions-only output to the Digital Lead.
+
+The final DRB Brief may only be produced when all questions are answered, excluded, or explicitly deferred outside the approval decision.
+
+## DRB Brief Formats
+
+Claude must produce the DRB Brief in one of two formats:
+
+1. Jira description version — clean paste-ready format for Jira description fields.
+2. Word-friendly version — inline formatted version with headings, tables, and bullets suitable for copy/paste into Word.
+
+Claude must ask which format is required unless the target is already clear from context.
 
 ## Output Modes
 
 Claude should produce two versions when preparing a DRB brief:
 
 1. Jira Description Version
-2. Working Notes Version
+2. Word-Friendly Version
 
 The Jira Description Version is the primary output.
 
@@ -36,9 +53,11 @@ The brief must include:
 - Expected benefit
 - Risk / impact view
 - Process flow status
-- Open questions
+- Decision readiness
 - Recommended DRB decision
 - Next steps if approved
+
+The brief must not include an open questions section. If unresolved material questions exist, Claude must withhold the final brief and return a questions-only output instead.
 
 ## Required DRB Decision Labels
 
@@ -97,8 +116,8 @@ Operational: [Low / Medium / High / Critical / TBC]
 Process flow status:
 [Status statement]
 
-Open questions:
-[List only material open questions. If none, state None identified at this stage.]
+Decision readiness:
+[State that all material questions have been resolved, excluded, or explicitly deferred outside this approval decision.]
 
 Recommended DRB decision:
 [Canonical decision + short reason.]

@@ -6,7 +6,7 @@ This file defines the working interface between the AI coworker and the Digital 
 
 ## Controlled Vocabulary
 
-Use `00_system_control/CONTROLLED_VOCABULARY.md` for consolidation outcomes, DRB priority decisions, priority signal labels, and current Jira status labels.
+Use `00_system_control/CONTROLLED_VOCABULARY.md` for consolidation outcomes, DRB priority decisions, priority signal labels, approved route labels, and current Jira status labels.
 
 ## Standard Loop
 
@@ -38,7 +38,7 @@ Hopper Consolidation Table:
 | Item | Apparent Type | Duplicate / Related Items | Business Area | System / Process Link | Issue Clarity | Missing Basic Info | Recommended Route | Suggested Consolidation Outcome | Department Questions | Jira Update |
 |---|---|---|---|---|---|---|---|---|---|---|
 
-Recommended Route values: `Development Route → Stage 1D`, `Implementation / Support Route → Stage 1 + Stage 2`, or `TBC`.
+Recommended Route values: `Development Route → Stage 1D`, `Implementation Route → Stage 1 + Stage 2`, `Support Route`, or `TBC`.
 
 ### Digital Lead Physical Action
 
@@ -94,7 +94,7 @@ After DRB priority approval, route each item to the correct initiation stage.
 
 For items confirmed as internal development (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool).
 
-Governed by: `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
+Governed by: `01_governance_lifecycle/05_ROUTE_RULES.md` and `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 
 **AI Output**
 
@@ -110,11 +110,11 @@ Governed by: `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 - supply required inputs listed in Stage 1D Session Start Checklist
 - flag any known exception gate triggers before session begins
 
-### Implementation / Support Route → Stage 1 + Stage 2
+### Implementation Route → Stage 1 + Stage 2
 
 For items confirmed as third-party implementation, supplier-led, SaaS onboarding, option appraisal, or business case routes.
 
-Governed by: `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
+Governed by: `01_governance_lifecycle/05_ROUTE_RULES.md` and `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
 
 **AI Output**
 
@@ -129,3 +129,20 @@ Governed by: `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
 - start the correct initiation form
 - arrange process mapping if required
 - engage vendor/developer if required
+
+### Support Route
+
+For items confirmed as minor BAU support, system fixes, or operational assistance that does not justify Initiation Form governance.
+
+Governed by: `01_governance_lifecycle/05_ROUTE_RULES.md`
+
+**AI Output**
+
+- Jira update text (route confirmed, BAU Support)
+- proportionate support note
+- confirmation that Stage 1D and Stage 1 governance do not apply
+
+**Digital Lead Physical Action**
+
+- update Jira status to BAU Support after Digital Lead confirmation
+- route to the appropriate support team or BAU tracking mechanism

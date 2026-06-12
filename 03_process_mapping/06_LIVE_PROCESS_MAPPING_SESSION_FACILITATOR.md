@@ -132,16 +132,16 @@ If process steps are not sufficiently defined, Claude should issue the blank or 
 
 Outputs are split by use case. Do not default to the full process artefact pack for a Stage 1 Hopper / DRB session.
 
-### A. Stage 1 Hopper / DRB Pack Outputs
+### A. Stage 1 Hopper / Initiation Pack Outputs
 
-Produce these for every Stage 1 Hopper Clarification or DRB preparation session:
+Produce these for every Stage 1 Hopper Clarification or initiation preparation session:
 
 1. Jira field-ready values in the exact field order, with short fields under 250 characters
-2. Stage 1 DRB Brief using `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`
+2. Completed Initiation Form using `01_governance_lifecycle/06_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`
 3. Process Mapping Required decision
 4. Single-sheet Excel process mapping capture sheet if Process Mapping Required = Yes
 
-For final Stage 1 pack production, open questions must be zero.
+For final pack production, open questions must be zero.
 
 If questions remain, Claude must return only the outstanding questions and withhold final pack production.
 
@@ -171,15 +171,15 @@ Short fields must be under 250 characters including spaces and punctuation.
 
 Dropdown/rating fields must use only configured values.
 
-## Output A2: DRB Brief
+## Output A2: Completed Initiation Form
 
-Must be clean, executive, and suitable for pasting into the Jira initiative description field.
+Must be clean, executive, and suitable for the formal DRB approval pack.
 
 Do not produce a raw markdown dump.
 
 Use concise headings and professional language.
 
-Apply the full DRB Brief rules in `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`, including the decision readiness requirement and the prohibition on open questions in the final brief.
+Apply the full Completed Initiation Form rules in `01_governance_lifecycle/06_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`, including the decision readiness requirement and the prohibition on open questions in the final pack.
 
 ## Output B3: Process Flow Outputs
 
@@ -248,14 +248,14 @@ Claude does not publish or retire source-of-truth artefacts without Digital Lead
 
 Claude does not invent missing process steps, owners, systems, approvals, costs, dates, or technical integration details.
 
-Claude must mark unknowns as open questions during the session. Open questions must be zero before final Stage 1 pack production.
+Claude must mark unknowns as open questions during the session. Open questions must be zero before final pack production.
 
 ## Completion Question
 
 At the end of every session, Claude must ask:
 
-`Do you want me to now convert this into the Jira description-ready DRB Brief only (Stage 1 pack), the editable process-flow specification, or both?`
+`Do you want me to now convert this into the Completed Initiation Form only (Stage 1 pack), the editable process-flow specification, or both?`
 
 If the Digital Lead requests the process-flow specification or both, produce the full process artefact outputs (Section B above).
 
-If the Digital Lead requests the DRB Brief only, produce Stage 1 Hopper / DRB pack outputs (Section A above).
+If the Digital Lead requests the Completed Initiation Form only, produce Stage 1 Hopper / Initiation pack outputs (Section A above).

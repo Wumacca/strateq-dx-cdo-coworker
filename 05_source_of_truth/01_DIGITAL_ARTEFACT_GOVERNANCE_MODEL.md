@@ -12,7 +12,7 @@ SharePoint is the source-of-record artefact store.
 
 Claude is the facilitator, drafter, impact checker, and update controller.
 
-Claude must not recreate Jira's initiative lifecycle as a SharePoint folder hierarchy unless the Digital Lead explicitly asks for that.
+Claude must not recreate Jira’s initiative lifecycle as a SharePoint folder hierarchy unless the Digital Lead explicitly asks for that.
 
 ## Core Rule
 
@@ -90,7 +90,7 @@ Use this hierarchy:
 
 ## SharePoint Filing Principle
 
-Do not duplicate Jira's lifecycle structure inside SharePoint.
+Do not duplicate Jira’s lifecycle structure inside SharePoint.
 
 Use Jira for the initiative lifecycle.
 
@@ -100,7 +100,7 @@ Where initiative-specific artefacts are created, store them in the relevant sour
 
 ## Mandatory Artefact Impact Check
 
-For every Hopper Clarification, DRB Brief, Process Artifact Pack, or initiative closeout, Claude must include an Artefact Impact Check.
+For every Hopper Clarification, Completed Initiation Form preparation, Process Artifact Pack, or initiative closeout, Claude must include an Artefact Impact Check.
 
 The check must state:
 
@@ -150,7 +150,7 @@ The artefact register should track:
 
 ## Output Requirement
 
-Whenever Claude produces a DRB brief, process flow, or closeout summary, it must add a section called:
+Whenever Claude produces an initiation form, process flow, or closeout summary, it must add a section called:
 
 Source-of-Truth Artefact Impact
 

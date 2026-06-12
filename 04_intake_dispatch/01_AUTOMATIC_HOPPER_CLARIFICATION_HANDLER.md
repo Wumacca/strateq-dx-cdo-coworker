@@ -35,12 +35,13 @@ When Hopper Clarification data is submitted, automatically produce:
 
 For every candidate item that reaches Priority Screen readiness, identify the likely route before producing the Hopper Consolidation Table.
 
-Use the Route Classification table from `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`:
+Apply `01_governance_lifecycle/05_ROUTE_RULES.md` for authoritative route classification rules.
 
 | Signal | Likely Route |
 |---|---|
 | Internal development (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool) | Development Route → Stage 1D |
-| Third-party implementation, supplier-led, SaaS onboarding, option appraisal, business case required | Implementation / Support Route → Stage 1 + Stage 2 |
+| Third-party implementation, supplier-led, SaaS onboarding, option appraisal, business case required | Implementation Route → Stage 1 + Stage 2 |
+| Minor BAU support, system fix, or operational assistance not justified for Initiation Form governance | Support Route |
 | Unclear | Flag as TBC — ask Digital Lead before assigning route |
 
 Record the Recommended Route in the Hopper Consolidation Table.
@@ -109,7 +110,7 @@ Use this structure unless the user asks otherwise:
 | Item | Apparent Type | Duplicate / Related Items | Business Area | System / Process Link | Issue Clarity | Missing Basic Info | Recommended Route | Suggested Consolidation Outcome | Department Questions | Jira Update |
 |---|---|---|---|---|---|---|---|---|---|---|
 
-The Recommended Route column uses: `Development Route → Stage 1D`, `Implementation / Support Route → Stage 1 + Stage 2`, or `TBC`.
+The Recommended Route column uses: `Development Route → Stage 1D`, `Implementation Route → Stage 1 + Stage 2`, `Support Route`, or `TBC`.
 
 ## Reminder Rule
 

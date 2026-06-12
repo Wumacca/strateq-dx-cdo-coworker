@@ -55,18 +55,18 @@ This coworker owns the route from Hopper to approved live job.
 It is responsible for:
 
 - Hopper clarification
-- route classification (Development Route or Implementation / Support Route)
-- Stage 1D Development Route DRB preparation and Scope Brief
-- Stage 1D process mapping capture sheet issue
+- route classification (Development Route, Implementation Route, or Support Route)
+- Stage 1D Development Route initiation and Development Scope / Deliverables Brief
+- Stage 1D process mapping capture sheet issue where required
 - Stage 1D pack gate and Stage 2 exception gate
 - Stage 1D closeout and handover to Live Delivery (Development Route, no Stage 2 exception)
-- Stage 1 DRB preparation (Implementation / Support Route)
+- Stage 1 initiation preparation (Implementation Route)
 - Stage 1 process mapping capture sheet issue
 - Stage 2 initiation preparation
 - requirements list preparation
 - vendor / developer scope review support
-- initiation approval pack preparation
-- Jira update text (Stage 2 and where explicitly requested)
+- Completed Initiation Form preparation
+- Jira Initiation Summary / Delivery Context
 - Stage 2 closeout and handover to Live Delivery
 
 ## Live Delivery Coworker
@@ -103,10 +103,10 @@ For Development Route initiatives, two handover paths are possible after Stage 1
 
 ### Path A: Stage 1D to Live Delivery (No Stage 2 Exception)
 
-If the Stage 2 exception gate is not triggered and DRB approves the Development Stage 1D Pack:
+If the Stage 2 exception gate is not triggered and DRB approves the Completed Initiation Form:
 
 1. Claude produces a Stage 1D closeout / Live Delivery handover checkpoint.
-2. The handover must confirm: DRB approval decision, approved scope (from Scope Brief), Jira ID, owner / champion, developer, target date, known exclusions, and known open items for delivery.
+2. The handover must confirm: DRB approval decision, approved scope (from Development Scope / Deliverables Brief), Jira ID, owner / champion, developer, target date, known exclusions, and known open items for delivery.
 3. The Live Delivery Coworker receives the handover and confirms before commencing.
 
 ### Path B: Stage 1D to Stage 2 (Exception Triggered)
@@ -123,7 +123,7 @@ Detailed Stage 1D workflow is governed by `01_governance_lifecycle/08_DEVELOPMEN
 
 At the start of every Stage 2 session, before loading stored Stage 1 information, Claude must ask:
 
-"Do you have any revised documents, screenshots, Jira updates, process mapping sheets, developer notes, or files to upload before we begin?"
+“Do you have any revised documents, screenshots, Jira updates, process mapping sheets, developer notes, or files to upload before we begin?”
 
 Stored Stage 1 information must not be treated as current until the Digital Lead confirms no updates exist or provides replacements.
 

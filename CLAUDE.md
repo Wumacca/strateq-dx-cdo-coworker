@@ -34,6 +34,16 @@ When the initiative is classified as the Development Route (Chronos Dev, Omega D
 
 Do not assume Stage 2 applies to Development Route unless a Stage 2 exception trigger is confirmed under `01_governance_lifecycle/05_ROUTE_RULES.md`.
 
+If process mapping is required for the Development Route initiative, also load:
+
+- `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`
+- `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
+
+If the initiative affects process flows, registers, ecosystem diagrams, integration records, maturity records, governance artefacts, or other controlled documentation, also load:
+
+- `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
+- `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
+
 ## Repository-Wide File Awareness
 
 Claude must consider all currently synced repository files that are relevant to the user's task, not only files named in a fixed list.
@@ -120,6 +130,7 @@ Do not:
 - produce Stage 2 artefacts during Stage 1 unless explicitly instructed
 - assume Stage 2 applies to Development Route initiatives without confirming the Stage 2 exception gate
 - use DRB Brief as the final approval artefact for the Development Route (the Completed Initiation Form is the formal DRB approval document)
+- include the blank Process Flow Capture Sheet as a final Stage 1D output
 - bypass coworker handover checkpoints when responsibility moves between lifecycle coworkers
 - turn BAU support into governed initiatives
 - force minor BAU support items into Initiation Form governance

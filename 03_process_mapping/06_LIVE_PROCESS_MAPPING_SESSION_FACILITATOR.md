@@ -103,13 +103,27 @@ Claude must periodically summarise the table back and ask: `Is this accurate bef
 
 ## Development Route Stage 1D Sessions
 
-For Development Route initiatives, the Process Flow Capture Sheet must be offered at session opening as part of the required documentation and attachments checklist, before clarification questions begin.
+For Development Route initiatives, apply `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md` as the primary governing file for all Stage 1D sessions.
 
-Apply `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md` for all Development Route Stage 1D sessions.
+If process mapping is required or likely required, Claude must issue a blank single-sheet Process Flow Capture Sheet to the Digital Lead at session opening as part of the required documentation and attachments checklist, before clarification questions begin.
 
-The Stage 1D process flow capture output follows the same single-sheet rules defined in the Stage 1 Excel Deliverable Rules section below.
+The blank capture sheet is an input tool issued to the Digital Lead for completion. Claude must not treat the blank sheet as a deliverable.
 
-Full process artefact outputs (swimlane, diagram spec, registers, source-of-truth impact table) are not default Stage 1D deliverables.
+Once the Digital Lead completes and uploads the completed capture sheet, Claude must read it and produce:
+
+- process flow swimlane specification using `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
+- Jira scope structure items
+- requirements / scope items
+- process bottlenecks and required enhancements
+- process summary for inclusion in the Completed Initiation Form
+
+The Stage 1D swimlane specification is a Stage 1D output where process mapping is required and the capture sheet has been returned. It is not deferred to Stage 2 by default.
+
+The Stage 1D process flow capture sheet follows the same single-sheet rules defined in the Stage 1 Excel Deliverable Rules section below.
+
+For same-person role consolidation rules, apply `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`.
+
+Where the initiative affects source-of-truth artefacts, also apply `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` and `00_system_control/04_COWORKER_HANDOVER_MODEL.md`.
 
 ## Stage 1 Excel Deliverable Rules
 
@@ -130,11 +144,11 @@ If process steps are not sufficiently defined, Claude should issue the blank or 
 
 ## Stage 6: Required Outputs After Session
 
-Outputs are split by use case. Do not default to the full process artefact pack for a Stage 1 Hopper / DRB session.
+Outputs are split by use case.
 
-### A. Stage 1 Hopper / Initiation Pack Outputs
+### A. Implementation Route Hopper / Initiation Pack Outputs
 
-Produce these for every Stage 1 Hopper Clarification or initiation preparation session:
+Produce these for every Stage 1 Hopper Clarification or initiation preparation session on the Implementation Route:
 
 1. Jira field-ready values in the exact field order, with short fields under 250 characters
 2. Completed Initiation Form using `01_governance_lifecycle/06_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`
@@ -151,7 +165,7 @@ Jira-ready update text is optional and must only be produced when explicitly req
 
 Produce these only when explicitly operating in a process artefact workflow, Stage 2 workflow, source-of-truth artefact workflow, or when the Digital Lead explicitly requests them.
 
-Do not produce these as default Stage 1 outputs:
+Do not produce these as default Implementation Route Stage 1 outputs:
 
 1. Draft horizontal swimlane process flow using `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
 2. Diagram build specification for draw.io / diagrams.net or PowerPoint
@@ -252,10 +266,18 @@ Claude must mark unknowns as open questions during the session. Open questions m
 
 ## Completion Question
 
-At the end of every session, Claude must ask:
+At the end of every session, Claude must ask the appropriate question for the route.
+
+**For Implementation Route sessions:**
 
 `Do you want me to now convert this into the Completed Initiation Form only (Stage 1 pack), the editable process-flow specification, or both?`
 
 If the Digital Lead requests the process-flow specification or both, produce the full process artefact outputs (Section B above).
 
-If the Digital Lead requests the Completed Initiation Form only, produce Stage 1 Hopper / Initiation pack outputs (Section A above).
+If the Digital Lead requests the Completed Initiation Form only, produce Implementation Route Hopper / Initiation pack outputs (Section A above).
+
+**For Development Route Stage 1D sessions:**
+
+`Are you ready for me to produce the Development Route Stage 1D outputs? This will include: Jira field-ready values, Completed Initiation Form, Development Scope / Deliverables Brief, process flow swimlane specification (if the completed capture sheet has been returned), source-of-truth artefact impact check where applicable, and Jira Initiation Summary / Delivery Context.`
+
+Do not proceed to final Stage 1D output production until the Digital Lead explicitly approves.

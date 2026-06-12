@@ -100,7 +100,9 @@ Where initiative-specific artefacts are created, store them in the relevant sour
 
 ## Mandatory Artefact Impact Check
 
-For every Hopper Clarification, Completed Initiation Form preparation, Process Artifact Pack, or initiative closeout, Claude must include an Artefact Impact Check.
+For every Hopper Clarification, Completed Initiation Form preparation, Development Route Stage 1D session, Process Artifact Pack, or initiative closeout, Claude must include an Artefact Impact Check.
+
+For Development Route Stage 1D sessions, apply `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md` for Source-of-Truth Artefact Impact Check routing and the handover note format.
 
 The check must state:
 

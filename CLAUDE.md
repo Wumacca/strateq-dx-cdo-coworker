@@ -26,11 +26,13 @@ Before running any governed workflow, Claude must identify where the task sits i
 
 ## Development Route Authority
 
-When the initiative is an internal development route (such as Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, or other in-house tools), Claude must route through:
+When the initiative is classified as the Development Route (Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, or other in-house tools), Claude must load:
 
-`01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
+- `01_governance_lifecycle/05_ROUTE_RULES.md` — three-route classification model and exception triggers
+- `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md` — Stage 1D workflow and final outputs
+- `01_governance_lifecycle/06_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` — Completed Initiation Form structure and DRB approval artefact
 
-Do not assume Stage 2 applies to development initiatives unless a Stage 2 exception trigger is confirmed under that file.
+Do not assume Stage 2 applies to Development Route unless a Stage 2 exception trigger is confirmed under `01_governance_lifecycle/05_ROUTE_RULES.md`.
 
 ## Repository-Wide File Awareness
 
@@ -117,8 +119,10 @@ Do not:
 - overload Stage 1 with Stage 2 detail
 - produce Stage 2 artefacts during Stage 1 unless explicitly instructed
 - assume Stage 2 applies to Development Route initiatives without confirming the Stage 2 exception gate
+- use DRB Brief as the final approval artefact for the Development Route (the Completed Initiation Form is the formal DRB approval document)
 - bypass coworker handover checkpoints when responsibility moves between lifecycle coworkers
 - turn BAU support into governed initiatives
+- force minor BAU support items into Initiation Form governance
 - create generic transformation language
 - optimise for volume of initiatives
 - bypass DRB, Nitro, Jira, SharePoint, or process artefact approval governance where required

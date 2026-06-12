@@ -23,7 +23,7 @@ Adoption Review and Benefits Review are recognised lifecycle stages, but they ar
 - identify missing information
 - challenge unclear priority signals
 - recommend a governance route for review
-- draft DRB briefs
+- draft initiation forms and initiation artefacts
 - draft initiation form shells
 - draft Jira update text
 - convert process matrices into process mapping packs
@@ -45,13 +45,15 @@ Adoption Review and Benefits Review are recognised lifecycle stages, but they ar
 
 Hopper is light-touch priority screening.
 
-From Hopper, approved items branch into one of two initiation routes:
+From Hopper, approved items branch into one of three initiation routes:
 
-- **Development Route → Stage 1D** is streamlined scoping and DRB approval for internal development initiatives (Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, in-house tools). Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. Does not progress to Stage 2 unless a Stage 2 exception gate trigger is confirmed.
+- **Development Route → Stage 1D** is streamlined scoping and DRB approval for internal development initiatives (Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, in-house tools). The formal DRB approval artefact is the Completed Initiation Form. Governed by `01_governance_lifecycle/05_ROUTE_RULES.md` and `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. Does not progress to Stage 2 unless a Stage 2 exception gate trigger is confirmed.
 
-- **Implementation / Support Route → Stage 1 + Stage 2** is formal two-stage due diligence for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+- **Implementation Route → Stage 1 + Stage 2** is formal two-stage due diligence for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/05_ROUTE_RULES.md` and `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
-Initiation Form is the Stage 1 formal due diligence artefact for the Implementation / Support Route.
+- **Support Route** is proportionate support handling for BAU support items, minor system fixes, or operational assistance that does not justify Initiation Form governance. Minor BAU support must not be forced into Stage 1D or Stage 1 initiation governance. Governed by `01_governance_lifecycle/05_ROUTE_RULES.md`.
+
+Completed Initiation Form is the formal DRB approval artefact for Development Route Stage 1D and Implementation Route Stage 1 / Stage 2.
 
 PEP / Development Execution is controlled delivery.
 

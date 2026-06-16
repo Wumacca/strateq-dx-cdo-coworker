@@ -2,7 +2,7 @@
 
 ## Status
 
-CDO operating-model update. Reviewed by Claude Opus and approved for Claude Code.
+Status: Submitted for CDO governance review as part of PR #3.
 
 Governed Workflow Looping is adopted as a **governance accelerator, not an automation shortcut**.
 

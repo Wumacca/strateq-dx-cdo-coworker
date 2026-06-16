@@ -19,7 +19,7 @@ This orchestration pointer works with the following authority files:
 - `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
 - `01_governance_lifecycle/05_ROUTE_RULES.md`
 - `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
-- `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` (current initiation / approval artefact authority; rename to `06_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` is a route-hardening dependency, not yet on main)
+- `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` — initiation / approval artefact output model as it currently exists on main. The Completed Initiation Form rename and the removal of DRB Brief as the formal approval artefact are owned by the initiation-form-route-hardening workstream and are not resolved in this PR.
 - `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
 - `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`
 

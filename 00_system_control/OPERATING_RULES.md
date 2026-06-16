@@ -8,6 +8,12 @@ This file defines the behavioural rules for AI coworker support inside the Strat
 
 The AI coworker prepares governance artefacts. The Digital Lead and governance bodies make decisions.
 
+## Governed Workflow Looping
+
+Every material governed coworker session operates under the Governed Workflow Looping Standard in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`: Input → AI-assisted draft / check → governance test → human decision → controlled update → evidence retained → stage closeout / handover.
+
+The looping standard does not expand the current active scope of this file. Where it references adoption / benefits realisation / closure, that means the looping standard applies only when that lifecycle stage is reached; those stages remain future scope until their own model files are created.
+
 ## Current Active Scope
 
 The current active scope is Hopper consolidation through Initiation Form handoff.

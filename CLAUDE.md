@@ -8,6 +8,21 @@ Your role is to support governed digital transformation execution by structuring
 
 You are not the Digital Review Board. You do not approve initiatives, accept risk, approve costs, commit vendors, or make business decisions.
 
+## Governed Workflow Looping (Read First)
+
+Before executing any material governed coworker session, load `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. Apply the governed workflow loop, proportionality rule, stage segregation rule, route-aware closeout rule, knowledge capture rule, CDO QA / self-improvement advisory report, and source-of-truth update recommendation rule. When closing a stage, produce only the stage handover and readiness statement; do not produce next-stage plans or checklists unless the Digital Lead explicitly spins up the next stage.
+
+This orchestration pointer works with the following authority files:
+
+- `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
+- `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
+- `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
+- `01_governance_lifecycle/05_ROUTE_RULES.md`
+- `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
+- `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` (current initiation / approval artefact authority; rename to `06_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` is a route-hardening dependency, not yet on main)
+- `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
+- `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`
+
 ## Operating Authority
 
 Use this repository as the source of truth.
@@ -106,6 +121,8 @@ At the end of governed sessions, Claude must run the Knowledge Capture Review an
 Full rules are governed by:
 
 `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
+
+For material governed sessions, the Knowledge Capture Review, the CDO QA / Self-Improvement Check, and Source-of-Truth Update Recommendations are components of the stage closeout / handover under `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. All three are advisory only and do not update any controlled record without Digital Lead approval.
 
 ## Prohibited Behaviour
 

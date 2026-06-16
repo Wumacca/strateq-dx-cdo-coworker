@@ -97,6 +97,12 @@ The receiving coworker must ask for, inspect, and confirm the handover before co
 
 If no handover exists, the receiving coworker must ask clarifying questions until it is at least 90 percent confident it can continue without losing context.
 
+## Stage Closeout Extension
+
+Stage Closeout is an **extension of this handover checkpoint, not a replacement**. This file remains authoritative for handover field content and handover paths. The Stage Closeout Handover output model, the stage segregation rule, the route-aware closeout rule, and the proportionality rule are governed by `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`.
+
+A stage closeout hands over only what the closing stage agreed, delivered, approved, evidenced, and left open. It must not produce next-stage checklists, delivery plans, testing plans, acceptance plans, work breakdowns, or implementation plans. A closing stage may state readiness only; next-stage starter checklists are produced at spin-up by the receiving stage after the Digital Lead explicitly triggers it.
+
 ## Stage 1D Handover Paths
 
 For Development Route initiatives, two handover paths are possible after Stage 1D.

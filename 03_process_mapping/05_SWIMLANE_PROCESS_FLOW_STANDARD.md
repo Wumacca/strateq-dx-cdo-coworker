@@ -4,6 +4,8 @@
 
 This file defines the standard visual and export format for swimlane process flows created by the Strateq DX CDO Coworker.
 
+Process artefact creation is a material governed session under `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. The swimlane remains a draft recommendation until the Digital Lead and department/champion agree it; any source-of-truth update is advisory until the Digital Lead approves a controlled update.
+
 ## Target Look and Feel
 
 The target format is a horizontal business swimlane diagram with:

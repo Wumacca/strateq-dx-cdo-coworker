@@ -79,6 +79,7 @@ At minimum, consider:
 
 ## Required Rules
 
+- Where the submission triggers a material governed session (route decision, source-of-truth impact, process artefact creation), apply the Governed Workflow Looping Standard in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`; routine Hopper clarification uses lightweight closeout.
 - Use exact controlled vocabulary from `00_system_control/CONTROLLED_VOCABULARY.md`.
 - Hopper is light-touch priority screening only.
 - Do not create Initiation Form content unless explicitly requested.

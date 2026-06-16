@@ -133,6 +133,10 @@ Do not:
 - leave system-of-record impacts unclear
 - apply this model to a Development Route item unless a Stage 2 exception has been confirmed
 
+## Stage Closeout
+
+When this stage closes, produce the stage closeout using the Stage Closeout Handover output model in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. Hand over only what this stage agreed, delivered, approved, evidenced, and left open. Do not produce next-stage plans or checklists. Use the route-correct readiness line from the looping standard.
+
 ## Next Lifecycle Trigger
 
 The next stage begins when the completed initiation form is ready for DRB form approval.

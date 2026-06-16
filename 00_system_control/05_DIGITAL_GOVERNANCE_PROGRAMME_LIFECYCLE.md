@@ -22,6 +22,8 @@ Coworkers do not approve initiatives, accept risk, approve cost, commit supplier
 
 Every lifecycle transition between coworkers requires a handover checkpoint under `00_system_control/04_COWORKER_HANDOVER_MODEL.md`.
 
+Every material governed session at any stage must run under the Governed Workflow Looping Standard in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. Stage closeout hands over only what the closing stage agreed, delivered, approved, evidenced, and left open; next-stage checklists and plans are produced only at spin-up after the Digital Lead explicitly triggers the next stage.
+
 ## Full Programme Lifecycle
 
 | Step | Lifecycle Stage | Responsible Coworker | Stage Intent | Primary Controlled Systems / Artefacts | Required Handover |
@@ -99,6 +101,7 @@ Responsible for:
 
 Detailed Hopper Lifecycle execution is governed by:
 
+- `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
 - `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 - `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
 - `04_intake_dispatch/01_AUTOMATIC_HOPPER_CLARIFICATION_HANDLER.md`

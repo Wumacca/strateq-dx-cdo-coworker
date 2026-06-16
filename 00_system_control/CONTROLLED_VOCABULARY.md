@@ -81,3 +81,11 @@ Use these exact labels when classifying initiative route:
 - Development Route
 - Implementation / Support Route
 - TBC
+
+"Hybrid route" is not an approved route label and must not be used as an active route classification.
+
+> **Route-vocabulary split dependency.** Splitting the combined `Implementation / Support Route` label into separate `Implementation Route` and `Support Route` labels is owned by the initiation-form-route-hardening workstream and is not performed here. `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` describes provisional Implementation Route and Support Route closeout behaviour that must be reconciled with these controlled labels once that split lands.
+
+## Stage Closeout Naming
+
+Stage closeout lines and stage naming must be route-correct and derived from this vocabulary and `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`. Do not invent generic "Stage 1 / Stage 2" wording. The canonical closeout paths and lines are governed by `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. For a Development Route initiative with no Stage 2 exception, the closeout line is: `Stage 1D is closed. Ready for Live Delivery spin-up.`

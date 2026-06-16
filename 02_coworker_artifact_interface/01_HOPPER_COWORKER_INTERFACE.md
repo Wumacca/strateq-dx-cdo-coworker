@@ -8,6 +8,10 @@ This file defines the working interface between the AI coworker and the Digital 
 
 Use `00_system_control/CONTROLLED_VOCABULARY.md` for consolidation outcomes, DRB priority decisions, priority signal labels, and current Jira status labels.
 
+## Governed Workflow Looping
+
+Material governed sessions follow `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. The Stage 1D Session Start Checklist and the Initiation Form stage starter checklist in Stage 3 below are receiving-stage spin-up artefacts, produced only after the Digital Lead confirms the route and triggers the stage. A closing stage states readiness only and does not produce next-stage plans or checklists.
+
 ## Standard Loop
 
 ```text

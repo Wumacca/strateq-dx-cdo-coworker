@@ -43,4 +43,4 @@ Links or attachments:
 
 ## Output Rule
 
-After receiving decision feedback, the AI coworker should produce a short decision summary, Jira-ready text, and the next-stage checklist.
+After receiving decision feedback, the AI coworker should produce a short decision summary and Jira-ready text. A next-stage starter checklist is produced only when the Digital Lead explicitly spins up the next stage, by the receiving stage, per the stage segregation and starter-checklist timing rules in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. When closing a stage, produce the stage closeout and readiness statement only.

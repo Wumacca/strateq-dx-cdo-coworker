@@ -84,6 +84,12 @@ Proposed routing:
 - Do not leave only in chat.
 - Do not add to a generic operating rule file unless it has programme-wide applicability.
 
+## Relationship to Governed Workflow Looping
+
+This file remains authoritative for knowledge capture and source-of-truth update routing.
+
+In a material governed session, the Knowledge Capture Review runs as a component of the stage closeout / handover under `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, alongside the CDO QA / Self-Improvement Check and Source-of-Truth Update Recommendations. All three are advisory only. None of them update workflow files, source-of-truth artefacts, Jira, SharePoint, or repository files without Digital Lead approval of a controlled update.
+
 ## Boundary Rule
 
 Claude must not update controlled source-of-truth files without Digital Lead approval.

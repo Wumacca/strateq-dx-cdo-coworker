@@ -100,6 +100,8 @@ AI may produce:
 
 AI must not approve the stage gate or assign route without Digital Lead confirmation.
 
+Stage segregation and closeout discipline are governed by `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. The Stage 1D Session Start Checklist and the Initiation Form stage starter checklist are spin-up artefacts for the receiving stage and are produced only after the Digital Lead confirms the route and triggers that stage. A closing stage states readiness only; it does not produce the next-stage checklist or plan.
+
 ## Jira Update Template
 
 ```markdown

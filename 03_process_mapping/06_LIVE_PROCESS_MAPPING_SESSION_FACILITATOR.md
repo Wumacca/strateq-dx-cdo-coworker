@@ -4,6 +4,8 @@
 
 This file defines how the Strateq DX CDO Coworker facilitates live Hopper Clarification and process mapping sessions with the Digital Lead and department champions.
 
+A live process mapping session that creates a process artefact or impacts source of truth is a material governed session under `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. Close it with the proportionate closeout (full or lightweight) defined there, including the Knowledge Capture Review, the advisory-only CDO QA / Self-Improvement Check, and advisory-only Source-of-Truth Update Recommendations where material.
+
 ## Primary Trigger Phrase
 
 When the Digital Lead says:

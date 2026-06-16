@@ -237,7 +237,9 @@ If no Stage 2 exception trigger applies and the Digital Lead confirms Pack 1 is 
 
 1. Claude produces the final Development Stage 1D Pack.
 2. The Digital Lead takes the pack to DRB for approval to commence the live development job.
-3. On DRB approval, a Stage 1D closeout / Live Delivery handover checkpoint is required under `00_system_control/04_COWORKER_HANDOVER_MODEL.md`.
+3. On DRB approval, a Stage 1D closeout / Live Delivery handover checkpoint is required under `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, produced using the Stage Closeout Handover output model in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`.
+
+The Stage 1D closeout hands over only what Stage 1D agreed, delivered, approved, evidenced, and left open. It must not include a Live Delivery checklist, delivery plan, testing plan, acceptance plan, or work breakdown. It ends with the route-correct readiness line: `Stage 1D is closed. Ready for Live Delivery spin-up.` The Live Delivery starter checklist is produced only at Live Delivery spin-up, by the Live Delivery Coworker, after the Digital Lead explicitly triggers it.
 
 ## Boundary Rules
 

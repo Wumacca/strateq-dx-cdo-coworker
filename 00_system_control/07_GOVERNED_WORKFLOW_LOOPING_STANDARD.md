@@ -34,6 +34,12 @@ Input
 
 Knowledge capture, CDO QA / self-improvement review, and source-of-truth update recommendations are **components of the stage closeout / handover step**, not separate workflows.
 
+### Pre-Loop Access Confirmation for Claude Opus
+
+Before the loop begins, any Claude Opus-governed review or session must confirm access to the required files or confirm that the prompt itself contains sufficient information. If access is not confirmed, the loop must not proceed. Missing files, missing exports, missing source records, or unclear authority must be reported as access gaps.
+
+This prevents substantive analysis being generated from incomplete context and preserves Digital Lead control over whether the session should proceed.
+
 ## AI Permission Boundary Reminder
 
 This reminder restates the operating boundary already governed by `00_system_control/OPERATING_RULES.md` and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. It does not extend AI authority.

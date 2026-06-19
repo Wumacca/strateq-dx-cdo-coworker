@@ -15,6 +15,14 @@ For a material governed coworker session, the router helps resolve, before work 
 
 The router is a routing aid. It points to the governing files. It does not contain or replace the detailed workflow logic those files hold.
 
+## Claude Opus Access Confirmation Gate
+
+Where the routed task is intended for Claude Opus, the first output must be an access confirmation response only. The Opus session must confirm whether it can access the authority files, source files, snapshots, exports, or prompt-contained information required for the task. It must not start the substantive coworker session until the Digital Lead confirms proceed.
+
+This applies to Hopper Portfolio Readiness Reviews, Pack 1 readiness reviews, delivery reviews, adoption/benefits reviews, source-of-truth reviews, programme-status reviews, and any other material governed review.
+
+The router must not be used to bypass this gate.
+
 ## Subordination
 
 The router is subordinate to, and must not override, the following authority files:

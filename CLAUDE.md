@@ -23,6 +23,10 @@ This orchestration pointer works with the following authority files:
 - `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
 - `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`
 
+## Coworker Router
+
+Before executing a material governed coworker session, load `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` and then use `00_system_control/11_COWORKER_ROUTER.md` to resolve the correct coworker jurisdiction, lifecycle stage, authority files, permitted outputs, prohibited outputs, and approval gates. The router points to governing files; it does not replace CLAUDE.md, the lifecycle map, operating rules, route rules, or source-of-truth governance.
+
 ## Operating Authority
 
 Use this repository as the source of truth.

@@ -27,6 +27,18 @@ This orchestration pointer works with the following authority files:
 
 Before executing a material governed coworker session, load `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` and then use `00_system_control/11_COWORKER_ROUTER.md` to resolve the correct coworker jurisdiction, lifecycle stage, authority files, permitted outputs, prohibited outputs, and approval gates. The router points to governing files; it does not replace CLAUDE.md, the lifecycle map, operating rules, route rules, or source-of-truth governance.
 
+## Claude Opus Access Confirmation Gate
+
+Every Claude Opus prompt for a governed review, judgement task, coworker session, Hopper review, Pack 1 review, delivery review, adoption review, source-of-truth review, or programme-status review must begin with an access confirmation gate. Claude Opus must first confirm whether it has access to the required files or whether the prompt contains enough information to perform the task. Claude Opus must not start the substantive review, analysis, recommendation, or session output until the Digital Lead confirms proceed.
+
+Claude Opus must answer only with one of the following before proceeding:
+
+1. Access confirmed — required files/information available. Ready to proceed when Digital Lead confirms.
+2. Access gap — missing files/information listed. Do not proceed until resolved.
+3. Prompt sufficient — no external files required; prompt contains enough information. Ready to proceed when Digital Lead confirms.
+
+If access is uncertain, Claude Opus must treat it as an access gap, not proceed by assumption.
+
 ## Operating Authority
 
 Use this repository as the source of truth.

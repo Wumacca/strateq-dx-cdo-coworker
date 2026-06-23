@@ -1,52 +1,54 @@
-# DRB Brief Output Model
+# DRB Meeting-Support Text Output Model
 
 ## Purpose
 
-This file defines the standard DRB Brief format for Jira initiative descriptions and DRB approval meetings.
+This file defines the standard format for **optional DRB meeting-support text** — short executive, decision-ready summary text for Jira initiative descriptions and DRB approval meetings.
+
+> **Formal approval artefact pointer.** The formal DRB-facing approval artefact is the **Completed Initiation Form**, governed by `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`. The output defined in this file is **optional DRB meeting-support text only**. It is not a final pack deliverable and not a formal approval artefact, and it must not replace the Completed Initiation Form or the Jira Initiative View / Hopper priority view as the default Hopper meeting surface. It is produced only when the Digital Lead explicitly requests written meeting-support text.
 
 ## Core Rule
 
-The DRB Brief is a Leadership Team approval document, not a working-session document.
+DRB meeting-support text is optional decision-support text, not a working-session document and not the formal approval document.
 
-The DRB Brief must be executive, decision-ready, and suitable for pasting into the Jira initiative description field.
+It must be executive, decision-ready, and suitable for pasting into the Jira initiative description field.
 
 It must not look like raw markdown notes, internal AI analysis, or a technical dump.
 
-Open questions must not appear in the final DRB Brief.
+Open questions must not appear in the final meeting-support text.
 
-If scope, ownership, system, process, delivery, risk, cost, timing, or approval questions remain unresolved, Claude must withhold the final DRB Brief and return a questions-only output to the Digital Lead.
+If scope, ownership, system, process, delivery, risk, cost, timing, or approval questions remain unresolved, Claude must withhold the final text and return a questions-only output to the Digital Lead.
 
-The final DRB Brief may only be produced when all questions are answered, excluded, or explicitly deferred outside the approval decision.
+The final meeting-support text may only be produced when all questions are answered, excluded, or explicitly deferred outside the approval decision.
 
-## DRB Brief Formats
+## Meeting-Support Text Formats
 
-Claude must produce the DRB Brief in one of two formats:
+Claude must produce the meeting-support text in one of two formats:
 
 1. Jira description version — clean paste-ready format for Jira description fields.
 2. Word-friendly version — inline formatted version with headings, tables, and bullets suitable for copy/paste into Word.
 
 Claude must ask which format is required unless the target is already clear from context.
 
-## DRB Brief Variants
+## Meeting-Support Text Variants
 
-Two variants are defined based on the initiative route.
+Two variants are defined based on the initiative route. Each is optional meeting-support text that accompanies — and never replaces — the Completed Initiation Form.
 
-### Development Approval Brief
+### Development Approval meeting-support text
 
 Used for Development Route Stage 1D initiatives where Pack 1 is sufficient for DRB to approve commencement of the live development job without requiring Stage 2.
 
-The Development Approval Brief must:
+The Development Approval meeting-support text must:
 
 - state the decision as approval to commence the live development job
-- include the Scope Brief as a supporting section or attachment
+- summarise the Scope Brief as a supporting section
 - confirm the Stage 2 exception gate decision in the Decision readiness section (confirming no exception triggers apply, or listing any the Digital Lead has explicitly accepted and why)
 - not commit to external suppliers, quotes, or vendor selection unless already confirmed
 
-### Implementation / Support Initiation Brief
+### Implementation / Support Initiation meeting-support text
 
 Used for Implementation / Support Route Stage 1 initiatives.
 
-The Implementation / Support Initiation Brief:
+This meeting-support text:
 
 - supports the Stage 1 decision: whether formal initiation should commence
 - does not commit to a solution, cost, or delivery timeline (those belong in Stage 2)
@@ -56,7 +58,7 @@ If the route is unclear, Claude must ask before selecting the variant.
 
 ## Output Modes
 
-Claude should produce two versions when preparing a DRB brief:
+Claude should produce two versions when preparing DRB meeting-support text:
 
 1. Jira Description Version
 2. Word-Friendly Version
@@ -69,7 +71,7 @@ Use clean headings, short paragraphs, and compact tables only where useful.
 
 Avoid excessive markdown symbols, code blocks, nested bullets, and long raw tables.
 
-The brief must include:
+The meeting-support text must include:
 
 - Initiative title
 - Decision required
@@ -84,7 +86,7 @@ The brief must include:
 - Recommended DRB decision
 - Next steps if approved
 
-The brief must not include an open questions section. If unresolved material questions exist, Claude must withhold the final brief and return a questions-only output instead.
+The meeting-support text must not include an open questions section. If unresolved material questions exist, Claude must withhold the final text and return a questions-only output instead.
 
 ## Required DRB Decision Labels
 
@@ -109,7 +111,7 @@ If process information is available, Claude must also produce a Draft Swimlane P
 
 `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
 
-The swimlane should be separate from the Jira DRB Brief unless the user asks for it to be embedded.
+The swimlane should be separate from the Jira meeting-support text unless the user asks for it to be embedded.
 
 ## Jira Description Template
 
@@ -154,4 +156,4 @@ Next steps if approved:
 
 ## Boundary
 
-The DRB Brief prepares the decision. It does not approve the initiative.
+DRB meeting-support text supports the decision discussion. It does not approve the initiative and it is not the formal approval artefact. The formal approval artefact is the Completed Initiation Form (`01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`).

@@ -100,7 +100,7 @@ Where initiative-specific artefacts are created, store them in the relevant sour
 
 ## Mandatory Artefact Impact Check
 
-For every Hopper Clarification, DRB Brief, Process Artifact Pack, or initiative closeout, Claude must include an Artefact Impact Check.
+For every Hopper Clarification, Completed Initiation Form, Process Artifact Pack, or initiative closeout, Claude must include an Artefact Impact Check.
 
 For a Hopper Portfolio Readiness Review (`01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`), the Source-of-Truth Update Recommendations produced at closeout are **report-only / advisory recommendations**. They must not automatically update any controlled record and require Digital Lead approval before any controlled update is applied.
 
@@ -154,7 +154,7 @@ The artefact register should track:
 
 ## Output Requirement
 
-Whenever Claude produces a DRB brief, process flow, or closeout summary, it must add a section called:
+Whenever Claude produces a Completed Initiation Form, optional DRB meeting-support text, process flow, or closeout summary, it must add a section called:
 
 Source-of-Truth Artefact Impact
 

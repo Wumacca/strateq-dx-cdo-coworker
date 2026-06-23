@@ -12,7 +12,7 @@ It does not replace the Initiation Form.
 
 It answers one question:
 
-> Is this item important enough to progress into formal initiation due diligence?
+> Is this item important enough for leadership / DRB to approve the correct next route trigger?
 
 ## Stage Position
 
@@ -96,7 +96,9 @@ Use the canonical DRB priority decision set from `00_system_control/CONTROLLED_V
 | Move to BAU Support | Not a governed initiative |
 | Hold for Future Review | Keep visible but do not progress now |
 
-## AI Output: Hopper Priority Screen
+## Optional Written Output: Hopper Priority Screen
+
+Use this format only where the Digital Lead explicitly requests a written Hopper Priority Screen output. The default meeting surface remains the Jira Initiative View / Hopper priority view.
 
 Use this format:
 

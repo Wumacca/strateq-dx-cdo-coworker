@@ -29,13 +29,14 @@
 | `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` | Governed workflow loop rules: proportionality, stage segregation, route-aware closeout, knowledge capture, CDO QA advisory. |
 | `01_governance_lifecycle/00_REQUEST_INTAKE_MODEL_FUTURE.md` | Future-state public request intake model. |
 | `01_governance_lifecycle/01_HOPPER_CONSOLIDATION_MODEL.md` | Rules for consolidating initiatives into the Hopper. |
-| `01_governance_lifecycle/02_HOPPER_PRIORITY_SCREEN_MODEL.md` | Priority screening model for Hopper initiatives. |
+| `01_governance_lifecycle/02_HOPPER_PRIORITY_SCREEN_MODEL.md` | Priority screening model for Hopper initiatives. "Priority Screen" = the Jira Initiative View / Hopper priority view, not a separate DRB document (see `09`). |
 | `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md` | Stage gate rules for moving from Hopper to Initiation. |
 | `01_governance_lifecycle/04_INITIATION_FORM_INTAKE_MODEL.md` | Initiation form intake and processing model. |
 | `01_governance_lifecycle/05_ROUTE_RULES.md` | Route determination rules (standard vs development route). |
 | `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` | DRB brief output model for initiation and approval artefacts. |
 | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md` | Two-stage initiation model definition. |
 | `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md` | Development route Stage 1D model and exception triggers. |
+| `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md` | Governing model for the Hopper Portfolio Readiness Review: prepares the Jira Initiative View / Hopper priority view for leadership / DRB discussion (pre-initiation, pre-Pack 1; no separate DRB Priority Screen artefact by default). |
 | `03_process_mapping/01_PROCESS_MAPPING_MATRIX_INPUT_RULES.md` | Input rules for process mapping sessions. |
 | `03_process_mapping/02_CREATE_PROCESS_MAPPING_PACK.md` | Process for creating a process mapping pack. |
 | `03_process_mapping/03_BLUEWORKS_BUILD_BRIEF_RULES.md` | Rules for Blueworks build briefs (optional tooling). |

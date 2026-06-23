@@ -18,6 +18,8 @@ Initiation Form asks:
 
 > Have we done enough due diligence to approve this for controlled delivery?
 
+> **Sequencing boundary.** The Initiation Form is produced **after** leadership / DRB priority approval, on an explicit per-initiative route trigger. The Hopper Portfolio Readiness Review (`01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`) and any initiative charter are pre-initiation inputs only and are **not** Initiation Forms. Do not produce an Initiation Form during the Hopper review or from a charter.
+
 ## Stage Position
 
 This flow applies to **Implementation / Support Route** items only.

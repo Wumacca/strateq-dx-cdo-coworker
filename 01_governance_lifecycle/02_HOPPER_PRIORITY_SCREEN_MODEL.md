@@ -1,8 +1,10 @@
 # Hopper Priority Screen Model
 
+> **Meeting surface — read first.** "Priority Screen" means the **Jira Initiative View / Hopper priority view** (the organised Hopper / Initiative View screens in Jira / Jira Product Discovery). It is **not** a separate DRB Priority Screen document. The Hopper Portfolio Readiness Review prepares this view for leadership / DRB discussion and does not produce a separate artefact (DRB Priority Screen, DRB pack, or leadership paper) unless the Digital Lead explicitly requests one. The full review workflow is governed by `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`. Any written table or meeting-support text below is produced only where a written output is explicitly requested by the Digital Lead.
+
 ## Purpose
 
-The Hopper Priority Screen prepares candidate Hopper items for Digital Review Board priority discussion.
+The Hopper Priority Screen prepares candidate Hopper items for leadership / Digital Review Board priority discussion by organising the Jira Initiative View / Hopper priority view.
 
 It does not approve initiatives.
 
@@ -10,7 +12,7 @@ It does not replace the Initiation Form.
 
 It answers one question:
 
-> Is this item important enough to progress into formal initiation due diligence?
+> Is this item important enough for leadership / DRB to approve the correct next route trigger?
 
 ## Stage Position
 
@@ -64,7 +66,7 @@ It must not automatically approve or reject an item.
 
 Business Priority Signal is qualitative only and must follow `CONTROLLED_VOCABULARY.md`.
 
-Claude must not invent numeric scores, weightings, or a 1-5 scale.
+Claude must not invent numeric scores, weightings, or a 1–5 scale. Where a Digital Lead-approved scoring model, team-returned charter score, or Jira-entered score exists, Claude may organise, display, summarise, and challenge the score, but must not create or alter scores without Digital Lead approval.
 
 Recommended priority dimensions:
 
@@ -86,7 +88,7 @@ Use the canonical DRB priority decision set from `00_system_control/CONTROLLED_V
 
 | Decision | Meaning |
 |---|---|
-| Progress to Initiation Form | Item deserves formal due diligence |
+| Progress to Approved Route Trigger | Item approved by leadership / DRB to move to the next route-correct stage (Pack 1 / Stage 1D, Initiation Form / Implementation Route, selection/support route, or existing delivery control as applicable) |
 | Clarify Before Progression | Targeted clarification is required before progression |
 | Merge / Duplicate | Item should be joined to another Hopper item or initiative |
 | Defer | Relevant but not for current programme window |
@@ -94,7 +96,9 @@ Use the canonical DRB priority decision set from `00_system_control/CONTROLLED_V
 | Move to BAU Support | Not a governed initiative |
 | Hold for Future Review | Keep visible but do not progress now |
 
-## AI Output: Hopper Priority Screen
+## Optional Written Output: Hopper Priority Screen
+
+Use this format only where the Digital Lead explicitly requests a written Hopper Priority Screen output. The default meeting surface remains the Jira Initiative View / Hopper priority view.
 
 Use this format:
 
@@ -136,9 +140,11 @@ Questions should be short and directed to the right party:
 - developer
 - commercial / finance
 
-## DRB Brief Format
+## Optional DRB Meeting-Support Text
 
-For items going to DRB, produce:
+This is not the formal approval artefact and is produced only when the Digital Lead explicitly asks for written meeting-support text. It does not replace Jira as the default meeting surface, and it does not replace the Completed Initiation Form where an approval document is required.
+
+For items where the Digital Lead has asked for written meeting-support text, produce:
 
 ```markdown
 ### [Initiative / Hopper Item]

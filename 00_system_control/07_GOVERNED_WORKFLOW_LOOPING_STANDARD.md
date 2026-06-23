@@ -83,6 +83,7 @@ Confluence is **not** part of the THREE60 DX governance setup. Do not reference 
 
 A material governed session is any coworker session that involves one or more of the following:
 
+- Hopper Portfolio Readiness Review (governed by `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; every such session must close with the full looping closeout)
 - route decision
 - initiation form preparation or approval
 - DRB approval

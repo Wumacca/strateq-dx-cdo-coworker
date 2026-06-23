@@ -20,6 +20,7 @@ This orchestration pointer works with the following authority files:
 - `01_governance_lifecycle/05_ROUTE_RULES.md`
 - `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 - `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` — initiation / approval artefact output model as it currently exists on main. The Completed Initiation Form rename and the removal of DRB Brief as the formal approval artefact are owned by the initiation-form-route-hardening workstream and are not resolved in this PR.
+- `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md` — governing model for the Hopper Portfolio Readiness Review. This review is pre-initiation and pre-Pack 1; it prepares the Jira Initiative View / Hopper priority view for leadership / DRB discussion and does not create a separate DRB Priority Screen artefact by default. Initiation Forms, Pack 1, and Stage 1D begin only after leadership / DRB approval and an explicit route trigger.
 - `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
 - `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`
 

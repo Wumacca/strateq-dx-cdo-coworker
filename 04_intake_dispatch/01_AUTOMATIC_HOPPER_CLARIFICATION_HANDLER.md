@@ -18,6 +18,8 @@ If the user provides any of the following, treat it as a Hopper Clarification su
 
 The user does not need to provide a full task prompt.
 
+> **Portfolio readiness pointer.** Where the submission is, or becomes, a full Hopper Portfolio Readiness Review (organising the Hopper for a leadership / DRB priority discussion), apply `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`. The "Priority Screen Readiness" output below refers to readiness of the Jira Initiative View / Hopper priority view — the default meeting surface — not a separate DRB Priority Screen document. The review is pre-initiation and pre-Pack 1; do not produce Initiation Form, Pack 1, or Stage 1D content from it.
+
 ## Default Action
 
 When Hopper Clarification data is submitted, automatically produce:

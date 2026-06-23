@@ -36,6 +36,7 @@ The router is subordinate to, and must not override, the following authority fil
 - `00_system_control/CONTROLLED_VOCABULARY.md`
 - `01_governance_lifecycle/05_ROUTE_RULES.md`
 - `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
+- `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`
 - `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
 
 Where the router and any authority file appear to conflict, the authority file governs and the conflict must be surfaced to the Digital Lead before final output.
@@ -109,6 +110,8 @@ This is a controlled mode / jurisdiction, not an always-on separate coworker. It
 Applies only when that lifecycle stage is reached. It remains future scope until its own model file is created, consistent with `00_system_control/OPERATING_RULES.md`. The router must not invoke it before that stage is reached.
 
 ## Hopper Portfolio Readiness
+
+> **Governing model.** The full Hopper Portfolio Readiness Review workflow — Access Confirmation Gate, Part 1 Grouping Review, Part 2 Minimum Hopper Information, Part 3 Scoring / Priority Preparation, the Initiative Charter rule, the route rules, the post-DRB route triggers, and the mandatory looping closeout — is governed by `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`. This section is a routing summary subordinate to that model. The review is pre-initiation and pre-Pack 1, its default meeting surface is the **Jira Initiative View / Hopper priority view**, and it does **not** create a separate DRB Priority Screen artefact unless the Digital Lead explicitly requests one. Where this section and `09` appear to differ on the review process, `09` governs.
 
 Hopper Portfolio Readiness is the standing responsibility to keep the Hopper capable of producing a leadership-ready minimum viable initiative portfolio at any time. The purpose is to ensure that all known Hopper items and initiatives are listed, understood at minimum-information level, benchmark-aligned where possible, proposed for priority, assessed for grouping or epic logic, and ready for leadership review or Pack 1 spin-up decision.
 
@@ -325,6 +328,8 @@ This restates the AI permission boundary already governed by `00_system_control/
 | 6 | User asks to update Hopper after review | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`; `00_system_control/OPERATING_RULES.md` | "Recommended update — requires Digital Lead approval." | Direct update to Jira / SharePoint / live Hopper | Digital Lead approves; coworker does not apply |
 | 7 | User asks to update programme status / memory after a review | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md` | Recommended programme-memory updates if those files exist; otherwise recommend creation under PR-B / pickup-handoff scope | Creating programme-memory files in this scope | Digital Lead approves; PR-A does not create the files |
 | 8 | User uploads completed / live / closed initiative evidence that affects Hopper status | Hopper Lifecycle Coworker for portfolio-status reflection; handover to Live Delivery Coworker or Adoption / Benefits lifecycle only if explicitly spun up | Hopper Portfolio Readiness with delivery/closure status read | This file; `04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` | Reflect items as in delivery / live / closed / superseded / duplicated, with Source Basis and Confidence | Reopening, restructuring, or modifying delivery/adoption records without explicit spin-up and Digital Lead approval | Recommendations only; handover checkpoint where responsibility moves |
+| 9 | User asks for a development epic charter or department scoring input | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md` | Initiative Charter (pre-initiation input tool only) using the charter columns in `09` | Treating the charter as an Initiation Form; committing scope or budget; producing Pack 1 / Stage 1D before approval | Recommendations only; charter feeds the Jira Initiative View / Hopper priority discussion |
+| 10 | Leadership / DRB approves a route trigger after the priority discussion | Hopper Lifecycle Coworker | Hopper Portfolio Readiness → route trigger | This file; `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md` | Per-initiative route trigger: development epic → Pack 1 / Stage 1D; implementation → Initiation Form / Implementation Route; support → selection/support route then Initiation Form; in-flight → continue under existing record | Batching unrelated initiatives into one Pack 1; starting any stage before explicit Digital Lead spin-up | Digital Lead approves and spins up each receiving stage |
 
 ## Programme-Memory Future Scope Note
 

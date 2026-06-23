@@ -4,19 +4,21 @@
 
 This file defines the canonical vocabulary for the current Hopper-to-Initiation workflow.
 
-Claude must use these exact labels when drafting Hopper consolidation outputs, Priority Screens, DRB briefs, and Jira-ready text.
+Claude must use these exact labels when drafting Hopper consolidation outputs, Priority Screens, Jira-ready text, and optional DRB meeting-support text where explicitly requested by the Digital Lead. DRB Brief is not a default or final Hopper review artefact.
 
 ## Canonical DRB Priority Decisions
 
 Use these exact labels:
 
-- Progress to Initiation Form
+- Progress to Approved Route Trigger
 - Clarify Before Progression
 - Merge / Duplicate
 - Defer
 - Reject
 - Move to BAU Support
 - Hold for Future Review
+
+**Progress to Approved Route Trigger** — approved by leadership / DRB to move to the next route-correct stage: Pack 1 / Stage 1D for Development Epics, Initiation Form / Implementation Route for Implementation items, selection/support route for Support items, or existing delivery control for in-flight items.
 
 Do not invent variants.
 
@@ -44,9 +46,9 @@ Each signal must include a short reason.
 
 The signal is qualitative only.
 
-Claude must not invent numeric scores, weightings, or a 1-5 scale.
+Claude must not invent numeric scores, weightings, or a 1–5 scale. Where a Digital Lead-approved scoring model, team-returned charter score, or Jira-entered score exists, Claude may organise, display, summarise, and challenge the score, but must not create or alter scores without Digital Lead approval.
 
-Scored fields in `01_governance_lifecycle/00_REQUEST_INTAKE_MODEL_FUTURE.md` are future scope and are not used in current Hopper screening.
+Scored fields in future request-intake models do not authorise Claude to create scores. Current Hopper review scoring may use Digital Lead-approved, team-returned, or Jira-entered scores only.
 
 ## Approved Jira Statuses: Current Workflow
 

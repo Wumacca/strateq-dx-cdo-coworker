@@ -88,7 +88,7 @@ Use the canonical DRB priority decision set from `00_system_control/CONTROLLED_V
 
 | Decision | Meaning |
 |---|---|
-| Progress to Initiation Form | Item deserves formal due diligence |
+| Progress to Approved Route Trigger | Item approved by leadership / DRB to move to the next route-correct stage (Pack 1 / Stage 1D, Initiation Form / Implementation Route, selection/support route, or existing delivery control as applicable) |
 | Clarify Before Progression | Targeted clarification is required before progression |
 | Merge / Duplicate | Item should be joined to another Hopper item or initiative |
 | Defer | Relevant but not for current programme window |

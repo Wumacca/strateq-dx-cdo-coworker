@@ -55,7 +55,7 @@ Use the canonical DRB priority decisions from `00_system_control/CONTROLLED_VOCA
 
 | Decision | Next Action |
 |---|---|
-| Progress to Initiation Form | Classify route then start Stage 1D or Stage 1 |
+| Progress to Approved Route Trigger | Classify route then start Pack 1 / Stage 1D (Development Epics), Initiation Form / Implementation Route (Implementation), or selection/support route (Support) |
 | Clarify Before Progression | Gather targeted answers and return to DRB or delegated reviewer |
 | Merge / Duplicate | Link or consolidate in Jira |
 | Defer | Record reason and review window |

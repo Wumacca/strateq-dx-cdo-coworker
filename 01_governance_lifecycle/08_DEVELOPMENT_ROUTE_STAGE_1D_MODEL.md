@@ -36,6 +36,10 @@ If the route is unclear, Claude must ask the Digital Lead before producing any o
 
 If the Initiative Type is clearly a Development Route, Claude must load and apply this file as the primary governing file, not `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
+## Pre-Stage-1D Boundary
+
+Stage 1D / Pack 1 for a development epic begins **only after** leadership / DRB approval of that epic and an explicit Digital Lead spin-up. The Hopper Portfolio Readiness Review (`01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`) is pre-initiation and pre-Pack 1. A development epic charter is a pre-initiation input tool used to gather task detail and department scoring input; it is **not** Stage 1D scope, is **not** an Initiation Form, and does not approve or commit anything. Each approved development epic gets its own Pack 1 / Stage 1D session — do not batch unrelated epics into one Pack 1.
+
 ## Stage 1D Trigger
 
 When the Digital Lead says `spin up stage 1 session` and the initiative is a Development Route, Claude must:

@@ -14,6 +14,8 @@ Initiation Form is formal due diligence.
 
 Do not overload Hopper with initiation-form detail.
 
+> **Leadership-readiness review pointer.** When consolidation feeds a leadership / DRB priority discussion, the governing model is `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`. The "Priority Screen" step prepares the Jira Initiative View / Hopper priority view as the default meeting surface — not a separate DRB Priority Screen document. The review is pre-initiation and pre-Pack 1.
+
 ## Stage Position
 
 ```text

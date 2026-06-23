@@ -17,6 +17,8 @@ A Hopper item can only proceed past this gate after a DRB priority decision conf
 
 Route selection is made at this gate, not assumed from Hopper data.
 
+> **Pre-approval boundary.** Everything before this gate — including the Hopper Portfolio Readiness Review (`01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`) and any initiative charter — is pre-initiation and pre-Pack 1. An initiation charter is a pre-initiation input tool only; it is not an Initiation Form and does not approve or commit anything. Initiation Forms, Pack 1, and Stage 1D begin only after leadership / DRB approval, and each approved initiative gets its own per-initiative route trigger (do not batch unrelated initiatives into one Pack 1).
+
 ## Controlled Vocabulary
 
 Use `00_system_control/CONTROLLED_VOCABULARY.md` for the canonical DRB priority decision set and current Jira status labels.

@@ -10,7 +10,7 @@ Use `00_system_control/CONTROLLED_VOCABULARY.md` for consolidation outcomes, DRB
 
 ## Governed Workflow Looping
 
-Material governed sessions follow `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. The Stage 1D Session Start Checklist and the Initiation Form stage starter checklist in Stage 3 below are receiving-stage spin-up artefacts, produced only after the Digital Lead confirms the route and triggers the stage. A closing stage states readiness only and does not produce next-stage plans or checklists.
+Material governed sessions follow `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. The Hopper Portfolio Readiness Review (the leadership-readiness form of Stage 2 below) is governed by `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; its default meeting surface is the Jira Initiative View / Hopper priority view (not a separate DRB Priority Screen document), it is pre-initiation and pre-Pack 1, and every such session must close with the full looping closeout. The Stage 1D Session Start Checklist and the Initiation Form stage starter checklist in Stage 3 below are receiving-stage spin-up artefacts, produced only after the Digital Lead confirms the route and triggers the stage. A closing stage states readiness only and does not produce next-stage plans or checklists.
 
 ## Standard Loop
 

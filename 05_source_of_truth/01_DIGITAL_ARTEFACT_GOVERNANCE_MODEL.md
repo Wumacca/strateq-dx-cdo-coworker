@@ -102,6 +102,8 @@ Where initiative-specific artefacts are created, store them in the relevant sour
 
 For every Hopper Clarification, DRB Brief, Process Artifact Pack, or initiative closeout, Claude must include an Artefact Impact Check.
 
+For a Hopper Portfolio Readiness Review (`01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`), the Source-of-Truth Update Recommendations produced at closeout are **report-only / advisory recommendations**. They must not automatically update any controlled record and require Digital Lead approval before any controlled update is applied.
+
 At a stage closeout, the Source-of-Truth Artefact Impact section is produced under the Stage Closeout Handover output model in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. It states which records are impacted and references the artefacts the next stage will need. It does not describe how to inspect, plan, sequence, test, or deliver them, and any source-of-truth update remains an advisory recommendation until the Digital Lead approves a controlled update.
 
 The check must state:

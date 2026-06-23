@@ -1,8 +1,10 @@
 # Hopper Priority Screen Model
 
+> **Meeting surface — read first.** "Priority Screen" means the **Jira Initiative View / Hopper priority view** (the organised Hopper / Initiative View screens in Jira / Jira Product Discovery). It is **not** a separate DRB Priority Screen document. The Hopper Portfolio Readiness Review prepares this view for leadership / DRB discussion and does not produce a separate artefact (DRB Priority Screen, DRB pack, or leadership paper) unless the Digital Lead explicitly requests one. The full review workflow is governed by `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; the table and DRB Brief formats below are produced only where a written output is explicitly required.
+
 ## Purpose
 
-The Hopper Priority Screen prepares candidate Hopper items for Digital Review Board priority discussion.
+The Hopper Priority Screen prepares candidate Hopper items for leadership / Digital Review Board priority discussion by organising the Jira Initiative View / Hopper priority view.
 
 It does not approve initiatives.
 

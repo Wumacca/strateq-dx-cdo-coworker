@@ -51,6 +51,8 @@ Adoption Review and Benefits Review are recognised lifecycle stages, but they ar
 
 Hopper is light-touch priority screening.
 
+The Hopper Portfolio Readiness Review prepares the Jira Initiative View / Hopper priority view for leadership / DRB discussion. That view is the default meeting surface; a separate DRB Priority Screen document is not produced by default. The review is pre-initiation and pre-Pack 1, and is governed by `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`. An initiative charter is a pre-initiation input tool only; it is not an Initiation Form and does not approve or commit anything. Initiation Forms, Pack 1, and Stage 1D begin only after leadership / DRB approval and an explicit per-initiative route trigger.
+
 From Hopper, approved items branch into one of two initiation routes:
 
 - **Development Route → Stage 1D** is streamlined scoping and DRB approval for internal development initiatives (Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, in-house tools). Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. Does not progress to Stage 2 unless a Stage 2 exception gate trigger is confirmed.

@@ -33,10 +33,11 @@
 | `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md` | Stage gate rules for moving from Hopper to Initiation. |
 | `01_governance_lifecycle/04_INITIATION_FORM_INTAKE_MODEL.md` | Initiation form intake and processing model. |
 | `01_governance_lifecycle/05_ROUTE_RULES.md` | Route determination rules (standard vs development route). |
-| `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` | DRB brief output model for initiation and approval artefacts. |
+| `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` | Optional DRB meeting-support text output model. Meeting-support / decision-support text only, produced on explicit Digital Lead request; not the formal approval artefact (see `10`). |
 | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md` | Two-stage initiation model definition. |
 | `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md` | Development route Stage 1D model and exception triggers. |
 | `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md` | Governing model for the Hopper Portfolio Readiness Review: prepares the Jira Initiative View / Hopper priority view for leadership / DRB discussion (pre-initiation, pre-Pack 1; no separate DRB Priority Screen artefact by default). |
+| `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` | Single authority for the formal DRB-facing approval artefact: the Completed Initiation Form. Defines the session-opening source-document checklist, uploaded-form-as-primary-source rule, required form structure, Word / `.docx` export, and the pack-deliverable rule (do not collapse the pack into the form). |
 | `03_process_mapping/01_PROCESS_MAPPING_MATRIX_INPUT_RULES.md` | Input rules for process mapping sessions. |
 | `03_process_mapping/02_CREATE_PROCESS_MAPPING_PACK.md` | Process for creating a process mapping pack. |
 | `03_process_mapping/03_BLUEWORKS_BUILD_BRIEF_RULES.md` | Rules for Blueworks build briefs (optional tooling). |
@@ -71,7 +72,7 @@
 
 ## 5. Active Decision Files
 
-Not currently present as a dedicated folder. Active decisions are tracked in Jira (external to this repo) and referenced through lifecycle and governance files above. The DRB brief output model (`01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`) governs the artefact format for approval decisions.
+Not currently present as a dedicated folder. Active decisions are tracked in Jira (external to this repo) and referenced through lifecycle and governance files above. The Completed Initiation Form output model (`01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`) governs the formal approval artefact; the DRB meeting-support text model (`01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`) governs optional meeting-support text only.
 
 ---
 
@@ -91,7 +92,7 @@ Dedicated review artefacts (closeout evidence, lessons learned) are stored in Sh
 | Item | Status |
 |---|---|
 | CDO control panel concept | In development — no dedicated file yet present in repo |
-| Initiation form / DRB Brief rename workstream | Open — noted in CLAUDE.md as unresolved in current PR |
+| Initiation form / DRB Brief rename workstream | Resolved — formal approval artefact is now the Completed Initiation Form (`01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`); `06` reframed as optional DRB meeting-support text only |
 | Active decision register | Not currently present as a repo file; tracked in Jira |
 | Client template folder | Artefacts held in `02_coworker_artifact_interface/`; no dedicated `client_template/` folder present |
 | Board interface folder | Newly created in this PR — not previously present |

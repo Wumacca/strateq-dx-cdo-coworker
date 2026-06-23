@@ -20,6 +20,8 @@ Initiation Form asks:
 
 > **Sequencing boundary.** The Initiation Form is produced **after** leadership / DRB priority approval, on an explicit per-initiative route trigger. The Hopper Portfolio Readiness Review (`01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`) and any initiative charter are pre-initiation inputs only and are **not** Initiation Forms. Do not produce an Initiation Form during the Hopper review or from a charter.
 
+> **Formal approval artefact pointer.** The formal approval document for this route is the **Completed Initiation Form**, governed by `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`. At session start, request the source documents in that file's session-opening checklist, including the current / draft Initiation Form. If a draft or partially completed Initiation Form is uploaded, treat it as the **primary approval-document source**. The Completed Initiation Form export must be Word-compatible / `.docx` where possible. Do not produce a separate "DRB Brief" as the formal approval artefact; optional DRB meeting-support text (`01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`) is produced only on explicit Digital Lead request and never replaces the Completed Initiation Form.
+
 ## Stage Position
 
 This flow applies to **Implementation / Support Route** items only.

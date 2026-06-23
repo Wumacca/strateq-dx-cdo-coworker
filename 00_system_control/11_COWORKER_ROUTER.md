@@ -52,7 +52,7 @@ The router must not:
 - duplicate source-of-truth governance
 - create new route labels
 - split route vocabulary
-- rename DRB Brief / Completed Initiation Form files
+- rename governance model files (including the Completed Initiation Form and DRB meeting-support text model files)
 - introduce KPI governance as a default trigger
 - introduce Confluence
 - create a pickup/handoff protocol

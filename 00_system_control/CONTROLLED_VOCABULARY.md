@@ -105,6 +105,14 @@ The full Hopper Portfolio Readiness Review workflow is governed by `01_governanc
 
 > **Hopper-review treatment vs active route classification.** "Implementation Route" and "Support Route" above are Hopper-review treatment / route-indication terms. They do **not** split or replace the active controlled route classification label `Implementation / Support Route` in the Approved Route Labels section. The formal split of that label is owned by the initiation-form-route-hardening workstream and is not performed here.
 
+## Formal Approval Artefact Terminology
+
+The formal approval-artefact naming rules are governed by `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`. Use these defined terms:
+
+- **Completed Initiation Form** — the formal DRB-facing approval document, for both the Development Route (Stage 1D / Pack 1, Development Approval) and the Implementation / Support Route (two-stage initiation). This is the only name for the formal approval artefact. Do not use "DRB Brief" as the name of a final pack deliverable or formal approval artefact.
+- **Optional DRB meeting-support text** — short executive decision-support / Jira-ready text produced only when the Digital Lead explicitly requests it, governed by `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`. It is not a formal approval artefact, does not replace the Completed Initiation Form, and does not replace the Jira Initiative View / Hopper priority view as the default Hopper meeting surface.
+- The term **DRB** remains valid for: DRB meeting, DRB approval, DRB decision required, DRB approval status, DRB-ready pack, DRB decision text, and optional DRB meeting-support text.
+
 ## Stage Closeout Naming
 
 Stage closeout lines and stage naming must be route-correct and derived from this vocabulary and `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`. Do not invent generic "Stage 1 / Stage 2" wording. The canonical closeout paths and lines are governed by `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. For a Development Route initiative with no Stage 2 exception, the closeout line is: `Stage 1D is closed. Ready for Live Delivery spin-up.`

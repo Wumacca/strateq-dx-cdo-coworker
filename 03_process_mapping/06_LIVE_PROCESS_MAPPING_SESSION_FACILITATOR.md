@@ -139,7 +139,7 @@ Outputs are split by use case. Do not default to the full process artefact pack 
 Produce these for every Stage 1 Hopper Clarification or DRB preparation session:
 
 1. Jira field-ready values in the exact field order, with short fields under 250 characters
-2. Stage 1 DRB Brief using `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`
+2. Completed Initiation Form as the formal approval artefact using `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`; optional DRB meeting-support text using `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` only when the Digital Lead explicitly requests it
 3. Process Mapping Required decision
 4. Single-sheet Excel process mapping capture sheet if Process Mapping Required = Yes
 
@@ -173,15 +173,13 @@ Short fields must be under 250 characters including spaces and punctuation.
 
 Dropdown/rating fields must use only configured values.
 
-## Output A2: DRB Brief
+## Output A2: Completed Initiation Form and Optional DRB Meeting-Support Text
 
-Must be clean, executive, and suitable for pasting into the Jira initiative description field.
+The formal approval artefact is the Completed Initiation Form, produced under `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`. Where a draft Initiation Form is uploaded, treat it as the primary approval-document source.
 
-Do not produce a raw markdown dump.
+Optional DRB meeting-support text is produced only when the Digital Lead explicitly requests it. It must be clean, executive, and suitable for pasting into the Jira initiative description field. Do not produce a raw markdown dump. Use concise headings and professional language.
 
-Use concise headings and professional language.
-
-Apply the full DRB Brief rules in `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`, including the decision readiness requirement and the prohibition on open questions in the final brief.
+Apply the full meeting-support text rules in `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`, including the decision readiness requirement and the prohibition on open questions in the final text. Meeting-support text is not the formal approval artefact and does not replace the Completed Initiation Form.
 
 ## Output B3: Process Flow Outputs
 
@@ -256,8 +254,8 @@ Claude must mark unknowns as open questions during the session. Open questions m
 
 At the end of every session, Claude must ask:
 
-`Do you want me to now convert this into the Jira description-ready DRB Brief only (Stage 1 pack), the editable process-flow specification, or both?`
+`Do you want me to now convert this into the Stage 1 pack outputs (Completed Initiation Form, plus optional DRB meeting-support text if you want it), the editable process-flow specification, or both?`
 
 If the Digital Lead requests the process-flow specification or both, produce the full process artefact outputs (Section B above).
 
-If the Digital Lead requests the DRB Brief only, produce Stage 1 Hopper / DRB pack outputs (Section A above).
+If the Digital Lead requests the Stage 1 pack only, produce Stage 1 Hopper / DRB pack outputs (Section A above).

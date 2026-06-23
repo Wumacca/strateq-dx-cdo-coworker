@@ -60,8 +60,9 @@ Confirm whether Pack 1 (the Development Stage 1D Pack) is sufficient to seek DRB
 
 ### B. Required Documentation and Attachments
 
-Claude must ask the Digital Lead to provide or confirm the following:
+Claude must ask the Digital Lead to provide or confirm the following. The source-document request follows the session-opening checklist in `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`, including the current / draft Initiation Form. If a draft or partially completed Initiation Form is uploaded, Claude must treat it as the primary approval-document source per that file.
 
+- Current / draft Initiation Form, if available
 - Jira screenshot / field export
 - Initiative Type screenshot / value (confirming Development Route)
 - Existing scope notes
@@ -133,13 +134,17 @@ Claude must capture and confirm:
 Claude must produce:
 
 1. Jira field-ready values for the configured initiative fields (250-character limit per `04_intake_dispatch/02_JIRA_FIELD_LENGTH_RULES.md`)
-2. DRB Brief — Development Approval variant (using `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`)
-3. Scope Brief (see Scope Brief section below)
-4. Single-sheet Excel Process Flow Capture Sheet if Process Mapping Required = Yes
+2. Completed Initiation Form — Development Approval (the formal approval artefact, using `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`)
+3. Scope Brief — including epic, task / milestone, and subtask level where provided (see Scope Brief section below)
+4. Process flow swimlane specification produced from the completed Process Flow Capture Sheet where Process Mapping Required = Yes, using `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
+5. Single-sheet Excel Process Flow Capture Sheet if Process Mapping Required = Yes
+6. Source-of-truth artefact impact check and handover note where controlled artefacts are impacted, using `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
 
-A separate Jira comment is optional and must only be produced when explicitly requested by the Digital Lead.
+The Completed Initiation Form is the formal approval document within the pack. It does not replace the other required pack outputs above; do not collapse the whole pack into the Initiation Form.
 
-Full process artefact outputs (swimlane flow, diagram spec, process step register, bottleneck register, source-of-truth impact table) are Stage 2 and process artefact workflow outputs. They are not default Stage 1D deliverables.
+Optional DRB meeting-support text (Jira description-ready decision text, using `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`) and a separate Jira comment are optional and must only be produced when explicitly requested by the Digital Lead. They are not the formal approval artefact.
+
+Full process artefact outputs beyond the swimlane specification (diagram spec, process step register, bottleneck register, full source-of-truth impact table) are Stage 2 and process artefact workflow outputs. They are not default Stage 1D deliverables.
 
 ## Scope Brief
 
@@ -219,7 +224,7 @@ Claude must state confidence in this format: "Confidence level: X% — [reason]"
 
 ## Scope Reconciliation
 
-If developer, department, or technical scope is provided during Stage 1D, Claude must reconcile it against the Digital Lead / governance scope before producing the DRB Brief or final pack.
+If developer, department, or technical scope is provided during Stage 1D, Claude must reconcile it against the Digital Lead / governance scope before producing the Completed Initiation Form or final pack.
 
 | Source / party | Developer / department scope | Digital Lead / governance scope | Agreed scope | Status | Required confirmation |
 |---|---|---|---|---|---|

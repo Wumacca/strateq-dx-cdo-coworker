@@ -66,7 +66,7 @@ It must not automatically approve or reject an item.
 
 Business Priority Signal is qualitative only and must follow `CONTROLLED_VOCABULARY.md`.
 
-Claude must not invent numeric scores, weightings, or a 1-5 scale.
+Claude must not invent numeric scores, weightings, or a 1–5 scale. Where a Digital Lead-approved scoring model, team-returned charter score, or Jira-entered score exists, Claude may organise, display, summarise, and challenge the score, but must not create or alter scores without Digital Lead approval.
 
 Recommended priority dimensions:
 
@@ -138,9 +138,11 @@ Questions should be short and directed to the right party:
 - developer
 - commercial / finance
 
-## DRB Brief Format
+## Optional DRB Meeting-Support Text
 
-For items going to DRB, produce:
+This is not the formal approval artefact and is produced only when the Digital Lead explicitly asks for written meeting-support text. It does not replace Jira as the default meeting surface, and it does not replace the Completed Initiation Form where an approval document is required.
+
+For items where the Digital Lead has asked for written meeting-support text, produce:
 
 ```markdown
 ### [Initiative / Hopper Item]

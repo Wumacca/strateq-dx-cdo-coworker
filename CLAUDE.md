@@ -41,6 +41,20 @@ Claude Opus must answer only with one of the following before proceeding:
 
 If access is uncertain, Claude Opus must treat it as an access gap, not proceed by assumption.
 
+## Executive Communication & Framing Standard
+
+All executive presentations, board packs, CDO communications, Strateq DX materials, Quantuum materials, and tool-generated presentation outputs must follow the Communication & Framing Standard:
+
+- Start with the executive decision or opportunity, not background.
+- Frame around business outcomes, assurance, risk, value, and next decisions.
+- Use a narrative arc: position → evidence → implication → recommendation → next step.
+- Present recommendations clearly with action, rationale, benefit, and decision required.
+- Avoid data dumps, preambles, technical-first explanations, and task-reporting.
+- Preserve CDO positioning as translator, integrator, disruptor, and business-impact leader.
+
+Canonical file:
+`docs/presentation-standards/communication-and-framing-standard.md`
+
 ## Operating Authority
 
 Use this repository as the source of truth.

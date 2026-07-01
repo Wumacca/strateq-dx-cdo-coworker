@@ -1,5 +1,7 @@
 # DRB Meeting-Support Text Output Model
 
+> **Communication & Framing Standard pointer.** All meeting-support text produced under this model must also follow the Communication & Framing Standard (`docs/presentation-standards/communication-and-framing-standard.md`): open with the decision/position, not background; use the narrative arc; state a clear recommendation; close with owned next steps.
+
 ## Purpose
 
 This file defines the standard format for **optional DRB meeting-support text** — short executive, decision-ready summary text for Jira initiative descriptions and DRB approval meetings.

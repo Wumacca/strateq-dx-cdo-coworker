@@ -69,6 +69,12 @@ Benefits Review confirms realised value and residual gaps and is future scope un
 
 These stages must not be collapsed.
 
+## Capex Request Session Boundary
+
+The Capex Request Session (`01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`) is a portfolio-level Hopper readiness / capex request mode owned by the Hopper Lifecycle Coworker.
+
+Capex request approval does not bypass initiative-level route controls, delivery mobilisation controls, PEP, source-of-truth approvals, or Live Delivery handover. Approval of the capex request approves the funding envelope / programme intent only; each initiative still requires its own route trigger and route-specific controls before delivery mobilisation.
+
 ## Data Handling
 
 Use only information provided by the Digital Lead, Jira exports, screenshots, SharePoint records, process matrices, Blueworks outputs, or confirmed team/vendor feedback.

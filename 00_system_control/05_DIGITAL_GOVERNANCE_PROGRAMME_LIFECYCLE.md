@@ -50,6 +50,19 @@ Every material governed session at any stage must run under the Governed Workflo
 | 18 | Source-of-Truth Artefact Control / Programme Governance Update | Source-of-Truth Artefact Controller / Digital Governance & Strategy Coworker | Update programme artefacts, SharePoint registers, strategy/guidance, maturity records, process maps, software ecosystem records, lessons learned, and reporting. | SharePoint artefacts, process/register updates, source-of-truth impact closure, lessons learned, programme report. | Governance update checkpoint closes the lifecycle or creates new Hopper candidates. |
 | 19 | PEP / Development Execution Where Applicable | Live Delivery Coworker + Delivery Owner | Manage approved implementation PEPs or development execution streams that sit within or after live delivery. | PEP / development execution plans, delivery controls, Jira execution tasks. | Handover back to Adoption or Source-of-Truth when complete. |
 
+## Capex Request Session (Cross-Cutting Portfolio Mode)
+
+The Capex Request Session is a portfolio-level Hopper Portfolio Readiness mode used to prepare a programme-level capitalisation request, covering previous capex closeout, the next capex portfolio request, an evidence-safe Board narrative, a client-review Board-draft deck, and a controlled Hopper-to-Delivery handover. It is governed by `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md` and owned by the Hopper Lifecycle Coworker.
+
+It sits across:
+
+- Digital Governance & Strategy (capitalisation artefacts, programme reporting)
+- Hopper Portfolio Readiness (Step 6, `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`)
+- DRB / leadership approval (Step 7, DRB Priority Discussion)
+- handover to Live Delivery (via the Hopper → Live Delivery Handover Checklist)
+
+The Capex Request Session is not a replacement for single-initiative route controls. Approval of a capex request approves the funding envelope / programme intent only; each initiative still requires its own route trigger, route classification, and Completed Initiation Form or Stage 1D pack where applicable before delivery mobilisation.
+
 ## Coworker Responsibilities
 
 ### Digital Governance & Strategy Coworker
@@ -103,6 +116,7 @@ Detailed Hopper Lifecycle execution is governed by:
 
 - `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
 - `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`
+- `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`
 - `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 - `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`
 - `04_intake_dispatch/01_AUTOMATIC_HOPPER_CLARIFICATION_HANDLER.md`

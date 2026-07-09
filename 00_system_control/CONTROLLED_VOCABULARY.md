@@ -113,6 +113,21 @@ The formal approval-artefact naming rules are governed by `01_governance_lifecyc
 - **Optional DRB meeting-support text** — short executive decision-support / Jira-ready text produced only when the Digital Lead explicitly requests it, governed by `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`. It is not a formal approval artefact, does not replace the Completed Initiation Form, and does not replace the Jira Initiative View / Hopper priority view as the default Hopper meeting surface.
 - The term **DRB** remains valid for: DRB meeting, DRB approval, DRB decision required, DRB approval status, DRB-ready pack, DRB decision text, and optional DRB meeting-support text.
 
+## Capex Request Session Terminology
+
+The full Capex Request Session workflow is governed by `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`. Use these defined terms:
+
+- **Capex Request Session** — a governed Hopper Portfolio Readiness mode used to prepare a programme-level capitalisation request: previous capex closeout, next capex portfolio request, evidence-safe Board narrative, client-review Board-draft deck, and controlled Hopper-to-Delivery handover. Owned by the Hopper Lifecycle Coworker.
+- **Portfolio Capex Request Pack** — the formal output artefact of a Capex Request Session. It consolidates the readiness tracker, evidence, claim safety table, and Board narrative into the capitalisation request. Do not use "Bulk Initiation Pack" as the name of this artefact; "bulk initiation" may only describe how the process operates.
+- **Capex Readiness Tracker** — the working control document that tracks, per initiative and evidence requirement, what is known, what is missing, and what is an accepted Digital-Lead-confirmed gap.
+- **Capital Efficiency Evidence** — the mandatory evidence section covering baseline cost, revised cost, avoided cost, recurring avoided cost where applicable, arithmetic check, evidence basis, claim status, finance validation status, and Board-safe wording for each cost-avoidance / value case.
+- **Plan Attainment Evidence** — the mandatory evidence section covering committed initiatives, delivered / live / controlled / next-phase status, date movement reason, budget position, unsupported claims, and Board-safe closeout wording.
+- **Claim Safety Table** — the claim-safety control table for Board-facing outputs, covering claim, evidence source, claim status, Board-safe wording, blocker / dependency, owner, and confidence basis. Confidence basis is a source-read judgement in words, never an invented numeric confidence score.
+- **Client-Review Board-Draft Deck** — a Board-safe, claim-safe, decision-led draft deck produced for client / Digital Lead review, with open dependencies visible as placeholders. It is not the Board-final deck.
+- **Board-Final Deck** — the final Board-facing deck issued for formal approval. It must not be produced by the Hopper Lifecycle Coworker while a Board-final blocker remains open.
+- **Board-final blocker** — an open finance, maturity, or other dependency that must clear before a Board-final deck or final approval wording may be issued.
+- **Mobilisation gap** — an item on the Hopper → Live Delivery Handover Checklist that is missing at handover and has been explicitly accepted by the Digital Lead rather than resolved before mobilisation.
+
 ## Stage Closeout Naming
 
 Stage closeout lines and stage naming must be route-correct and derived from this vocabulary and `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`. Do not invent generic "Stage 1 / Stage 2" wording. The canonical closeout paths and lines are governed by `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. For a Development Route initiative with no Stage 2 exception, the closeout line is: `Stage 1D is closed. Ready for Live Delivery spin-up.`

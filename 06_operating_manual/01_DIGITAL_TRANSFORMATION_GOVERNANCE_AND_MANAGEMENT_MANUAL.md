@@ -26,7 +26,9 @@ The human operating view of the whole programme is four stages:
 1. **Request to Hopper** — a need becomes a visible candidate item.
 2. **Hopper to Go / No-Go Decision** — the item is readied, prioritised, and taken to leadership / DRB for a route decision.
 3. **Initiative Delivery / Live Implementation Control** — the approved initiative is delivered under control.
-4. **Completion and Handover** — the initiative is completed, adopted, and its evidence and source-of-truth records are updated.
+4. **Completion and Handover** — delivery is accepted, closed and handed over. Adoption, benefits, maturity confirmation and source-of-truth updates continue as separate lifecycle controls where required.
+
+Delivery closeout does not confirm adoption, embedded use, realised benefits or confirmed maturity movement. Consistent with the maturity boundary in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, delivery closeout may propose only a **provisional** maturity impact; the Adoption and Benefits stage confirms, revises or rejects it.
 
 This four-stage model is the **human operating view**. It does **not** replace the detailed controlled lifecycle in `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`. The same initiative moves across both views at once: the macro-stage is the plain-language position, the detailed lifecycle stage is the controlled process position.
 
@@ -37,7 +39,7 @@ This four-stage model is the **human operating view**. It does **not** replace t
 | 3. Initiative Delivery / Live Implementation Control | Steps 14–15, 19: Job Live → Live Delivery → PEP / Development Execution |
 | 4. Completion and Handover | Steps 16–18: Go-Live / Deployment → Adoption & Benefits → Source-of-Truth Artefact Control / Programme Governance Update |
 
-Client context and maturity links are a **future governed layer** referenced by this manual but not yet operationally governed (see the placeholder note at the end).
+The full reusable Client Digital Governance Profile and Maturity Improvement Loop authority models remain future buildouts. Existing approved client benchmark, maturity, strategy, ecosystem and governance artefacts remain valid controlled sources for the Client Context Gate.
 
 ---
 

@@ -14,6 +14,22 @@ Every material governed coworker session operates under the Governed Workflow Lo
 
 The looping standard does not expand the current active scope of this file. Where it references adoption / benefits realisation / closure, that means the looping standard applies only when that lifecycle stage is reached; those stages remain future scope until their own model files are created.
 
+## Source-of-Truth and Storage Boundary
+
+The controlled architecture separates method, live status, and evidence:
+
+- **GitHub** governs methods and schemas (coworker authority files, workflow models, schemas, controlled vocabulary, operating rules, checklist templates, governance manuals).
+- **Jira** governs live initiative and delivery status (lifecycle position, Hopper / delivery status, linked PEPs and Epics, milestones, owners, actions, risks, blockers, decisions, candidate changes, next control move).
+- **SharePoint / the controlled client workspace** governs approved artefacts and evidence (approved artefacts, Completed Initiation Forms, decision evidence, Board packs, delivery and acceptance evidence, benchmark assessments, maturity registers, source-of-truth records).
+- **Coworkers** reconcile the available controlled sources and recommend updates. They do not invent the live position and do not silently mutate controlled records.
+- **No permanent parallel GitHub initiative ledger is permitted.** GitHub must not become a parallel live client initiative-management system. The Initiative Control Record (`00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`) is a reusable schema, not a live per-initiative file, and its target-state live home is Jira.
+
+## Interactive Session and Closeout Write-Back
+
+Every material governed session runs interactively under `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`.
+
+> No material governed session is closed until a controlled write-back has been proposed and the Digital Lead has approved it, explicitly deferred it, or accepted the remaining gap.
+
 ## Current Active Scope
 
 The current active scope is Hopper consolidation through Initiation Form handoff.

@@ -12,12 +12,17 @@
 |---|---|
 | `CLAUDE.md` | Role definition, operating authority, required behaviour, prohibited behaviour, and model guidance. Primary coworker instruction file. |
 | `README.md` | Repository overview. |
-| `00_system_control/` | System control files: lifecycle map, operating rules, controlled vocabulary, folder map, coworker handover model, knowledge capture rules, governed workflow looping standard, coworker router. |
+| `00_system_control/` | System control files: lifecycle map, operating rules, controlled vocabulary, folder map, coworker handover model, knowledge capture rules, governed workflow looping standard, coworker router, interactive governed session protocol, initiative control record schema. |
 | `00_system_control/CONTROLLED_VOCABULARY.md` | Controlled terminology for the programme. |
 | `00_system_control/FOLDER_MAP.md` | Authoritative folder structure reference. |
 | `00_system_control/OPERATING_RULES.md` | Binding operating rules for all coworker sessions. |
+| `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` | **Machine / authority file.** Global authority for how material coworker sessions run interactively: runtime access gate, Client Context Gate, Initiative Reconciliation Gate, Required Inputs Gate, Live Session Status Board, controlled session states, and closeout write-back. |
+| `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` | **Machine / authority file.** Reusable schema for initiative control fields. Jira is the target-state live record; GitHub holds the schema only. Not a live per-initiative ledger. |
 | `05_source_of_truth/` | Source-of-truth governance model. |
 | `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` | Defines how digital artefacts are governed, classified, and updated. |
+| `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` | **Human-facing navigation manual — non-authoritative.** Explains how the Digital Lead uses the governed coworker system across the four-stage macro model and each lifecycle stage. Where it and an authority file differ, the authority file prevails. |
+
+> **Machine / authority files vs human-facing navigation.** All files above except the operating manual are machine / authority files: they control coworker behaviour and prevail in any conflict. `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` is human-facing navigation only and is subordinate to the authority files it references.
 
 ---
 

@@ -22,7 +22,22 @@ Coworkers do not approve initiatives, accept risk, approve cost, commit supplier
 
 Every lifecycle transition between coworkers requires a handover checkpoint under `00_system_control/04_COWORKER_HANDOVER_MODEL.md`.
 
-Every material governed session at any stage must run under the Governed Workflow Looping Standard in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. Stage closeout hands over only what the closing stage agreed, delivered, approved, evidenced, and left open; next-stage checklists and plans are produced only at spin-up after the Digital Lead explicitly triggers the next stage.
+Every material governed session at any stage must run under the Governed Workflow Looping Standard in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` and, interactively, under the Interactive Governed Session Protocol in `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. Stage closeout hands over only what the closing stage agreed, delivered, approved, evidenced, and left open; next-stage checklists and plans are produced only at spin-up after the Digital Lead explicitly triggers the next stage.
+
+## Human Operating View and Controlled Process View
+
+This lifecycle map is the **controlled process view**. The four-stage macro model — (1) Request to Hopper, (2) Hopper to Go / No-Go Decision, (3) Initiative Delivery / Live Implementation Control, (4) Completion and Handover — is the **human operating view**, described for the Digital Lead in the human-facing manual `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md`.
+
+- The four-stage macro model is the human operating view and does **not** replace this detailed controlled lifecycle.
+- The detailed lifecycle in the table below is the controlled process view.
+- The **same initiative** moves across both views at once: the macro-stage is the plain-language position, the detailed lifecycle stage is the controlled process position.
+- Client context and maturity links are **future governed layers**, referenced by the manual and by the strategic and maturity alignment fields in the Initiative Control Record schema, but not yet operationally governed.
+
+### Supporting authority pointers
+
+- **Human-facing manual:** `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` — non-authoritative human navigation of this lifecycle.
+- **Initiative Control Record schema:** `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` — the reusable schema for initiative control fields (Jira is the target-state live record; GitHub holds the schema only).
+- **Interactive Governed Session Protocol:** `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` — the interactive gates and session-state controls applied at every material session.
 
 ## Full Programme Lifecycle
 

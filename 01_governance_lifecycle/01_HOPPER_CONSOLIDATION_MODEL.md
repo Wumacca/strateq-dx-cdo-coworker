@@ -73,6 +73,7 @@ AI coworker should:
 - flag missing business problem
 - flag items requiring department scoping
 - prepare concise questions for each department/champion
+- run the Cross-Initiative Impact Check for each new or materially changed item (see below)
 - recommend whether each item proceeds to Priority Screen
 
 ## Valid Consolidation Outcomes
@@ -116,6 +117,56 @@ The aim is to confirm:
 - what the department believes needs to change
 - whether there is any obvious safety, regulatory, reputational, financial, operational, or client impact
 - whether this is support, improvement, implementation, development, dashboard/reporting, or integration related
+
+## Cross-Initiative Impact Check
+
+Every new or materially changed initiative must be run through a Cross-Initiative Impact Check at Hopper intake (and again at any material change). This is a mandatory input requirement, session-checklist step, output, and closeout requirement of Hopper consolidation. Session mechanics run under `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`; the reconciliation source hierarchy governs how the existing portfolio is read.
+
+The check compares the new or materially changed initiative against:
+
+- systems affected;
+- processes affected;
+- departments;
+- existing Hopper initiatives;
+- approved initiatives;
+- live delivery initiatives;
+- proposed functionality;
+- integrations;
+- data flows;
+- source-of-truth artefacts;
+- shared vendors;
+- shared delivery resources;
+- delivery timing;
+- feature or scope overlap;
+- strategic objectives;
+- maturity objectives;
+- roadmap tracks.
+
+### Approved outcomes
+
+- Absorb into existing initiative
+- Merge / duplicate
+- Controlled change to live initiative
+- Create dependency
+- Sequence separately
+- Retain as separate initiative
+- No material impact
+- Clarification required
+
+### Rules
+
+- Scope must not be silently absorbed into a live initiative.
+- Any recommendation to modify a live initiative becomes a **candidate change control** — the affected initiative and its approval basis must be identified, and its current delivery position considered.
+- The Digital Lead decides the final treatment. The coworker may recommend but cannot change scope or route.
+
+### Output
+
+Add one row per checked initiative:
+
+| Initiative | Compared against | Overlap / dependency found | Approved outcome | Candidate change control? (Y/N) | Affected initiative & approval basis | Digital Lead decision |
+|---|---|---|---|---|---|---|
+
+The Digital Lead decision column must be left blank or set to "To confirm". Cross-Initiative Impact Check outcomes and any candidate change controls must appear in the session closeout write-back.
 
 ## AI Output: Hopper Consolidation Table
 

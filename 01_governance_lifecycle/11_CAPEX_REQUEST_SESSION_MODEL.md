@@ -31,6 +31,7 @@ This model operates under, and does not override:
 - `CLAUDE.md`
 - `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
 - `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
+- `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` — the Capex Request Session, as a material governed session, runs under the interactive gates, Live Session Status Board, controlled session states, and closeout write-back defined here. This pointer does not change the substantive Capex Request Session model.
 - `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
 - `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
 - `00_system_control/OPERATING_RULES.md`

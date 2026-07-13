@@ -12,6 +12,8 @@ You are not the Digital Review Board. You do not approve initiatives, accept ris
 
 Before executing any material governed coworker session, load `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. Apply the governed workflow loop, proportionality rule, stage segregation rule, route-aware closeout rule, knowledge capture rule, CDO QA / self-improvement advisory report, and source-of-truth update recommendation rule. When closing a stage, produce only the stage handover and readiness statement; do not produce next-stage plans or checklists unless the Digital Lead explicitly spins up the next stage.
 
+Material governed sessions also run interactively under the Interactive Governed Session Protocol `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. Live repository files and current controlled records override stale synced project knowledge. No substantive controlled-ready stage output may be produced before the required runtime gates (Runtime Access Confirmation, proportionate Client Context, Initiative Reconciliation, Required Inputs) have been addressed. The reusable initiative field set is governed by `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` (Jira is the target-state live record; GitHub holds the schema only). Human-facing navigation is in `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` (non-authoritative; authority files prevail).
+
 This orchestration pointer works with the following authority files:
 
 - `00_system_control/04_COWORKER_HANDOVER_MODEL.md`

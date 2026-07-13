@@ -289,6 +289,81 @@ Every material governed session must end with Source-of-Truth Update Recommendat
 
 These are advisory recommendations for Digital Lead action. They do not authorise Claude to update controlled records.
 
+## Interactive Governed Session Protocol Integration
+
+Every material governed session runs interactively under `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. That protocol wraps the governed workflow loop in a fixed interactive sequence and is mandatory integration, not a separate workflow. This file (`07`) remains authoritative for the loop, proportionality, stage segregation, route-aware closeout, and the Digital Lead approval gate; `12` is authoritative for how those are surfaced interactively.
+
+Mandatory integration points from `12`:
+
+- **Client Context Gate** — proportionate confirmation of the controlled client-context source; never reconstructed from memory, synced knowledge, or chat history.
+- **Initiative Reconciliation Gate** — reconcile the initiative and unresolved obligations against a physical read-source hierarchy (live Jira → Jira export → interim register → access gap); waiver is explicit and risk-bounded.
+- **Required Inputs Gate** — one consolidated, batched input table before substantive stage output.
+- **Live Session Status Board** — created at spin-up and refreshed on every material exchange.
+- **Digital Lead actions required** — a standing action block that ends every substantive governed-session response.
+- **Controlled session states** — Not started / Active / Suspended — awaiting evidence / Pending Digital Lead decision / Pending external approval / Ready for closeout / Closed and handed over. "Open chat thread" is not a governance status. A suspended session remains visible at future Initiative Reconciliation Gates and does not automatically block unrelated work.
+- **Closeout write-back** — no material governed session is closed until a controlled write-back has been proposed (labelled `Recommended update — requires Digital Lead approval.`) and the Digital Lead has approved it, explicitly deferred it, or accepted the remaining gap.
+
+The initiative fields reconciled, updated and handed over are governed by the reusable `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`. GitHub holds the schema only; Jira is the target-state live Initiative Control Record; SharePoint / the controlled client workspace holds approved artefacts and evidence. No permanent live per-initiative ledger is permitted in the GitHub repository.
+
+## Freshness and Evidence Model
+
+Freshness is **event / cadence based**. There is no universal "stale after N days" rule.
+
+| Information category | Freshness rule |
+|---|---|
+| Live delivery status | Revalidated each fortnightly delivery cycle or material event |
+| Delivery RAID | Reviewed each delivery cycle |
+| Owner / champion | Confirmed at stage spin-up and when responsibility changes |
+| DRB / approval decision | Valid once formally recorded unless superseded |
+| Scope / exclusions | Valid until approved change control |
+| Cost / vendor quote | Valid until quote expiry, commercial change or revalidation event |
+| Schedule / milestones | Revalidated each delivery cycle |
+| UAT / acceptance evidence | Valid against approved test scope unless scope changes |
+| Benefits evidence | Revalidated at adoption / benefits gates |
+| Source-of-truth impact | Rechecked at material change, go-live and closeout |
+| Initiative relationships / dependencies | Rechecked at Hopper intake and material change |
+| Client strategy / maturity context | Rechecked at the proportionate Client Context Gate |
+
+Approved freshness statuses:
+
+- Current
+- Revalidation due
+- Stale
+- Superseded
+- Pending confirmation
+- Not applicable
+
+A stale item must identify: the reason it is stale; the output or decision blocked; the owner; the evidence required; the next review point.
+
+## Maturity-Impact Vocabulary and Boundary
+
+These controlled maturity-impact statuses are used by the strategic and maturity alignment fields in `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`. This workstream provides the vocabulary and boundary only; it does not build the Maturity Improvement Loop model, does not calculate maturity scores, and does not update any live maturity position.
+
+Controlled maturity-impact statuses:
+
+- No maturity impact identified
+- Expected maturity impact
+- Provisional maturity impact
+- Pending adoption evidence
+- Confirmed maturity impact
+- Rejected — insufficient evidence
+
+Definitions:
+
+- **Expected maturity impact** — the intended capability improvement identified during Hopper, initiation or approval.
+- **Provisional maturity impact** — an evidence-led movement proposed at delivery closeout based on delivered capability, acceptance, go-live and ownership evidence. It is not yet a confirmed update to the live maturity position where adoption or embedded-use evidence is required.
+- **Pending adoption evidence** — delivery evidence exists, but operational use, ownership, adoption or benefit evidence remains outstanding.
+- **Confirmed maturity impact** — question-level and roadmap-track movement approved after the required adoption, benefits and evidence review.
+- **Rejected — insufficient evidence** — the proposed movement is not supported by sufficient evidence.
+
+Boundary rules:
+
+> Delivery closeout may propose a provisional maturity impact based on delivered capability, acceptance, go-live and ownership evidence. The live maturity position must not be changed solely because delivery is complete where adoption or embedded-use evidence is required.
+
+> The Adoption and Benefits stage confirms, revises or rejects the proposed maturity movement using evidence of operational use, ownership, adoption, benefit and sustained capability.
+
+> Any approved live maturity-register update remains subject to the Source-of-Truth Artefact Controller and Digital Lead or authorised reviewer approval.
+
 ## Boundary
 
 Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. Where this file and an authority file appear to conflict, surface the conflict to the Digital Lead before producing final output.

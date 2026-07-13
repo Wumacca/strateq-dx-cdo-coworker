@@ -38,6 +38,10 @@ Use `00_system_control/CONTROLLED_VOCABULARY.md` for:
 
 Do not invent variants.
 
+## Session Protocol and Cross-Initiative Impact Check
+
+Priority screening of a new or materially changed item runs under the Interactive Governed Session Protocol (`00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`) and must reflect the Cross-Initiative Impact Check governed by `01_governance_lifecycle/01_HOPPER_CONSOLIDATION_MODEL.md`. Where the impact check has recommended a candidate change control (for example, absorb, merge, or controlled change to a live initiative), that outcome must be visible in the screen; scope must not be silently absorbed, and the Digital Lead decides the final treatment.
+
 ## Input Required
 
 For each item, use available information:

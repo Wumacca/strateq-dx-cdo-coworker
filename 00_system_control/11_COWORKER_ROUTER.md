@@ -30,6 +30,7 @@ The router is subordinate to, and must not override, the following authority fil
 - `CLAUDE.md`
 - `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
 - `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
+- `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`
 - `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
 - `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
 - `00_system_control/OPERATING_RULES.md`
@@ -73,6 +74,10 @@ For a material governed coworker session:
 5. Run the session under the governed workflow loop, with the Digital Lead approval gate at every controlled update and stage transition.
 
 The material session threshold and the proportionality rule are governed by `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. The router does not redefine them.
+
+## Global Interactive Session Rule
+
+Every material stage / session trigger invokes the Interactive Governed Session Protocol (`00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`) **before** stage-specific execution. Whatever jurisdiction the router resolves, the coworker first runs the Runtime Access Confirmation Gate, the proportionate Client Context Gate, the Initiative Reconciliation Gate, and the Required Inputs Gate, maintains the Live Session Status Board, ends substantive responses with the Digital Lead actions block, and closes only after a controlled write-back has been approved, deferred, or its gap accepted. The router resolves jurisdiction; `12` governs the interactive sequence. This rule creates no new coworker route.
 
 ## Coworker Jurisdictions
 

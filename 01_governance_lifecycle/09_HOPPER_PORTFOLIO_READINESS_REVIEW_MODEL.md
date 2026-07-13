@@ -140,6 +140,10 @@ Group by:
 - Do not update Jira, SharePoint, GitHub, Hopper records, workflows, or source-of-truth records automatically.
 - Do not create Pack 1 scope, process maps, cost estimates, delivery plans, DRB packs, or Initiation Forms during Part 1.
 
+### Cross-Initiative Impact Check
+
+Grouping in Part 1 must be supported by the Cross-Initiative Impact Check governed by `01_governance_lifecycle/01_HOPPER_CONSOLIDATION_MODEL.md`. Every new or materially changed initiative in the review is compared against systems, processes, departments, existing / approved / live-delivery initiatives, functionality, integrations, data flows, source-of-truth artefacts, shared vendors / resources, delivery timing, feature / scope overlap, and strategic / maturity / roadmap objectives. Use the approved outcomes (Absorb into existing initiative / Merge / duplicate / Controlled change to live initiative / Create dependency / Sequence separately / Retain as separate initiative / No material impact / Clarification required). Any recommendation to modify a live initiative becomes a **candidate change control**: scope must not be silently absorbed, the affected initiative and its approval basis must be identified, and the Digital Lead decides the final treatment. Cross-Initiative Impact Check outcomes and candidate change controls must be carried into the mandatory closeout.
+
 ---
 
 ## Part 2 — Minimum Hopper Information
@@ -301,6 +305,7 @@ Every Hopper Portfolio Readiness Review session is a material governed session a
 - Inputs Used / Evidence Base
 - Delivered / Agreed Artefacts
 - Decisions Made
+- Cross-Initiative Impact Check outcomes / candidate change controls
 - Open Items / Constraints
 - Jira / Hopper Update Recommendations
 - Knowledge Capture Review
@@ -324,5 +329,3 @@ This restates the AI permission boundary already governed by `00_system_control/
 ## Boundary
 
 Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. Where this file and an authority file appear to conflict, surface the conflict to the Digital Lead before producing final output.
-</content>
-</invoke>

@@ -34,6 +34,8 @@ Input
 
 Knowledge capture, CDO QA / self-improvement review, and source-of-truth update recommendations are **components of the stage closeout / handover step**, not separate workflows.
 
+For every material initiative or reporting session, the **confirmation-first status rule** precedes the loop: after access is established and before any held position is used, the coworker presents the latest available position it holds, identifies its source and date, and asks «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Unconfirmed positions are marked `Pending confirmation`. This is distinct from the file/record access confirmation below and is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. Claude has no live connection to Jira, SharePoint, or Omega 365.
+
 ### Pre-Loop Access Confirmation for Claude Opus
 
 Before the loop begins, any Claude Opus-governed review or session must confirm access to the required files or confirm that the prompt itself contains sufficient information. If access is not confirmed, the loop must not proceed. Missing files, missing exports, missing source records, or unclear authority must be reported as access gaps.
@@ -249,7 +251,7 @@ Use the existing `04` handover checkpoint as the field authority. Include the fo
 ### 5. Source-of-Truth Artefact Impact
 
 - records impacted
-- whether handover to the Source-of-Truth Artefact Controller is required
+- whether the source-of-truth artefact control mode must be applied within the initiative thread
 - references / links to artefacts the next stage will need
 - do not describe how to inspect, plan, sequence, test, or deliver them
 
@@ -296,7 +298,8 @@ Every material governed session runs interactively under `00_system_control/12_I
 Mandatory integration points from `12`:
 
 - **Client Context Gate** — proportionate confirmation of the controlled client-context source; never reconstructed from memory, synced knowledge, or chat history.
-- **Initiative Reconciliation Gate** — reconcile the initiative and unresolved obligations against a physical read-source hierarchy (live Jira → Jira export → interim register → access gap); waiver is explicit and risk-bounded.
+- **Confirmation-first status step** — present the latest held position with its source and date and obtain Digital Lead confirmation or correction before the position is used; unconfirmed items are `Pending confirmation`.
+- **Initiative Reconciliation Gate** — reconcile the initiative and unresolved obligations against the available read-source hierarchy in the no-live-connection client workspace (latest confirmed Initiative Evidence and Decision File → current Jira export or snapshot supplied in-session → other supplied controlled record → access gap); waiver is explicit and risk-bounded. Claude has no live client-system connection.
 - **Required Inputs Gate** — one consolidated, batched input table before substantive stage output.
 - **Live Session Status Board** — created at spin-up and refreshed on every material exchange.
 - **Digital Lead actions required** — a standing action block that ends every substantive governed-session response.
@@ -362,7 +365,7 @@ Boundary rules:
 
 > The Adoption and Benefits stage confirms, revises or rejects the proposed maturity movement using evidence of operational use, ownership, adoption, benefit and sustained capability.
 
-> Any approved live maturity-register update remains subject to the Source-of-Truth Artefact Controller and Digital Lead or authorised reviewer approval.
+> Any approved live maturity-register update remains subject to the source-of-truth artefact control mode and Digital Lead or authorised reviewer approval.
 
 ## Boundary
 

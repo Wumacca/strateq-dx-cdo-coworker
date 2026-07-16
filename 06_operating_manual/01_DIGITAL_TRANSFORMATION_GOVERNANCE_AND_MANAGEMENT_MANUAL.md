@@ -8,12 +8,15 @@
 
 This manual is the human operating view. It tells the Digital Lead what each stage is for, how to open it, what the coworker will do, what the Digital Lead must do, and what "done" looks like. It does not contain the detailed workflow logic — that stays in the controlled authority files named in each section.
 
+There are two client-project lifecycle coworkers — the **Hopper Lifecycle Coworker** (origin and intake through approval to commence delivery) and the **Live Delivery Coworker** (approval through delivery, adoption, benefits, source-of-truth impact, and closeout). The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and reporting are governed stages, controls, or modes handled inside the same continuous initiative thread — not separate coworkers or separate threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker. Each initiative runs in one continuous thread (`HOP | [ID] | [Initiative]` → `LIVE | [ID] | [Initiative]` → `CLOSED | [ID] | [Initiative]`), with only two non-initiative threads: `90 | Bi-Weekly Programme Reporting` and `91 | Monthly Leadership Reporting`. The workspace, thread, no-live-connection, and reporting model is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and set out for humans in `06_operating_manual/02_CLIENT_PROJECT_WORKSPACE_GUIDE.md`. Claude has no live connection to Jira, SharePoint, or Omega 365.
+
 Every material governed session runs under the Interactive Governed Session Protocol (`00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`), which wraps the stage work in a fixed set of gates. Whatever stage you spin up, the coworker begins with:
 
-1. **Runtime Access Confirmation Gate** — what live files and client records it can see, and what is missing.
+1. **Runtime Access Confirmation Gate** — which repository files, exports, snapshots, and evidence files it can see, and what is missing (this confirms access, not business status).
 2. **Client Context Gate** (proportionate) — which controlled client-context source it is working from.
-3. **Initiative Reconciliation Gate** — the current initiative position from Jira / a Jira export / an interim register, plus any unresolved obligations.
-4. **Required Inputs Gate** — one consolidated table of what is present, missing, stale, or an accepted gap.
+3. **Confirmation-First Status Gate** — it presents the latest position it holds, with source and date, and asks «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Unconfirmed items are marked `Pending confirmation`.
+4. **Initiative Reconciliation Gate** — the initiative position from the latest confirmed Initiative Evidence and Decision File or a supplied Jira export / snapshot (no live connection), plus any unresolved obligations.
+5. **Required Inputs Gate** — one consolidated table of what is present, missing, stale, or an accepted gap.
 
 It then maintains a **Live Session Status Board**, ends every substantive response with **Digital Lead actions required**, and cannot treat a session as closed until it has proposed a **controlled write-back** and the Digital Lead has approved, deferred, or accepted the gap.
 
@@ -32,12 +35,12 @@ Delivery closeout does not confirm adoption, embedded use, realised benefits or 
 
 This four-stage model is the **human operating view**. It does **not** replace the detailed controlled lifecycle in `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`. The same initiative moves across both views at once: the macro-stage is the plain-language position, the detailed lifecycle stage is the controlled process position.
 
-| Four-stage macro model (human view) | Detailed repository lifecycle (controlled view) |
-|---|---|
-| 1. Request to Hopper | Steps 1–4: Digital Governance & Strategy → Assessment / Benchmark → Candidate Initiative Creation → Hopper / Intake Consolidation |
-| 2. Hopper to Go / No-Go Decision | Steps 5–13: Light-touch scoping → Hopper Portfolio Readiness → DRB Priority Discussion → Route Classification → Stage 1D / Stage 1 → Stage 2 → Initiation Form / DRB form approval → Nitro / leadership sign-off |
-| 3. Initiative Delivery / Live Implementation Control | Steps 14–15, 19: Job Live → Live Delivery → PEP / Development Execution |
-| 4. Completion and Handover | Steps 16–18: Go-Live / Deployment → Adoption & Benefits → Source-of-Truth Artefact Control / Programme Governance Update |
+| Four-stage macro model (human view) | Detailed repository lifecycle (controlled view) | Owner |
+|---|---|---|
+| 1. Request to Hopper | Steps 1–4: Digital Governance & Strategy (control function) → Assessment / Benchmark → Candidate Initiative Creation → Hopper / Intake Consolidation | Digital Governance & Strategy control function feeding the Hopper Lifecycle Coworker |
+| 2. Hopper to Go / No-Go Decision | Steps 5–13: Light-touch scoping → Hopper Portfolio Readiness → DRB Priority Discussion → Route Classification → Stage 1D / Stage 1 → Stage 2 → Initiation Form / DRB form approval → Nitro / leadership sign-off | Hopper Lifecycle Coworker (DRB is a governed control) |
+| 3. Initiative Delivery / Live Implementation Control | Steps 14–15, 19: Job Live → Live Delivery → PEP / Development Execution | Live Delivery Coworker |
+| 4. Completion and Handover | Steps 16–18: Go-Live / Deployment → Adoption & Benefits → Source-of-Truth Artefact Control / Programme Governance Update | Live Delivery Coworker (adoption/benefits stages; source-of-truth control mode) |
 
 The full reusable Client Digital Governance Profile and Maturity Improvement Loop authority models remain future buildouts. Existing approved client benchmark, maturity, strategy, ecosystem and governance artefacts remain valid controlled sources for the Client Context Gate.
 
@@ -87,6 +90,8 @@ The checklists in this manual are **expected checklists for human planning**. Th
 
 ## Section 2 — Digital Governance & Strategy
 
+> Digital Governance & Strategy is a programme governance and control function, not a client-project coworker or a separate thread. Its initiative-creating outputs enter the Hopper Lifecycle Coworker directly; its cross-initiative governance is handled through the reporting modes and the Digital Lead's governance authority.
+
 1. **Purpose.** Maintain the governance environment that creates, assesses, prioritises, funds, reports, and controls digital change.
 2. **What this stage owns.** Digital strategy, governance model, DRB model, capitalisation artefacts, programme reporting, SharePoint artefact library structure, creation of candidate initiatives.
 3. **What this stage does not own.** Hopper triage, initiation, delivery, or approval decisions.
@@ -102,8 +107,8 @@ The checklists in this manual are **expected checklists for human planning**. Th
 13. **Approval points.** Digital Lead approves any controlled update and confirms a candidate initiative before Hopper handover.
 14. **Freshness obligations.** Client strategy / maturity context rechecked at the proportionate Client Context Gate.
 15. **Exit criteria.** Candidate initiative confirmed, or governance artefact updated and approved.
-16. **Closeout / handover.** Governance-to-Hopper handover when a candidate initiative enters the Hopper (`00_system_control/04_COWORKER_HANDOVER_MODEL.md`).
-17. **What the coworker will ask for next.** Whether to hand the candidate to the Hopper / Intake stage.
+16. **Closeout / handover.** No coworker handover; a confirmed candidate enters the Hopper Lifecycle Coworker directly (`00_system_control/04_COWORKER_HANDOVER_MODEL.md`).
+17. **What the coworker will ask for next.** Whether to open the candidate as a Hopper / Intake item in the initiative thread.
 
 ---
 
@@ -124,7 +129,7 @@ The checklists in this manual are **expected checklists for human planning**. Th
 13. **Approval points.** Digital Lead confirms candidate initiatives and any score.
 14. **Freshness obligations.** Maturity context rechecked at the proportionate Client Context Gate and at formal re-benchmarking.
 15. **Exit criteria.** Candidate initiatives identified, or assessment closed.
-16. **Closeout / handover.** Handover to Hopper if a candidate enters the Hopper.
+16. **Closeout / handover.** No coworker handover; identified candidates enter the Hopper Lifecycle Coworker directly.
 17. **What the coworker will ask for next.** Whether to route identified gaps into the Hopper.
 
 ---
@@ -314,19 +319,21 @@ The checklists in this manual are **expected checklists for human planning**. Th
 13. **Approval points.** Session is not closed until the Digital Lead approves / defers / accepts the write-back.
 14. **Freshness obligations.** Source-of-truth impact rechecked at material change, go-live, and closeout.
 15. **Exit criteria.** Write-back approved / deferred / gap accepted and handover state set to `Closed and handed over`.
-16. **Closeout / handover.** Route-correct readiness statement into the next stage or lifecycle coworker.
-17. **What the coworker will ask for next.** Whether to hand over to Adoption & Benefits or Source-of-Truth Control.
+16. **Closeout / handover.** Route-correct readiness statement. At approval to commence delivery this is the principal Hopper → Live Delivery coworker handover; adoption, benefits, and source-of-truth movement are internal Live Delivery stage transitions in the same thread.
+17. **What the coworker will ask for next.** For a Hopper-stage closeout, whether to spin up Live Delivery; for a Live Delivery stage, whether to move into the next internal stage (adoption / benefits / source-of-truth control / closeout).
 
 ---
 
 ## Section 13 — Adoption and Benefits
 
-`Placeholder — lifecycle-recognised, not operationally governed yet.` The Adoption and Benefits model is not built in this workstream.
+> Adoption and benefits are internal stages of the Live Delivery Coworker, handled inside the same continuous initiative thread — not a separate coworker or thread.
+
+`Placeholder — lifecycle-recognised, not operationally governed yet.` The detailed Adoption and Benefits model is not built in this workstream.
 
 1. **Purpose.** Confirm controlled use, competence, benefits evidence, ownership, and closeout readiness after go-live, and confirm / revise / reject any proposed maturity movement.
 2. **What this stage owns.** Adoption and benefits confirmation (once modelled), including confirming maturity impact.
 3. **What this stage does not own.** Delivery execution or approved maturity-register mutation (Source-of-Truth control owns the register).
-4. **Entry criteria.** Go-live handover received and the Digital Lead spins up adoption.
+4. **Entry criteria.** Go-live completed within Live Delivery (internal stage transition, same thread) and the Digital Lead confirms the adoption stage.
 5. **Exact spin-up command.** Not yet governed. Do not spin up.
 6. **Authority files.** Adoption and Benefits model — `Placeholder — lifecycle-recognised, not operationally governed yet.`
 7–17. Not operationally governed yet. Do not invent workflow detail. Note the maturity boundary: delivery closeout may propose only a **provisional** maturity impact; the Adoption and Benefits stage confirms, revises, or rejects the movement using operational-use, ownership, adoption, and benefit evidence, subject to Source-of-Truth and Digital Lead approval.
@@ -334,6 +341,8 @@ The checklists in this manual are **expected checklists for human planning**. Th
 ---
 
 ## Section 14 — Source-of-Truth Control
+
+> Source-of-truth artefact control is a governed control mode applied within the initiative thread by the Live Delivery Coworker, not a separate coworker or thread.
 
 1. **Purpose.** Maintain source-of-truth artefact integrity when lifecycle changes occur — registers, process flows, decision records, superseded / active artefact control.
 2. **What this stage owns.** Source-of-truth registers and artefact control, and approval routing for register changes (including any approved maturity-register update).
@@ -347,7 +356,7 @@ The checklists in this manual are **expected checklists for human planning**. Th
 10. **Digital Lead responsibilities.** Approve register changes; authorise the reviewer where required.
 11. **Live session checklist.** Access confirmed · artefacts identified · impact check run · updates recommended · approval recorded.
 12. **Required artefacts and records.** Artefact impact report, recommended register updates.
-13. **Approval points.** Any live register change requires Source-of-Truth Artefact Controller and Digital Lead / authorised reviewer approval.
+13. **Approval points.** Any live register change requires the source-of-truth artefact control mode to be applied and Digital Lead / authorised reviewer approval.
 14. **Freshness obligations.** Source-of-truth impact rechecked at material change, go-live, and closeout.
 15. **Exit criteria.** Impacted registers updated (on approval) or gap accepted.
 16. **Closeout / handover.** Governance update checkpoint; may create new Hopper candidates.
@@ -357,7 +366,7 @@ The checklists in this manual are **expected checklists for human planning**. Th
 
 ## Section 15 — Programme Closeout / Learning
 
-1. **Purpose.** Update programme artefacts, registers, lessons learned, and reporting as the lifecycle closes or creates new candidates.
+1. **Purpose.** Prepare recommended updates to programme artefacts, registers, lessons learned, and reporting as the lifecycle closes or creates new candidates, for Digital Lead or authorised-owner approval and physical write-back. Claude does not itself update controlled client systems.
 2. **What this stage owns.** Lessons learned and programme reporting updates (as a lifecycle-recognised activity under source-of-truth / governance control).
 3. **What this stage does not own.** New initiative approval or delivery.
 4. **Entry criteria.** Adoption / source-of-truth control complete, or a programme learning point is captured.

@@ -229,7 +229,7 @@ The deck must frame the capex request through the Board Pack Framing Hierarchy (
 
 ## Source-Read Contract
 
-The deliverables / evidence file is the target-state primary source for live programme status, where it exists and is mature.
+The deliverables / evidence file is the target-state primary source for the confirmed programme-status position, where it exists and is mature, subject to the confirmation-first status rule. Claude has no live connection to Jira, SharePoint, or Omega 365 and reads only supplied or accessible controlled records; it must not imply a live client-system status feed.
 
 Where the deliverables file is not yet mature, the coworker must request interim evidence such as:
 

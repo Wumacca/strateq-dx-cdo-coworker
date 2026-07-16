@@ -14,15 +14,28 @@ Every material governed coworker session operates under the Governed Workflow Lo
 
 The looping standard does not expand the current active scope of this file. Where it references adoption / benefits realisation / closure, that means the looping standard applies only when that lifecycle stage is reached; those stages remain future scope until their own model files are created.
 
+## Two Client-Project Coworkers
+
+There are exactly two client-project lifecycle coworkers: the **Hopper Lifecycle Coworker** (origin and intake through approval to commence delivery) and the **Live Delivery Coworker** (approval through delivery, adoption, benefits, source-of-truth impact, and closeout). The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and programme / leadership reporting are governed stages, controls, or modes, not separate coworkers or separate threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker. The client workspace, thread, and reporting model is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`.
+
+## No Live Client-System Connection
+
+Claude has no permitted live connection to Jira, SharePoint, or Omega 365 in the active client workspace. Claude must never claim it has read or updated a live client system. Every client-system update is presented as `Recommended update — requires Digital Lead approval and physical update in the client system.` and is marked complete only when the Digital Lead explicitly confirms the physical update occurred. A separately governed future-state integration architecture may be developed later, but it must not appear as an available option inside the active coworker process.
+
 ## Source-of-Truth and Storage Boundary
 
-The controlled architecture separates method, live status, and evidence:
+The controlled architecture separates method, client-facing status, and evidence:
 
 - **GitHub** governs methods and schemas (coworker authority files, workflow models, schemas, controlled vocabulary, operating rules, checklist templates, governance manuals).
-- **Jira** governs live initiative and delivery status (lifecycle position, Hopper / delivery status, linked PEPs and Epics, milestones, owners, actions, risks, blockers, decisions, candidate changes, next control move).
+- **Jira** is the client-facing initiative and delivery-status system (lifecycle position, Hopper / delivery status, linked PEPs and Epics, milestones, owners, actions, risks, blockers, decisions, candidate changes, next control move). Claude reads supplied exports / snapshots only; it has no live connection.
 - **SharePoint / the controlled client workspace** governs approved artefacts and evidence (approved artefacts, Completed Initiation Forms, decision evidence, Board packs, delivery and acceptance evidence, benchmark assessments, maturity registers, source-of-truth records).
-- **Coworkers** reconcile the available controlled sources and recommend updates. They do not invent the live position and do not silently mutate controlled records.
-- **No permanent parallel GitHub initiative ledger is permitted.** GitHub must not become a parallel live client initiative-management system. The Initiative Control Record (`00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`) is a reusable schema, not a live per-initiative file, and its target-state live home is Jira.
+- **Omega 365** is the client-facing action-management system. Claude references Omega 365 actions and prepares write-back text without a live connection and without maintaining a duplicate action register.
+- **Coworkers** reconcile the available controlled sources and recommend updates. They do not invent the current position and do not silently mutate controlled records.
+- **No permanent parallel GitHub initiative ledger is permitted.** GitHub must not become a parallel live client initiative-management system. The Initiative Control Record (`00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`) is a reusable schema, not a live per-initiative file, and its target-state client-facing home is Jira. Its single AI-readable client-copy implementation is the Initiative Evidence and Decision File (`02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`), held in the controlled client workspace, not in this repository.
+
+## Update-Once Rule
+
+A confirmed update received in any initiative, bi-weekly, or monthly session must first be reconciled into the affected Initiative Evidence and Decision File before any report is generated. No material fact may remain only in a chat, a reporting thread, a previous report, an input template, Claude Project knowledge, or assistant memory. Reports are controlled outputs and snapshots, not parallel sources of truth. A pending physical client-system write-back does not block reporting from a Digital Lead-confirmed position, provided the pending write-back is clearly identified.
 
 ## Interactive Session and Closeout Write-Back
 
@@ -99,9 +112,9 @@ When a fact is missing, mark it as missing. Do not fill gaps with assumptions.
 
 ## Jira Rule
 
-Jira is the controlled tracking surface.
+Jira is the client-facing tracking surface.
 
-AI output may include Jira-ready comments, field update recommendations, or status change recommendations, but the Digital Lead applies changes unless direct integration is explicitly approved later.
+AI output may include Jira-ready comments, field update recommendations, or status change recommendations, but the Digital Lead or an authorised user applies changes. Claude has no live Jira connection in the active client workspace and must not imply one.
 
 ## Blueworks Rule
 

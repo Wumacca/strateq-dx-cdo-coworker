@@ -44,17 +44,18 @@ Every material governed session must follow this sequence. A material session mu
 
 1. **Runtime Access Confirmation Gate**
 2. **Client Context Gate**
-3. **Initiative Reconciliation Gate**
-4. **Required Inputs Gate**
-5. **Live Session Status Board**
-6. **Stage-specific work** (governed by the relevant route / stage authority file)
-7. **Governance and evidence test**
-8. **Human decision**
-9. **Controlled update recommendations**
-10. **Closeout, suspension or handover**
-11. **Digital Lead actions required**
+3. **Confirmation-First Status Gate** (present the latest held position; obtain Digital Lead confirmation or correction)
+4. **Initiative Reconciliation Gate**
+5. **Required Inputs Gate**
+6. **Live Session Status Board**
+7. **Stage-specific work** (governed by the relevant route / stage authority file)
+8. **Governance and evidence test**
+9. **Human decision**
+10. **Controlled update recommendations**
+11. **Closeout, suspension or handover**
+12. **Digital Lead actions required**
 
-Gates 1–4 may be addressed together at spin-up in one batched exchange. The Live Session Status Board (5) is created at spin-up and refreshed on every material exchange thereafter.
+Gates 1–5 may be addressed together at spin-up in one batched exchange, but the Confirmation-First Status Gate (3) must present the held position and obtain confirmation before that position is used or reconciled as current. The Live Session Status Board (6) is created at spin-up and refreshed on every material exchange thereafter. For reporting sessions, the Confirmation-First Status Gate may be completed as a structured batch confirmation across the initiatives in scope.
 
 ---
 
@@ -64,14 +65,13 @@ This is the runtime gate all material governed sessions must perform. It preserv
 
 At spin-up the coworker must state:
 
-- which live repository files it can access;
-- which client records and artefacts it can access;
+- which current repository authority files it can access;
+- which supplied exports, snapshots, and evidence records it can access;
 - which records are missing;
 - whether the prompt alone is sufficient;
-- whether any synced project knowledge may be stale;
-- which source will be treated as current.
+- whether any synced project knowledge may be stale.
 
-Live repository files and current controlled records override synced project knowledge. The coworker must answer only with one of the access confirmation responses defined in `CLAUDE.md` (access confirmed / access gap / prompt sufficient) and must not begin substantive stage work until the Digital Lead confirms proceed. Uncertain access is treated as an access gap.
+This gate confirms access only. Accessible current repository authority files and supplied exports, snapshots, and evidence records take precedence over synced project knowledge for authority and content, but this gate must **not** decide that a business position is current — whether the held position is current is settled at the Confirmation-First Status Gate (gate 3) by the Digital Lead. The coworker must answer only with one of the access confirmation responses defined in `CLAUDE.md` (access confirmed / access gap / prompt sufficient) and must not begin substantive stage work until the Digital Lead confirms proceed. Uncertain access is treated as an access gap.
 
 ---
 
@@ -152,34 +152,57 @@ This workstream does not create the Client Digital Governance Profile model and 
 
 ---
 
-## 3. Initiative Reconciliation Gate
+## 3. Confirmation-First Status Gate
+
+Access confirmation (gate 1) and business-status confirmation are separate mandatory controls. Gate 1 confirms whether the coworker can access the required repository files, exports, snapshots, evidence files, or prompt-contained information. It does **not** confirm that the business status is current.
+
+At the start of every material initiative or reporting session, after access is established and before the supplied status is used, the coworker must:
+
+1. present the latest available position it holds;
+2. identify the source and date of that position;
+3. ask:
+
+> **Is this still accurate? Please confirm or provide any changes since the last recorded update.**
+
+The coworker must not treat any of the following as current without Digital Lead confirmation: prior chat; Claude Project knowledge; assistant memory; an earlier report; an older export; an initiative evidence file; a previously approved historical artefact; a prior status snapshot. A previously approved historical artefact confirms a past decision, not the current status.
+
+Where the position is not confirmed, mark the affected information `Pending confirmation` and state which output, decision, report, or control move is affected.
+
+This gate applies to initiative sessions and to the bi-weekly and monthly reporting sessions. For reporting sessions it may be completed as a structured batch confirmation across the initiatives in scope. It is governed together with `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`.
+
+---
+
+## 4. Initiative Reconciliation Gate
 
 Before substantive stage work begins, the coworker must reconcile the requested initiative and any visible unresolved governance obligations.
 
-### 3.1 Physical read-source hierarchy
+### 4.1 Available read-source hierarchy (no live client connection)
 
-Use this hierarchy:
+Claude has no live connection to Jira, SharePoint, or Omega 365 and must not imply one. Use this hierarchy:
 
-1. Connected live Jira integration, where available.
-2. A current Jira export, snapshot or report supplied in-session.
-3. A current interim client Initiative Control Register where Jira does not expose all required control fields.
+1. The latest confirmed Initiative Evidence and Decision File for the initiative.
+2. A current Jira export, snapshot, or report supplied in-session.
+3. Another current supplied controlled record (for example a SharePoint export or Omega 365 action extract) where the evidence file does not expose all required control fields.
 4. If none is available, declare an Initiative Reconciliation access gap.
+
+The reconciled position is not treated as current until the Confirmation-First Status Gate is satisfied.
 
 The coworker must state:
 
-- which source was used;
-- source date / time or reporting period;
-- whether it is live, exported or interim;
+- which source was used (Initiative Evidence and Decision File, supplied Jira export, SharePoint export, or Omega 365 extract);
+- source date and freshness;
+- the last Digital Lead confirmation date;
 - the scope of records included;
 - whether the source covers only the requested initiative or the wider portfolio;
-- the filters used for a Jira export;
+- the filters used for a supplied Jira export;
 - whether decisions, evidence and linked delivery records were included;
-- the last reconciled-with-Jira date where an interim register is used;
+- the required Initiative Evidence and Decision File update;
+- the required Jira, SharePoint, and Omega 365 physical write-backs;
 - limitations on the reconciliation performed.
 
 The coworker must **not** reconstruct the initiative-control position from memory, synced project knowledge, prior assistant summaries, chat history, or assumptions about Jira. Conversation search may be used only as a secondary discovery aid; information recovered from a conversation must be reconciled into a controlled record before it is treated as authoritative.
 
-### 3.2 Items to reconcile
+### 4.2 Items to reconcile
 
 Check for:
 
@@ -195,11 +218,11 @@ Check for:
 - candidate changes not yet dispositioned;
 - records whose freshness requires revalidation;
 - unresolved source-of-truth impacts;
-- delivery or adoption handovers not completed.
+- internal delivery, go-live, adoption, benefits, or closeout stage transitions not completed.
 
 Unresolved items from other initiatives must be reported. They must not automatically block unrelated work.
 
-### 3.3 Reconciliation waiver
+### 4.3 Reconciliation waiver
 
 Where no valid reconciliation source is available, pause and report an access gap. The session may continue only if the Digital Lead explicitly waives the Initiative Reconciliation Gate.
 
@@ -229,7 +252,7 @@ The waiver must appear in the Live Session Status Board, in Digital Lead actions
 
 ---
 
-## 4. Required Inputs Gate
+## 5. Required Inputs Gate
 
 At stage spin-up, produce one consolidated input table:
 
@@ -253,7 +276,7 @@ No substantive stage output may be treated as controlled-ready until mandatory i
 
 ---
 
-## 5. Live Session Status Board
+## 6. Live Session Status Board
 
 Every material exchange must create or refresh a visible session board:
 
@@ -289,7 +312,7 @@ Approved item statuses:
 
 ---
 
-## 6. Stage-specific work
+## 7. Stage-specific work
 
 Stage-specific work is governed by the relevant route / stage authority file (for example `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`, `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`, `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`, or `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`). This protocol does not redefine that work; it wraps it in the interactive gates, the status board, and the closeout write-back.
 
@@ -297,29 +320,30 @@ Stage segregation applies: a closing stage hands over only what it agreed, deliv
 
 ---
 
-## 7. Governance and evidence test
+## 8. Governance and evidence test
 
 Apply the governance test and evidence / freshness model before any output is treated as controlled-ready. Freshness is event / cadence based (see `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`); there is no universal arbitrary staleness period. A stale item must identify the reason it is stale, the output or decision blocked, the owner, the evidence required, and the next review point.
 
 ---
 
-## 8. Human decision
+## 9. Human decision
 
 The Digital Lead is the decision and approval authority at every controlled update and stage transition. AI proposes; the Digital Lead decides. No controlled update (repository, Jira, SharePoint, process artefact, source-of-truth) is applied without Digital Lead approval, and the next stage is not started until the Digital Lead explicitly spins it up.
 
 ---
 
-## 9. Controlled update recommendations
+## 10. Controlled update recommendations
 
-Prepare update text as recommendations only. All recommended updates must be labelled:
+Prepare update text as recommendations only, using the label that matches the target:
 
-`Recommended update — requires Digital Lead approval.`
+- **Client-system updates (Jira, SharePoint, Omega 365):** `Recommended update — requires Digital Lead approval and physical update in the client system.` Claude cannot mutate Jira, SharePoint, or Omega 365; the Digital Lead or an authorised user performs the physical update and confirms completion.
+- **Reusable GitHub authority-file updates and the AI-readable Initiative Evidence and Decision File:** `Recommended update — requires Digital Lead approval.` These are not client-system physical write-backs; the Initiative Evidence and Decision File is maintained only within Claude's approved AI-readable workspace role and only when the Digital Lead approves the update or instructs Claude to make it.
 
 This restates the AI permission boundary already governed by `00_system_control/OPERATING_RULES.md` and `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. It does not extend AI authority.
 
 ---
 
-## 10. Closeout, suspension or handover — controlled session states
+## 11. Closeout, suspension or handover — controlled session states
 
 Add these controlled session states:
 
@@ -348,18 +372,17 @@ No material governed session may be treated as closed until a controlled write-b
 - actions open;
 - accepted gaps;
 - linked artefacts;
-- required Jira update;
-- required interim-register update, where relevant;
-- required SharePoint / evidence update;
+- required Initiative Evidence and Decision File update;
+- required Jira physical write-back, where relevant;
+- required SharePoint / evidence physical write-back, where relevant;
+- required Omega 365 physical write-back, where relevant;
 - client-context impacts;
 - source-of-truth impacts;
 - maturity-impact position;
 - handover state;
 - next-stage trigger.
 
-All write-backs must be labelled:
-
-`Recommended update — requires Digital Lead approval.`
+Each recommendation must be labelled to match its target: physical Jira, SharePoint, or Omega 365 write-backs use `Recommended update — requires Digital Lead approval and physical update in the client system.`; the Initiative Evidence and Decision File update and any reusable GitHub authority-file update use `Recommended update — requires Digital Lead approval.` (see Controlled update recommendations above). Claude never implies it can mutate Jira, SharePoint, or Omega 365.
 
 The session is not closed until the Digital Lead has:
 
@@ -371,7 +394,7 @@ The closeout otherwise uses the Stage Closeout Handover Output Model, Knowledge 
 
 ---
 
-## 11. Digital Lead actions required
+## 12. Digital Lead actions required
 
 Every substantive governed-session response must end with a standing action block:
 

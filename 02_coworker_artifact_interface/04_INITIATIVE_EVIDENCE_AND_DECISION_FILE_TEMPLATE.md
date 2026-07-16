@@ -2,9 +2,9 @@
 
 ## Status
 
-Reusable client-copy template. This file defines the minimum AI-readable initiative evidence and decision record required by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`.
+Reusable client-copy template. This file defines the minimum AI-readable initiative evidence and decision record required by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`. It is the client-copy implementation of the reusable Initiative Control Record schema (`00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`) and is the single AI-readable per-initiative continuity record — it does not sit alongside a separate interim register.
 
-Do not use this reusable repository file as a live initiative record. Create the client-specific copy in the controlled client workspace / Claude Project knowledge arrangement agreed for that client. Jira, SharePoint, and Omega 365 remain the client-facing operational systems.
+Do not use this reusable repository file as a live initiative record. Create the client-specific copy in the controlled client workspace / Claude Project knowledge arrangement agreed for that client. Jira, SharePoint, and Omega 365 remain the client-facing operational systems, and Claude has no live connection to them. This file is not automatically the organisational source of record; SharePoint holds the organisational source-of-record artefacts.
 
 ## Purpose
 

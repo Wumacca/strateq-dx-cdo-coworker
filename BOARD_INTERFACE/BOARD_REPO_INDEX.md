@@ -74,10 +74,13 @@
 
 ## 4. Operating Boundaries
 
+- There are exactly two client-project lifecycle coworkers: the Hopper Lifecycle Coworker and the Live Delivery Coworker. The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker.
+- DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and reporting are governed stages, controls, or modes, not separate coworkers or threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker.
+- Each initiative runs in one continuous thread (`HOP` → `LIVE` → `CLOSED`); the only non-initiative threads are `90 | Bi-Weekly Programme Reporting` and `91 | Monthly Leadership Reporting`.
 - Jira remains the client-facing initiative and delivery-status system.
 - SharePoint remains the organisational source-of-record artefact store.
 - Omega 365 remains the action-management system.
-- Claude has no permitted live connection to those client systems.
-- Claude works from available initiative evidence and requires Digital Lead confirmation before treating status as current.
+- Claude has no permitted live connection to those client systems and never claims it has read or updated one.
+- Claude works from the single AI-readable Initiative Evidence and Decision File and requires Digital Lead confirmation before treating status as current.
 - Confirmed reporting updates must be written back to the affected initiative evidence and decision files before programme reporting is finalised.
-- GitHub holds reusable methods and templates only; it must not become a parallel live Jira portfolio or Omega 365 action register.
+- GitHub holds reusable methods and templates only; it must not become a parallel live Jira portfolio, an Omega 365 action register, or a programme-memory ledger.

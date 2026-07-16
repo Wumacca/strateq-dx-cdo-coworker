@@ -19,7 +19,7 @@ The router is a routing aid. It points to the governing files. It does not conta
 
 Where the routed task is intended for Claude Opus, the first output must be an access confirmation response only. The Opus session must confirm whether it can access the authority files, source files, snapshots, exports, or prompt-contained information required for the task. It must not start the substantive coworker session until the Digital Lead confirms proceed.
 
-This applies to Hopper Portfolio Readiness Reviews, Pack 1 readiness reviews, delivery reviews, adoption/benefits reviews, source-of-truth reviews, programme-status reviews, and any other material governed review.
+This applies to Hopper Portfolio Readiness Reviews, Pack 1 readiness reviews, delivery reviews, adoption/benefits reviews, source-of-truth reviews, programme reporting reviews, and any other material governed review.
 
 The router must not be used to bypass this gate.
 
@@ -35,11 +35,14 @@ The router is subordinate to, and must not override, the following authority fil
 - `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
 - `00_system_control/OPERATING_RULES.md`
 - `00_system_control/CONTROLLED_VOCABULARY.md`
+- `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`
 - `01_governance_lifecycle/05_ROUTE_RULES.md`
 - `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 - `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`
 - `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`
 - `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
+
+There are exactly two client-project lifecycle coworkers — the Hopper Lifecycle Coworker and the Live Delivery Coworker. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and programme / leadership reporting are governed stages, controls, or modes, not separate coworkers. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker. Claude has no live connection to Jira, SharePoint, or Omega 365.
 
 Where the router and any authority file appear to conflict, the authority file governs and the conflict must be surfaced to the Digital Lead before final output.
 
@@ -59,7 +62,9 @@ The router must not:
 - introduce Confluence
 - create a pickup/handoff protocol
 - create skillset lens files
-- create programme-memory files
+- create programme-memory files or a programme-status ledger
+- create additional coworkers, additional client-project threads, or additional reporting cycles
+- imply a live connection to Jira, SharePoint, or Omega 365
 
 The router resolves jurisdiction and points to governing files. The governing files define what is produced and how.
 
@@ -77,11 +82,21 @@ The material session threshold and the proportionality rule are governed by `00_
 
 ## Global Interactive Session Rule
 
-Every material stage / session trigger invokes the Interactive Governed Session Protocol (`00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`) **before** stage-specific execution. Whatever jurisdiction the router resolves, the coworker first runs the Runtime Access Confirmation Gate, the proportionate Client Context Gate, the Initiative Reconciliation Gate, and the Required Inputs Gate, maintains the Live Session Status Board, ends substantive responses with the Digital Lead actions block, and closes only after a controlled write-back has been approved, deferred, or its gap accepted. The router resolves jurisdiction; `12` governs the interactive sequence. This rule creates no new coworker route.
+Every material stage / session trigger invokes the Interactive Governed Session Protocol (`00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`) **before** stage-specific execution. Whatever jurisdiction the router resolves, the coworker runs the mandatory sequence:
+
+1. Runtime Access Confirmation Gate
+2. Client Context Gate
+3. Confirmation-First Status Gate
+4. Initiative Reconciliation Gate
+5. Required Inputs Gate
+6. Live Session Status Board
+7. governed stage execution and closeout
+
+The held position cannot be reconciled or used as current until the Digital Lead has confirmed or corrected it at the Confirmation-First Status Gate. The coworker maintains the Live Session Status Board, ends substantive responses with the Digital Lead actions block, and closes only after a controlled write-back has been approved, deferred, or its gap accepted. The router resolves jurisdiction; `12` governs the interactive sequence. This rule creates no new coworker route.
 
 ## Coworker Jurisdictions
 
-The router recognises the following jurisdictions.
+The router recognises exactly two client-project lifecycle coworkers — the Hopper Lifecycle Coworker and the Live Delivery Coworker. Source-of-truth artefact control and adoption / benefits are governed modes / stages within those coworkers, not separate coworkers.
 
 ### 1. Hopper Lifecycle Coworker
 
@@ -107,13 +122,13 @@ Owns the approved live job after Stage 1D / Stage 2 / form approval, including d
 
 The label is **Live Delivery Coworker**. Do not use "Initiative Delivery Coworker".
 
-### 3. Source-of-Truth Artefact Controller
+### Source-of-truth artefact control (governed mode)
 
-This is a controlled mode / jurisdiction, not an always-on separate coworker. It is invoked when source-of-truth artefact integrity is the subject of the work (artefact registers, process flow / ecosystem / maturity registers, decision records, superseded / active artefact control), governed by `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`.
+This is a controlled mode within the Live Delivery Coworker's ownership, not a separate coworker or a separate thread. It is invoked when source-of-truth artefact integrity is the subject of the work (artefact registers, process flow / ecosystem / maturity registers, decision records, superseded / active artefact control), governed by `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. It is applied inside the continuous initiative thread.
 
-### 4. Adoption / Benefits Lifecycle
+### Adoption / benefits (internal Live Delivery stage)
 
-Applies only when that lifecycle stage is reached. It remains future scope until its own model file is created, consistent with `00_system_control/OPERATING_RULES.md`. The router must not invoke it before that stage is reached.
+Adoption and benefits are internal stages of the Live Delivery Coworker, applied only when that lifecycle stage is reached and handled inside the continuous initiative thread. The detailed adoption / benefits model remains future scope until its own model file is created, consistent with `00_system_control/OPERATING_RULES.md`. It is not a separate coworker or thread.
 
 ## Hopper Portfolio Readiness
 
@@ -140,7 +155,7 @@ If Digital Lead approval is given, the coworker must not review the screenshot i
 The source-read hierarchy is:
 
 1. Current Hopper screenshot / export / snapshot
-2. Current programme-memory/status files if they exist
+2. Current Initiative Evidence and Decision Files where they exist
 3. Digital Benchmark Assessment / benchmark source files
 4. Phase 2 update / roadmap / summary files
 5. Approved initiation forms
@@ -149,7 +164,7 @@ The source-read hierarchy is:
 8. Prior coworker handovers and update files where available
 9. Source-of-truth artefact files where relevant
 
-If programme-memory/status files do not exist, the coworker must state this as a limitation and use the available source files. It must recommend creation of programme-memory files under PR-B / pickup-handoff scope, and must not create them during the review.
+Claude has no live connection to Jira, SharePoint, or Omega 365; it reads only supplied or accessible controlled records. If Initiative Evidence and Decision Files do not exist, the coworker must state this as a limitation and use the available source files. It must not create a programme-memory or programme-status ledger. Cross-initiative status is read from the confirmed Initiative Evidence and Decision Files.
 
 The coworker must use all available approved information to propose answers for Digital Lead review.
 
@@ -164,7 +179,7 @@ It must clearly distinguish:
 Every proposed answer must show:
 
 - **Confidence:** High / Medium / Low
-- **Source Basis:** Snapshot / Programme Status / Benchmark / Phase 2 / Initiation Form / Adoption-Benefits / AIRB-QPR / Prior Handover / Source-of-Truth / Inference
+- **Source Basis:** Snapshot / Initiative Evidence / Benchmark / Phase 2 / Initiation Form / Adoption-Benefits / AIRB-QPR / Prior Handover / Source-of-Truth / Inference
 
 ### Hopper Portfolio Readiness Review Output
 
@@ -181,7 +196,7 @@ The session must return:
 9. Pack 1 Readiness
 10. Open Clarifications
 11. Recommended Hopper Updates for Digital Lead Approval
-12. Recommended Programme-Memory Updates, if programme-memory files exist or should be created later
+12. Recommended Initiative Evidence and Decision File updates for Digital Lead Approval
 
 ### Proposed Hopper Review Table Fields
 
@@ -286,7 +301,7 @@ Grouping values:
 
 ### Pack 1 Boundary
 
-> Hopper Portfolio Readiness Review = portfolio control and prioritisation readiness.
+> Hopper Portfolio Readiness Review = portfolio prioritisation readiness.
 > Pack 1 session = detailed initiative shaping and DRB preparation.
 
 The Hopper Portfolio Readiness Review must not create:
@@ -314,13 +329,14 @@ The coworker must be able to produce a leadership-ready view grouped by:
 
 ## No Automatic Update Authority
 
-The coworker may recommend Hopper updates, but must not update Jira, SharePoint, GitHub, source-of-truth files, programme-memory files, or controlled records without Digital Lead approval.
+The coworker may recommend Hopper updates, but must not update Jira, SharePoint, GitHub, source-of-truth files, Initiative Evidence and Decision Files, or controlled records without Digital Lead approval.
 
-Where updates are needed, the coworker must present them as:
+Where updates are needed, the coworker must present them with the label that matches the target:
 
-> "Recommended update — requires Digital Lead approval."
+> Client-system updates (Jira, SharePoint, Omega 365): "Recommended update — requires Digital Lead approval and physical update in the client system."
+> Reusable GitHub authority-file updates and the AI-readable Initiative Evidence and Decision File: "Recommended update — requires Digital Lead approval."
 
-This restates the AI permission boundary already governed by `00_system_control/OPERATING_RULES.md` and `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. It does not extend AI authority.
+Claude cannot mutate Jira, SharePoint, or Omega 365. This restates the AI permission boundary already governed by `00_system_control/OPERATING_RULES.md` and `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. It does not extend AI authority.
 
 ## Router Table
 
@@ -331,16 +347,16 @@ This restates the AI permission boundary already governed by `00_system_control/
 | 3 | Leadership asks for next six months of proposed initiatives | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`; `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` | Leadership Six-Month View grouped as specified | Pack 1 / DRB detail | Recommendations only |
 | 4 | User asks whether an item is ready for Pack 1 | Hopper Lifecycle Coworker | Hopper Portfolio Readiness → Pack 1 boundary | This file; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`; relevant route / initiation authority files under `01_governance_lifecycle/` | Pack 1 Readiness assessment | Pack 1 outputs without explicit spin-up | Digital Lead must spin up Pack 1 |
 | 5 | User asks to group initiatives into epics | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` | Grouping / Epic Recommendations using grouping values | Building the epic / delivery structure | Recommendations only |
-| 6 | User asks to update Hopper after review | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`; `00_system_control/OPERATING_RULES.md` | "Recommended update — requires Digital Lead approval." | Direct update to Jira / SharePoint / live Hopper | Digital Lead approves; coworker does not apply |
-| 7 | User asks to update programme status / memory after a review | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md` | Recommended programme-memory updates if those files exist; otherwise recommend creation under PR-B / pickup-handoff scope | Creating programme-memory files in this scope | Digital Lead approves; PR-A does not create the files |
-| 8 | User uploads completed / live / closed initiative evidence that affects Hopper status | Hopper Lifecycle Coworker for portfolio-status reflection; handover to Live Delivery Coworker or Adoption / Benefits lifecycle only if explicitly spun up | Hopper Portfolio Readiness with delivery/closure status read | This file; `04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` | Reflect items as in delivery / live / closed / superseded / duplicated, with Source Basis and Confidence | Reopening, restructuring, or modifying delivery/adoption records without explicit spin-up and Digital Lead approval | Recommendations only; handover checkpoint where responsibility moves |
+| 6 | User asks to update Hopper after review | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`; `00_system_control/OPERATING_RULES.md` | "Recommended update — requires Digital Lead approval." | Direct update to Jira / SharePoint / Hopper; implying live client-system access | Digital Lead approves; coworker does not apply |
+| 7 | User asks to update the confirmed initiative position after a review | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`; `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` | Recommended Initiative Evidence and Decision File updates and required Jira / SharePoint / Omega 365 physical write-backs, labelled as recommendations | Creating a programme-memory or programme-status ledger; mutating client systems | Digital Lead approves; coworker does not apply |
+| 8 | User uploads completed / live / closed initiative evidence that affects Hopper status | Hopper Lifecycle Coworker for portfolio-status reflection; the initiative is owned by the Live Delivery Coworker once approved (internal stage, same thread) | Hopper Portfolio Readiness with delivery/closure status read | This file; `04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` | Reflect items as in delivery / live / closed / superseded / duplicated, with Source Basis and Confidence | Reopening, restructuring, or modifying delivery/adoption records without explicit spin-up and Digital Lead approval | Recommendations only; principal handover checkpoint only at Hopper → Live Delivery |
 | 9 | User asks for a development epic charter or department scoring input | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md` | Initiative Charter (pre-initiation input tool only) using the charter columns in `09` | Treating the charter as an Initiation Form; committing scope or budget; producing Pack 1 / Stage 1D before approval | Recommendations only; charter feeds the Jira Initiative View / Hopper priority discussion |
 | 10 | Leadership / DRB approves a route trigger after the priority discussion | Hopper Lifecycle Coworker | Hopper Portfolio Readiness → route trigger | This file; `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md` | Per-initiative route trigger: development epic → Pack 1 / Stage 1D; implementation → Initiation Form / Implementation Route; support → selection/support route then Initiation Form; in-flight → continue under existing record | Batching unrelated initiatives into one Pack 1; starting any stage before explicit Digital Lead spin-up | Digital Lead approves and spins up each receiving stage |
 | 11 | Digital Lead opens a capex request / capitalisation closeout-and-next-request session | Hopper Lifecycle Coworker | Hopper Portfolio Readiness — Capex Request Mode | `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`; `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`; `00_system_control/CONTROLLED_VOCABULARY.md`; `00_system_control/OPERATING_RULES.md`; `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; `01_governance_lifecycle/05_ROUTE_RULES.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `docs/presentation-standards/communication-and-framing-standard.md` where present | Access gate; source-read status reflection; Capex Readiness Tracker; Portfolio Capex Request Pack; Capital Efficiency Evidence; Plan Attainment Evidence; Claim Safety Table; Board slide brief / storyboard; client-review Board-draft deck; Hopper → Live Delivery Handover Checklist | Final spend approval; maturity approval; benefits approval; a Board-final deck while blockers remain open; initiative-level delivery mobilisation; Pack 1 / Stage 1D / Stage 1 / Stage 2 detail before route-specific spin-up; Jira delivery / epic build; unsupported Board claims; controlled updates without Digital Lead approval | Digital Lead approval required for spin-up, readiness, output use, and every controlled update |
 
-## Programme-Memory Future Scope Note
+## No Programme-Memory Ledger
 
-Programme-memory files such as `PROGRAMME_STATUS.md`, `HOPPER_STATUS.md`, `INITIATIVE_INDEX.md`, `SESSION_HANDOVER.md`, `DECISION_LOG.md`, `PACK_1_PIPELINE.md`, `DELIVERY_STATUS.md`, and `ADOPTION_CLOSURE_STATUS.md` are PR-B / pickup-handoff scope unless already present on main. The router may require the coworker to read them if they exist, and may recommend updates to them, but PR-A must not create those files.
+The router must not create, or recommend the creation of, a programme-memory or programme-status ledger (for example generic `PROGRAMME_STATUS.md`, `HOPPER_STATUS.md`, `INITIATIVE_INDEX.md`, `SESSION_HANDOVER.md`, `DECISION_LOG.md`, `DELIVERY_STATUS.md`, or `ADOPTION_CLOSURE_STATUS.md` files) or any differently named equivalent. Cross-initiative status is read from the confirmed Initiative Evidence and Decision Files governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`. GitHub holds reusable methods and schemas only and must not become a parallel live client initiative-management system.
 
 ## Boundary
 

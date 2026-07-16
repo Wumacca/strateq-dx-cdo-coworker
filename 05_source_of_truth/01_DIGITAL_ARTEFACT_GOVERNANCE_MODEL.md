@@ -6,11 +6,13 @@ This file defines how the Strateq DX CDO Coworker manages organisational digital
 
 ## Core Operating Model
 
-Jira is the initiative lifecycle system.
+Jira is the client-facing initiative and delivery-status system.
 
-SharePoint is the source-of-record artefact store.
+SharePoint is the organisational source-of-record artefact store.
 
-Claude is the facilitator, drafter, impact checker, and update controller.
+Omega 365 is the client-facing action-management system.
+
+Claude is the facilitator, drafter, impact checker, and update-recommendation preparer. Claude has no live connection to Jira, SharePoint, or Omega 365 and must never claim it has read or updated a live client system. Source-of-truth artefact control is a governed control mode applied within the initiative thread by the Live Delivery Coworker (or by the Hopper Lifecycle Coworker where a pre-approval artefact impact arises); it is not a separate coworker or thread. The single AI-readable per-initiative continuity record is the Initiative Evidence and Decision File (`02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`), which is not automatically the organisational source of record; SharePoint holds the organisational source-of-record artefacts.
 
 Claude must not recreate Jira's initiative lifecycle as a SharePoint folder hierarchy unless the Digital Lead explicitly asks for that.
 

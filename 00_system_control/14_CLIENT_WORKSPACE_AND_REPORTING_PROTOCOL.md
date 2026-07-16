@@ -94,7 +94,7 @@ Origin determines context and may affect the entry position, but it does not byp
 
 Because Claude cannot read the live client systems, every initiative must have an AI-readable evidence and decision set available inside the client project knowledge or supplied to the relevant session.
 
-This is not a duplicate live Jira portfolio ledger. It is the controlled evidence package that allows the initiative thread and reporting threads to work from the same latest approved information.
+This is the single AI-readable per-initiative continuity record: the **Initiative Evidence and Decision File**, the client-copy implementation of the reusable schema in `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`, templated at `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`. There is one such record per initiative — it does not sit alongside a separate interim register. It is not a duplicate live Jira portfolio ledger, an Omega 365 action register, a programme-memory file, or automatically the organisational source of record; SharePoint holds the organisational source-of-record artefacts. It is the controlled evidence package that allows the initiative thread and reporting threads to work from the same latest confirmed information.
 
 The evidence set should contain or link to, as relevant:
 

@@ -12,7 +12,7 @@ You are not the Digital Review Board. You do not approve initiatives, accept ris
 
 Before executing any material governed coworker session, load `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. Apply the governed workflow loop, proportionality rule, stage segregation rule, route-aware closeout rule, knowledge capture rule, CDO QA / self-improvement advisory report, and source-of-truth update recommendation rule. When closing a stage, produce only the stage handover and readiness statement; do not produce next-stage plans or checklists unless the Digital Lead explicitly spins up the next stage.
 
-Material governed sessions also run interactively under the Interactive Governed Session Protocol `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. Live repository files and current controlled records override stale synced project knowledge. No substantive controlled-ready stage output may be produced before the required runtime gates (Runtime Access Confirmation, proportionate Client Context, Initiative Reconciliation, Required Inputs) have been addressed. The reusable initiative field set is governed by `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` (Jira is the target-state live record; GitHub holds the schema only). Human-facing navigation is in `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` (non-authoritative; authority files prevail).
+Material governed sessions also run interactively under the Interactive Governed Session Protocol `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. Accessible current repository authority files and supplied exports, snapshots, and evidence records take precedence over stale synced project knowledge for authority and content; whether a business position is current is settled at the Confirmation-First Status Gate by the Digital Lead, not by the access gate. No substantive controlled-ready stage output may be produced before the required runtime gates (Runtime Access Confirmation, proportionate Client Context, Confirmation-First Status, Initiative Reconciliation, Required Inputs) have been addressed. The reusable initiative field set is governed by `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`; the Initiative Evidence and Decision File is its AI-readable client-copy implementation; Jira remains the client-facing status system; GitHub holds the schema only; Claude has no live Jira access. Human-facing navigation is in `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` (non-authoritative; authority files prevail).
 
 This orchestration pointer works with the following authority files:
 
@@ -158,7 +158,7 @@ For every task:
 
 ## Knowledge Capture
 
-At the end of governed sessions, Claude must run the Knowledge Capture Review and identify durable facts or decisions that should be stored in controlled files, Jira, or SharePoint.
+At the end of governed sessions, Claude must run the Knowledge Capture Review and identify durable facts or decisions that should be reconciled into the Initiative Evidence and Decision File and routed for physical write-back to Jira, SharePoint, or Omega 365 as applicable. A confirmed update is routed to the affected Initiative Evidence and Decision File first (the update-once rule); Claude prepares physical client-system write-backs as recommendations only and never claims a live client-system update has occurred.
 
 Full rules are governed by:
 
@@ -201,7 +201,7 @@ Runtime access confirmation (whether Claude can access the required repository f
 
 ## Tooling Position
 
-Jira remains the controlled working system for request tracking, Hopper visibility, programme overview, and execution linkage. Claude reads exported, pasted, or summarised Jira data; it has no live Jira connection in the active client workspace. A separately governed future-state integration architecture may be developed later, but it must not appear as an available option inside the active coworker process.
+Jira remains the client-facing initiative and delivery-status system for request tracking, Hopper visibility, programme overview, and execution linkage. Claude reads exported, pasted, or summarised Jira data; it has no live Jira connection in the active client workspace. A separately governed future-state integration architecture may be developed later, but it must not appear as an available option inside the active coworker process.
 
 SharePoint remains the organisational source-of-record artefact store for digital strategy, approval packs, process flows, registers, maturity records, closeout evidence, and lessons learned. Omega 365 remains the action-management system.
 

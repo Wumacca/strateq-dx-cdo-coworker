@@ -4,7 +4,14 @@
 
 This file defines how durable facts, decisions, and technical constraints discovered during governed sessions are identified, routed, and stored in controlled source-of-truth locations.
 
-Claude must not leave durable knowledge only in chat. Chat is ephemeral. Controlled files, Jira, and SharePoint are the governed record.
+Claude must not leave durable knowledge only in chat. Chat is ephemeral. The governed record spans four distinct roles, which are not the same type of source of truth:
+
+- **Initiative Evidence and Decision File** — the AI-readable per-initiative continuity record;
+- **Jira** — the client-facing initiative and delivery-status system;
+- **SharePoint** — the organisational controlled artefacts and evidence store;
+- **Omega 365** — the action-management system.
+
+Claude has no live connection to Jira, SharePoint, or Omega 365.
 
 ## What Counts as Durable Knowledge
 
@@ -99,10 +106,19 @@ No material fact may remain only in a chat, a reporting thread, a previous repor
 
 Required Jira, SharePoint, and Omega 365 physical write-backs are prepared as recommendations labelled `Recommended update — requires Digital Lead approval and physical update in the client system.` Claude has no live connection to those systems and must never claim a client-system update has occurred; a write-back is complete only when the Digital Lead explicitly confirms the physical update.
 
+## Confirmation versus file-update approval
+
+Digital Lead confirmation and controlled-file update approval are distinct:
+
+- Digital Lead confirmation **establishes or corrects the current business position** (the confirmation-first status rule). It does not, by itself, apply any file update.
+- A proposed controlled file update — including an update to the Initiative Evidence and Decision File or a reusable GitHub authority file — is applied **only when the Digital Lead explicitly approves that update or explicitly instructs Claude to make it**.
+- Confirmation of a status position does **not** prove that Jira, SharePoint, or Omega 365 was physically updated; a physical client-system write-back is complete only when the Digital Lead or an authorised user reports it complete.
+- Claude may maintain the Initiative Evidence and Decision File **only within its approved AI-readable workspace role**; client-system mutation (Jira, SharePoint, Omega 365) remains a Digital Lead or authorised-user action.
+
 ## Boundary Rule
 
 Claude must not update controlled source-of-truth files without Digital Lead approval.
 
-Claude must not treat chat confirmation alone as sufficient authority to update a repository file, Initiative Evidence and Decision File, Jira field, SharePoint artefact, or Omega 365 action.
+Claude must not treat chat confirmation of a status position as sufficient authority to apply a controlled file update, or to claim a Jira field, SharePoint artefact, or Omega 365 action was physically updated.
 
 Knowledge capture proposals are outputs for Digital Lead action, not self-authorised updates.

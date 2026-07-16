@@ -82,7 +82,17 @@ The material session threshold and the proportionality rule are governed by `00_
 
 ## Global Interactive Session Rule
 
-Every material stage / session trigger invokes the Interactive Governed Session Protocol (`00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`) **before** stage-specific execution. Whatever jurisdiction the router resolves, the coworker first runs the Runtime Access Confirmation Gate, the proportionate Client Context Gate, the Initiative Reconciliation Gate, and the Required Inputs Gate, maintains the Live Session Status Board, ends substantive responses with the Digital Lead actions block, and closes only after a controlled write-back has been approved, deferred, or its gap accepted. The router resolves jurisdiction; `12` governs the interactive sequence. This rule creates no new coworker route.
+Every material stage / session trigger invokes the Interactive Governed Session Protocol (`00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`) **before** stage-specific execution. Whatever jurisdiction the router resolves, the coworker runs the mandatory sequence:
+
+1. Runtime Access Confirmation Gate
+2. Client Context Gate
+3. Confirmation-First Status Gate
+4. Initiative Reconciliation Gate
+5. Required Inputs Gate
+6. Live Session Status Board
+7. governed stage execution and closeout
+
+The held position cannot be reconciled or used as current until the Digital Lead has confirmed or corrected it at the Confirmation-First Status Gate. The coworker maintains the Live Session Status Board, ends substantive responses with the Digital Lead actions block, and closes only after a controlled write-back has been approved, deferred, or its gap accepted. The router resolves jurisdiction; `12` governs the interactive sequence. This rule creates no new coworker route.
 
 ## Coworker Jurisdictions
 
@@ -321,11 +331,12 @@ The coworker must be able to produce a leadership-ready view grouped by:
 
 The coworker may recommend Hopper updates, but must not update Jira, SharePoint, GitHub, source-of-truth files, Initiative Evidence and Decision Files, or controlled records without Digital Lead approval.
 
-Where updates are needed, the coworker must present them as:
+Where updates are needed, the coworker must present them with the label that matches the target:
 
-> "Recommended update — requires Digital Lead approval."
+> Client-system updates (Jira, SharePoint, Omega 365): "Recommended update — requires Digital Lead approval and physical update in the client system."
+> Reusable GitHub authority-file updates and the AI-readable Initiative Evidence and Decision File: "Recommended update — requires Digital Lead approval."
 
-This restates the AI permission boundary already governed by `00_system_control/OPERATING_RULES.md` and `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. It does not extend AI authority.
+Claude cannot mutate Jira, SharePoint, or Omega 365. This restates the AI permission boundary already governed by `00_system_control/OPERATING_RULES.md` and `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. It does not extend AI authority.
 
 ## Router Table
 

@@ -64,7 +64,7 @@ Post-go-live adoption, benefits, competence, usage, support, and closeout eviden
 
 ## Source-of-truth artefact control (governed mode)
 
-Source-of-truth artefact integrity is a governed control mode applied within the initiative thread whenever an initiative creates, changes, replaces, or retires a controlled artefact, governed by `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. It ensures SharePoint artefacts, process maps, registers, decision records, and maturity records remain current and referenced against the client-facing Jira status. It is a mode, not a separate client-project coworker, and does not require its own thread or coworker handover.
+Source-of-truth artefact integrity is a governed control mode applied within the initiative thread whenever an initiative creates, changes, replaces, or retires a controlled artefact, governed by `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. In this mode Claude identifies the affected SharePoint artefacts, process maps, registers, decision records, and maturity records; prepares approved update recommendations; tracks the required physical write-backs; and confirms a status only when the Digital Lead or an authorised user reports the update complete. Claude does not itself update SharePoint or any controlled client system. It is a mode, not a separate client-project coworker, and does not require its own thread or coworker handover.
 
 ## Mandatory Handover Rule
 

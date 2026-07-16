@@ -366,7 +366,7 @@ The checklists in this manual are **expected checklists for human planning**. Th
 
 ## Section 15 — Programme Closeout / Learning
 
-1. **Purpose.** Update programme artefacts, registers, lessons learned, and reporting as the lifecycle closes or creates new candidates.
+1. **Purpose.** Prepare recommended updates to programme artefacts, registers, lessons learned, and reporting as the lifecycle closes or creates new candidates, for Digital Lead or authorised-owner approval and physical write-back. Claude does not itself update controlled client systems.
 2. **What this stage owns.** Lessons learned and programme reporting updates (as a lifecycle-recognised activity under source-of-truth / governance control).
 3. **What this stage does not own.** New initiative approval or delivery.
 4. **Entry criteria.** Adoption / source-of-truth control complete, or a programme learning point is captured.

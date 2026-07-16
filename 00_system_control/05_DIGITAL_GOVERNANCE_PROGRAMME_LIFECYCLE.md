@@ -10,7 +10,7 @@ Detailed workflow execution remains governed by the relevant stage-specific file
 
 ## Operating Principles
 
-Jira is the initiative lifecycle system.
+Jira is the client-facing initiative and delivery-status system.
 
 SharePoint is the organisational source-of-record artefact store.
 
@@ -38,7 +38,7 @@ This lifecycle map is the **controlled process view**. The four-stage macro mode
 ### Supporting authority pointers
 
 - **Human-facing manual:** `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` — non-authoritative human navigation of this lifecycle.
-- **Initiative Control Record schema:** `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` — the reusable schema for initiative control fields (Jira is the target-state live record; GitHub holds the schema only).
+- **Initiative Control Record schema:** `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` is the reusable schema for initiative control fields; the Initiative Evidence and Decision File (`02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`) is its AI-readable client-copy implementation. Jira remains the client-facing initiative and delivery-status system; GitHub holds the schema only; Claude has no live Jira access.
 - **Interactive Governed Session Protocol:** `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` — the interactive gates and session-state controls applied at every material session.
 
 ## Full Programme Lifecycle
@@ -64,8 +64,8 @@ This lifecycle map is the **controlled process view**. The four-stage macro mode
 | 15 | Live Delivery | Live Delivery Coworker | Track delivery, issues, vendor/developer progress, scope control, risks, blockers, and implementation evidence. | Jira delivery structure, weekly delivery-control touchpoint, risks/actions, delivery artefacts, implementation evidence. | Internal Live Delivery stage transition into go-live and adoption; recorded in the Initiative Evidence and Decision File. |
 | 16 | Go-Live / Deployment | Live Delivery Coworker (go-live stage) | Confirm the solution is live, users are identified, support route exists, and adoption period can start. | Go-live record, user list, support model, training evidence, operational readiness. | Internal Live Delivery stage transition into adoption; recorded in the Initiative Evidence and Decision File. |
 | 17 | Adoption & Benefits | Live Delivery Coworker (adoption / benefits stage) | Confirm controlled use, competence, benefits evidence, ownership, support, and closeout readiness. | 30-day review, benefits evidence, adoption evidence, competence readiness, support ownership, closeout record. | Internal Live Delivery stage transition into source-of-truth impact and closeout. |
-| 18 | Source-of-Truth Artefact Control / Programme Governance Update | Live Delivery Coworker (source-of-truth control mode) | Update programme artefacts, SharePoint registers, strategy/guidance, maturity records, process maps, software ecosystem records, lessons learned, and reporting. | SharePoint artefacts, process/register updates, source-of-truth impact closure, lessons learned, programme report. | Source-of-truth control mode closes the lifecycle inside the initiative thread or surfaces new Hopper candidates. |
-| 19 | PEP / Development Execution Where Applicable | Live Delivery Coworker + Delivery Owner | Manage approved implementation PEPs or development execution streams that sit within or after live delivery. | PEP / development execution plans, delivery controls, Jira execution tasks. | Handover back to Adoption or Source-of-Truth when complete. |
+| 18 | Source-of-Truth Artefact Control / Programme Governance Update | Live Delivery Coworker (source-of-truth control mode) | Identify affected controlled artefacts (SharePoint registers, strategy/guidance, maturity records, process maps, software ecosystem records, lessons learned, reporting) and prepare approved update recommendations and physical write-backs for the Digital Lead or authorised owner; record whether each physical update is completed, deferred, or pending. Claude does not directly update SharePoint, Jira, Omega 365, or any controlled client system. | SharePoint artefacts, process/register updates, source-of-truth impact closure, lessons learned, programme report. | Source-of-truth control mode closes the lifecycle inside the initiative thread or surfaces new Hopper candidates. |
+| 19 | PEP / Development Execution Where Applicable | Live Delivery Coworker + Delivery Owner | Manage approved implementation PEPs or development execution streams that sit within or after live delivery. | PEP / development execution plans, delivery controls, Jira execution tasks. | Internal Live Delivery stage transition: PEP / development execution remains owned by the Live Delivery Coworker and, on completion, transitions internally into go-live, adoption, benefits, source-of-truth impact, or closeout as applicable, recorded in the Initiative Evidence and Decision File. No additional coworker handover occurs. |
 
 ## Capex Request Session (Cross-Cutting Portfolio Mode)
 

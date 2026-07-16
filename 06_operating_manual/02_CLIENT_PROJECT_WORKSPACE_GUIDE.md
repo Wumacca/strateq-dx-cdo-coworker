@@ -4,6 +4,10 @@
 
 This is the practical setup guide for each client Claude Project. Detailed lifecycle and governance rules remain controlled by the authority files. The client workspace and reporting rules are governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`.
 
+## Two client-project coworkers
+
+Each initiative is owned by two client-project lifecycle coworkers in turn, inside the same continuous thread: the **Hopper Lifecycle Coworker** (origin and intake through approval to commence delivery) and the **Live Delivery Coworker** (approval through delivery, adoption, benefits, source-of-truth impact, and closeout). The only principal handover is Hopper Lifecycle Coworker → Live Delivery Coworker, at approval. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and reporting are governed stages, controls, or modes inside the thread — not separate coworkers or threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker.
+
 ## Project structure
 
 Create one Claude Project per client.

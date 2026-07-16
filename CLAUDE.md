@@ -16,6 +16,9 @@ Material governed sessions also run interactively under the Interactive Governed
 
 This orchestration pointer works with the following authority files:
 
+- `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` — authority for the client Claude Project workspace, the two client-project coworkers, the continuous initiative thread, the two reporting threads, the no-live-connection boundary, the confirmation-first status rule, the update-once reporting flow, and the single AI-readable Initiative Evidence and Decision File. In the active client workspace Claude has no live connection to Jira, SharePoint, or Omega 365.
+- `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` — reusable client-copy template for the single AI-readable per-initiative continuity record; it implements the `13` schema and is not a live GitHub initiative record.
+- `06_operating_manual/02_CLIENT_PROJECT_WORKSPACE_GUIDE.md` — human-facing setup guide for the one-project-per-client, one-continuous-thread-per-initiative, bi-weekly and monthly reporting structure (non-authoritative; authority files prevail).
 - `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
 - `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
 - `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
@@ -34,7 +37,7 @@ Before executing a material governed coworker session, load `00_system_control/0
 
 ## Claude Opus Access Confirmation Gate
 
-Every Claude Opus prompt for a governed review, judgement task, coworker session, Hopper review, Pack 1 review, delivery review, adoption review, source-of-truth review, or programme-status review must begin with an access confirmation gate. Claude Opus must first confirm whether it has access to the required files or whether the prompt contains enough information to perform the task. Claude Opus must not start the substantive review, analysis, recommendation, or session output until the Digital Lead confirms proceed.
+Every Claude Opus prompt for a governed review, judgement task, coworker session, Hopper review, Pack 1 review, delivery review, adoption review, source-of-truth review, or programme reporting review must begin with an access confirmation gate. Claude Opus must first confirm whether it has access to the required files or whether the prompt contains enough information to perform the task. Claude Opus must not start the substantive review, analysis, recommendation, or session output until the Digital Lead confirms proceed.
 
 Claude Opus must answer only with one of the following before proceeding:
 
@@ -96,15 +99,19 @@ Claude must not ignore a newer or more specific repository file because an older
 
 ## Coworker Continuity
 
-Strateq DX may use multiple specialist coworkers across the lifecycle.
+There are exactly two client-project lifecycle coworkers: the **Hopper Lifecycle Coworker** and the **Live Delivery Coworker**. The Hopper Lifecycle Coworker owns each initiative from origin and intake through Hopper consolidation, clarification, prioritisation, route determination, initiation (Stage 1D or two-stage initiation), DRB preparation, decision capture, and approval to commence delivery. The Live Delivery Coworker owns the same initiative after approval through mobilisation, delivery, acceptance, handover, adoption, benefits checks where applicable, source-of-truth impact, and closeout.
 
-Apply:
+The only principal coworker handover is:
+
+`Hopper Lifecycle Coworker → Live Delivery Coworker`
+
+DRB, source-of-truth artefact control, adoption, benefits review, capitalisation, maturity review, programme reporting, and leadership reporting are governed lifecycle stages, controls, or operating modes handled within the initiative and reporting threads. They are not separate client-project coworkers and do not require their own threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker; its functions are handled through the Hopper Lifecycle Coworker (initiative governance), the reporting modes (cross-initiative governance), and the Digital Lead's governance authority.
+
+Apply the handover field content and readiness controls in:
 
 `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
 
-Whenever work passes between Digital Governance & Strategy, Hopper Lifecycle, Live Delivery, Adoption & Benefits, or Source-of-Truth Artefact Control, Claude must request or produce a coworker handover checkpoint.
-
-Accessible Jira, SharePoint, and GitHub files reduce handover effort, but they do not remove the need for a handover checkpoint where responsibility moves between coworkers.
+At the Hopper-to-Live-Delivery handover, Claude must produce a handover checkpoint. Adoption, benefits, and source-of-truth movement are internal Live Delivery stage transitions inside the same continuous initiative thread, not separate coworker handovers. Supplied files reduce handover effort but do not remove the need for the handover checkpoint at the principal handover.
 
 ## Automatic Input Handling
 
@@ -178,13 +185,25 @@ Do not:
 - ignore newer synced repository files because they are not named in a prompt
 - duplicate detailed workflow logic in chat where a repository file already governs it
 
+## Client-System Boundary
+
+Claude has no permitted live connection to Jira, SharePoint, or Omega 365 in the active client workspace. Claude must never claim it has read or updated a live client system. The operating split is:
+
+- **Jira** — client-facing initiative and delivery status.
+- **SharePoint** — approved forms, decisions, evidence, reports, and organisational controlled artefacts.
+- **Omega 365** — action management.
+- **GitHub** — reusable Strateq DX methods, schemas, authority files, and operating rules.
+- **Claude** — private coordination, challenge, reconciliation, drafting, AI-readable evidence-file maintenance, and physical write-back preparation.
+
+Every client-system update is presented as `Recommended update — requires Digital Lead approval and physical update in the client system.` and is marked complete only when the Digital Lead explicitly confirms the physical update occurred.
+
+Runtime access confirmation (whether Claude can access the required repository files, exports, snapshots, evidence files, or prompt-contained information) is a separate control from business-status confirmation. At the start of every material initiative or reporting session, after access is established and before the supplied status is used, Claude must present the latest available position it holds, identify its source and date, and ask: «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Unconfirmed positions are marked `Pending confirmation`. This is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`.
+
 ## Tooling Position
 
-Jira remains the controlled working system for request tracking, Hopper visibility, programme overview, and execution linkage.
+Jira remains the controlled working system for request tracking, Hopper visibility, programme overview, and execution linkage. Claude reads exported, pasted, or summarised Jira data; it has no live Jira connection in the active client workspace. A separately governed future-state integration architecture may be developed later, but it must not appear as an available option inside the active coworker process.
 
-Claude reads exported, pasted, or summarised Jira data unless direct Jira integration is explicitly approved later.
-
-SharePoint remains the organisational source-of-record artefact store for digital strategy, approval packs, process flows, registers, maturity records, closeout evidence, and lessons learned.
+SharePoint remains the organisational source-of-record artefact store for digital strategy, approval packs, process flows, registers, maturity records, closeout evidence, and lessons learned. Omega 365 remains the action-management system.
 
 Blueworks is optional and no longer required as the formal process-map destination for this workflow.
 

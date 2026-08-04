@@ -208,7 +208,7 @@ Use the route-correct lifecycle name from:
 - On conversion, it inherits the receiving route's canonical lifecycle path and closeout wording.
 - Support Route must not force BAU or minor support into full initiation governance.
 
-> **Route-vocabulary dependency.** The controlled route-vocabulary split into separate `Implementation Route` and `Support Route` labels is owned by the initiation-form-route-hardening workstream and is **not** to be performed in this looping standard. On main, the controlled label currently appears as the combined `Implementation / Support Route` (see `00_system_control/CONTROLLED_VOCABULARY.md`). Until the split lands, the Implementation Route and Support Route closeout behaviour above is provisional and must be reconciled against the controlled vocabulary when the route-hardening workstream completes. This standard does not redefine the route model.
+The `Implementation Route` and `Support Route` labels above match the controlled route classification labels in `00_system_control/CONTROLLED_VOCABULARY.md`. This standard does not redefine the route model.
 
 ## Stage Closeout Handover Output Model
 

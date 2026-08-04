@@ -81,12 +81,13 @@ Use this current workflow label for Development Route Stage 1D work:
 Use these exact labels when classifying initiative route:
 
 - Development Route
-- Implementation / Support Route
+- Implementation Route
+- Support Route
 - TBC
 
 "Hybrid route" is not an approved route label and must not be used as an active route classification.
 
-> **Route-vocabulary split dependency.** Splitting the combined `Implementation / Support Route` label into separate `Implementation Route` and `Support Route` labels is owned by the initiation-form-route-hardening workstream and is not performed here. `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` describes provisional Implementation Route and Support Route closeout behaviour that must be reconciled with these controlled labels once that split lands.
+> **Route-vocabulary split — complete.** The combined `Implementation / Support Route` label has been split into separate `Implementation Route` and `Support Route` controlled labels. `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`'s Implementation Route and Support Route closeout behaviour is no longer provisional. Any remaining reference to the combined `Implementation / Support Route` label elsewhere in this repository is a pending downstream-alignment item, not an active controlled label.
 
 ## Hopper Portfolio Readiness Review Terminology
 
@@ -103,13 +104,13 @@ The full Hopper Portfolio Readiness Review workflow is governed by `01_governanc
 - **Controlled update recommendation** — a proposed change to a controlled record (Jira, SharePoint, GitHub, Hopper, source-of-truth) that requires Digital Lead approval before it is applied.
 - **Report-only recommendation** — an advisory output (CDO QA / self-improvement, knowledge capture, Jira / Hopper update, source-of-truth update) that must not automatically change any controlled record.
 
-> **Hopper-review treatment vs active route classification.** "Implementation Route" and "Support Route" above are Hopper-review treatment / route-indication terms. They do **not** split or replace the active controlled route classification label `Implementation / Support Route` in the Approved Route Labels section. The formal split of that label is owned by the initiation-form-route-hardening workstream and is not performed here.
+> **Hopper-review treatment terms now match the controlled labels.** "Implementation Route" and "Support Route" above were previously Hopper-review treatment / route-indication terms held distinct from the (then-combined) controlled route classification label. Following the route-vocabulary split, these terms are now the same active controlled route classification labels used in the Approved Route Labels section above.
 
 ## Formal Approval Artefact Terminology
 
 The formal approval-artefact naming rules are governed by `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`. Use these defined terms:
 
-- **Completed Initiation Form** — the formal DRB-facing approval document, for both the Development Route (Stage 1D / Pack 1, Development Approval) and the Implementation / Support Route (two-stage initiation). This is the only name for the formal approval artefact. Do not use "DRB Brief" as the name of a final pack deliverable or formal approval artefact.
+- **Completed Initiation Form** — the formal DRB-facing approval document, for both the Development Route (Stage 1D / Pack 1, Development Approval) and the Implementation Route / Support Route (two-stage initiation). This is the only name for the formal approval artefact. Do not use "DRB Brief" as the name of a final pack deliverable or formal approval artefact.
 - **Optional DRB meeting-support text** — short executive decision-support / Jira-ready text produced only when the Digital Lead explicitly requests it, governed by `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md`. It is not a formal approval artefact, does not replace the Completed Initiation Form, and does not replace the Jira Initiative View / Hopper priority view as the default Hopper meeting surface.
 - The term **DRB** remains valid for: DRB meeting, DRB approval, DRB decision required, DRB approval status, DRB-ready pack, DRB decision text, and optional DRB meeting-support text.
 

@@ -116,6 +116,60 @@ Jira is the client-facing tracking surface.
 
 AI output may include Jira-ready comments, field update recommendations, or status change recommendations, but the Digital Lead or an authorised user applies changes. Claude has no live Jira connection in the active client workspace and must not imply one.
 
+## Initiative and Work-Item Identifier Control Rule
+
+### 1. Initiative identity and work-item identity are distinct
+
+An initiative reference (for example a portfolio-level or Jira Product Discovery identifier) and a Jira delivery work-item reference (for example a project ticket identifier) identify different objects. They must **never** be assumed to be aliases for one another.
+
+A relationship between an initiative reference and a Jira work-item reference may only be stated where it is explicitly supported by current Jira export or other Digital Lead-supplied authoritative evidence.
+
+### 2. Never invent or infer an identifier
+
+The coworker must not:
+
+- generate the next likely identifier in a known sequence;
+- infer an identifier from a previous initiative, session, or artefact;
+- carry an identifier forward simply because it appeared in an earlier draft;
+- treat two identifiers as "both valid" without confirmed evidence;
+- silently substitute an identifier from chat context, memory, or prior session output.
+
+### 3. Current confirmed evidence wins
+
+At the Required Inputs Gate, the coworker must establish from the current Jira export or Digital Lead-supplied authoritative evidence:
+
+- the confirmed initiative reference, where one applies;
+- the confirmed Jira work-item reference, where one applies.
+
+If either identifier cannot be confirmed, flag it as an unresolved input (status: `Missing` or `Pending confirmation` in the Required Inputs table) rather than guessing.
+
+### 4. Digital Lead corrections supersede stale references immediately
+
+If the Digital Lead explicitly corrects an identifier during a session, the coworker must:
+
+- treat the corrected identifier as authoritative for the remainder of the session;
+- stop using the superseded identifier in subsequent outputs;
+- identify any live draft artefacts or session records produced during that session that contain the stale reference;
+- propose the appropriate controlled correction under the existing artefact governance rules;
+- not present the superseded identifier as an alternative, alias, or "also valid".
+
+Historical and audit evidence must not be rewritten where the repository's existing governance requires that history to be retained.
+
+### 5. Artefact reference validation before issue
+
+Before issuing a Scope Brief, process flow, Jira update text, handover, email draft, decision pack, or other initiative artefact, validate that every initiative reference and work-item reference in the artefact matches the confirmed current identity. An unverified identifier must not propagate across multiple artefacts.
+
+Where an artefact is specifically about a Jira work item, use the confirmed Jira work-item identifier as the primary reference. Do not prepend an initiative reference merely because one exists elsewhere.
+
+### 6. Identifier consistency check (integrated into existing QA)
+
+This check is a standard item within the CDO QA / Self-Improvement Check at stage closeout (`00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`). Before finalising any substantive output, apply:
+
+- What initiative reference am I using? What evidence confirmed it?
+- What Jira work-item reference am I using? What evidence confirmed it?
+- Have I accidentally treated them as interchangeable?
+- Does any draft output still contain a superseded identifier?
+
 ## Blueworks Rule
 
 Blueworks remains the formal process mapping system.

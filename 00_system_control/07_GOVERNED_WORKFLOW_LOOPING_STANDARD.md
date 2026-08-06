@@ -273,6 +273,8 @@ Use table:
 | What worked | What nearly caused ambiguity or scope drift | What governance rule prevented error | What instruction was missing or weak | What should be added or corrected in source-of-truth | Repo update recommended? | Confidence level |
 |---|---|---|---|---|---|---|
 
+> **Standard QA item — identifier consistency:** Before finalising substantive outputs in this session, check: what initiative reference was used and what evidence confirmed it; what Jira work-item reference was used and what evidence confirmed it; whether they were accidentally treated as interchangeable; whether any output contains a superseded identifier. Full rule: `00_system_control/OPERATING_RULES.md`.
+
 > CDO QA / Self-Improvement findings are recommendations only. They do not update the workflow, source-of-truth, Jira, SharePoint, or repository files unless the Digital Lead approves a controlled update.
 
 ### 8. Closeout Statement

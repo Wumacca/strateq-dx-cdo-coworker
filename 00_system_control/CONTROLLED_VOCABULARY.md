@@ -179,6 +179,15 @@ The interactive session model is governed by `00_system_control/12_INTERACTIVE_G
 
 > These maturity-impact terms are schema and boundary vocabulary only. The coworker does not calculate maturity scores or update any live maturity position in the current workstream; the Maturity Improvement Loop model is a future placeholder.
 
+## Initiative and Work-Item Identifier Vocabulary
+
+The full identifier control rule is in `00_system_control/OPERATING_RULES.md` (Initiative and Work-Item Identifier Control Rule). Use these defined terms.
+
+- **Initiative reference** — an identifier assigned at the portfolio or programme level to an initiative record (for example a reference from Jira Product Discovery or equivalent portfolio tracking). It identifies the initiative; it does not identify a Jira delivery work item.
+- **Jira work-item reference** — the identifier of a specific Jira object: a work item, delivery ticket, Epic, task, or sub-task. It identifies that specific Jira object; it does not confirm initiative scope, route, approval, or identity.
+- **Identifier conflation** — the prohibited act of treating an initiative reference and a Jira work-item reference as aliases or interchangeable. They are distinct objects. A relationship between them may only be stated where it is explicitly supported by current Jira export or Digital Lead-supplied authoritative evidence.
+- **Superseded identifier** — an identifier that the Digital Lead has explicitly corrected or replaced during a session. It must not appear in subsequent outputs and must not be presented as an alternative or alias for the replacement. It may be retained in historical or audit evidence where the repository's existing governance requires that history.
+
 ## Stage Closeout Naming
 
 Stage closeout lines and stage naming must be route-correct and derived from this vocabulary and `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`. Do not invent generic "Stage 1 / Stage 2" wording. The canonical closeout paths and lines are governed by `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. For a Development Route initiative with no Stage 2 exception, the closeout line is: `Stage 1D is closed. Ready for Live Delivery spin-up.`

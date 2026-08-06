@@ -6,6 +6,17 @@ This file defines the standard visual and export format for swimlane process flo
 
 Process artefact creation is a material governed session under `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. The swimlane remains a draft recommendation until the Digital Lead and department/champion agree it; any source-of-truth update is advisory until the Digital Lead approves a controlled update.
 
+## Artefact Writing Conventions
+
+All process-flow artefacts produced under this standard must follow the shortform writing, title, layout, and column-naming conventions in `00_system_control/15_ARTEFACT_WRITING_CONVENTIONS.md`. RACI participation rules are in `00_system_control/OPERATING_RULES.md`.
+
+Key points from those conventions that apply here:
+
+- Clean document title; do not embed `DRAFT` or review instructions in the title. Use the Process Agreement Status field below to convey draft or agreed state.
+- No legend or instruction row unless genuinely required.
+- Record pending items as terse text (e.g. `PENDING scoping`) in the `Comments` column; do not use decorative shading to indicate unresolved items.
+- Do not add Digital Team, Digital Lead, or Developer as operational RACI participants in a business, project, or discipline process flow. Digital building or configuring the enabling capability does not make Digital an operational RACI participant. Digital may legitimately appear in a RACI where the workflow itself is a Digital support, implementation, or digital-delivery workflow. The Digital Lead's separate Strateq DX governance authority is unaffected by this rule.
+
 ## Target Look and Feel
 
 The target format is a horizontal business swimlane diagram with:

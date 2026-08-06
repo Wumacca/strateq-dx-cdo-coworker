@@ -91,8 +91,10 @@ It must not include Stage 2 handover tabs, requirements tabs, source-of-truth im
 
 Required capture columns:
 
-| Process Milestone | Process Step | RACI / role columns | Input / Trigger | Output | System | Process Bottlenecks | Future-State Requirement | Priority | Notes |
+| Process Milestone | Current Process Step | RACI / role columns | Input / Trigger | Output | System | Process Bottlenecks | Development Scope | Priority | Comments |
 |---|---|---|---|---|---|---|---|---|---|
+
+Writing conventions — shortform default, column terminology, and pending-item notation — are in `00_system_control/15_ARTEFACT_WRITING_CONVENTIONS.md`. RACI participation rules are in `00_system_control/OPERATING_RULES.md`.
 
 ### D. Question Ledger
 

@@ -76,6 +76,43 @@ Adoption Review and Benefits Review are recognised lifecycle stages, but they ar
 - bypass DRB or leadership sign-off
 - treat draft artefacts as approved records
 
+## Artefact RACI Conventions
+
+### Digital Team Operational RACI Boundary
+
+The Digital Team is not a participant in normal business, project, or discipline operational workflows that are owned and managed by the respective teams.
+
+When producing or structuring RACI assignments in process-flow artefacts or registers:
+
+- Do not automatically add `Digital Team`, `Digital Lead`, `Developer`, or equivalent as a RACI role in a business, project, or discipline process flow.
+- Digital building or configuring a tool that enables a process does NOT make Digital Responsible or Accountable for executing that process.
+- The operational team owns and operates its workflow.
+- Digital involvement in the operational environment is limited to the appropriate support or implementation engagement, in accordance with the current route and operating model.
+- System or tool capability that Digital or development must provide may be described in the `Development Scope` column without assigning Digital an operational RACI role.
+
+**This rule concerns RACI participation in business, project, or discipline operational workflows. It must NOT remove or weaken:**
+
+- the Digital Lead's governance authority under the Strateq DX lifecycle;
+- Digital governance activities;
+- Digital initiative assessment and approval controls;
+- Digital support responsibilities;
+- Digital implementation responsibilities;
+- development and build responsibilities where they legitimately exist in the digital delivery workflow.
+
+The distinction is: who builds, supports, or enables the capability is not the same as who owns or executes the business process.
+
+### Do Not Invent RACI Accountability
+
+When producing or restructuring a RACI:
+
+- Never invent a Responsible or Accountable owner merely to make the matrix appear complete.
+- Never transfer an R or A from Digital to another operational role without confirmed evidence.
+- If removing an incorrectly assigned role exposes an R/A gap, leave the gap visible and flag it for workstream-lead confirmation.
+- Only populate RACI assignments supported by confirmed process evidence or workstream-lead input.
+- An incomplete but truthful draft RACI is preferable to a complete but invented one.
+- Do not automatically add a role simply because it appears to be the likely actor; include it only where confirmed.
+- Where the actual operational actor is known but not represented in the current RACI structure, flag that structural gap for workstream-lead confirmation.
+
 ## Lifecycle Separation
 
 Hopper is light-touch priority screening.
@@ -198,3 +235,4 @@ Every artefact should make clear:
 5. What physical action the Digital Lead must take
 6. What Jira / SharePoint / Blueworks / Nitro update is required
 7. What triggers the next lifecycle stage
+8. Artefact writing and formatting conventions are governed by `00_system_control/15_ARTEFACT_WRITING_CONVENTIONS.md`.

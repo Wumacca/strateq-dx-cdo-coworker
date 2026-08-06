@@ -98,7 +98,7 @@ Claude owns the process mapping capture sheet during the session.
 
 Claude must maintain and update this table as the conversation progresses:
 
-| Step | Current / Future | Lane / Role | Activity | System | Input | Output | Bottleneck / Control Gap | Evidence / Control | Notes |
+| Step | Current / Future | Lane / Role | Activity | System | Input | Output | Bottleneck / Control Gap | Evidence / Control | Comments |
 |---:|---|---|---|---|---|---|---|---|---|
 
 Claude must periodically summarise the table back and ask: `Is this accurate before we move on?`
@@ -123,8 +123,10 @@ It must not include Stage 2 handover tabs, requirements tabs, source-of-truth im
 
 The Stage 1 process mapping capture sheet must follow the agreed capture format:
 
-| Process Milestone | Process Step | RACI / role columns | Input / Trigger | Output | System | Process Bottlenecks | Future-State Requirement | Priority | Notes |
+| Process Milestone | Current Process Step | RACI / role columns | Input / Trigger | Output | System | Process Bottlenecks | Future-State Requirement | Priority | Comments |
 |---|---|---|---|---|---|---|---|---|---|
+
+Writing conventions — shortform default, title cleanliness, column terminology, and pending-item notation — are in `00_system_control/15_ARTEFACT_WRITING_CONVENTIONS.md`. RACI participation rules are in `00_system_control/OPERATING_RULES.md`.
 
 If process steps are already sufficiently defined and all questions are answered, Claude should populate the sheet.
 

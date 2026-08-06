@@ -136,12 +136,13 @@ The coworker must not:
 
 ### 3. Current confirmed evidence wins
 
-At the Required Inputs Gate, the coworker must establish from the current Jira export or Digital Lead-supplied authoritative evidence:
+At the Required Inputs Gate, record the initiative reference and Jira work-item reference where they are applicable at the current lifecycle point. Use these statuses:
 
-- the confirmed initiative reference, where one applies;
-- the confirmed Jira work-item reference, where one applies.
+- If an identifier is expected at the current lifecycle point but cannot be confirmed from current Jira export or Digital Lead-supplied authoritative evidence: `Missing` or `Pending confirmation`.
+- If an identifier legitimately does not yet exist or is not applicable at the current lifecycle point: `Not yet assigned` or `Not applicable`. This alone does not block the session.
+- Never invent an identifier to satisfy this gate.
 
-If either identifier cannot be confirmed, flag it as an unresolved input (status: `Missing` or `Pending confirmation` in the Required Inputs table) rather than guessing.
+Any output that specifically depends on an unresolved identifier must not be finalised until that identifier is confirmed.
 
 ### 4. Digital Lead corrections supersede stale references immediately
 

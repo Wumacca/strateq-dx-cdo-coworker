@@ -270,7 +270,13 @@ Approved statuses:
 
 Freshness position uses the freshness statuses in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` (Current / Revalidation due / Stale / Superseded / Pending confirmation / Not applicable).
 
-For every material initiative session, the confirmed initiative reference and the confirmed Jira work-item reference are mandatory Required Inputs Gate items. Each must appear as a row in the input table with its source and freshness status. They are distinct identifiers and must not be assumed to be aliases for one another. If either cannot be confirmed from current Jira export or Digital Lead-supplied authoritative evidence, set its status to `Missing` or `Pending confirmation`. Full rule: `00_system_control/OPERATING_RULES.md` (Initiative and Work-Item Identifier Control Rule).
+For every material initiative session, record the initiative reference and Jira work-item reference in the input table where applicable. They are distinct identifiers and must not be assumed to be aliases for one another. Apply these statuses:
+
+- Expected at this lifecycle point but unconfirmed: `Missing` or `Pending confirmation`.
+- Not yet assigned or not applicable at this lifecycle point: `Not yet assigned` or `Not applicable`. This alone does not block the session.
+- Never invent an identifier to satisfy this gate.
+
+Any output that specifically depends on an unresolved identifier must not be finalised until that identifier is confirmed. Full rule: `00_system_control/OPERATING_RULES.md` (Initiative and Work-Item Identifier Control Rule).
 
 Questions must be batched. Do not drip-feed one question at a time unless an answer creates a genuinely new dependency.
 

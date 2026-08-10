@@ -31,6 +31,8 @@ The router is subordinate to, and must not override, the following authority fil
 - `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
 - `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
 - `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`
+- `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`
+- `00_system_control/PROGRAMME_STATUS_RULES.md`
 - `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
 - `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
 - `00_system_control/OPERATING_RULES.md`
@@ -62,9 +64,12 @@ The router must not:
 - introduce Confluence
 - create a pickup/handoff protocol
 - create skillset lens files
-- create programme-memory files or a programme-status ledger
+- create a programme-memory file or a generic programme-status ledger inside this repository
+- store client-specific programme truth in this repository
 - create additional coworkers, additional client-project threads, or additional reporting cycles
 - imply a live connection to Jira, SharePoint, or Omega 365
+
+Programme status is **resolved from the active client workspace**, not created generically inside DX Build. The client `PROGRAMME_STATUS.md` is the client's live controlled status surface, held at `[ACTIVE_CLIENT_WORKSPACE]/00_system_control/PROGRAMME_STATUS.md` and governed by `00_system_control/PROGRAMME_STATUS_RULES.md`. This repository holds the reusable template and rules only.
 
 The router resolves jurisdiction and points to governing files. The governing files define what is produced and how.
 
@@ -79,6 +84,22 @@ For a material governed coworker session:
 5. Run the session under the governed workflow loop, with the Digital Lead approval gate at every controlled update and stage transition.
 
 The material session threshold and the proportionality rule are governed by `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. The router does not redefine them.
+
+## Global Client Workspace Resolution Rule
+
+Where the session concerns a client programme, a client artefact, a client capex request, a client delivery status, a client handover, or a client evidence record, the router must first resolve the **active client workspace** under `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, before jurisdiction execution and before the interactive gates below.
+
+Resolution sequence:
+
+1. Identify active client.
+2. Load active client `CLIENT_CONTEXT_MANIFEST`.
+3. Confirm client repo root and required files exist.
+4. Load active client `PROGRAMME_STATUS.md`.
+5. Load DX Build authority files.
+6. Apply lifecycle routing.
+7. Proceed only after required gates are satisfied.
+
+No coworker or future app workflow may assert client programme status until the active client workspace has been resolved and the client `PROGRAMME_STATUS.md` has been loaded. The router must not default to the last-used client. If the active client is unclear, the coworker stops and asks: "Which client workspace is active for this session?"
 
 ## Global Interactive Session Rule
 
@@ -352,11 +373,20 @@ Claude cannot mutate Jira, SharePoint, or Omega 365. This restates the AI permis
 | 8 | User uploads completed / live / closed initiative evidence that affects Hopper status | Hopper Lifecycle Coworker for portfolio-status reflection; the initiative is owned by the Live Delivery Coworker once approved (internal stage, same thread) | Hopper Portfolio Readiness with delivery/closure status read | This file; `04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` | Reflect items as in delivery / live / closed / superseded / duplicated, with Source Basis and Confidence | Reopening, restructuring, or modifying delivery/adoption records without explicit spin-up and Digital Lead approval | Recommendations only; principal handover checkpoint only at Hopper → Live Delivery |
 | 9 | User asks for a development epic charter or department scoring input | Hopper Lifecycle Coworker | Hopper Portfolio Readiness | This file; `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md` | Initiative Charter (pre-initiation input tool only) using the charter columns in `09` | Treating the charter as an Initiation Form; committing scope or budget; producing Pack 1 / Stage 1D before approval | Recommendations only; charter feeds the Jira Initiative View / Hopper priority discussion |
 | 10 | Leadership / DRB approves a route trigger after the priority discussion | Hopper Lifecycle Coworker | Hopper Portfolio Readiness → route trigger | This file; `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md` | Per-initiative route trigger: development epic → Pack 1 / Stage 1D; implementation → Initiation Form / Implementation Route; support → selection/support route then Initiation Form; in-flight → continue under existing record | Batching unrelated initiatives into one Pack 1; starting any stage before explicit Digital Lead spin-up | Digital Lead approves and spins up each receiving stage |
-| 11 | Digital Lead opens a capex request / capitalisation closeout-and-next-request session | Hopper Lifecycle Coworker | Hopper Portfolio Readiness — Capex Request Mode | `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`; `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`; `00_system_control/CONTROLLED_VOCABULARY.md`; `00_system_control/OPERATING_RULES.md`; `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; `01_governance_lifecycle/05_ROUTE_RULES.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `docs/presentation-standards/communication-and-framing-standard.md` where present | Access gate; source-read status reflection; Capex Readiness Tracker; Portfolio Capex Request Pack; Capital Efficiency Evidence; Plan Attainment Evidence; Claim Safety Table; Board slide brief / storyboard; client-review Board-draft deck; Hopper → Live Delivery Handover Checklist | Final spend approval; maturity approval; benefits approval; a Board-final deck while blockers remain open; initiative-level delivery mobilisation; Pack 1 / Stage 1D / Stage 1 / Stage 2 detail before route-specific spin-up; Jira delivery / epic build; unsupported Board claims; controlled updates without Digital Lead approval | Digital Lead approval required for spin-up, readiness, output use, and every controlled update |
+| 11 | Digital Lead opens a capitalisation closeout, capex request, next-capex request, bulk initiation, or Board closeout-and-continuation session | Hopper Lifecycle Coworker | Hopper Portfolio Readiness — Capex Request Session mode | `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`; `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`; active client `CLIENT_CONTEXT_MANIFEST`; active client `PROGRAMME_STATUS.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; executive communication / presentation standard where present (`docs/presentation-standards/communication-and-framing-standard.md`); plus `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`; `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`; `00_system_control/CONTROLLED_VOCABULARY.md`; `00_system_control/OPERATING_RULES.md`; `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; `01_governance_lifecycle/05_ROUTE_RULES.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` | Access / client workspace resolution gate; source-read status reflection; Capex Readiness Tracker; Bulk Initiation Pack recommendation (formal artefact name: Portfolio Capex Request Pack); Capital Efficiency Evidence; Plan Attainment Evidence; Claim Safety Table; Board slide brief / storyboard; client-review Board-draft deck with placeholders visible; Hopper → Live Delivery Handover Checklist | Board-final deck while blockers remain open; final spend approval; maturity approval; benefits realisation approval; budget commitment; delivery mobilisation; Pack 1 / Stage 1D / Stage 1 / Stage 2 / DRB detail before spin-up; Jira delivery / epic build; unsupported Board claims; storing client-specific programme truth in DX Build; controlled updates without Digital Lead approval | Digital Lead approves spin-up, controlled updates, and handover |
+| 12 | Any session that concerns a client programme, client artefact, client capex request, client delivery status, client handover, or client evidence record | Resolve the active client workspace first, then route to the jurisdiction the stage requires | Client Workspace Resolution Gate (pre-jurisdiction) | `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`; `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md`; `00_system_control/PROGRAMME_STATUS_RULES.md`; active client `CLIENT_CONTEXT_MANIFEST`; active client `PROGRAMME_STATUS.md` | Session start declaration showing active client, manifest, programme status revision and date, required registers, write mode, lifecycle stage, and gate result | Asserting client programme status before resolution; defaulting to the last-used client; proceeding on partial file access; writing client programme truth into DX Build | Digital Lead confirms the active client and confirms proceed |
 
-## No Programme-Memory Ledger
+## No Programme-Memory Ledger In DX Build
 
-The router must not create, or recommend the creation of, a programme-memory or programme-status ledger (for example generic `PROGRAMME_STATUS.md`, `HOPPER_STATUS.md`, `INITIATIVE_INDEX.md`, `SESSION_HANDOVER.md`, `DECISION_LOG.md`, `DELIVERY_STATUS.md`, or `ADOPTION_CLOSURE_STATUS.md` files) or any differently named equivalent. Cross-initiative status is read from the confirmed Initiative Evidence and Decision Files governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`. GitHub holds reusable methods and schemas only and must not become a parallel live client initiative-management system.
+The router must not create, or recommend the creation of, a programme-memory or programme-status ledger **inside the DX Build repository** — for example a populated `PROGRAMME_STATUS.md`, `HOPPER_STATUS.md`, `INITIATIVE_INDEX.md`, `SESSION_HANDOVER.md`, `DECISION_LOG.md`, `DELIVERY_STATUS.md`, or `ADOPTION_CLOSURE_STATUS.md`, or any differently named equivalent. DX Build holds reusable methods, schemas, templates, routing rules, interface contracts, and generic examples only, and must not become a parallel live client initiative-management system.
+
+This is a **storage-location rule, not a prohibition on programme status itself**. Programme status is resolved from the active client workspace, not created generically inside DX Build:
+
+- the client's live controlled status surface is `[ACTIVE_CLIENT_WORKSPACE]/00_system_control/PROGRAMME_STATUS.md`, built from `00_system_control/PROGRAMME_STATUS_TEMPLATE.md` and governed by `00_system_control/PROGRAMME_STATUS_RULES.md`;
+- cross-initiative detail is read from the confirmed Initiative Evidence and Decision Files governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`;
+- resolution and the read/write boundary are governed by `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`.
+
+Any earlier wording that treated programme status as future scope, or as something to be created generically within this repository, is superseded by the client workspace interface: programme truth lives in the client workspace and is resolved, not invented.
 
 ## Boundary
 

@@ -78,7 +78,7 @@ Use only the approved environment:
 - **SharePoint** — client documents / controlled artefact storage where applicable
 - **GitHub** — coworker repo / source-of-truth markdown files where applicable
 
-Confluence is **not** part of the THREE60 / Strateq DX digital governance setup. Do not reference Confluence as a governed system, meeting surface, update target, evidence store, or controlled artefact location.
+Confluence is **not** part of the client / Strateq DX digital governance setup. Do not reference Confluence as a governed system, meeting surface, update target, evidence store, or controlled artefact location.
 
 ---
 
@@ -250,7 +250,7 @@ These route definitions classify the **treatment / route indication** for an ite
 
 ### Development Epic
 
-- Chronos Dev, Omega Dev, CRM Dev, or equivalent build on an existing THREE60-owned platform.
+- Chronos Dev, Omega Dev, CRM Dev, or equivalent build on an existing client-owned platform.
 - Requires a department charter where detail / scoring is needed.
 - After leadership / DRB approval, route to Pack 1 / Stage 1D spin-up under `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
 

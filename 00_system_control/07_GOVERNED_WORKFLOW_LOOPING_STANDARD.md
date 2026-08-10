@@ -79,7 +79,7 @@ The controlled systems for this workflow are:
 - Blueworks / Nitro where applicable
 - approved source-of-truth documents
 
-Confluence is **not** part of the THREE60 DX governance setup. Do not reference Confluence as a governed system, update target, evidence store, or controlled artefact location.
+Confluence is **not** part of the Strateq DX governance setup. Do not reference Confluence as a governed system, update target, evidence store, or controlled artefact location.
 
 ## Material Session Threshold
 
@@ -102,6 +102,10 @@ KPI governance is **excluded** from the Governed Workflow Looping update in this
 ## Proportionality Rule
 
 Closeout effort must be proportionate to the session.
+
+> Proportionality governs output effort only. It does not reduce the mandatory authority-file or client-workspace source-read requirements.
+
+A lightweight closeout still requires the Tier 1 authority-file read and, for any session concerning a client programme, the Active Client Workspace Resolution Gate in `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`. Proportionality may reduce how much is written at closeout. It never reduces what must be read before work begins.
 
 ### Full closeout applies to
 
@@ -158,6 +162,12 @@ The stage closeout **may include only**:
 - what source-of-truth records are impacted
 - what knowledge should be captured
 - whether the stage is ready for the next stage to be spun up
+
+### Handover Staleness Rule
+
+> Where a client handover or programme status position changes, existing downstream handovers become stale and must be reissued before the downstream coworker continues.
+
+A handover becomes **stale, not wrong**, when downstream truth changes. Staleness is recorded in the client handover register and in Section 13 of the client `PROGRAMME_STATUS.md`, governed by `00_system_control/PROGRAMME_STATUS_RULES.md`. The downstream coworker must not continue on a stale handover; the handover is reissued from the current confirmed position first. This restates and strengthens the handover authority in `00_system_control/04_COWORKER_HANDOVER_MODEL.md` and does not replace it.
 
 ### Starter-Checklist Timing Rule
 

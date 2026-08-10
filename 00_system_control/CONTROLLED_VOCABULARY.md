@@ -95,7 +95,7 @@ The full Hopper Portfolio Readiness Review workflow is governed by `01_governanc
 
 - **Hopper Portfolio Readiness Review** — the pre-initiation, pre-Pack 1 review that organises minimum meeting information and scores so the Hopper is ready for a leadership / DRB priority discussion.
 - **Jira Initiative View / Hopper priority view** — the organised Hopper / Initiative View screens in Jira / Jira Product Discovery. This is the **default meeting surface** for the leadership / DRB priority discussion. The term "Priority Screen" means this view unless the Digital Lead explicitly requests a separate artefact. A separate DRB Priority Screen document is **not** produced by default.
-- **Development Epic** — a Chronos Dev, Omega Dev, CRM Dev, or equivalent build on an existing THREE60-owned platform. May use a department charter for detail / scoring. After approval, routes to Pack 1 / Stage 1D.
+- **Development Epic** — a Chronos Dev, Omega Dev, CRM Dev, or equivalent build on an existing client-owned platform. May use a department charter for detail / scoring. After approval, routes to Pack 1 / Stage 1D.
 - **Grouped Initiative** — an implementation or support item grouped for leadership review. Not called an epic unless it is a development route. No charter by default.
 - **Initiative Charter** — a pre-initiation input tool only. Gathers business reason, sub-task detail, deliverables / expected benefit, current method, and department priority score input. A charter is **not** an Initiation Form and does not approve or commit anything.
 - **Implementation Route** (Hopper-review treatment term) — the tool / system exists or the route is sufficiently known; after approval, routes to Initiation Form / Implementation Route.

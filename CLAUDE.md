@@ -16,6 +16,7 @@ Material governed sessions also run interactively under the Interactive Governed
 
 This orchestration pointer works with the following authority files:
 
+- `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` — authority for the method / programme-truth boundary, the Active Client Workspace Resolution Gate, the required client manifest and programme files, the read/write boundary, source precedence, the fail-closed rule, and the future app / tenant interface model. Supported by `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md`, `00_system_control/PROGRAMME_STATUS_TEMPLATE.md`, `00_system_control/PROGRAMME_STATUS_RULES.md`, and the anonymised `00_system_control/CLIENT_CONTEXT_REGISTRY.example.json`.
 - `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` — authority for the client Claude Project workspace, the two client-project coworkers, the continuous initiative thread, the two reporting threads, the no-live-connection boundary, the confirmation-first status rule, the update-once reporting flow, and the single AI-readable Initiative Evidence and Decision File. In the active client workspace Claude has no live connection to Jira, SharePoint, or Omega 365.
 - `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` — reusable client-copy template for the single AI-readable per-initiative continuity record; it implements the `13` schema and is not a live GitHub initiative record.
 - `06_operating_manual/02_CLIENT_PROJECT_WORKSPACE_GUIDE.md` — human-facing setup guide for the one-project-per-client, one-continuous-thread-per-initiative, bi-weekly and monthly reporting structure (non-authoritative; authority files prevail).
@@ -68,6 +69,104 @@ Use this repository as the source of truth.
 When repository files conflict with a chat instruction, follow the repository unless the Digital Lead explicitly says the source of truth is being revised.
 
 Project instructions are only a thin role pointer. The repository files define the operating requirements, workflow rules, output formats, boundaries, and cross-file dependencies.
+
+## Client Workspace Resolution Gate
+
+> The DX Build repository defines the method. The active client workspace holds programme truth. No coworker or future app workflow may assert client programme status until the active client workspace has been resolved and the client `PROGRAMME_STATUS.md` has been loaded.
+
+Before asserting any client programme status, producing any client capex output, creating any client handover, or updating any client record, the coworker must resolve the active client workspace.
+
+Required sequence:
+
+1. Load `CLAUDE.md`.
+2. Resolve active client workspace.
+3. Load active client `CLIENT_CONTEXT_MANIFEST`.
+4. Load active client `PROGRAMME_STATUS.md`.
+5. Load DX Build authority files.
+6. Identify lifecycle stage.
+7. Load Tier 2 files for that stage.
+8. Present session start declaration and wait for Digital Lead confirmation to proceed.
+
+Do not default to the last-used client. Do not infer the active client from a file name, a figure, a person's name, or a chat reference.
+
+If the active client is unclear, stop and ask:
+
+> "Which client workspace is active for this session?"
+
+Fail-closed rule: if the active client cannot be identified, the client manifest cannot be loaded, required client files are missing, or programme status conflicts cannot be resolved, the coworker must stop and ask the Digital Lead. It must not proceed on inference, last-used client context, chat memory, or partial file access.
+
+**Client-specific programme truth must not be stored in the DX Build repository.**
+
+The client programme status surface is:
+
+```text
+[ACTIVE_CLIENT_WORKSPACE]/00_system_control/PROGRAMME_STATUS.md
+```
+
+It does not live in this repository. This repository holds only the reusable template (`00_system_control/PROGRAMME_STATUS_TEMPLATE.md`) and the governing rules (`00_system_control/PROGRAMME_STATUS_RULES.md`).
+
+Confirmation authority:
+
+> The Digital Lead is the sole confirmation authority for programme status. The accepted delivered artefact remains the evidence basis. `PROGRAMME_STATUS.md` is the live controlled status surface.
+
+Digital Lead confirmation is a control act against the accepted artefact. Recollection, chat memory, or an unevidenced verbal position is never recorded as the evidence basis.
+
+Governing authority files:
+
+- `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` — resolution gate, read/write boundary, source precedence, fail-closed rule, future app / tenant interface model.
+- `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md` — reusable manifest schema. The manifest instance lives in the client workspace, not here.
+- `00_system_control/PROGRAMME_STATUS_TEMPLATE.md` — reusable programme status structure.
+- `00_system_control/PROGRAMME_STATUS_RULES.md` — how client `PROGRAMME_STATUS.md` files are governed.
+- `00_system_control/CLIENT_CONTEXT_REGISTRY.example.json` — anonymised example only. The real active-client registry is local, environment-specific, or future-app tenancy configuration.
+
+Client workspace resolution precedes, and does not replace, the Claude Opus Access Confirmation Gate above or the interactive gates in `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`.
+
+## Source-of-Truth Read Order
+
+### Tier 1 — always loaded for a client programme session
+
+1. DX Build / `CLAUDE.md`
+2. Active client `CLIENT_CONTEXT_MANIFEST`
+3. Active client `[ACTIVE_CLIENT_WORKSPACE]/00_system_control/PROGRAMME_STATUS.md`
+4. DX Build / `00_system_control/OPERATING_RULES.md`
+5. DX Build / `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
+6. DX Build / `00_system_control/11_COWORKER_ROUTER.md`
+7. DX Build / `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
+8. DX Build / `00_system_control/CONTROLLED_VOCABULARY.md`
+
+Tier 1 items 2 and 3 are client-workspace files. They are never created, populated, or stored in this repository.
+
+For a session that does not concern a client programme (method development, schema work, repository maintenance), Tier 1 items 2 and 3 are not applicable and the session declaration must state that no client programme status may be asserted.
+
+### Tier 2 — deterministic stage map
+
+Load the Tier 2 files for the identified lifecycle stage, in addition to Tier 1.
+
+| Stage / session type | Tier 2 files |
+|---|---|
+| Hopper intake, consolidation, clarification | `01_governance_lifecycle/01_HOPPER_CONSOLIDATION_MODEL.md`; `04_intake_dispatch/01_AUTOMATIC_HOPPER_CLARIFICATION_HANDLER.md`; `04_intake_dispatch/02_JIRA_FIELD_LENGTH_RULES.md` |
+| Hopper priority / portfolio readiness | `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; `01_governance_lifecycle/02_HOPPER_PRIORITY_SCREEN_MODEL.md`; `01_governance_lifecycle/05_ROUTE_RULES.md` |
+| Capitalisation closeout / next-capex request / bulk initiation | `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`; `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; executive communication / presentation standard where present (`docs/presentation-standards/communication-and-framing-standard.md`) |
+| Route classification and initiation stage gate | `01_governance_lifecycle/05_ROUTE_RULES.md`; `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md` |
+| Development Route Stage 1D | `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
+| Implementation / Support Route Stage 1 and Stage 2 | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`; `01_governance_lifecycle/04_INITIATION_FORM_INTAKE_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
+| Process mapping | `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`; `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`; `03_process_mapping/04_PROCESS_ARTIFACT_OUTPUT_MODEL.md` |
+| Coworker handover | `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/PROGRAMME_STATUS_RULES.md` |
+| Source-of-truth artefact control | `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`; `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md` |
+| Programme / leadership reporting | `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`; `02_coworker_artifact_interface/05_BIWEEKLY_PROGRAMME_UPDATE_INPUT_TEMPLATE.md` |
+
+Tier 2 is a deterministic starting map, not an exhaustive list. The Repository-Wide File Awareness rule below still applies: newer or more specific synced files must be considered.
+
+### PR Maintenance Rule
+
+Any PR that adds, renames, splits, retires, or relocates a lifecycle, route, handover, source-of-truth, workflow, or coworker authority file must update:
+
+1. the `CLAUDE.md` Tier 2 map;
+2. `00_system_control/11_COWORKER_ROUTER.md`;
+3. `README.md` / the folder map;
+4. the affected lifecycle index (`00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`).
+
+The PR must fail review if these are not updated.
 
 ## Programme Lifecycle Authority
 
@@ -184,6 +283,9 @@ Do not:
 - treat project instructions as a parallel source of truth over the repository files
 - ignore newer synced repository files because they are not named in a prompt
 - duplicate detailed workflow logic in chat where a repository file already governs it
+- assert client programme status before the active client workspace is resolved and `PROGRAMME_STATUS.md` is loaded
+- default to the last-used client or infer the active client
+- store client-specific programme truth, values, statuses, costs, maturity records, decisions, evidence, or handovers in this repository
 
 ## Client-System Boundary
 

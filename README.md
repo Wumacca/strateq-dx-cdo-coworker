@@ -1,12 +1,74 @@
 ## Strateq DX Repository Purpose
 
-Strateq DX is the controlled evidence and delivery repository for Strateq-led digital transformation, governance, capitalisation, and Board reporting work. It is separate from Quantuum AI product build material.
+Strateq DX Build is the **reusable method repository** for Strateq-led digital transformation, governance, capitalisation, and Board reporting work. It holds the standards, schemas, templates, routing rules, and coworker method files. It does not hold any client's programme truth. It is separate from Quantuum AI product build material.
+
+## DX Build, Client Workspace, and Future App
+
+> The DX Build repository defines the method. The active client workspace holds programme truth. No coworker or future app workflow may assert client programme status until the active client workspace has been resolved and the client `PROGRAMME_STATUS.md` has been loaded.
+
+### DX Build (this repository)
+
+- reusable methods;
+- schemas;
+- authority files;
+- coworker routing;
+- templates.
+
+Also: interface contracts, generic anonymised examples, and human-facing operating manuals. Nothing client-specific.
+
+### Client workspace (one per client, held separately)
+
+- active programme status;
+- client artefacts;
+- decision/evidence registers;
+- client-specific capex packs;
+- client-specific handovers.
+
+Also: the client context manifest instance, the artefact and handover registers, and the Initiative Evidence and Decision Files.
+
+### Future app
+
+- resolves client context through the manifest;
+- executes coworker workflows against the active client workspace.
+
+```text
+Client Registry
+→ Client Context Manifest
+→ Programme Status
+→ Artefact / Decision / Evidence / Handover Registers
+→ Coworker workflow execution
+```
+
+The app or coworker may read current client status, propose controlled updates, and write only after Digital Lead approval, where write capability exists. The manifest `write_mode` field defaults to `proposal_only`.
+
+### Governing files
+
+| File | Purpose |
+|---|---|
+| `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` | The interface standard: resolution gate, read/write boundary, source precedence, fail-closed rule, future app / tenant model |
+| `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md` | Reusable manifest schema. Instances live in the client workspace |
+| `00_system_control/PROGRAMME_STATUS_TEMPLATE.md` | Reusable programme status structure |
+| `00_system_control/PROGRAMME_STATUS_RULES.md` | How client `PROGRAMME_STATUS.md` files are governed |
+| `00_system_control/CLIENT_CONTEXT_REGISTRY.example.json` | Anonymised example registry only |
+
+> The Digital Lead is the sole confirmation authority for programme status. The accepted delivered artefact remains the evidence basis. `PROGRAMME_STATUS.md` is the live controlled status surface.
+
+**Client-specific programme truth must not be stored in the DX Build repository.**
 
 ## Repository Structure
 
-- `THREE60/` holds THREE60 delivery and governance evidence.
+- `00_system_control/` holds the system control, routing, interface, schema, and template authority files.
+- `01_governance_lifecycle/` holds the governed lifecycle, route, initiation, and Capex Request Session models.
+- `02_coworker_artifact_interface/` holds the coworker / Digital Lead working interface templates.
+- `03_process_mapping/`, `04_intake_dispatch/`, `05_source_of_truth/` hold the process, intake, and artefact governance models.
+- `06_operating_manual/` holds human-facing, non-authoritative navigation.
+- `BOARD_INTERFACE/` and `docs/` hold Board-facing index material and presentation standards.
 - `_archive/source_zips/` holds original source packs and imported zip files.
 - Board-facing content must be generated from controlled markdown source files, not from standalone slide edits.
+
+## PR Maintenance Rule
+
+Any PR that adds, renames, splits, retires, or relocates a lifecycle, route, handover, source-of-truth, workflow, or coworker authority file must update the `CLAUDE.md` Tier 2 map, `00_system_control/11_COWORKER_ROUTER.md`, this README / the folder map, and the affected lifecycle index. The PR must fail review if these are not updated.
 
 ## Client Workspace and Reporting Controls
 

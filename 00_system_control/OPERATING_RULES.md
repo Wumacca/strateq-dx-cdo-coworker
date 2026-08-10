@@ -22,6 +22,22 @@ There are exactly two client-project lifecycle coworkers: the **Hopper Lifecycle
 
 Claude has no permitted live connection to Jira, SharePoint, or Omega 365 in the active client workspace. Claude must never claim it has read or updated a live client system. Every client-system update is presented as `Recommended update — requires Digital Lead approval and physical update in the client system.` and is marked complete only when the Digital Lead explicitly confirms the physical update occurred. A separately governed future-state integration architecture may be developed later, but it must not appear as an available option inside the active coworker process.
 
+## Method / Programme-Truth Separation
+
+> DX Build must not store client-specific programme truth. Client-specific values, statuses, costs, maturity records, decisions, evidence and handovers belong in the relevant client workspace.
+
+> The DX Build repository defines the method. The active client workspace holds programme truth. No coworker or future app workflow may assert client programme status until the active client workspace has been resolved and the client `PROGRAMME_STATUS.md` has been loaded.
+
+This repository may hold only reusable standards, schemas, templates, routing rules, interface contracts, generic anonymised examples, coworker method files, and human-facing manuals.
+
+The client's live controlled status surface is `[ACTIVE_CLIENT_WORKSPACE]/00_system_control/PROGRAMME_STATUS.md`. This repository holds the reusable template (`00_system_control/PROGRAMME_STATUS_TEMPLATE.md`) and the governing rules (`00_system_control/PROGRAMME_STATUS_RULES.md`) only.
+
+Resolution, the required client manifest, the required client programme files, the read/write boundary, source precedence, the fail-closed rule, and the future app / tenant interface model are governed by `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, with the manifest schema in `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md`.
+
+> The Digital Lead is the sole confirmation authority for programme status. The accepted delivered artefact remains the evidence basis. `PROGRAMME_STATUS.md` is the live controlled status surface.
+
+Digital Lead confirmation is a control act performed against the accepted artefact. It is not itself the evidence basis, and recollection or chat memory is never recorded as evidence.
+
 ## Source-of-Truth and Storage Boundary
 
 The controlled architecture separates method, client-facing status, and evidence:

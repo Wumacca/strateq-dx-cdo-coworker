@@ -8,15 +8,17 @@ Governing model for the Capex Request Session. This file is the single source of
 
 The Capex Request Session is a governed Hopper Portfolio Readiness mode used to prepare a programme-level capitalisation request.
 
-It converts the process recently used for the THREE60 capitalisation closeout and next six-month request into a reusable Strateq DX method. It is used whenever the Digital Lead needs to close out a previous capex position and/or present the next portfolio-level capex ask to the Board, with an evidence-safe narrative and a client-review draft deck.
+It is a reusable Strateq DX method. It carries no client-specific data and is applied to whichever client workspace is resolved for the session. It is used whenever the Digital Lead needs to close out a previous capex position and/or present the next portfolio-level capex ask to the Board, with an evidence-safe narrative and a client-review draft deck.
 
-The Capex Request Session supports:
+The Capex Request Session is a Hopper Lifecycle workflow for:
 
-1. Previous capex closeout
-2. Next capex portfolio request
-3. Evidence-safe Board narrative
-4. Client-review Board-draft deck
-5. Controlled Hopper-to-Delivery handover
+1. closing out a previous capitalisation phase;
+2. reading controlled delivery evidence;
+3. identifying gaps;
+4. assembling Board-safe closeout evidence;
+5. defining next proposed capex scope as a portfolio-level bulk initiation;
+6. producing a client-review Board-draft deck;
+7. producing a Hopper → Live Delivery handover checklist.
 
 ## Positioning
 
@@ -32,6 +34,8 @@ This model operates under, and does not override:
 - `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
 - `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
 - `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` — the Capex Request Session, as a material governed session, runs under the interactive gates, Live Session Status Board, controlled session states, and closeout write-back defined here. This pointer does not change the substantive Capex Request Session model.
+- `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` — the Active Client Workspace Resolution Gate runs before any substantive session output.
+- `00_system_control/PROGRAMME_STATUS_RULES.md`
 - `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
 - `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
 - `00_system_control/OPERATING_RULES.md`
@@ -65,6 +69,26 @@ Route-specific controls (Completed Initiation Form, Stage 1D, Stage 1 / Stage 2,
 ```
 
 The Capex Request Session is **not** a replacement for single-initiative route controls. It is a portfolio-level readiness and Board-narrative mode that sits alongside, and feeds into, the existing Hopper-to-Initiation route.
+
+## Client Workspace Resolution
+
+A Capex Request Session is a client programme session. The Active Client Workspace Resolution Gate in `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` runs **first**, before the access gate response, before any source read for content, and before any Board-facing figure is quoted.
+
+Required sequence:
+
+1. Identify active client.
+2. Load active client `CLIENT_CONTEXT_MANIFEST`.
+3. Confirm client repo root and required files exist — for this session type the decision register, evidence register, and handover register are mandatory.
+4. Load active client `PROGRAMME_STATUS.md`, in particular Section 1A Capital Efficiency / Cost Avoidance Evidence, Section 1B Plan Attainment Evidence, Section 6A Capital Decision Register, and Section 13 Handover Register.
+5. Load DX Build authority files.
+6. Apply lifecycle routing.
+7. Proceed only after required gates are satisfied.
+
+> No coworker or future app workflow may assert client programme status until the active client workspace has been resolved and the client `PROGRAMME_STATUS.md` has been loaded.
+
+Fail-closed: if the active client cannot be identified, the manifest cannot be loaded, required client files are missing, or programme status conflicts cannot be resolved, the coworker must stop and ask the Digital Lead. It must not proceed on inference, last-used client context, chat memory, or partial file access. A Capex Request Session that cannot resolve the workspace produces no readiness tracker, no evidence tables, no deck, and no handover checklist.
+
+This model is reusable method. Every client-specific figure, initiative name, approval name, maturity record, and evidence pointer produced in a session belongs in the client workspace, never in the DX Build repository.
 
 ## Core Jurisdiction
 
@@ -115,6 +139,20 @@ The Capex Request Session must not produce:
 
 A Board-final deck may only be produced once every Board-final blocker on the Claim Safety Table is cleared, and only when the Digital Lead confirms it is ready to be issued as final.
 
+## Information Requirements
+
+Five information groups must be satisfied — from a controlled source, or as an explicitly accepted gap — before the session reaches ready.
+
+| # | Requirement group | Covers | Governed by |
+|---:|---|---|---|
+| 1 | Previous capex closeout | What was approved, what was committed, what was delivered / live / controlled / moved to next phase, date movement reasons, budget position, closeout evidence, residual obligations | Plan Attainment Evidence below; client `PROGRAMME_STATUS.md` Sections 1B, 6A |
+| 2 | Next capex definition | Candidate initiative set, route classification per initiative, grouping / epic logic, indicative value or explicit TBC, sequencing anchors, dependencies, purpose of continuation | Hopper Portfolio Readiness (`01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`); `01_governance_lifecycle/05_ROUTE_RULES.md` |
+| 3 | Capital Efficiency Evidence | Baseline cost, revised cost, avoided cost, recurring avoided cost, arithmetic check, evidence basis, claim status, finance validation status, Board-safe wording | Capital Efficiency Evidence below; client `PROGRAMME_STATUS.md` Section 1A |
+| 4 | Plan Attainment Evidence | Committed initiatives, delivered / live / controlled / next-phase status, date movement reason, budget position, unsupported claims, Board-safe closeout wording | Plan Attainment Evidence below; client `PROGRAMME_STATUS.md` Section 1B |
+| 5 | Board Ask | Closeout ask, continuation / next-capex ask, indicative capital value or explicit TBC, purpose of continuation, open dependencies / Board-final blockers | Mandatory Board Ask below |
+
+Each requirement is tracked per line in the Capex Readiness Tracker with its source read, its status, and the Digital Lead decision. A requirement is never satisfied by inference.
+
 ## Mandatory Board Ask
 
 Every Capex Request Session must put the Board Ask up front. The ask must not be hidden at the end of the deck or buried in evidence.
@@ -146,7 +184,7 @@ Capital Efficiency Evidence is a mandatory information requirement and output se
 ### Rules
 
 - Do not invent savings.
-- Do not mix one-off and recurring savings into one total without labelling which is which.
+- **One-off and recurring avoided costs must not be merged into a single total unless separately labelled.**
 - Calculate percentage reductions correctly: `(baseline cost − revised cost) / baseline cost × 100`. Show the calculation, not just the result.
 - Mark finance-dependent claims as pending until validated by finance.
 - Use Board-safe wording (see `docs/presentation-standards/communication-and-framing-standard.md` Section 6) where evidence is incomplete.
@@ -170,6 +208,10 @@ Plan Attainment Evidence is a mandatory information requirement and output secti
 ### Delivery / Adoption Separation Rule
 
 > Delivery may close once delivery acceptance, go-live, and delivery evidence are complete. Adoption and benefits remain separate lifecycle controls where required and must not be collapsed into delivery closeout.
+
+> Live initiatives are complete for delivery closeout unless the governing route explicitly requires a post-adoption gate.
+
+Where the governing route does require a post-adoption gate, the initiative is reported as live with the adoption gate open, not as incomplete delivery. The route basis for requiring the gate must be stated.
 
 ### Plan Attainment Evidence Table
 
@@ -242,18 +284,32 @@ Where the deliverables file is not yet mature, the coworker must request interim
 
 ### Source-Read Order
 
-Read status from controlled files in this order where available:
+Read status from controlled sources in this order where available. The client workspace is resolved first; nothing below is read for content until the resolution gate passes.
 
-1. Deliverables / evidence file
-2. Actual delivery and variance record
-3. Benefits and evidence register
-4. Emergent work register
-5. Digital governance process map
-6. Digital maturity register
-7. Final finance reconciliation
-8. Adoption gate records and assurance evidence
-9. Original approved capitalisation request
-10. Executive Communication & Framing Standard / protocol
+1. Active client `CLIENT_CONTEXT_MANIFEST` — addressing and write mode
+2. Active client `[ACTIVE_CLIENT_WORKSPACE]/00_system_control/PROGRAMME_STATUS.md` — the live controlled status surface
+3. Client evidence register and the accepted delivered artefacts it indexes
+4. Client decision register and handover register
+5. Deliverables / evidence file
+6. Actual delivery and variance record
+7. Benefits and evidence register
+8. Emergent work register
+9. Digital governance process map
+10. Digital maturity register
+11. Final finance reconciliation
+12. Adoption gate records and assurance evidence
+13. Original approved capitalisation request
+14. Executive Communication & Framing Standard / protocol
+
+### Source Precedence
+
+> The accepted delivered artefact remains the evidence basis. `PROGRAMME_STATUS.md` is the live controlled status surface.
+
+Where a figure in a deck, summary, report, or draft conflicts with the accepted delivered artefact, the accepted artefact governs. The conflict is surfaced to the Digital Lead before either figure appears in a Board-facing output, and the `PROGRAMME_STATUS.md` record is corrected by supersession under `00_system_control/PROGRAMME_STATUS_RULES.md`.
+
+> The Digital Lead is the sole confirmation authority for programme status.
+
+Digital Lead confirmation is a control act against the accepted artefact. Recollection, chat memory, synced project knowledge, and last-used client context are never recorded as the evidence basis and are never sources for a Board claim.
 
 Where a source in this order does not exist or is not accessible, flag it as an access gap under the Claude Opus Access Confirmation Gate in `CLAUDE.md` rather than substituting an assumption.
 
@@ -296,6 +352,12 @@ The Capex Readiness Tracker is the working control document for the session. It 
 
 This strengthens, and does not replace, the existing Hopper Lifecycle Stage 1D / Stage 2 closeout to Live Delivery handover paths governed by `00_system_control/04_COWORKER_HANDOVER_MODEL.md` and `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`.
 
+### Handover Staleness Rule
+
+> Where a client handover or programme status position changes, existing downstream handovers become stale and must be reissued before the downstream coworker continues.
+
+A handover becomes stale, not wrong. Issued handovers and their staleness state are recorded in the client handover register and in Section 13 of the client `PROGRAMME_STATUS.md`. Because a Capex Request Session commonly moves the confirmed portfolio position, the coworker must review existing downstream handovers at closeout and mark any that the movement has made stale.
+
 ### Handover Checklist Fields
 
 The handover checklist must include, per initiative:
@@ -329,7 +391,7 @@ Each approved initiative still requires its own route trigger under `01_governan
 
 A Capex Request Session may produce, once Digital Lead approval is given at each controlled step:
 
-1. Access confirmation gate response
+1. Access / client workspace resolution gate response
 2. Source-read status reflection
 3. Capex Readiness Tracker
 4. Portfolio Capex Request Pack
@@ -344,14 +406,17 @@ A Capex Request Session may produce, once Digital Lead approval is given at each
 
 A Capex Request Session must not produce:
 
+- a Board-final deck or final approval wording while finance, maturity, or other Board-final blockers remain open
 - final spend approval
 - maturity approval
-- benefits approval
-- a Board-final deck while blockers remain open
+- benefits realisation approval
+- budget commitment
 - initiative-level delivery mobilisation
-- Pack 1 / Stage 1D / Stage 1 / Stage 2 detail before route-specific spin-up
+- Pack 1 / Stage 1D / Stage 1 / Stage 2 / DRB detail before route-specific spin-up
 - Jira delivery / epic build
 - unsupported Board claims
+- storing client-specific programme truth in the DX Build repository
+- any client programme assertion before the active client workspace is resolved
 - controlled updates without Digital Lead approval
 
 ## Looping Compliance — Mandatory Closeout

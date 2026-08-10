@@ -225,6 +225,26 @@ Handover format is governed by:
 
 ## File Discovery Rule
 
+### Client Workspace Resolution Precedes Source-Read
+
+> Client workspace resolution precedes lifecycle source-read where the session concerns a client programme, client artefact, client capex request, client delivery status, client handover or client evidence record.
+
+Resolution is governed by `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` and runs in this order before any lifecycle file is read for content:
+
+1. Identify active client.
+2. Load active client `CLIENT_CONTEXT_MANIFEST`.
+3. Confirm client repo root and required files exist.
+4. Load active client `PROGRAMME_STATUS.md`.
+5. Load DX Build authority files, including this lifecycle map.
+6. Apply lifecycle routing.
+7. Proceed only after required gates are satisfied.
+
+No coworker or future app workflow may assert client programme status until the active client workspace has been resolved and the client `PROGRAMME_STATUS.md` has been loaded. The coworker must not default to the last-used client, and must fail closed and ask the Digital Lead where the active client, the manifest, the required files, or a status conflict cannot be resolved.
+
+DX Build defines the method. The active client workspace holds programme truth. Client-specific programme truth must not be stored in this repository.
+
+### General file discovery
+
 This lifecycle map is not an exhaustive list of every file in the repository.
 
 For every task, the coworker must identify the relevant current repository files, including any newer synced files added after this lifecycle map was created.

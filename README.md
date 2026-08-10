@@ -45,7 +45,7 @@ The app or coworker may read current client status, propose controlled updates, 
 
 | File | Purpose |
 |---|---|
-| `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` | The interface standard: resolution gate, read/write boundary, source precedence, fail-closed rule, future app / tenant model |
+| `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` | The interface standard: resolution gate, read/write boundary, source precedence, fail-closed rule, future app / tenant model |
 | `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md` | Reusable manifest schema. Instances live in the client workspace |
 | `00_system_control/PROGRAMME_STATUS_TEMPLATE.md` | Reusable programme status structure |
 | `00_system_control/PROGRAMME_STATUS_RULES.md` | How client `PROGRAMME_STATUS.md` files are governed |

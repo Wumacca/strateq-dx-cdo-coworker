@@ -34,7 +34,7 @@ This model operates under, and does not override:
 - `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
 - `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
 - `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` — the Capex Request Session, as a material governed session, runs under the interactive gates, Live Session Status Board, controlled session states, and closeout write-back defined here. This pointer does not change the substantive Capex Request Session model.
-- `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` — the Active Client Workspace Resolution Gate runs before any substantive session output.
+- `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` — the Active Client Workspace Resolution Gate runs before any substantive session output.
 - `00_system_control/PROGRAMME_STATUS_RULES.md`
 - `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
 - `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
@@ -72,7 +72,7 @@ The Capex Request Session is **not** a replacement for single-initiative route c
 
 ## Client Workspace Resolution
 
-A Capex Request Session is a client programme session. The Active Client Workspace Resolution Gate in `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` runs **first**, before the access gate response, before any source read for content, and before any Board-facing figure is quoted.
+A Capex Request Session is a client programme session. The Active Client Workspace Resolution Gate in `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` runs **first**, before the access gate response, before any source read for content, and before any Board-facing figure is quoted.
 
 Required sequence:
 

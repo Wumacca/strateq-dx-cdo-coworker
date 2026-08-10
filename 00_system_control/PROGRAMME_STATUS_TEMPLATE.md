@@ -6,7 +6,7 @@ Reusable template. This file is the generic structure from which each client wor
 
 > This template holds **no client values**. Copy it into the client workspace at `<client_repo_root>/00_system_control/PROGRAMME_STATUS.md` and populate it there. A populated `PROGRAMME_STATUS.md` must never be committed to the DX Build repository.
 
-Governed by `00_system_control/PROGRAMME_STATUS_RULES.md` and `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`.
+Governed by `00_system_control/PROGRAMME_STATUS_RULES.md` and `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`.
 
 All bracketed values below are placeholders. All tables ship empty.
 
@@ -290,4 +290,4 @@ Every change to this file is logged. Entries are appended, never edited or remov
 
 ## Boundary
 
-This template defines structure only. It does not extend AI authority, does not create a live connection to Jira, SharePoint, or Omega 365, and does not override `00_system_control/PROGRAMME_STATUS_RULES.md`, `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`, or `00_system_control/OPERATING_RULES.md`.
+This template defines structure only. It does not extend AI authority, does not create a live connection to Jira, SharePoint, or Omega 365, and does not override `00_system_control/PROGRAMME_STATUS_RULES.md`, `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`, or `00_system_control/OPERATING_RULES.md`.

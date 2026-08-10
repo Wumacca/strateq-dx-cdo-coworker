@@ -32,7 +32,7 @@ This repository may hold only reusable standards, schemas, templates, routing ru
 
 The client's live controlled status surface is `[ACTIVE_CLIENT_WORKSPACE]/00_system_control/PROGRAMME_STATUS.md`. This repository holds the reusable template (`00_system_control/PROGRAMME_STATUS_TEMPLATE.md`) and the governing rules (`00_system_control/PROGRAMME_STATUS_RULES.md`) only.
 
-Resolution, the required client manifest, the required client programme files, the read/write boundary, source precedence, the fail-closed rule, and the future app / tenant interface model are governed by `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, with the manifest schema in `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md`.
+Resolution, the required client manifest, the required client programme files, the read/write boundary, source precedence, the fail-closed rule, and the future app / tenant interface model are governed by `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, with the manifest schema in `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md`.
 
 > The Digital Lead is the sole confirmation authority for programme status. The accepted delivered artefact remains the evidence basis. `PROGRAMME_STATUS.md` is the live controlled status surface.
 

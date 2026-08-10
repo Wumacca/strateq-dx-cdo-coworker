@@ -4,7 +4,7 @@
 
 Authority file for how client-specific `PROGRAMME_STATUS.md` files are governed.
 
-Read together with `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` (resolution and interface) and `00_system_control/PROGRAMME_STATUS_TEMPLATE.md` (structure).
+Read together with `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` (resolution and interface) and `00_system_control/PROGRAMME_STATUS_TEMPLATE.md` (structure).
 
 ## Purpose
 
@@ -136,4 +136,4 @@ These apply wherever Sections 1A and 1B are used, including in Capex Request Ses
 
 ## Boundary
 
-Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. Where this file and an authority file appear to conflict, surface the conflict to the Digital Lead before producing final output.
+Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. Where this file and an authority file appear to conflict, surface the conflict to the Digital Lead before producing final output.

@@ -6,7 +6,7 @@ Reusable schema. Authority for the structure, field meanings, allowed values, an
 
 > The schema is reusable. The manifest instance is client-specific and must live in the client workspace, not in the DX Build repo.
 
-This schema is governed by, and read together with, `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`.
+This schema is governed by, and read together with, `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`.
 
 ## Purpose
 
@@ -180,4 +180,4 @@ All fields listed below are required. A manifest missing any required field is i
 
 ## Boundary
 
-This schema defines structure only. It does not extend AI authority, does not create a live connection to any client system, and does not override `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`, or `00_system_control/OPERATING_RULES.md`.
+This schema defines structure only. It does not extend AI authority, does not create a live connection to any client system, and does not override `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`, or `00_system_control/OPERATING_RULES.md`.

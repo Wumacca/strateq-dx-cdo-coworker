@@ -229,7 +229,7 @@ Handover format is governed by:
 
 > Client workspace resolution precedes lifecycle source-read where the session concerns a client programme, client artefact, client capex request, client delivery status, client handover or client evidence record.
 
-Resolution is governed by `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` and runs in this order before any lifecycle file is read for content:
+Resolution is governed by `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` and runs in this order before any lifecycle file is read for content:
 
 1. Identify active client.
 2. Load active client `CLIENT_CONTEXT_MANIFEST`.

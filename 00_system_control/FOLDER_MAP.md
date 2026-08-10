@@ -21,19 +21,17 @@ docs/
 ## Folder Purposes
 
 ### 00_system_control
-Controls how the repository is organised and how AI coworker support must behave. Includes the two-coworker client workspace and reporting protocol (`14`), the interactive session protocol (`12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`), the client workspace interface standard (`12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`), the initiative control record schema (`13`), the coworker router (`11`), and the coworker handover, lifecycle, operating, knowledge-capture, and vocabulary authority files. There are exactly two client-project lifecycle coworkers — the Hopper Lifecycle Coworker and the Live Delivery Coworker; Claude has no live connection to Jira, SharePoint, or Omega 365.
+Controls how the repository is organised and how AI coworker support must behave. Includes the two-coworker client workspace and reporting protocol (`14`), the interactive session protocol (`12`), the client workspace interface standard (`15`), the initiative control record schema (`13`), the coworker router (`11`), and the coworker handover, lifecycle, operating, knowledge-capture, and vocabulary authority files. There are exactly two client-project lifecycle coworkers — the Hopper Lifecycle Coworker and the Live Delivery Coworker; Claude has no live connection to Jira, SharePoint, or Omega 365.
 
 Client-interface files held here are **reusable method only**:
 
 | File | Type |
 |---|---|
-| `12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` | Interface contract — resolution gate, boundaries, future app / tenant model |
+| `15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` | Interface contract — resolution gate, boundaries, future app / tenant model |
 | `CLIENT_CONTEXT_MANIFEST_SCHEMA.md` | Schema — the manifest instance lives in the client workspace |
 | `CLIENT_CONTEXT_REGISTRY.example.json` | Anonymised example only |
 | `PROGRAMME_STATUS_TEMPLATE.md` | Template — the populated `PROGRAMME_STATUS.md` lives in the client workspace |
 | `PROGRAMME_STATUS_RULES.md` | Rules governing client `PROGRAMME_STATUS.md` files |
-
-The bare numeral `12` in cross-references means the Interactive Governed Session Protocol. The client workspace interface standard is always cited by full path.
 
 Client-specific programme truth is never stored in this repository. It lives at `[ACTIVE_CLIENT_WORKSPACE]/`.
 

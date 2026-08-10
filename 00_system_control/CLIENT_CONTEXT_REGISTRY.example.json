@@ -2,7 +2,7 @@
   "registry_version": "1.0",
   "registry_type": "example",
   "schema": "00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md",
-  "standard": "00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md",
+  "standard": "00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md",
   "notice": "Example only. The real active-client registry is local, environment-specific, or future-app tenancy configuration. It must not contain real client programme truth in the DX Build repo.",
   "active_client": null,
   "active_client_resolution": "The active client is set explicitly by the Digital Lead or by an unambiguous session parameter. A null value means unresolved. The coworker must not default to the last-used client and must ask: Which client workspace is active for this session?",

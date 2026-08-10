@@ -105,7 +105,7 @@ Closeout effort must be proportionate to the session.
 
 > Proportionality governs output effort only. It does not reduce the mandatory authority-file or client-workspace source-read requirements.
 
-A lightweight closeout still requires the Tier 1 authority-file read and, for any session concerning a client programme, the Active Client Workspace Resolution Gate in `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`. Proportionality may reduce how much is written at closeout. It never reduces what must be read before work begins.
+A lightweight closeout still requires the Tier 1 authority-file read and, for any session concerning a client programme, the Active Client Workspace Resolution Gate in `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`. Proportionality may reduce how much is written at closeout. It never reduces what must be read before work begins.
 
 ### Full closeout applies to
 

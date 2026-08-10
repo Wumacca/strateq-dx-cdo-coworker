@@ -4,7 +4,7 @@
 
 Authority file. This is the single source for how the reusable Strateq DX Build method, the coworker system, and any future application resolve and interface with a client-specific workspace.
 
-> **File numbering note.** The numeric shorthand `12` used elsewhere in this repository refers to `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. This standard must always be cited by its full path, `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`, never as bare `12`. The two files are complementary and neither overrides the other: the Interactive Governed Session Protocol governs the interactive session sequence; this file governs client workspace resolution and the method / programme-truth boundary. Where a renumbering PR is raised, it must update every reference under the PR maintenance rule in `CLAUDE.md`.
+This standard (`15`) and the Interactive Governed Session Protocol (`12`) are complementary and neither overrides the other: `12` governs the interactive session sequence; `15` governs client workspace resolution and the method / programme-truth boundary.
 
 ## 1. Purpose and Boundary
 

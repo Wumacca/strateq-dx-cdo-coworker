@@ -16,7 +16,7 @@ Material governed sessions also run interactively under the Interactive Governed
 
 This orchestration pointer works with the following authority files:
 
-- `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` — authority for the method / programme-truth boundary, the Active Client Workspace Resolution Gate, the required client manifest and programme files, the read/write boundary, source precedence, the fail-closed rule, and the future app / tenant interface model. Cite by full path; the bare numeral `12` continues to mean the Interactive Governed Session Protocol. Supported by `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md`, `00_system_control/PROGRAMME_STATUS_TEMPLATE.md`, `00_system_control/PROGRAMME_STATUS_RULES.md`, and the anonymised `00_system_control/CLIENT_CONTEXT_REGISTRY.example.json`.
+- `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` — authority for the method / programme-truth boundary, the Active Client Workspace Resolution Gate, the required client manifest and programme files, the read/write boundary, source precedence, the fail-closed rule, and the future app / tenant interface model. Supported by `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md`, `00_system_control/PROGRAMME_STATUS_TEMPLATE.md`, `00_system_control/PROGRAMME_STATUS_RULES.md`, and the anonymised `00_system_control/CLIENT_CONTEXT_REGISTRY.example.json`.
 - `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` — authority for the client Claude Project workspace, the two client-project coworkers, the continuous initiative thread, the two reporting threads, the no-live-connection boundary, the confirmation-first status rule, the update-once reporting flow, and the single AI-readable Initiative Evidence and Decision File. In the active client workspace Claude has no live connection to Jira, SharePoint, or Omega 365.
 - `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` — reusable client-copy template for the single AI-readable per-initiative continuity record; it implements the `13` schema and is not a live GitHub initiative record.
 - `06_operating_manual/02_CLIENT_PROJECT_WORKSPACE_GUIDE.md` — human-facing setup guide for the one-project-per-client, one-continuous-thread-per-initiative, bi-weekly and monthly reporting structure (non-authoritative; authority files prevail).
@@ -113,7 +113,7 @@ Digital Lead confirmation is a control act against the accepted artefact. Recoll
 
 Governing authority files:
 
-- `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` — resolution gate, read/write boundary, source precedence, fail-closed rule, future app / tenant interface model.
+- `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md` — resolution gate, read/write boundary, source precedence, fail-closed rule, future app / tenant interface model.
 - `00_system_control/CLIENT_CONTEXT_MANIFEST_SCHEMA.md` — reusable manifest schema. The manifest instance lives in the client workspace, not here.
 - `00_system_control/PROGRAMME_STATUS_TEMPLATE.md` — reusable programme status structure.
 - `00_system_control/PROGRAMME_STATUS_RULES.md` — how client `PROGRAMME_STATUS.md` files are governed.
@@ -146,7 +146,7 @@ Load the Tier 2 files for the identified lifecycle stage, in addition to Tier 1.
 |---|---|
 | Hopper intake, consolidation, clarification | `01_governance_lifecycle/01_HOPPER_CONSOLIDATION_MODEL.md`; `04_intake_dispatch/01_AUTOMATIC_HOPPER_CLARIFICATION_HANDLER.md`; `04_intake_dispatch/02_JIRA_FIELD_LENGTH_RULES.md` |
 | Hopper priority / portfolio readiness | `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; `01_governance_lifecycle/02_HOPPER_PRIORITY_SCREEN_MODEL.md`; `01_governance_lifecycle/05_ROUTE_RULES.md` |
-| Capitalisation closeout / next-capex request / bulk initiation | `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`; `00_system_control/12_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; executive communication / presentation standard where present (`docs/presentation-standards/communication-and-framing-standard.md`) |
+| Capitalisation closeout / next-capex request / bulk initiation | `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md`; `00_system_control/15_CLIENT_WORKSPACE_INTERFACE_STANDARD.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; executive communication / presentation standard where present (`docs/presentation-standards/communication-and-framing-standard.md`) |
 | Route classification and initiation stage gate | `01_governance_lifecycle/05_ROUTE_RULES.md`; `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md` |
 | Development Route Stage 1D | `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
 | Implementation / Support Route Stage 1 and Stage 2 | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`; `01_governance_lifecycle/04_INITIATION_FORM_INTAKE_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |

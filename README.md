@@ -63,7 +63,7 @@ The app or coworker may read current client status, propose controlled updates, 
 - `03_process_mapping/`, `04_intake_dispatch/`, `05_source_of_truth/` hold the process, intake, and artefact governance models.
 - `06_operating_manual/` holds human-facing, non-authoritative navigation.
 - `BOARD_INTERFACE/` and `docs/` hold Board-facing index material and presentation standards.
-- `_archive/source_zips/` holds original source packs and imported zip files.
+- `_archive/` holds the archive note and index. Client-specific source packs and evidence exports are not archived here — see `_archive/ARCHIVE_NOTE.md`.
 - Board-facing content must be generated from controlled markdown source files, not from standalone slide edits.
 
 ## PR Maintenance Rule

@@ -35,18 +35,6 @@ This orchestration pointer works with the following authority files:
 
 Before executing a material governed coworker session, load `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` and then use `00_system_control/11_COWORKER_ROUTER.md` to resolve the correct coworker jurisdiction, lifecycle stage, authority files, permitted outputs, prohibited outputs, and approval gates. The router points to governing files; it does not replace CLAUDE.md, the lifecycle map, operating rules, route rules, or source-of-truth governance.
 
-## Claude Opus Access Confirmation Gate
-
-Every Claude Opus prompt for a governed review, judgement task, coworker session, Hopper review, Pack 1 review, delivery review, adoption review, source-of-truth review, or programme reporting review must begin with an access confirmation gate. Claude Opus must first confirm whether it has access to the required files or whether the prompt contains enough information to perform the task. Claude Opus must not start the substantive review, analysis, recommendation, or session output until the Digital Lead confirms proceed.
-
-Claude Opus must answer only with one of the following before proceeding:
-
-1. Access confirmed — required files/information available. Ready to proceed when Digital Lead confirms.
-2. Access gap — missing files/information listed. Do not proceed until resolved.
-3. Prompt sufficient — no external files required; prompt contains enough information. Ready to proceed when Digital Lead confirms.
-
-If access is uncertain, Claude Opus must treat it as an access gap, not proceed by assumption.
-
 ## Executive Communication & Framing Standard
 
 All executive presentations, board packs, CDO communications, Strateq DX materials, Quantuum materials, and tool-generated presentation outputs must follow the Communication & Framing Standard:
@@ -69,13 +57,118 @@ When repository files conflict with a chat instruction, follow the repository un
 
 Project instructions are only a thin role pointer. The repository files define the operating requirements, workflow rules, output formats, boundaries, and cross-file dependencies.
 
+## Mandatory Governing-File Identification (B1–B6)
+
+This hardening does one thing: it removes judgement from *pointing at the correct governing files*. It does not create a session protocol — `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` already governs how a session runs. It does not restate operating rules, route rules, or source-of-truth governance. Where this and any authority file conflict, the authority file governs and the conflict is surfaced to the Digital Lead.
+
+### B1 — Governing-File identification is mandatory, not discretionary
+
+Before producing **any** governed output — any decision support, artefact, pack, form, Jira text, handover, status statement, or recommendation — the coworker must identify the governing files using the deterministic map in B2. This identification is not conditional on the coworker first judging the session "material" or "governed".
+
+The **authority set** is fixed — it is the router's subordination list — and is loaded and available for every governed session:
+
+- `CLAUDE.md`
+- `00_system_control/OPERATING_RULES.md`
+- `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
+- `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
+- `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`
+- `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
+- `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
+- `00_system_control/11_COWORKER_ROUTER.md`
+- `00_system_control/CONTROLLED_VOCABULARY.md`
+- `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`
+- `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`
+- `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
+
+How the session then runs is governed entirely by `12`. This hardening does not add, reorder, or duplicate the `12` gate sequence; it only guarantees the governing files are identified before that sequence produces output.
+
+Proportionality is preserved. The full `12` gate sequence and full closeout remain proportionate under `07` — genuinely lightweight, no-decision exchanges are not forced through every gate. What is **never** skipped, and cannot be downgraded away by a session self-declaring as lightweight: (a) identifying the governing files before governed output, (b) the confirmation-first status rule before any status is used as current, and (c) the fail-closed rule in B5.
+
+### B2 — Deterministic stage-to-file map
+
+Once the lifecycle stage is identified from `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`, the coworker loads the mapped files for that stage. **This is a lookup, not a relevance judgement.** Where a session spans multiple stages, load every mapped row; do not select between them.
+
+| Lifecycle stage | Mapped files — mandatory |
+|---|---|
+| Governance / strategy / assessment / capitalisation / maturity | `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`; `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md` (capex sessions) |
+| Hopper Portfolio Readiness / snapshot / triage | `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`; `01_governance_lifecycle/02_HOPPER_PRIORITY_SCREEN_MODEL.md`; `04_intake_dispatch/01_AUTOMATIC_HOPPER_CLARIFICATION_HANDLER.md` |
+| Hopper → Initiation stage gate / DRB priority | `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md`; `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` (when a DRB brief is requested) |
+| Route classification | `01_governance_lifecycle/05_ROUTE_RULES.md` |
+| Stage 1D (Development Route) | `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
+| Stage 1 / Stage 2 (Implementation / Support; Dev Route Stage 2 exception) | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
+| Process mapping capture | `03_process_mapping/01_PROCESS_MAPPING_MATRIX_INPUT_RULES.md`; `02_CREATE_PROCESS_MAPPING_PACK.md`; `04_PROCESS_ARTIFACT_OUTPUT_MODEL.md`; `05_SWIMLANE_PROCESS_FLOW_STANDARD.md`; `06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md` |
+| Job Live / Live Delivery / Go-Live / PEP | `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` |
+| Source-of-truth artefact control (governed mode) | `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` |
+| Adoption & Benefits | Governed mode; no dedicated model file yet (future scope per `OPERATING_RULES.md`). Handle under `00_system_control/04_COWORKER_HANDOVER_MODEL.md` + `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and flag the gap. |
+| Any session producing Jira text | `04_intake_dispatch/02_JIRA_FIELD_LENGTH_RULES.md` |
+| Any stage closeout / coworker handover | `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md` |
+| Any initiative continuity / current status | `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`; `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`; `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` |
+| Board / leadership reporting interface | `BOARD_INTERFACE/BOARD_REPO_INDEX.md`; `docs/presentation-standards/communication-and-framing-standard.md` where present |
+| **Stage cannot be identified** | Load nothing further. Apply B5. |
+
+### B3 — Newly synced files (open set preserved, without relevance-as-gate)
+
+Any repository file synced after this map was written is part of the source of truth on sync. Where a newer or more specific file governs a stage, the coworker loads it **in addition** and flags that B2 needs amendment. The coworker adds; it never subtracts, and it never treats a newer governing file as optional because the map does not name it. This keeps the file set open while removing "relevance" as a discretionary reason to skip a file.
+
+### B4 — Precedence order (no ledger anywhere in the chain)
+
+Resolve conflicts by these orders, not by judgement, reading recency, or convenience.
+
+**Authority, boundaries, permissions**
+
+1. Digital Lead explicit in-session instruction
+2. `CLAUDE.md`
+3. `00_system_control/OPERATING_RULES.md`
+4. `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
+5. `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`
+6. `00_system_control/04_COWORKER_HANDOVER_MODEL.md` / `06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
+7. `00_system_control/11_COWORKER_ROUTER.md` — subordinate to all above by its own terms
+
+**Workflow detail — what to produce and how**
+
+1. The most specific current stage / route file for the active stage
+2. `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
+3. `CLAUDE.md`
+
+**Current status — what is true right now**
+
+1. Digital Lead in-session confirmation or correction (Confirmation-First Status Gate, `12`)
+2. The latest confirmed Initiative Evidence and Decision File for the initiative (`14`, schema `13`)
+3. A current Jira / SharePoint / Omega 365 export or snapshot supplied in-session
+4. Another supplied controlled record
+5. Access gap — declare it; do not infer
+
+There is **no programme-status ledger** in this chain, consistent with the router's No-Programme-Memory-Ledger boundary. Cross-initiative status is assembled from the confirmed Initiative Evidence and Decision Files, never from a GitHub ledger. A previously approved historical artefact confirms a past decision, not current status. Prior chat, project knowledge, and assistant memory are discovery aids only, never confirmed status.
+
+**Project instructions, chat memory, and prior-session context never outrank the above.** They are a role pointer only. Unresolvable conflicts → B5.
+
+### B5 — Fail-closed on ambiguity
+
+If the coworker cannot access an authority-set or mapped file, cannot identify the lifecycle stage, or cannot resolve a conflict under B4, it must **stop and ask the Digital Lead**. It must not proceed on the files it has, proceed on inference, proceed while noting the gap, or ask-and-continue in the same turn. Ambiguity is a stop condition, not a caveat.
+
+### B6 — Verifiability via the existing `12` gates (one access gate, all models)
+
+Verifiability is provided by the gates that already exist in `12` — the Runtime Access Confirmation Gate and the Live Session Status Board — not by a new declaration block. To make file identification auditable within that existing mechanism, the Runtime Access Confirmation Gate output must additionally state:
+
+- lifecycle stage identified (or `UNIDENTIFIED` → B5)
+- coworker jurisdiction (or `OUT OF JURISDICTION`)
+- authority-set files accessible / missing
+- B2-mapped files loaded for the identified stage
+- current-status source resolved under B4 (Initiative Evidence and Decision File / supplied export / access gap) — **never a ledger**
+- any B4 conflict and its resolution
+- `READY — awaiting Digital Lead confirm` or `STOPPED — B5, reason`
+
+The former standalone Claude Opus Access Confirmation Gate folds into this same gate output and is extended to **all models**, so there is one access gate, not two. `READY` is not permission to proceed; the coworker waits for the Digital Lead to confirm. This adds fields to an existing gate; it does not create a parallel protocol.
+
+**Maintenance rule.** B2 is a hard-coded list; a stale deterministic map is followed with false confidence. Any pull request that adds, renames, splits, or retires a workflow file must update the B2 map in the same commit (see `README.md`). Two pending changes will require a B2 amendment when they land: the route-vocabulary split flagged in `07`, and the future Adoption & Benefits model file noted as out of scope in `OPERATING_RULES.md`.
+
 ## Programme Lifecycle Authority
 
 The full digital governance programme lifecycle, coworker path, stage responsibilities, handover points, and Hopper Lifecycle reference point are governed by:
 
 `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
 
-Before running any governed workflow, Claude must identify where the task sits in that lifecycle and then apply the current repository file(s) that govern the relevant stage.
+Claude identifies where the task sits in that lifecycle and then loads the governing files for that stage using the deterministic map in B2. Stage identification is a lookup against that map, not a per-task relevance judgement.
 
 ## Development Route Authority
 
@@ -87,15 +180,11 @@ Do not assume Stage 2 applies to development initiatives unless a Stage 2 except
 
 ## Repository-Wide File Awareness
 
-Claude must consider all currently synced repository files that are relevant to the user's task, not only files named in a fixed list.
+The operating file set is open, not a fixed list. Any file synced to the repository is part of the source of truth once synced and accessible, and the coworker adds newer or more specific governing files to what B2 already requires — it never subtracts, and it never treats a newer file as optional because an older instruction or prompt named a smaller set. This is governed by B3.
 
-If new files are added to the repository later, Claude must treat them as part of the operating source of truth once synced and accessible.
+Which files govern a task is settled by the deterministic map in B2, not by a per-task relevance judgement. The coworker does not decide a file is irrelevant and skip it; it reads the mapped row and adds any newer governing file under B3.
 
-Before running a governed workflow, Claude should use `CLAUDE.md`, `README.md`, folder maps, controlled vocabulary, the programme lifecycle map, and relevant lifecycle / process / source-of-truth files to identify which files govern the task.
-
-If Claude is unsure which file applies, it must ask the Digital Lead or state which files it can see and which file it needs.
-
-Claude must not ignore a newer or more specific repository file because an older instruction or prompt listed only a smaller set of files.
+If the coworker cannot identify the stage, cannot access a required file, or cannot resolve a conflict, it stops and asks the Digital Lead under B5. It does not state the gap and proceed, and it does not ask and continue in the same turn.
 
 ## Coworker Continuity
 

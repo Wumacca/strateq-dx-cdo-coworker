@@ -97,7 +97,7 @@ Once the lifecycle stage is identified from `00_system_control/05_DIGITAL_GOVERN
 | Stage 1D (Development Route) | `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
 | Stage 1 / Stage 2 (Implementation / Support; Dev Route Stage 2 exception) | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
 | Process mapping capture | `03_process_mapping/01_PROCESS_MAPPING_MATRIX_INPUT_RULES.md`; `02_CREATE_PROCESS_MAPPING_PACK.md`; `04_PROCESS_ARTIFACT_OUTPUT_MODEL.md`; `05_SWIMLANE_PROCESS_FLOW_STANDARD.md`; `06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md` |
-| Job Live / Live Delivery / Go-Live / PEP | `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` |
+| Job Live / Live Delivery / Go-Live / PEP | `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`; `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md` |
 | Source-of-truth artefact control (governed mode) | `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` |
 | Adoption & Benefits | Governed mode; no dedicated model file yet (future scope per `OPERATING_RULES.md`). Handle under `00_system_control/04_COWORKER_HANDOVER_MODEL.md` + `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and flag the gap. |
 | Any session producing Jira text | `04_intake_dispatch/02_JIRA_FIELD_LENGTH_RULES.md` |

@@ -18,6 +18,7 @@ The Claude client-project workspace, no-live-connection boundary, confirmation-f
 - `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` (reusable schema; the evidence file is its client-copy implementation)
 - `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`
 - `02_coworker_artifact_interface/05_BIWEEKLY_PROGRAMME_UPDATE_INPUT_TEMPLATE.md`
+- `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md`
 - `06_operating_manual/02_CLIENT_PROJECT_WORKSPACE_GUIDE.md`
 
 These files do not replace the existing lifecycle, route, approval, evidence, stage-closeout, or source-of-truth controls. Jira (initiative and delivery status), SharePoint (approved artefacts and evidence), and Omega 365 (action management) remain the client-facing operational tools. Claude has no permitted live connection to them and never claims it has read or updated a live client system.

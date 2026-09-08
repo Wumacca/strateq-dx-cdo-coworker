@@ -22,6 +22,10 @@ The Claude client-project workspace, no-live-connection boundary, confirmation-f
 
 These files do not replace the existing lifecycle, route, approval, evidence, stage-closeout, or source-of-truth controls. Jira (initiative and delivery status), SharePoint (approved artefacts and evidence), and Omega 365 (action management) remain the client-facing operational tools. Claude has no permitted live connection to them and never claims it has read or updated a live client system.
 
+## Contribution Note — Keep the B2 Map Current
+
+`CLAUDE.md` holds a deterministic stage-to-file map (B2) that the coworker follows as a lookup rather than a relevance judgement. A stale map is followed with false confidence, so any pull request that **adds, renames, splits, or retires a workflow / governance file must update the B2 map in the same commit.** Two changes already flagged as pending will each require a B2 amendment when they land: the route-vocabulary split noted in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, and the future Adoption & Benefits model file noted as out of scope in `00_system_control/OPERATING_RULES.md`.
+
 ## Executive Communication & Framing Standard
 
 All executive presentations, board packs, CDO communications, Strateq DX materials, Quantuum materials, and tool-generated presentation outputs must follow the Communication & Framing Standard:

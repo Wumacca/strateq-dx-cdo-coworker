@@ -103,6 +103,8 @@ KPI governance is **excluded** from the Governed Workflow Looping update in this
 
 Closeout effort must be proportionate to the session.
 
+Proportionality governs **output effort and closeout depth only**. It never removes the governing-file identification required before any governed output (`CLAUDE.md` B1–B2), the confirmation-first status rule before any status is used as current, or the fail-closed rule (`CLAUDE.md` B5). A session cannot downgrade itself out of these by self-declaring as lightweight.
+
 ### Full closeout applies to
 
 - initiation approval

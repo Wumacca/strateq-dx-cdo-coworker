@@ -15,9 +15,9 @@ For a material governed coworker session, the router helps resolve, before work 
 
 The router is a routing aid. It points to the governing files. It does not contain or replace the detailed workflow logic those files hold.
 
-## Claude Opus Access Confirmation Gate
+## Access Confirmation Gate
 
-Where the routed task is intended for Claude Opus, the first output must be an access confirmation response only. The Opus session must confirm whether it can access the authority files, source files, snapshots, exports, or prompt-contained information required for the task. It must not start the substantive coworker session until the Digital Lead confirms proceed.
+The routed task's first output must be an access confirmation response only, governed by the single access gate defined in `CLAUDE.md` (B6). That gate folds the former Opus-only gate into the Runtime Access Confirmation Gate of `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` and applies to all models, not Opus only. The session must confirm whether it can access the authority files, source files, snapshots, exports, or prompt-contained information required for the task, and must state the lifecycle stage identified, the coworker jurisdiction, and the B2-mapped files loaded. It must not start the substantive coworker session until the Digital Lead confirms proceed.
 
 This applies to Hopper Portfolio Readiness Reviews, Pack 1 readiness reviews, delivery reviews, adoption/benefits reviews, source-of-truth reviews, programme reporting reviews, and any other material governed review.
 

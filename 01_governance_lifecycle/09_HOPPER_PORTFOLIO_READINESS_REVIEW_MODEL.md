@@ -84,7 +84,7 @@ Confluence is **not** part of the THREE60 / Strateq DX digital governance setup.
 
 ## Part 0 — Access Confirmation Gate
 
-Before any substantive review, confirm access under the Claude Opus Access Confirmation Gate in `CLAUDE.md` and the pre-loop access confirmation in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`.
+Before any substantive review, confirm access under the single Access Confirmation Gate in `CLAUDE.md` (B6) — which folds the former Opus-only gate into the Runtime Access Confirmation Gate of `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` and applies to all models — and the pre-loop access confirmation in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`.
 
 Confirm availability of, or flag as missing:
 

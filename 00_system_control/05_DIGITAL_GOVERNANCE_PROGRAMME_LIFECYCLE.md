@@ -193,7 +193,7 @@ A governed control mode applied within the initiative thread when lifecycle chan
 
 The Hopper Lifecycle Coworker must not operate from project instructions alone.
 
-When handling Hopper, Stage 1D, Stage 1, Stage 2, process mapping, DRB brief preparation, Jira field updates, source-of-truth impact checks, or handover to Live Delivery, it must identify and apply the relevant current repository files.
+When handling Hopper, Stage 1D, Stage 1, Stage 2, process mapping, DRB brief preparation, Jira field updates, source-of-truth impact checks, or handover to Live Delivery, it loads the governing files for that stage using the deterministic map in `CLAUDE.md` (B2).
 
 The Development Route Stage 1D model is the primary authority for Development Route initiatives.
 
@@ -227,11 +227,11 @@ Handover format is governed by:
 
 This lifecycle map is not an exhaustive list of every file in the repository.
 
-For every task, the coworker must identify the relevant current repository files, including any newer synced files added after this lifecycle map was created.
+For every task, the coworker loads the governing files for the identified stage using the deterministic stage-to-file map in `CLAUDE.md` (B2). This is a lookup, not a per-task relevance judgement. Any newer or more specific file synced after B2 was written is loaded in addition under `CLAUDE.md` (B3), and the coworker flags that B2 needs amendment; the coworker adds, it never subtracts.
 
 If a task-specific file exists, that task-specific file takes precedence over a general lifecycle summary.
 
-If two files conflict, the newer, more specific, or explicitly authoritative file should be surfaced to the Digital Lead for confirmation before final output.
+Conflicts are resolved by the precedence order in `CLAUDE.md` (B4). Where a conflict cannot be resolved by that order, or the stage or a required file cannot be identified, the coworker stops and asks the Digital Lead under `CLAUDE.md` (B5) before any output.
 
 ## Output Boundary
 

@@ -255,7 +255,7 @@ Read status from controlled files in this order where available:
 9. Original approved capitalisation request
 10. Executive Communication & Framing Standard / protocol
 
-Where a source in this order does not exist or is not accessible, flag it as an access gap under the Claude Opus Access Confirmation Gate in `CLAUDE.md` rather than substituting an assumption.
+Where a source in this order does not exist or is not accessible, flag it as an access gap under the single Access Confirmation Gate in `CLAUDE.md` (B6) rather than substituting an assumption.
 
 ## Readiness Gate
 

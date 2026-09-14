@@ -290,15 +290,23 @@ The checklists in this manual are **expected checklists for human planning**. Th
 
 ## Section 11 — Initiative Delivery / Live Implementation Control
 
-`Placeholder — lifecycle-recognised, not operationally governed yet.` The full Stage 3 Live Delivery model is not built in this workstream.
-
-1. **Purpose.** Move the approved initiative into controlled delivery execution and track scope, risks, blockers, and implementation evidence.
-2. **What this stage owns.** Delivery mobilisation and tracking (once the model is built).
-3. **What this stage does not own.** Adoption, benefits, or source-of-truth register updates.
-4. **Entry criteria.** A route stage closed with a Live Delivery readiness statement and the Digital Lead spins up delivery.
-5. **Exact spin-up command.** `Spin up Live Delivery for [initiative].`
-6. **Authority files.** `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` (Steps 14–15, 19); `00_system_control/04_COWORKER_HANDOVER_MODEL.md`. Detailed Stage 3 Live Delivery model — `Placeholder — lifecycle-recognised, not operationally governed yet.`
-7–17. Beyond mobilisation intake and the interactive gates, detailed delivery workflow is not yet governed. Do not invent workflow detail. The interactive gates, Live Session Status Board, freshness model, and closeout write-back in `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` still apply. Live delivery status and RAID are revalidated each fortnightly delivery cycle or material event.
+1. **Purpose.** Establish the evidenced mobilisation baseline, control the client side of delivery and produce reliable delivery reporting through adoption / handover and closeout.
+2. **What this stage owns.** Initiative Delivery Setup, PEP/client-control planning, RAID/decision/change/evidence continuity, readiness, acceptance interface and delivery reporting.
+3. **What this stage does not own.** The supplier's or developer's full detailed plan; budget/cost control unless assigned; business approval, acceptance or go-live authority.
+4. **Entry criteria.** An approved Initiation Form or alternative authority to proceed, or a Digital Lead-approved draft mobilisation discovery where authority is not yet evidenced.
+5. **Exact spin-up command.** `Start governed Live Delivery setup for [initiative].`
+6. **Authority files.** `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`; `02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md`; `02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md`; `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md`; `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`; plus the global interactive, evidence and handover controls.
+7. **Overview workflow.** Bind one client → inspect handover and sources → classify evidence → resolve entry/ownership dimensions → ask one gap questionnaire → draft Initiative Delivery Setup → establish PEP/controls → Digital Lead approves `Mobilising → In Delivery` → govern delivery and reporting.
+8. **Required inputs.** Available authority, scope, contract/SOW, detailed-owner plan, approvals, current status/RAID/minutes, ownership, reporting and acceptance evidence. A missing Initiation Form does not invalidate another approved mandate.
+9. **Coworker responsibilities.** State what is evidenced, missing or conflicting; maintain initiative records and PEP before reports; never duplicate the full vendor plan or infer budget responsibility.
+10. **Digital Lead responsibilities.** Confirm unresolved facts, approve responsibilities and governance, accept controlled gaps, and approve stage transitions and releases.
+11. **Live session checklist.** Client bound · sources inventoried · authority tested · delivery/financial ownership resolved · PEP and evidence controls established · reporting route confirmed · Digital Lead decision recorded.
+12. **Required artefacts and records.** Initiative Delivery Setup, handover/source index, Initiative Evidence and Decision File, PEP/client-control record and Artefact 1 after delivery starts.
+13. **Approval points.** Authority to proceed; `Mobilising → In Delivery`; scope/change; acceptance; go-live; release and external publication.
+14. **Freshness obligations.** Revalidate live status, RAID, milestones, owners and reporting narrative at each applicable delivery cycle or material event.
+15. **Exit criteria.** Delivery accepted; operational ownership and residual obligations confirmed; evidence and source-of-truth impact recorded; closeout approved.
+16. **Closeout / handover.** The first Artefact 1 after mobilisation references the approved Initiative Delivery Setup once. Delivery moves through Adoption / Handover before closure where applicable.
+17. **What the Coworker will ask for next.** Only missing evidence or decisions needed for the next control move, batched into one clear request.
 
 ---
 

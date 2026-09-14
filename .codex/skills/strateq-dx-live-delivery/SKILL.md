@@ -85,7 +85,7 @@ Within the private client repository only, draft or reconcile:
 3. Initiative Evidence and Decision File;
 4. PEP/client-control hierarchy and controlled reporting inputs;
 5. RAID, decision, change and evidence references;
-6. Artefact 1 Rev1 when the initiative is in delivery;
+6. Artefact 1 using the approved Rev1 structure and current client-controlled template revision when the initiative is in delivery;
 7. programme/leadership reporting inputs after initiative records are current.
 
 Use the update-once rule: initiative records and PEP first, reports second. Current Position, Next Control Move and 7 Day Lookahead must be confirmed or transparently derived from governed records.

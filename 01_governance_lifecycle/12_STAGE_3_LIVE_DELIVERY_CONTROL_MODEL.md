@@ -123,7 +123,7 @@ Requires closeout evidence, residual ownership, source-of-truth impact, lessons 
 ## Artefact interface
 
 - Artefact 0: `Initiative Delivery Setup` — governed by `02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md`.
-- Artefact 1 Rev1: live delivery meeting/reporting record — governed by `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md`.
+- Artefact 1: live delivery meeting/reporting record using the approved Rev1 structure and the current client-controlled file revision — governed by `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md`.
 - PEP: client-control plan and portfolio reporting source, not a second supplier plan.
 - Initiative Evidence and Decision File: current evidence and decision continuity record.
 

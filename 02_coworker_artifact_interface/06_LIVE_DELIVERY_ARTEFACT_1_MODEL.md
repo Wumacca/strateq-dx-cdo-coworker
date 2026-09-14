@@ -2,7 +2,7 @@
 
 ## Status
 
-Artefact 1 Rev1 is the canonical live delivery meeting and reporting record. Preserve its approved agenda and layout. Do not redesign it through this method file.
+The approved Artefact 1 Rev1 agenda and layout are canonical. A client-controlled template revision may increment when an approved control is added; the current filename and revision in the bound private client repository govern. Preserve the Rev1 structure and do not redesign it through this method file.
 
 ## Purpose
 

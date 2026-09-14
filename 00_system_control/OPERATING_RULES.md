@@ -18,20 +18,23 @@ The looping standard does not expand the current active scope of this file. Wher
 
 There are exactly two client-project lifecycle coworkers: the **Hopper Lifecycle Coworker** (origin and intake through approval to commence delivery) and the **Live Delivery Coworker** (approval through delivery, adoption, benefits, source-of-truth impact, and closeout). The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and programme / leadership reporting are governed stages, controls, or modes, not separate coworkers or separate threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker. The client workspace, thread, and reporting model is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`.
 
-## No Live Client-System Connection
+## Client Connection and Isolation Boundary
 
-Claude has no permitted live connection to Jira, SharePoint, or Omega 365 in the active client workspace. Claude must never claim it has read or updated a live client system. Every client-system update is presented as `Recommended update — requires Digital Lead approval and physical update in the client system.` and is marked complete only when the Digital Lead explicitly confirms the physical update occurred. A separately governed future-state integration architecture may be developed later, but it must not appear as an available option inside the active coworker process.
+The active client's `CLIENT_BOUNDARY.md` and `SOURCE_OF_TRUTH.md` define the permitted repositories, connected sources and manual publication destinations. The Coworker must never claim access or an update that the available tools have not evidenced. Every unperformed external update is presented as `Recommended update — requires Digital Lead approval and physical update in the destination system.` and is marked complete only when the Digital Lead confirms it.
+
+Client binding and zero-crossover controls are mandatory under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`.
 
 ## Source-of-Truth and Storage Boundary
 
-The controlled architecture separates method, client-facing status, and evidence:
+The controlled architecture separates method and client records:
 
-- **GitHub** governs methods and schemas (coworker authority files, workflow models, schemas, controlled vocabulary, operating rules, checklist templates, governance manuals).
-- **Jira** is the client-facing initiative and delivery-status system (lifecycle position, Hopper / delivery status, linked PEPs and Epics, milestones, owners, actions, risks, blockers, decisions, candidate changes, next control move). Claude reads supplied exports / snapshots only; it has no live connection.
-- **SharePoint / the controlled client workspace** governs approved artefacts and evidence (approved artefacts, Completed Initiation Forms, decision evidence, Board packs, delivery and acceptance evidence, benchmark assessments, maturity registers, source-of-truth records).
-- **Omega 365** is the client-facing action-management system. Claude references Omega 365 actions and prepares write-back text without a live connection and without maintaining a duplicate action register.
-- **Coworkers** reconcile the available controlled sources and recommend updates. They do not invent the current position and do not silently mutate controlled records.
-- **No permanent parallel GitHub initiative ledger is permitted.** GitHub must not become a parallel live client initiative-management system. The Initiative Control Record (`00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`) is a reusable schema, not a live per-initiative file, and its target-state client-facing home is Jira. Its single AI-readable client-copy implementation is the Initiative Evidence and Decision File (`02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`), held in the controlled client workspace, not in this repository.
+- **Public method repository:** reusable authority files, workflow models, schemas, controlled vocabulary, templates and skills. It contains zero client data.
+- **Private client repository:** the live client working authority where the client profile selects GitHub. It contains the PEP, initiative records, working artefacts and release controls.
+- **Configured client systems:** optional status, action, evidence or publication systems named in the client profile. A platform is not assumed globally.
+- **External client store:** may be a manual publication destination without being a connected working source.
+- **Coworkers:** reconcile permitted controlled sources and prepare controlled changes. They do not invent the current position or silently mutate records.
+
+There is no live per-initiative record in this public method repository. Client records are permitted only in the selected private client repository.
 
 ## Update-Once Rule
 
@@ -45,9 +48,7 @@ Every material governed session runs interactively under `00_system_control/12_I
 
 ## Current Active Scope
 
-The current active scope is Hopper consolidation through Initiation Form handoff.
-
-Adoption Review and Benefits Review are recognised lifecycle stages, but they are future scope for this repository until their own model files are created.
+The active governed scope includes Hopper and initiation plus Stage 3 mobilisation and live delivery under `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`. Adoption and benefits remain limited to the controls explicitly defined in that model until a dedicated model is approved.
 
 ## Authority Boundaries
 
@@ -64,6 +65,10 @@ Adoption Review and Benefits Review are recognised lifecycle stages, but they ar
 - convert process matrices into process mapping packs
 - prepare Blueworks build briefs
 - prepare vendor/developer question sets
+- inspect mobilisation handovers and alternative authorities to proceed
+- draft Initiative Delivery Setup
+- configure and validate PEP/client-control records
+- draft evidence-led live delivery and leadership reporting
 
 ### AI Coworker Must Not
 
@@ -84,7 +89,7 @@ The Hopper Portfolio Readiness Review prepares the Jira Initiative View / Hopper
 
 From Hopper, approved items branch into one of two initiation routes:
 
-- **Development Route → Stage 1D** is streamlined scoping and DRB approval for internal development initiatives (Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, in-house tools). Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. Does not progress to Stage 2 unless a Stage 2 exception gate trigger is confirmed.
+- **Development Route → Stage 1D** is streamlined scoping and approval for an internal build or enhancement on a client-owned platform. Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. It does not progress to Stage 2 unless a Stage 2 exception trigger is confirmed.
 
 - **Implementation / Support Route → Stage 1 + Stage 2** is formal two-stage due diligence for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
@@ -106,21 +111,19 @@ Capex request approval does not bypass initiative-level route controls, delivery
 
 ## Data Handling
 
-Use only information provided by the Digital Lead, Jira exports, screenshots, SharePoint records, process matrices, Blueworks outputs, or confirmed team/vendor feedback.
+Use only information from the bound client repository, sources supplied for that client session, and confirmed team/vendor feedback. Other client sources are prohibited even if technically accessible.
 
 When a fact is missing, mark it as missing. Do not fill gaps with assumptions.
 
-## Jira Rule
+## Delivery-System Rule
 
-Jira is the client-facing tracking surface.
+The client profile names the delivery tracking surface. Where Jira is selected, Jira-specific route files apply. Where it is not selected, the Coworker must not create Jira IDs, Jira text or Jira dependencies. For GitHub-authority live delivery, the PEP and initiative records in the private client repository provide the controlled client-side delivery view.
 
-AI output may include Jira-ready comments, field update recommendations, or status change recommendations, but the Digital Lead or an authorised user applies changes. Claude has no live Jira connection in the active client workspace and must not imply one.
+## Process-Mapping Platform Rule
 
-## Blueworks Rule
+The bound client profile names the formal process-mapping system, if any.
 
-Blueworks remains the formal process mapping system.
-
-AI may create draft process narratives, swimlane specifications, bottleneck registers, and Blueworks build briefs. The final governed process map is published in Blueworks.
+AI may create draft process narratives, swimlane specifications, bottleneck registers and build briefs. The final governed process map is released and published through the client's approved route.
 
 ## DRB Rule
 
@@ -128,9 +131,9 @@ The Digital Review Board is the decision forum for priority progression and init
 
 AI output should prepare DRB decisions, not replace them.
 
-## Nitro Rule
+## Formal Sign-Off Rule
 
-Where leadership sign-off or cost approval is required, Nitro or the approved signing process remains the formal approval mechanism.
+Where leadership sign-off or cost approval is required, use the approved signing process named in the client profile.
 
 ## Output Rule
 
@@ -141,5 +144,5 @@ Every artefact should make clear:
 3. What decision is required
 4. Who must be engaged
 5. What physical action the Digital Lead must take
-6. What Jira / SharePoint / Blueworks / Nitro update is required
+6. What controlled file, delivery system, process-mapping system, signing route or publication destination update is required
 7. What triggers the next lifecycle stage

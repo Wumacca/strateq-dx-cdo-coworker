@@ -1,0 +1,137 @@
+# Initiative Delivery Setup
+
+> **Template status:** Client-agnostic controlled template. Copy into the bound private client repository for each initiative. Do not enter client information in this public repository.
+
+## 1. Control header
+
+| Field | Controlled value | Evidence / reference | Status |
+|---|---|---|---|
+| Client ID |  |  | Missing |
+| Initiative ID |  |  | Missing |
+| Initiative title |  |  | Missing |
+| Delivery group |  |  | Missing |
+| Version | Draft 0.1 |  | Draft |
+| Record owner |  |  | Missing |
+| Review date |  |  | Missing |
+| Private client repository |  |  | Missing |
+| Initiative path |  |  | Missing |
+| Method baseline commit |  |  | Missing |
+
+## 2. Mobilisation basis
+
+| Field | Controlled value | Evidence / reference | Status |
+|---|---|---|---|
+| Entry basis | TBC |  | Missing |
+| Authority to proceed |  |  | Missing |
+| Approval reference |  |  | Missing |
+| Decision owner |  |  | Missing |
+| Effective date |  |  | Missing |
+| Outcome |  |  | Missing |
+| Scope |  |  | Missing |
+| Exclusions |  |  | Missing |
+| Success criteria |  |  | Missing |
+| Authority gap |  |  | Missing |
+
+If authority to proceed is not evidenced, retain this record in draft and state:
+
+> No approved mobilisation authority has been evidenced. Setup may proceed in draft, but the initiative cannot transition to In Delivery.
+
+## 3. Delivery profile
+
+| Field | Controlled value | Evidence / reference | Status |
+|---|---|---|---|
+| Delivery route | TBC |  | Missing |
+| Delivery model | TBC |  | Missing |
+| Funding classification | TBC |  | Missing |
+| Detailed plan owner |  |  | Missing |
+| Detailed plan location |  |  | Missing |
+| Client-control plan owner |  |  | Missing |
+| Client-control plan location |  |  | Missing |
+| Digital Lead |  |  | Missing |
+| Sponsor |  |  | Missing |
+| Business / operational owner |  |  | Missing |
+| Delivery owner |  |  | Missing |
+| Operational acceptance owner |  |  | Missing |
+| Go-live approval authority |  |  | Missing |
+
+## 4. Financial responsibility
+
+| Field | Controlled value | Evidence / reference | Status |
+|---|---|---|---|
+| Budget / cost owner | TBC |  | Missing |
+| Information available to Digital |  |  | Missing |
+| Digital financial reporting basis | TBC |  | Missing |
+| Variation / expenditure approval authority |  |  | Missing |
+| Financial reporting audience |  |  | Missing |
+| Financial reporting cadence |  |  | Missing |
+
+## 5. Governance and reporting
+
+| Control | Owner / chair | Cadence / trigger | Participants / audience | Record location | Status |
+|---|---|---|---|---|---|
+| Delivery-control meeting |  |  |  |  | Missing |
+| RAID review |  |  |  |  | Missing |
+| Decision control |  |  |  |  | Missing |
+| Change control |  |  |  |  | Missing |
+| Programme reporting |  |  |  |  | Missing |
+| Leadership reporting |  |  |  |  | Missing |
+
+**Reporting cut-off:**  
+**Position validator:**  
+**Escalation thresholds and route:**
+
+## 6. Delivery-control structure
+
+| Control area | Required client control / milestone | Completion criteria | Owner | Evidence required | Status |
+|---|---|---|---|---|---|
+| Scope / requirements |  |  |  |  | Missing |
+| Vendor / developer interface |  |  |  |  | Missing |
+| Client activities / dependencies |  |  |  |  | Missing |
+| Data |  |  |  |  | Not assessed |
+| Integration |  |  |  |  | Not assessed |
+| Testing / UAT |  |  |  |  | Not assessed |
+| Training / competence |  |  |  |  | Not assessed |
+| Operational readiness |  |  |  |  | Not assessed |
+| Cutover / go-live |  |  |  |  | Not assessed |
+| Acceptance / handover |  |  |  |  | Not assessed |
+
+Do not reproduce a vendor's or developer's full detailed plan. Record only client-controlled milestones, obligations, interface dependencies, acceptance gates and evidence.
+
+## 7. Evidence inventory
+
+Use only these statuses: `Confirmed by evidence`, `Requires confirmation`, `Missing`, `Conflicting`, `Not applicable`, `Accepted gap`.
+
+| Required source / fact | Status | Source and date | Confirmed position | Gap / conflict | Owner | Review point |
+|---|---|---|---|---|---|---|
+| Authority to proceed | Missing |  |  |  |  |  |
+| Approved scope | Missing |  |  |  |  |  |
+| Detailed owner plan | Missing |  |  |  |  |  |
+| Contract / SOW where applicable | Missing |  |  |  |  |  |
+| Current status / RAID / minutes | Missing |  |  |  |  |  |
+| Acceptance / go-live authority | Missing |  |  |  |  |  |
+
+## 8. Readiness decision
+
+| Gate check | Result | Evidence / accepted condition | Owner | Review point |
+|---|---|---|---|---|
+| Authority to proceed evidenced | Not met |  |  |  |
+| Scope and exclusions recorded | Not met |  |  |  |
+| Delivery and governance ownership confirmed | Not met |  |  |  |
+| PEP / client-control structure established | Not met |  |  |  |
+| Budget and financial-reporting responsibility confirmed | Not met |  |  |  |
+| Acceptance and go-live authority named | Not met |  |  |  |
+| Reporting and escalation route confirmed | Not met |  |  |  |
+| Material gaps accepted or resolved | Not met |  |  |  |
+
+**Digital Lead decision:** Pending  
+**Decision conditions:**  
+**Effective transition date:**  
+**First Artefact 1 mobilisation reference:**  
+
+This record closes only when the Digital Lead approves the transition from `Mobilising` to `In Delivery`.
+
+## Controlled update and approval history
+
+| Version | Date | Change | Prepared by | Digital Lead decision | Evidence / commit |
+|---|---|---|---|---|---|
+| Draft 0.1 |  | Initial setup | AI Coworker | Pending |  |

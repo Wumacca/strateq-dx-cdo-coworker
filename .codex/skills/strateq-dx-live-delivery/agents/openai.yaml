@@ -1,0 +1,4 @@
+interface:
+  display_name: "Strateq DX Live Delivery"
+  short_description: "Mobilise and govern one client initiative safely"
+  default_prompt: "Use $strateq-dx-live-delivery to bind one client, inspect the initiative evidence, reconcile its setup and PEP, and ask only for unresolved decisions."

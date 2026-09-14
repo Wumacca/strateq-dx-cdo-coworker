@@ -2,9 +2,9 @@
 
 ## Purpose
 
-Provide one structured input for the Digital Lead to confirm or correct initiative positions during `90 | Bi-Weekly Programme Reporting`.
+Provide one structured input for the Digital Lead to confirm or correct initiative positions during the bi-weekly programme-reporting thread named in the bound client profile.
 
-This is an input aid, not the source of truth. Confirmed changes must be written back to each affected Initiative Evidence and Decision File before the programme report is finalised.
+This is an input aid, not the source of truth. Confirmed changes must be written back to each affected Initiative Evidence and Decision File and PEP/client-control record before the programme report is finalised.
 
 ## Reporting period
 
@@ -20,7 +20,7 @@ Known omissions:
 
 Use one row per initiative.
 
-| Initiative ID / title | Latest status still accurate? | Correct status / health | Progress since last cycle | Next fortnight | Decision required | Risk / blocker | Milestone / target change | Evidence added / missing | Omega 365 action change | Client action / owner |
+| Initiative ID / title | Latest status still accurate? | Correct status / health | Current position | Progress since last cycle | Next control move | 7-day lookahead | Decision required | Risk / blocker | Milestone / target change | Evidence added / missing | Action-system change | Client action / owner |
 |---|---|---|---|---|---|---|---|---|---|---|
 
 Allowed response for `Latest status still accurate?`:
@@ -47,9 +47,9 @@ The coworker must:
 1. present the latest position held for each initiative;
 2. reconcile this input against that position;
 3. identify confirmed changes and unresolved gaps;
-4. update or prepare the affected Initiative Evidence and Decision Files;
+4. update or prepare the affected Initiative Evidence and Decision Files and PEP/client-control records;
 5. identify separate evidence or decision artefacts requiring update;
-6. prepare Jira, SharePoint, and Omega 365 physical write-back instructions;
+6. prepare any external physical write-back instructions required by the client profile;
 7. generate the bi-weekly report only from the confirmed updated initiative positions.
 
 ## Output control

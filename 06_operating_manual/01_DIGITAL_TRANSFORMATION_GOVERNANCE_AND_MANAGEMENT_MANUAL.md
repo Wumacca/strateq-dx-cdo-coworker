@@ -8,14 +8,14 @@
 
 This manual is the human operating view. It tells the Digital Lead what each stage is for, how to open it, what the coworker will do, what the Digital Lead must do, and what "done" looks like. It does not contain the detailed workflow logic — that stays in the controlled authority files named in each section.
 
-There are two client-project lifecycle coworkers — the **Hopper Lifecycle Coworker** (origin and intake through approval to commence delivery) and the **Live Delivery Coworker** (approval through delivery, adoption, benefits, source-of-truth impact, and closeout). The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and reporting are governed stages, controls, or modes handled inside the same continuous initiative thread — not separate coworkers or separate threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker. Each initiative runs in one continuous thread (`HOP | [ID] | [Initiative]` → `LIVE | [ID] | [Initiative]` → `CLOSED | [ID] | [Initiative]`), with only two non-initiative threads: `90 | Bi-Weekly Programme Reporting` and `91 | Monthly Leadership Reporting`. The workspace, thread, no-live-connection, and reporting model is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and set out for humans in `06_operating_manual/02_CLIENT_PROJECT_WORKSPACE_GUIDE.md`. Claude has no live connection to Jira, SharePoint, or Omega 365.
+There are two client-project lifecycle Coworkers — the **Hopper Lifecycle Coworker** and the **Live Delivery Coworker**. The only principal Coworker handover is Hopper → Live Delivery. Each initiative uses one continuous thread and each client uses two reporting threads, with exact names set in its private profile. Before any client work, the Coworker binds exactly one private client repository under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`; the public method repository is read-only and contains no client data.
 
 Every material governed session runs under the Interactive Governed Session Protocol (`00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`), which wraps the stage work in a fixed set of gates. Whatever stage you spin up, the coworker begins with:
 
 1. **Runtime Access Confirmation Gate** — which repository files, exports, snapshots, and evidence files it can see, and what is missing (this confirms access, not business status).
-2. **Client Context Gate** (proportionate) — which controlled client-context source it is working from.
+2. **Client Context Gate** — the one bound client ID, private repository, method baseline and allowed sources / destinations.
 3. **Confirmation-First Status Gate** — it presents the latest position it holds, with source and date, and asks «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Unconfirmed items are marked `Pending confirmation`.
-4. **Initiative Reconciliation Gate** — the initiative position from the latest confirmed Initiative Evidence and Decision File or a supplied Jira export / snapshot (no live connection), plus any unresolved obligations.
+4. **Initiative Reconciliation Gate** — the initiative position from the latest confirmed Initiative Evidence and Decision File and PEP/control record, then any permitted export or supplied source, plus unresolved obligations.
 5. **Required Inputs Gate** — one consolidated table of what is present, missing, stale, or an accepted gap.
 
 It then maintains a **Live Session Status Board**, ends every substantive response with **Digital Lead actions required**, and cannot treat a session as closed until it has proposed a **controlled write-back** and the Digital Lead has approved, deferred, or accepted the gap.
@@ -38,9 +38,9 @@ This four-stage model is the **human operating view**. It does **not** replace t
 | Four-stage macro model (human view) | Detailed repository lifecycle (controlled view) | Owner |
 |---|---|---|
 | 1. Request to Hopper | Steps 1–4: Digital Governance & Strategy (control function) → Assessment / Benchmark → Candidate Initiative Creation → Hopper / Intake Consolidation | Digital Governance & Strategy control function feeding the Hopper Lifecycle Coworker |
-| 2. Hopper to Go / No-Go Decision | Steps 5–13: Light-touch scoping → Hopper Portfolio Readiness → DRB Priority Discussion → Route Classification → Stage 1D / Stage 1 → Stage 2 → Initiation Form / DRB form approval → Nitro / leadership sign-off | Hopper Lifecycle Coworker (DRB is a governed control) |
-| 3. Initiative Delivery / Live Implementation Control | Steps 14–15, 19: Job Live → Live Delivery → PEP / Development Execution | Live Delivery Coworker |
-| 4. Completion and Handover | Steps 16–18: Go-Live / Deployment → Adoption & Benefits → Source-of-Truth Artefact Control / Programme Governance Update | Live Delivery Coworker (adoption/benefits stages; source-of-truth control mode) |
+| 2. Hopper to Go / No-Go Decision | Steps 5–13: light-touch scoping → Hopper readiness → priority decision → route classification → Stage 1D or two-stage initiation → formal approval / leadership sign-off | Hopper Lifecycle Coworker (the decision body remains a governed control) |
+| 3. Initiative Delivery / Live Implementation Control | Authorised → Mobilising / Initiative Delivery Setup → In Delivery / PEP and Artefact 1 | Live Delivery Coworker |
+| 4. Completion and Handover | Adoption / Handover → Operational / Live → Closed / Retired | Live Delivery Coworker (source-of-truth control remains a governed mode) |
 
 The full reusable Client Digital Governance Profile and Maturity Improvement Loop authority models remain future buildouts. Existing approved client benchmark, maturity, strategy, ecosystem and governance artefacts remain valid controlled sources for the Client Context Gate.
 

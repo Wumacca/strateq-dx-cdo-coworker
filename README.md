@@ -1,41 +1,57 @@
-## Strateq DX Repository Purpose
+# Strateq DX Coworker Method
 
-Strateq DX is the controlled evidence and delivery repository for Strateq-led digital transformation, governance, capitalisation, and Board reporting work. It is separate from Quantuum AI product build material.
+This public repository is the client-agnostic authority for Strateq DX governance and delivery methods. It contains reusable rules, lifecycle models, schemas, interfaces and Coworker instructions only.
 
-## Repository Structure
+## Data boundary
 
-- `THREE60/` holds THREE60 delivery and governance evidence.
-- `_archive/source_zips/` holds original source packs and imported zip files.
-- Board-facing content must be generated from controlled markdown source files, not from standalone slide edits.
+Client facts, evidence, live records and branded artefacts belong in a separate private repository for each client. They must never be committed here. Client branches or folders inside this repository are not permitted isolation boundaries.
 
-## Client Workspace and Reporting Controls
+Mandatory standard: `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`.
 
-There are exactly two client-project lifecycle coworkers — the **Hopper Lifecycle Coworker** (origin and intake through approval to commence delivery) and the **Live Delivery Coworker** (approval through delivery, adoption, benefits, source-of-truth impact, and closeout). The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and reporting are governed stages, controls, or modes — not separate coworkers or threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker. Each initiative runs in one continuous thread (`HOP` → `LIVE` → `CLOSED`), with only two non-initiative threads: `90 | Bi-Weekly Programme Reporting` and `91 | Monthly Leadership Reporting`.
+## Core runtime
 
-The Claude client-project workspace, no-live-connection boundary, confirmation-first status rule, single AI-readable Initiative Evidence and Decision File, and reporting-to-initiative-evidence write-back are governed by:
+There are two lifecycle coworkers used inside one continuous initiative thread:
 
+- Hopper Lifecycle Coworker — origin/intake through authority to commence.
+- Live Delivery Coworker — mobilisation through delivery, adoption/handover and closeout.
+
+The principal handover is Hopper → Live Delivery. Programme and leadership reporting are governed modes, not additional coworkers.
+
+Stage 3 is governed by:
+
+- `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`
+- `02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md`
+- `02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md`
+- `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md`
+
+The reusable runtime entry point is `.codex/skills/strateq-dx-live-delivery/`.
+
+## Source architecture
+
+| Layer | Role |
+|---|---|
+| This repository | Reusable method; read-only during client work |
+| Private client repository | Client context, live working records and artefacts |
+| Initiative folder | Initiative-specific evidence, setup and control records |
+| ChatGPT/AI thread | Working interface only |
+| External client store | Manual publication destination where configured |
+
+The client profile names the actual delivery-control systems. Jira, SharePoint or any other platform is not assumed globally.
+
+## Governing entry points
+
+- `AGENTS.md` — model/tool instructions and client-binding rule
+- `CLAUDE.md` — existing deterministic authority and stage map; applies to all models
+- `00_system_control/OPERATING_RULES.md`
+- `00_system_control/11_COWORKER_ROUTER.md`
+- `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`
 - `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`
-- `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` (reusable schema; the evidence file is its client-copy implementation)
-- `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`
-- `02_coworker_artifact_interface/05_BIWEEKLY_PROGRAMME_UPDATE_INPUT_TEMPLATE.md`
-- `06_operating_manual/02_CLIENT_PROJECT_WORKSPACE_GUIDE.md`
+- `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`
 
-These files do not replace the existing lifecycle, route, approval, evidence, stage-closeout, or source-of-truth controls. Jira (initiative and delivery status), SharePoint (approved artefacts and evidence), and Omega 365 (action management) remain the client-facing operational tools. Claude has no permitted live connection to them and never claims it has read or updated a live client system.
+## File-map maintenance
 
-## Contribution Note — Keep the B2 Map Current
+Any pull request that adds, renames, splits or retires a governance file must update `CLAUDE.md` B2, `00_system_control/FOLDER_MAP.md` and this README in the same commit.
 
-`CLAUDE.md` holds a deterministic stage-to-file map (B2) that the coworker follows as a lookup rather than a relevance judgement. A stale map is followed with false confidence, so any pull request that **adds, renames, splits, or retires a workflow / governance file must update the B2 map in the same commit.** Two changes already flagged as pending will each require a B2 amendment when they land: the route-vocabulary split noted in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, and the future Adoption & Benefits model file noted as out of scope in `00_system_control/OPERATING_RULES.md`.
+## Executive communication
 
-## Executive Communication & Framing Standard
-
-All executive presentations, board packs, CDO communications, Strateq DX materials, Quantuum materials, and tool-generated presentation outputs must follow the Communication & Framing Standard:
-
-- Start with the executive decision or opportunity, not background.
-- Frame around business outcomes, assurance, risk, value, and next decisions.
-- Use a narrative arc: position → evidence → implication → recommendation → next step.
-- Present recommendations clearly with action, rationale, benefit, and decision required.
-- Avoid data dumps, preambles, technical-first explanations, and task-reporting.
-- Preserve CDO positioning as translator, integrator, disruptor, and business-impact leader.
-
-Canonical file:
-`docs/presentation-standards/communication-and-framing-standard.md`
+Executive and Board-facing outputs follow `docs/presentation-standards/communication-and-framing-standard.md`.

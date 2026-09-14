@@ -8,7 +8,7 @@ Governing model for the Capex Request Session. This file is the single source of
 
 The Capex Request Session is a governed Hopper Portfolio Readiness mode used to prepare a programme-level capitalisation request.
 
-It converts the process recently used for the THREE60 capitalisation closeout and next six-month request into a reusable Strateq DX method. It is used whenever the Digital Lead needs to close out a previous capex position and/or present the next portfolio-level capex ask to the Board, with an evidence-safe narrative and a client-review draft deck.
+It defines a reusable Strateq DX method for closing a previous capex position and/or presenting the next portfolio-level capex ask to a governing body, with an evidence-safe narrative and a client-review draft deck.
 
 The Capex Request Session supports:
 
@@ -97,9 +97,9 @@ The Hopper Lifecycle Coworker owns the Capex Request Session as a portfolio-leve
 - commit scope
 - create a Board-final issue
 - mobilise delivery
-- update Jira
-- update SharePoint
-- update GitHub
+- update a client system without explicit authority
+- publish an artefact externally
+- update either the method or client repository without Digital Lead approval
 - update source-of-truth artefacts
 - invent delivery truth, cost, savings, benefits, maturity, or Board claims
 
@@ -229,11 +229,11 @@ The deck must frame the capex request through the Board Pack Framing Hierarchy (
 
 ## Source-Read Contract
 
-The deliverables / evidence file is the target-state primary source for the confirmed programme-status position, where it exists and is mature, subject to the confirmation-first status rule. Claude has no live connection to Jira, SharePoint, or Omega 365 and reads only supplied or accessible controlled records; it must not imply a live client-system status feed.
+The deliverables / evidence file is the primary source for the confirmed programme-status position where it exists and is mature, subject to the confirmation-first status rule. The Coworker reads only allowlisted sources in the bound client profile and must not imply a live status feed it has not evidenced.
 
 Where the deliverables file is not yet mature, the coworker must request interim evidence such as:
 
-- current Jira plan snapshot
+- current execution-plan snapshot
 - Board delivery deck
 - Digital Lead status confirmation
 - finance reconciliation
@@ -310,7 +310,7 @@ The handover checklist must include, per initiative:
 - owner / sponsor / champion
 - dependencies and sequencing anchors
 - open scoping actions
-- PEP / delivery-structure setup required in Jira
+- Initiative Delivery Setup and PEP / delivery-control structure required
 - artefacts to update on mobilisation
 - open evidence dependencies
 - accepted mobilisation gaps
@@ -350,7 +350,7 @@ A Capex Request Session must not produce:
 - a Board-final deck while blockers remain open
 - initiative-level delivery mobilisation
 - Pack 1 / Stage 1D / Stage 1 / Stage 2 detail before route-specific spin-up
-- Jira delivery / epic build
+- execution-system delivery / epic build
 - unsupported Board claims
 - controlled updates without Digital Lead approval
 

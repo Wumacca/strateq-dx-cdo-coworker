@@ -34,11 +34,11 @@ Input
 
 Knowledge capture, CDO QA / self-improvement review, and source-of-truth update recommendations are **components of the stage closeout / handover step**, not separate workflows.
 
-For every material initiative or reporting session, the **confirmation-first status rule** precedes the loop: after access is established and before any held position is used, the coworker presents the latest available position it holds, identifies its source and date, and asks «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Unconfirmed positions are marked `Pending confirmation`. This is distinct from the file/record access confirmation below and is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. Claude has no live connection to Jira, SharePoint, or Omega 365.
+For every material initiative or reporting session, client binding and the **confirmation-first status rule** precede the loop: after access is established and before any held position is used, the Coworker presents the latest available position, identifies its source and date, and asks «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Unconfirmed positions are marked `Pending confirmation`. This is distinct from file/record access confirmation and is governed by `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`, `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`.
 
-### Pre-Loop Access Confirmation for Claude Opus
+### Pre-Loop Access Confirmation
 
-Before the loop begins, any Claude Opus-governed review or session must confirm access to the required files or confirm that the prompt itself contains sufficient information. If access is not confirmed, the loop must not proceed. Missing files, missing exports, missing source records, or unclear authority must be reported as access gaps.
+Before the loop begins, every governed review or session must confirm access to the required method files and the one bound client source set, or confirm that the prompt itself contains sufficient information. If access or client binding is not confirmed, the loop must not proceed. Missing files, missing exports, missing source records, unclear authority or any cross-client ambiguity must be reported as access gaps.
 
 This prevents substantive analysis being generated from incomplete context and preserves Digital Lead control over whether the session should proceed.
 
@@ -65,21 +65,13 @@ AI must not:
 - reclassify the final route without Digital Lead approval
 - change approved scope
 - mutate source-of-truth files without an approved repository change
-- update Jira directly unless explicitly authorised
-- update SharePoint directly unless explicitly authorised
+- update an external client system unless explicitly authorised by its profile
+- read or write any other client's repository or files
 - start the next stage before the Digital Lead spins it up
 
 ## Controlled Systems
 
-The controlled systems for this workflow are:
-
-- Jira
-- SharePoint
-- GitHub
-- Blueworks / Nitro where applicable
-- approved source-of-truth documents
-
-Confluence is **not** part of the THREE60 DX governance setup. Do not reference Confluence as a governed system, update target, evidence store, or controlled artefact location.
+Controlled systems are defined per client, never globally. They include the public method repository, exactly one private client working authority, any execution/action systems named by that client, and its approved external publication destinations. A platform's technical availability does not place it inside the current client boundary.
 
 ## Material Session Threshold
 
@@ -154,7 +146,7 @@ The stage closeout **may include only**:
 - what was delivered in the closing stage
 - what artefacts were produced
 - what approvals were received
-- what Jira / SharePoint / process artefact references exist
+- what controlled-system, released-artefact and process-artefact references exist
 - what open items remain from the closing stage
 - what known constraints must be handed over
 - what source-of-truth records are impacted
@@ -172,14 +164,14 @@ A closing stage may state readiness only.
 The loop does not self-complete. The Digital Lead is the decision and approval authority at every controlled update and at every stage transition.
 
 - AI proposes; the Digital Lead decides.
-- No controlled update (repository, Jira, SharePoint, process artefact, source-of-truth) is applied without Digital Lead approval.
+- No controlled update is applied without Digital Lead approval.
 - The next stage is not started until the Digital Lead explicitly spins it up.
 
 ## Advisory-Only QA Rule
 
-> CDO QA / Self-Improvement findings are recommendations only. They do not update the workflow, source-of-truth, Jira, SharePoint, or repository files unless the Digital Lead approves a controlled update.
+> CDO QA / Self-Improvement findings are recommendations only. They do not update the workflow, source-of-truth, client systems or repository files unless the Digital Lead approves a controlled update.
 
-No rule in this repository permits Claude or any AI coworker to automatically update workflow files, source-of-truth artefacts, Jira, SharePoint, or repository files from QA / self-improvement findings.
+No rule in this repository permits an AI Coworker to automatically update workflow files, source-of-truth artefacts, client systems or repository files from QA / self-improvement findings.
 
 ## Route-Aware Closeout Rule
 
@@ -237,13 +229,13 @@ Use the existing `04` handover checkpoint as the field authority. Include the fo
 
 ### 3. Evidence and Traceability
 
-- Jira references
+- controlled initiative and delivery references
 - approval records
 - initiation form reference
 - process flow reference
 - scope / deliverables brief reference
 - source-of-truth artefact references
-- milestone-to-Jira traceability where applicable
+- milestone-to-execution traceability where applicable
 
 ### 4. Open Items / Constraints for Handover
 
@@ -275,7 +267,7 @@ Use table:
 | What worked | What nearly caused ambiguity or scope drift | What governance rule prevented error | What instruction was missing or weak | What should be added or corrected in source-of-truth | Repo update recommended? | Confidence level |
 |---|---|---|---|---|---|---|
 
-> CDO QA / Self-Improvement findings are recommendations only. They do not update the workflow, source-of-truth, Jira, SharePoint, or repository files unless the Digital Lead approves a controlled update.
+> CDO QA / Self-Improvement findings are recommendations only. They do not update the workflow, source-of-truth, client systems or repository files unless the Digital Lead approves a controlled update.
 
 ### 8. Closeout Statement
 
@@ -299,16 +291,16 @@ Every material governed session runs interactively under `00_system_control/12_I
 
 Mandatory integration points from `12`:
 
-- **Client Context Gate** — proportionate confirmation of the controlled client-context source; never reconstructed from memory, synced knowledge, or chat history.
+- **Client Context Gate** — confirmation of one valid client binding and the controlled client-context source; never reconstructed from memory, synced knowledge or chat history.
 - **Confirmation-first status step** — present the latest held position with its source and date and obtain Digital Lead confirmation or correction before the position is used; unconfirmed items are `Pending confirmation`.
-- **Initiative Reconciliation Gate** — reconcile the initiative and unresolved obligations against the available read-source hierarchy in the no-live-connection client workspace (latest confirmed Initiative Evidence and Decision File → current Jira export or snapshot supplied in-session → other supplied controlled record → access gap); waiver is explicit and risk-bounded. Claude has no live client-system connection.
+- **Initiative Reconciliation Gate** — reconcile the initiative and unresolved obligations against the bound client's source hierarchy (latest confirmed Initiative Evidence and Decision File and PEP/control record → current permitted export or snapshot → other supplied controlled record → access gap); waiver is explicit and risk-bounded.
 - **Required Inputs Gate** — one consolidated, batched input table before substantive stage output.
 - **Live Session Status Board** — created at spin-up and refreshed on every material exchange.
 - **Digital Lead actions required** — a standing action block that ends every substantive governed-session response.
 - **Controlled session states** — Not started / Active / Suspended — awaiting evidence / Pending Digital Lead decision / Pending external approval / Ready for closeout / Closed and handed over. "Open chat thread" is not a governance status. A suspended session remains visible at future Initiative Reconciliation Gates and does not automatically block unrelated work.
 - **Closeout write-back** — no material governed session is closed until a controlled write-back has been proposed (labelled `Recommended update — requires Digital Lead approval.`) and the Digital Lead has approved it, explicitly deferred it, or accepted the remaining gap.
 
-The initiative fields reconciled, updated and handed over are governed by the reusable `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`. GitHub holds the schema only; Jira is the target-state live Initiative Control Record; SharePoint / the controlled client workspace holds approved artefacts and evidence. No permanent live per-initiative ledger is permitted in the GitHub repository.
+The initiative fields reconciled, updated and handed over are governed by the reusable `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`. The public method repository holds the schema only. The bound private client repository implements the live record where its client profile selects GitHub; any external publication is separately controlled.
 
 ## Freshness and Evidence Model
 

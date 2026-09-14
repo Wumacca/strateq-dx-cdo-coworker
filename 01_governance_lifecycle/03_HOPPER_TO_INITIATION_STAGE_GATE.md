@@ -8,7 +8,7 @@ The stage gate prevents lightly screened ideas from moving into delivery without
 
 From this gate, approved items branch into either:
 
-- **Development Route → Stage 1D** — for internal development initiatives (Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, in-house tools). Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
+- **Development Route → Stage 1D** — for an internal build or enhancement on a client-owned platform. Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
 - **Implementation / Support Route → Stage 1 + Stage 2** — for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
 ## Core Rule
@@ -38,9 +38,9 @@ If approved: Route Classification
 ↓
 ┌─────────────────────────────────────┬────────────────────────────────────────────────────┐
 │ Development Route                   │ Implementation / Support Route                     │
-│ (internal dev, Chronos, Omega,      │ (third-party, supplier, SaaS, option appraisal,    │
-│  SharePoint build, Power BI build,  │  business case, uncertain architecture,            │
-│  in-house tool)                     │  material cost, supplier selection)                │
+│ (internal build or enhancement on  │ (third-party, supplier, SaaS, option appraisal,    │
+│  a client-owned platform)           │  business case, uncertain architecture,            │
+│                                     │  material cost, supplier selection)                │
 └─────────────────────────────────────┴────────────────────────────────────────────────────┘
 ↓                                     ↓
 Stage 1D                              Stage 1 → Stage 2

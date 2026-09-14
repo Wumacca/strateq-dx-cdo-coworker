@@ -41,7 +41,7 @@ Use the Route Classification table from `01_governance_lifecycle/08_DEVELOPMENT_
 
 | Signal | Likely Route |
 |---|---|
-| Internal development (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool) | Development Route → Stage 1D |
+| Internal build or enhancement on a client-owned platform | Development Route → Stage 1D |
 | Third-party implementation, supplier-led, SaaS onboarding, option appraisal, business case required | Implementation / Support Route → Stage 1 + Stage 2 |
 | Unclear | Flag as TBC — ask Digital Lead before assigning route |
 

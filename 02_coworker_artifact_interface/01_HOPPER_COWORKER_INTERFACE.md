@@ -96,7 +96,7 @@ After DRB priority approval, route each item to the correct initiation stage.
 
 ### Development Route → Stage 1D
 
-For items confirmed as internal development (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool).
+For items confirmed as an internal build or enhancement on a client-owned platform.
 
 Governed by: `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 

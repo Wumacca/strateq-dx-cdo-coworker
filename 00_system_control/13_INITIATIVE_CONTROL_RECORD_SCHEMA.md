@@ -2,28 +2,30 @@
 
 ## Status
 
-Reusable schema for the initiative control fields used across the governed lifecycle. This is a **schema**, not a live initiative record. Do not create one GitHub file per initiative. GitHub holds the reusable method / schema only; it does not hold live per-initiative data.
+Reusable schema for the initiative control fields used across the governed lifecycle. This file is a schema, not a live initiative record. The public method repository holds the schema only; a private client repository may hold one live client copy per initiative where the client profile selects GitHub as its working authority.
 
 There is exactly one AI-readable per-initiative continuity record: the **Initiative Evidence and Decision File** (`02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`), which is the client-copy implementation of this schema, held in the controlled client workspace and governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`. Do not maintain a second AI-readable initiative record alongside it.
 
-This schema is applied by the Interactive Governed Session Protocol (`00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`) at the Initiative Reconciliation Gate and in the closeout write-back. Claude has no live connection to Jira, SharePoint, or Omega 365.
+This schema is applied by the Interactive Governed Session Protocol at reconciliation and closeout. Client binding is mandatory under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`.
 
 ## Storage Rule
 
-- **Client-facing initiative and delivery status:** Jira (target-state). Claude reads supplied exports / snapshots only; it has no live connection.
-- **Approved artefacts and evidence:** SharePoint / controlled client workspace.
-- **Action management:** Omega 365 (referenced, not duplicated).
-- **Single AI-readable continuity record:** the Initiative Evidence and Decision File in the controlled client workspace, implementing this schema.
-- **Reusable method / schema:** GitHub (this file).
+- **Reusable method/schema:** this public repository.
+- **Live initiative record:** one Initiative Evidence and Decision File in the bound private client repository or approved client system.
+- **Client-control plan:** the PEP or other source named in the client profile.
+- **Detailed execution:** the named developer/vendor system or plan; referenced, not duplicated.
+- **Actions, evidence and publication:** the systems/paths named in the client's `SOURCE_OF_TRUTH.md`.
 
-No permanent live per-initiative ledger is permitted in the reusable GitHub repository. No permanent portfolio index or programme-memory ledger that duplicates Jira is permitted in GitHub.
+No client record is permitted in this public repository. No uncontrolled ledger may duplicate the governed private client records.
 
 ## Field Set
 
 ### 1. Identity
 
 - Initiative ID
+- Client ID
 - Initiative title
+- Delivery group
 - Summary
 - Initiative origin
 - Originating artefact / reference
@@ -41,13 +43,15 @@ Route labels must use the controlled labels in `00_system_control/CONTROLLED_VOC
 - Detailed repository lifecycle position
 - Current gate
 - Gate status
-- Current Jira status
+- Current delivery-record status
 - Next control move
 - Next stage trigger
 
 ### 3. Approval
 
 - Approval basis
+- Entry basis
+- Authority to proceed and evidence status
 - Decision body
 - Decision date
 - Decision outcome
@@ -66,6 +70,13 @@ Route labels must use the controlled labels in `00_system_control/CONTROLLED_VOC
 - Vendor
 - Developer
 - Support owner
+- Detailed-plan owner
+- Client-control-plan owner
+- Budget/cost owner
+- Digital financial-reporting basis
+- Variation/expenditure authority
+- Acceptance authority
+- Go-live authority
 
 ### 5. Scope
 
@@ -81,8 +92,9 @@ Route labels must use the controlled labels in `00_system_control/CONTROLLED_VOC
 
 - Delivery status
 - Delivery health
+- Delivery model
 - Linked PEP
-- Linked Epic
+- Detailed-plan reference
 - Current milestone
 - Target finish
 - Current blockers
@@ -90,6 +102,7 @@ Route labels must use the controlled labels in `00_system_control/CONTROLLED_VOC
 - Next fortnightly work package
 - Evidence status
 - Handover readiness
+- Reporting audiences, cadence, cut-off and validator
 
 ### 7. Evidence
 
@@ -148,10 +161,10 @@ Recommended relationship treatment uses the Cross-Initiative Impact Check outcom
 - Last confirmed by Digital Lead
 - Last confirmation date
 - Freshness status (Current / Revalidation due / Stale / Superseded / Pending confirmation / Not applicable)
-- Omega 365 action references (referenced, not duplicated)
-- Required Jira physical write-back and status (Pending / Completed / Deferred / Not applicable)
-- Required SharePoint physical write-back and status
-- Required Omega 365 physical write-back and status
+- Action-system references (referenced, not duplicated)
+- Required private-client-repository update and status (Pending / Completed / Deferred / Not applicable)
+- Required external publication/evidence write-back and status
+- Required action-system write-back and status
 
 Physical write-backs are prepared as recommendations; only the Digital Lead or an authorised user performs them, and a write-back is marked complete only on explicit Digital Lead confirmation.
 
@@ -179,29 +192,29 @@ Maturity-impact values use the controlled maturity-impact vocabulary and boundar
 
 ## Single AI-readable record: the Initiative Evidence and Decision File
 
-Because Claude has no live connection to Jira, SharePoint, or Omega 365, each initiative's AI-readable continuity record is the **Initiative Evidence and Decision File** — the client-copy implementation of this schema. It replaces any separate "interim client Initiative Control Register" concept; there is one AI-readable record per initiative, not two.
+Each initiative's continuity record is the **Initiative Evidence and Decision File** — the client-copy implementation of this schema. There is one such record per initiative, not a parallel set of memory ledgers.
 
 The Initiative Evidence and Decision File must:
 
-- exist in the controlled client workspace (not in this GitHub repository);
+- exist in the bound private client repository or approved client working system (never in this public method repository);
 - use this Initiative Control Record schema;
-- identify Jira as the client-facing initiative and delivery-status system;
+- identify the configured client working authority and delivery-control records;
 - record the latest information source and source date;
 - record the Digital Lead confirmation status and last confirmation date;
-- record the Jira scope / filter of any supplied export and whether it covered the requested initiative or the wider portfolio;
-- identify fields known to differ from the latest supplied Jira export;
+- record the scope/filter of any supplied export and whether it covered the requested initiative or wider portfolio;
+- identify fields that differ from the latest controlled source;
 - identify an owner;
-- record required Jira, SharePoint, and Omega 365 physical write-backs and their status.
+- record required repository updates, action-system updates and external publications with status.
 
 Every governed-session closeout must propose, as recommendations for Digital Lead approval:
 
 1. Initiative Evidence and Decision File update;
-2. Jira physical write-back text and status;
-3. SharePoint / evidence physical write-back and status;
-4. Omega 365 physical write-back and status.
+2. client working-authority update and status;
+3. external publication/evidence write-back and status;
+4. action-system write-back and status.
 
-The coworker must not treat the Initiative Evidence and Decision File as current where the confirmation-first status rule has not been satisfied or where its freshness is overdue under the applicable freshness rule in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. The Initiative Evidence and Decision File is not automatically the organisational source of record; SharePoint holds the organisational source-of-record artefacts.
+The Coworker must not treat the Initiative Evidence and Decision File as current where the confirmation-first status rule has not been satisfied or its freshness requires revalidation. Its authority is defined by the bound client's `SOURCE_OF_TRUTH.md`.
 
 ## Boundary
 
-This schema adds no AI approval authority, no numeric AI confidence scoring, and no authority to mutate Jira, SharePoint, GitHub or source-of-truth records. All controlled updates require Digital Lead approval under `00_system_control/OPERATING_RULES.md` and `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`.
+This schema adds no AI approval authority or numeric AI confidence scoring. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.

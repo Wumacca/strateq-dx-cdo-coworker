@@ -34,13 +34,15 @@ This protocol governs the **runtime** behaviour of a coworker inside a governed 
 
 ## Applicability
 
-This protocol applies to every material governed session as defined by the material session threshold in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, including Hopper intake, Hopper Portfolio Readiness, Pack 1 / Stage 1D, Implementation / Support initiation, Completed Initiation Form preparation or approval, Capex Request Sessions, material scope or change-control sessions, delivery reviews and closeout, source-of-truth impact reviews, and any adoption / benefits or maturity session once that lifecycle stage is reached.
+This protocol applies to every material governed session as defined by the material session threshold in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, including Hopper intake, Hopper Portfolio Readiness, Pack 1 / Stage 1D, Implementation Route or Support Route initiation, Completed Initiation Form preparation or approval, Capex Request Sessions, material scope or change-control sessions, delivery reviews and closeout, source-of-truth impact reviews, and any adoption / benefits or maturity session once that lifecycle stage is reached.
 
 Lightweight, non-governed exchanges (BAU support, minor clarification, routine drafting, exploratory discussion with no decision, approval, route, record or source-of-truth impact) use the lightweight closeout in `07` and are not required to run the full sequence. The gate depth must be proportionate to the session (see Client Context Gate proportionality below).
 
 ## Mandatory Session Sequence
 
 Every material governed session must follow this sequence. A material session must not jump directly to final output before the required gates have been addressed.
+
+For client work, identifying the proposed client and reading only that repository's `CLIENT_BOUNDARY.md` is a precondition to gates 1–2. The binding must be completed before any other client source is opened.
 
 1. **Runtime Access Confirmation Gate**
 2. **Client Context Gate**
@@ -65,6 +67,7 @@ This is the runtime gate all material governed sessions must perform. It preserv
 
 At spin-up the coworker must state:
 
+- the bound AI Project/workspace, memory-boundary status, thread/path and repository allowlist;
 - which current repository authority files it can access;
 - which supplied exports, snapshots, and evidence records it can access;
 - which records are missing;
@@ -77,9 +80,9 @@ This gate confirms access only. Accessible current repository authority files an
 
 ## 2. Client Context Gate
 
-> **Client Context Gate** — confirms the applicable client profile, strategic objectives, maturity roadmap alignment, software/process context and relevant governance artefacts. The detailed gate is governed by a forthcoming Client Digital Governance Profile and Maturity Improvement Loop authority model.
+> **Client Context Gate** — binds one client under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md` and confirms the applicable client profile, repository, strategic context and governance artefacts.
 
-The following future files are `Placeholder — lifecycle-recognised, not operationally governed yet.`:
+The binding and repository-isolation part of this gate is operational now. The following deeper governance layers remain future models:
 
 - Client Digital Governance Profile model
 - Client Governance Artefact Register model
@@ -101,7 +104,7 @@ The Client Context Gate must be grounded in a controlled client-context source w
 
 The coworker must **not** reconstruct or declare the client context current from memory, synced project knowledge, previous assistant summaries, chat history, or assumptions based on earlier client work.
 
-Until the full Client Digital Governance Profile and Governance Artefact Register models are implemented, the gate may be satisfied by:
+The gate requires `CLIENT_BOUNDARY.md` and `CLIENT_CONTEXT.md` in the selected private client repository. Deeper strategic/maturity context may be satisfied by:
 
 1. a controlled current client-context artefact supplied or accessible in-session; or
 2. explicit Digital Lead confirmation of the applicable profile, artefact version and known limitations.
@@ -122,7 +125,7 @@ Where the Digital Lead explicitly permits the session to proceed, record the mis
 - the owner;
 - the review point.
 
-A Client Context Gate access gap does not automatically block every routine session. It must block any claim that strategy, maturity, ecosystem, governance or source-of-truth alignment has been fully assessed.
+A missing deeper strategy or maturity source does not automatically block every routine session. A missing/ambiguous client binding or repository allowlist always blocks the session.
 
 ### Proportionality
 
@@ -133,7 +136,7 @@ A **full** Client Context Gate is mandatory for:
 - Hopper intake;
 - Hopper Portfolio Readiness;
 - Pack 1 / Stage 1D;
-- Implementation / Support initiation;
+- Implementation Route or Support Route initiation;
 - Capex Request Sessions;
 - material scope or change-control sessions;
 - delivery closeout;
@@ -176,31 +179,31 @@ This gate applies to initiative sessions and to the bi-weekly and monthly report
 
 Before substantive stage work begins, the coworker must reconcile the requested initiative and any visible unresolved governance obligations.
 
-### 4.1 Available read-source hierarchy (no live client connection)
+### 4.1 Available read-source hierarchy
 
-Claude has no live connection to Jira, SharePoint, or Omega 365 and must not imply one. Use this hierarchy:
+Use only sources permitted by the bound client's `CLIENT_BOUNDARY.md` and `SOURCE_OF_TRUTH.md`, in this order:
 
 1. The latest confirmed Initiative Evidence and Decision File for the initiative.
-2. A current Jira export, snapshot, or report supplied in-session.
-3. Another current supplied controlled record (for example a SharePoint export or Omega 365 action extract) where the evidence file does not expose all required control fields.
+2. The current PEP or delivery record in the bound client working authority.
+3. A current export, snapshot, plan, report or other controlled record supplied/accessible for the active client session.
 4. If none is available, declare an Initiative Reconciliation access gap.
 
 The reconciled position is not treated as current until the Confirmation-First Status Gate is satisfied.
 
 The coworker must state:
 
-- which source was used (Initiative Evidence and Decision File, supplied Jira export, SharePoint export, or Omega 365 extract);
+- which source was used and its exact client-repository path or controlled reference;
 - source date and freshness;
 - the last Digital Lead confirmation date;
 - the scope of records included;
 - whether the source covers only the requested initiative or the wider portfolio;
-- the filters used for a supplied Jira export;
+- the scope/filter used for any supplied portfolio export;
 - whether decisions, evidence and linked delivery records were included;
 - the required Initiative Evidence and Decision File update;
-- the required Jira, SharePoint, and Omega 365 physical write-backs;
+- the required controlled repository updates and external publication/write-backs;
 - limitations on the reconciliation performed.
 
-The coworker must **not** reconstruct the initiative-control position from memory, synced project knowledge, prior assistant summaries, chat history, or assumptions about Jira. Conversation search may be used only as a secondary discovery aid; information recovered from a conversation must be reconciled into a controlled record before it is treated as authoritative.
+The coworker must not reconstruct the initiative-control position from memory, synced project knowledge, prior assistant summaries or chat history. Conversation search is a discovery aid only; recovered information must be reconciled into the bound client record before use.
 
 ### 4.2 Items to reconcile
 
@@ -328,16 +331,16 @@ Apply the governance test and evidence / freshness model before any output is tr
 
 ## 9. Human decision
 
-The Digital Lead is the decision and approval authority at every controlled update and stage transition. AI proposes; the Digital Lead decides. No controlled update (repository, Jira, SharePoint, process artefact, source-of-truth) is applied without Digital Lead approval, and the next stage is not started until the Digital Lead explicitly spins it up.
+The Digital Lead is the decision and approval authority at every controlled update and stage transition. AI proposes; the Digital Lead decides. A repository branch may be prepared when instructed, but no controlled change is merged/released and no external publication is claimed without approval.
 
 ---
 
 ## 10. Controlled update recommendations
 
-Prepare update text as recommendations only, using the label that matches the target:
+Prepare controlled changes using the label that matches the target:
 
-- **Client-system updates (Jira, SharePoint, Omega 365):** `Recommended update — requires Digital Lead approval and physical update in the client system.` Claude cannot mutate Jira, SharePoint, or Omega 365; the Digital Lead or an authorised user performs the physical update and confirms completion.
-- **Reusable GitHub authority-file updates and the AI-readable Initiative Evidence and Decision File:** `Recommended update — requires Digital Lead approval.` These are not client-system physical write-backs; the Initiative Evidence and Decision File is maintained only within Claude's approved AI-readable workspace role and only when the Digital Lead approves the update or instructs Claude to make it.
+- **Repository branch/PR:** `Controlled update — requires Digital Lead approval before merge/release.`
+- **External publication or unconnected client system:** `Recommended update — requires Digital Lead approval and physical update in the destination system.`
 
 This restates the AI permission boundary already governed by `00_system_control/OPERATING_RULES.md` and `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. It does not extend AI authority.
 
@@ -373,16 +376,16 @@ No material governed session may be treated as closed until a controlled write-b
 - accepted gaps;
 - linked artefacts;
 - required Initiative Evidence and Decision File update;
-- required Jira physical write-back, where relevant;
-- required SharePoint / evidence physical write-back, where relevant;
-- required Omega 365 physical write-back, where relevant;
+- required working-authority update;
+- required external publication/evidence write-back, where relevant;
+- required action-system write-back, where relevant;
 - client-context impacts;
 - source-of-truth impacts;
 - maturity-impact position;
 - handover state;
 - next-stage trigger.
 
-Each recommendation must be labelled to match its target: physical Jira, SharePoint, or Omega 365 write-backs use `Recommended update — requires Digital Lead approval and physical update in the client system.`; the Initiative Evidence and Decision File update and any reusable GitHub authority-file update use `Recommended update — requires Digital Lead approval.` (see Controlled update recommendations above). Claude never implies it can mutate Jira, SharePoint, or Omega 365.
+Each recommendation must be labelled to match its repository or external destination target. The Coworker never implies an unverified update or publication.
 
 The session is not closed until the Digital Lead has:
 

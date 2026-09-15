@@ -10,7 +10,7 @@ Strateq DX uses exactly two client-project lifecycle coworkers across the digita
 
 DRB, source-of-truth artefact control, adoption, benefits review, capitalisation, maturity review, and programme / leadership reporting are governed lifecycle stages, controls, or operating modes handled within the initiative and reporting threads. They are not separate client-project coworkers and do not require their own threads or their own coworker handovers.
 
-Jira remains the client-facing initiative and delivery-status system. SharePoint remains the organisational source-of-record artefact store. Omega 365 remains the action-management system. GitHub remains the source of reusable coworker operating rules. Claude has no live connection to Jira, SharePoint, or Omega 365 and must never claim it has read or updated a live client system.
+The public GitHub repository remains the reusable method authority. The bound private client repository and `SOURCE_OF_TRUTH.md` name the live client records, action controls and publication destinations. No delivery platform is assumed globally. Client separation is mandatory under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`.
 
 ## Two-Coworker Path
 
@@ -19,7 +19,7 @@ The client-project coworker path is:
 1. Hopper Lifecycle Coworker
 2. Live Delivery Coworker
 
-The same continuous initiative thread is renamed as the initiative progresses (`HOP | [ID] | [Initiative]` → `LIVE | [ID] | [Initiative]` → `CLOSED | [ID] | [Initiative]`). Client workspace, thread, reporting, and no-live-connection rules are governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`.
+The same continuous initiative thread is renamed as the initiative progresses (`HOP | [Group] | [Initiative]` → `LIVE | [Group] | [Initiative]` → `CLOSED | [Group] | [Initiative]`). The exact client naming convention is recorded in `CLIENT_CONTEXT.md`.
 
 ## Digital Governance & Strategy (control function)
 
@@ -36,12 +36,12 @@ This coworker owns the route from Hopper to approved live job.
 It is responsible for:
 
 - Hopper clarification
-- route classification (Development Route or Implementation / Support Route)
+- route classification (Development Route, Implementation Route or Support Route)
 - Stage 1D Development Route DRB preparation and Scope Brief
 - Stage 1D process mapping capture sheet issue
 - Stage 1D pack gate and Stage 2 exception gate
 - Stage 1D closeout and handover to Live Delivery (Development Route, no Stage 2 exception)
-- Stage 1 DRB preparation (Implementation / Support Route)
+- Stage 1 DRB preparation (Implementation Route or Support Route)
 - Stage 1 process mapping capture sheet issue
 - Stage 2 initiation preparation
 - requirements list preparation
@@ -56,7 +56,7 @@ This coworker owns the same initiative after it has been approved to commence.
 
 It receives the principal controlled handover from the Hopper Lifecycle Coworker.
 
-It is responsible for delivery mobilisation, delivery tracking, Jira execution structure, developer/vendor coordination artefacts, delivery risks, weekly delivery-control touchpoints, implementation evidence, acceptance, handover, adoption, benefits checks where applicable, source-of-truth impact, and delivery closeout — all inside the same continuous initiative thread.
+It is responsible for evidence-led mobilisation, `Initiative Delivery Setup`, the client-control plan/PEP, developer or vendor interfaces, delivery controls, implementation evidence, acceptance, handover, adoption, benefits checks where applicable, source-of-truth impact, reporting and closeout — all inside the same continuous initiative thread. Detailed control is governed by `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`.
 
 ## Adoption and benefits (internal Live Delivery stage)
 
@@ -64,7 +64,7 @@ Post-go-live adoption, benefits, competence, usage, support, and closeout eviden
 
 ## Source-of-truth artefact control (governed mode)
 
-Source-of-truth artefact integrity is a governed control mode applied within the initiative thread whenever an initiative creates, changes, replaces, or retires a controlled artefact, governed by `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. In this mode Claude identifies the affected SharePoint artefacts, process maps, registers, decision records, and maturity records; prepares approved update recommendations; tracks the required physical write-backs; and confirms a status only when the Digital Lead or an authorised user reports the update complete. Claude does not itself update SharePoint or any controlled client system. It is a mode, not a separate client-project coworker, and does not require its own thread or coworker handover.
+Source-of-truth artefact integrity is a governed control mode applied within the initiative thread whenever an initiative creates, changes, replaces, or retires a controlled artefact, governed by `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. The Coworker identifies affected artefacts, process maps, registers, decisions and maturity records; prepares controlled changes; and records an external publication only after confirmation. It is a mode, not a separate coworker or thread.
 
 ## Mandatory Handover Rule
 
@@ -72,7 +72,7 @@ Whenever work moves from one coworker to another, the current coworker must prod
 
 The receiving coworker must ask for, inspect, and confirm the handover before continuing.
 
-If no handover exists, the receiving coworker must ask clarifying questions until it is at least 90 percent confident it can continue without losing context.
+If no handover exists, the receiving coworker must state that no governed handover was located, inventory the available evidence and ask one consolidated set of questions for the missing mobilisation information. It must not infer authority to proceed.
 
 ## Stage Closeout Extension
 
@@ -89,7 +89,7 @@ For Development Route initiatives, two paths are possible after Stage 1D. Path A
 If the Stage 2 exception gate is not triggered and DRB approves the Development Stage 1D Pack:
 
 1. Claude produces a Stage 1D closeout / Live Delivery handover checkpoint.
-2. The handover must confirm: DRB approval decision, approved scope (from Scope Brief), Jira ID, owner / champion, developer, target date, known exclusions, and known open items for delivery.
+2. The handover must confirm: approval decision, approved scope (from Scope Brief), initiative ID, owner/champion, developer, target date, known exclusions, and known open items for delivery.
 3. The Live Delivery Coworker receives the handover and confirms before commencing.
 
 ### Path B: Stage 1D to Stage 2 (Exception Triggered — internal escalation)
@@ -106,7 +106,7 @@ Detailed Stage 1D workflow is governed by `01_governance_lifecycle/08_DEVELOPMEN
 
 At the start of every Stage 2 session, before loading stored Stage 1 information, Claude must ask:
 
-"Do you have any revised documents, screenshots, Jira updates, process mapping sheets, developer notes, or files to upload before we begin?"
+"Do you have any revised documents, delivery-system exports, process mapping sheets, developer/vendor notes, approvals, plans, minutes, RAID records, or other files to provide before we begin?"
 
 Stored Stage 1 information must not be treated as current until the Digital Lead confirms no updates exist or provides replacements.
 
@@ -118,7 +118,7 @@ Every coworker handover must include:
 
 - originating coworker / lifecycle stage
 - receiving coworker / lifecycle stage
-- Jira key(s)
+- initiative ID and client delivery group
 - initiative / programme name
 - current lifecycle status
 - decision already made
@@ -129,8 +129,12 @@ Every coworker handover must include:
 - open questions
 - known risks / constraints
 - source-of-truth artefacts affected
-- SharePoint artefact locations
-- Jira links / update status
+- bound client repository and initiative path
+- entry basis and authority to proceed
+- delivery model and detailed-plan owner
+- budget/cost owner and Digital financial-reporting basis
+- acceptance and go-live authority
+- controlled artefact locations and external publication status
 - required next action
 - files the receiving coworker must inspect
 - confidence level and remaining information gaps
@@ -140,7 +144,7 @@ Every coworker handover must include:
 The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker, which occurs at approval to commence delivery. It takes one of these route-specific forms:
 
 - Hopper Lifecycle Stage 1D closeout to Live Delivery (Development Route, no Stage 2 exception)
-- Hopper Lifecycle Stage 2 closeout to Live Delivery (Implementation / Support Route, and Development Route where the Stage 2 exception is triggered)
+- Hopper Lifecycle Stage 2 closeout to Live Delivery (Implementation Route, Support Route, and Development Route where the Stage 2 exception is triggered)
 
 Stage 1D to Stage 2 (Development Route, exception triggered) is an internal escalation within the Hopper Lifecycle Coworker's ownership, not a coworker handover. Delivery → adoption/benefits → source-of-truth impact → closeout are internal Live Delivery stage transitions inside the same continuous initiative thread, recorded in the Initiative Evidence and Decision File; they are not coworker handovers. Programme-level artefact, strategy, reporting, approval, or maturity updates are handled through the reporting modes and the Digital Lead's governance authority, not through a coworker handover.
 
@@ -156,6 +160,6 @@ The handover checkpoint provides governed interpretation, decision status, curre
 
 Coworkers must not assume another coworker has already approved, updated, or published an artefact.
 
-Coworkers must not rely on chat memory alone where Jira, SharePoint, or GitHub source files should hold the controlled record.
+Coworkers must not rely on chat memory where the bound client repository or configured client system should hold the controlled record.
 
 Coworkers must ask what files, registers, or artefacts they need before continuing if continuity is unclear.

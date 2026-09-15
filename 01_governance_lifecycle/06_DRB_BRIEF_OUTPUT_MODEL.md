@@ -46,9 +46,9 @@ The Development Approval meeting-support text must:
 - confirm the Stage 2 exception gate decision in the Decision readiness section (confirming no exception triggers apply, or listing any the Digital Lead has explicitly accepted and why)
 - not commit to external suppliers, quotes, or vendor selection unless already confirmed
 
-### Implementation / Support Initiation meeting-support text
+### Implementation Route or Support Route initiation meeting-support text
 
-Used for Implementation / Support Route Stage 1 initiatives.
+Used for Implementation Route or Support Route Stage 1 initiatives.
 
 This meeting-support text:
 

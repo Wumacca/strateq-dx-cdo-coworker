@@ -65,7 +65,7 @@ Owner confirmed:
 Sponsor confirmed:
 Digital champion confirmed:
 Cost approval required:
-Nitro required:
+Formal sign-off required:
 Next Jira status:
 Comments:
 ```

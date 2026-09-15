@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This file defines the canonical vocabulary for the current Hopper-to-Initiation workflow.
+This file defines the canonical vocabulary for the governed lifecycle from Hopper through live delivery and closeout.
 
-Claude must use these exact labels when drafting Hopper consolidation outputs, Priority Screens, Jira-ready text, and optional DRB meeting-support text where explicitly requested by the Digital Lead. DRB Brief is not a default or final Hopper review artefact.
+Every approved AI Coworker must use these exact labels when drafting governed records, client-system update text, and optional DRB meeting-support text where explicitly requested by the Digital Lead. `DRB Brief` is not a default or final Hopper review artefact.
 
 ## Canonical DRB Priority Decisions
 
@@ -46,13 +46,13 @@ Each signal must include a short reason.
 
 The signal is qualitative only.
 
-Claude must not invent numeric scores, weightings, or a 1–5 scale. Where a Digital Lead-approved scoring model, team-returned charter score, or Jira-entered score exists, Claude may organise, display, summarise, and challenge the score, but must not create or alter scores without Digital Lead approval.
+The Coworker must not invent numeric scores, weightings, or a 1–5 scale. Where a Digital Lead-approved scoring model, team-returned charter score, or client-system-entered score exists, the Coworker may organise, display, summarise, and challenge the score, but must not create or alter scores without Digital Lead approval.
 
 Scored fields in future request-intake models do not authorise Claude to create scores. Current Hopper review scoring may use Digital Lead-approved, team-returned, or Jira-entered scores only.
 
-## Approved Jira Statuses: Current Workflow
+## Approved Hopper Statuses
 
-Use these current workflow labels unless the Digital Lead provides the actual Jira status names:
+Use these method labels unless the bound client profile provides the actual controlled-system status names:
 
 - Hopper - Unscreened
 - Hopper - Clarify
@@ -68,9 +68,9 @@ Use these current workflow labels unless the Digital Lead provides the actual Ji
 
 BAU, Reject, and Merge are AI recommendations only.
 
-The Digital Lead confirms before any Jira status change, item removal, or merge action.
+The Digital Lead confirms before any controlled status change, item removal, or merge action.
 
-## Approved Jira Statuses: Stage 1D
+## Approved Stage 1D Status
 
 Use this current workflow label for Development Route Stage 1D work:
 
@@ -87,7 +87,56 @@ Use these exact labels when classifying initiative route:
 
 "Hybrid route" is not an approved route label and must not be used as an active route classification.
 
-> **Route-vocabulary split — complete.** The combined `Implementation / Support Route` label has been split into separate `Implementation Route` and `Support Route` controlled labels. `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`'s Implementation Route and Support Route closeout behaviour is no longer provisional. Any remaining reference to the combined `Implementation / Support Route` label elsewhere in this repository is a pending downstream-alignment item, not an active controlled label.
+> **Route-vocabulary split — complete.** The former combined route label has been retired. `Implementation Route` and `Support Route` are separate controlled labels, and the closeout behaviour in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` is authoritative.
+
+## Stage 3 Live Delivery Labels
+
+Use these lifecycle labels:
+
+- Authorised
+- Mobilising
+- In Delivery
+- Adoption / Handover
+- Operational / Live
+- Paused (On Hold)
+- Closed / Retired
+
+Use these entry-basis labels:
+
+- Digital Initiation Form
+- Transition / Enterprise Mandate
+- Contract / Procurement Approval
+- Leadership Instruction
+- Existing Live Project Adoption
+- Exception — Authority Not Evidenced
+- TBC
+
+`No Digital Initiation Form` does not mean `No authority to proceed`. Where no approved authority is evidenced, setup may remain draft but the initiative must not move to `In Delivery`.
+
+Use these delivery-model labels:
+
+- Development-led Delivery
+- Digital-led Implementation / Support
+- Vendor-led Implementation with Digital Client-side Assurance
+- TBC
+
+Capex, Opex and transition / programme funding are funding classifications, not delivery models.
+
+Use these Digital financial-reporting-basis labels:
+
+- Full Cost Tracking
+- Summary Supplied by Budget Owner
+- Approved Variations Only
+- Emerging Cost Impacts / Exceptions Only
+- No Financial Reporting by Digital
+- TBC
+
+The following ownership fields must be resolved independently: Detailed Plan Owner; Client Control Plan Owner; Budget / Cost Owner; Operational Acceptance Owner; Go-live Approval Authority; Reporting Owner.
+
+- **Initiative Delivery Setup** — the controlled mobilisation record that establishes entry basis, authority, scope, delivery model, ownership, governance, PEP/control structure, evidence requirements and readiness. This exact title replaces earlier extended titles.
+- **PEP / client-control plan** — the bound client's authoritative view of client-side milestones, obligations, interfaces, acceptance gates and required evidence where the client profile selects it. It does not duplicate a supplier's detailed plan.
+- **Detailed owner plan** — the developer-, Digital- or supplier-owned execution detail. For vendor-led delivery, supplier detail remains with the supplier while the client-control plan governs the client interface and acceptance.
+- **Mobilisation handover reference** — the one-time reference from the first Artefact 1 record after approval of `Mobilising` to `In Delivery` back to the approved Initiative Delivery Setup.
 
 ## Hopper Portfolio Readiness Review Terminology
 
@@ -95,14 +144,14 @@ The full Hopper Portfolio Readiness Review workflow is governed by `01_governanc
 
 - **Hopper Portfolio Readiness Review** — the pre-initiation, pre-Pack 1 review that organises minimum meeting information and scores so the Hopper is ready for a leadership / DRB priority discussion.
 - **Jira Initiative View / Hopper priority view** — the organised Hopper / Initiative View screens in Jira / Jira Product Discovery. This is the **default meeting surface** for the leadership / DRB priority discussion. The term "Priority Screen" means this view unless the Digital Lead explicitly requests a separate artefact. A separate DRB Priority Screen document is **not** produced by default.
-- **Development Epic** — a Chronos Dev, Omega Dev, CRM Dev, or equivalent build on an existing THREE60-owned platform. May use a department charter for detail / scoring. After approval, routes to Pack 1 / Stage 1D.
+- **Development Epic** — a build or enhancement on an existing client-owned platform. May use a department charter for detail / scoring. After approval, routes to Pack 1 / Stage 1D.
 - **Grouped Initiative** — an implementation or support item grouped for leadership review. Not called an epic unless it is a development route. No charter by default.
 - **Initiative Charter** — a pre-initiation input tool only. Gathers business reason, sub-task detail, deliverables / expected benefit, current method, and department priority score input. A charter is **not** an Initiation Form and does not approve or commit anything.
 - **Implementation Route** (Hopper-review treatment term) — the tool / system exists or the route is sufficiently known; after approval, routes to Initiation Form / Implementation Route.
 - **Support Route** (Hopper-review treatment term) — the tool does not yet exist or the solution route is not selected; the team needs Digital support to select then implement.
 - **In-flight item** — an item already under initiation, delivery, adoption, or support control. Visible in the Hopper review but not regrouped as new backlog work unless the Digital Lead confirms.
-- **Controlled update recommendation** — a proposed change to a controlled record (Jira, SharePoint, GitHub, Hopper, source-of-truth) that requires Digital Lead approval before it is applied.
-- **Report-only recommendation** — an advisory output (CDO QA / self-improvement, knowledge capture, Jira / Hopper update, source-of-truth update) that must not automatically change any controlled record.
+- **Controlled update recommendation** — a proposed change to a governed record that requires Digital Lead approval before it is applied.
+- **Report-only recommendation** — an advisory output (CDO QA / self-improvement, knowledge capture, controlled-system update, source-of-truth update) that must not automatically change any controlled record.
 
 > **Hopper-review treatment terms now match the controlled labels.** "Implementation Route" and "Support Route" above were previously Hopper-review treatment / route-indication terms held distinct from the (then-combined) controlled route classification label. Following the route-vocabulary split, these terms are now the same active controlled route classification labels used in the Approved Route Labels section above.
 
@@ -139,15 +188,19 @@ The client workspace, coworker, thread and reporting model is governed by `00_sy
 - **Lifecycle stage** — a controlled step within a coworker's ownership (for example Hopper consolidation, Stage 1D, delivery, closeout). A stage is not a coworker and does not require its own thread.
 - **Governed mode / control** — a governed activity applied within the initiative or reporting threads (DRB, source-of-truth artefact control, adoption, benefits review, capitalisation, maturity review, programme reporting, leadership reporting, closeout). A mode is not a client-project coworker and does not require its own thread.
 - **Digital Governance & Strategy** — a programme governance and control function, not a client-project coworker, client-project thread, additional lifecycle owner, or mandatory coworker handover. Its functions are handled through the Hopper Lifecycle Coworker (initiative governance), the reporting modes (cross-initiative governance), and the Digital Lead's governance authority.
-- **Initiative thread** — one continuous Claude thread per initiative, renamed as the initiative progresses (`HOP | [ID] | [Initiative]` → `LIVE | [ID] | [Initiative]` → `CLOSED | [ID] | [Initiative]`). A thread is an interface and continuity aid; it is never the controlled record.
-- **Reporting thread** — one of exactly two non-initiative threads: `90 | Bi-Weekly Programme Reporting` and `91 | Monthly Leadership Reporting`. No other reporting thread, portfolio-control thread, DRB thread, programme-status thread, adoption thread, source-of-truth thread, or inter-stage handover thread is used.
-- **Initiative Evidence and Decision File** — the single AI-readable per-initiative continuity record, the client-copy implementation of the `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` schema, governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and templated at `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`. It records the latest Digital Lead-confirmed position and required physical write-backs. It is not a duplicate Jira backlog, an Omega 365 action register, a programme-memory file, or automatically the organisational source of record. There is only one AI-readable continuity record per initiative.
-- **No permitted live connection** — Claude has no live connection to Jira, SharePoint, or Omega 365 in the active client workspace. Claude must never claim it has read or updated a live client system.
-- **Confirmation-first status rule** — at the start of every material initiative or reporting session, after access is established and before the supplied status is used, Claude presents the latest available position it holds, identifies the source and date of that position, and asks: «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Claude must not treat prior chat, Claude Project knowledge, assistant memory, an earlier report, an older export, an initiative evidence file, a previously approved historical artefact, or a prior status snapshot as current without Digital Lead confirmation. This is distinct from the Runtime Access Confirmation Gate, which confirms file/record access, not business status.
+- **Client binding** — the fail-closed act of resolving exactly one client ID, one private client repository, one allowed method repository and the permitted external destinations before any client source is read or written.
+- **Method repository** — the public, client-agnostic Strateq DX authority. It is read-only during client work and must contain no client facts, evidence or artefacts.
+- **Client working authority** — the one private repository named in the bound client's profile. It contains client context, live records, evidence indexes, PEP/control records and released artefacts.
+- **Initiative thread** — one continuous AI-workspace thread per initiative, renamed according to the bound client's naming convention. A thread is an interface and continuity aid; it is never the controlled record.
+- **Reporting thread** — one bi-weekly programme-reporting thread and one monthly leadership-reporting thread, named according to the bound client profile. No parallel reporting ledger or additional programme-status thread is created.
+- **Initiative Evidence and Decision File** — the single AI-readable per-initiative continuity record, the client-copy implementation of the `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` schema, governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and templated at `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`. It records the latest Digital Lead-confirmed position and required write-backs. It is not a duplicate execution backlog, action register, programme-memory file or automatically the external organisational record.
+- **Permitted connection** — a repository, file source or system explicitly allowlisted by the bound client profile. The Coworker must not infer access from technical availability.
+- **Manual external publication** — an approved artefact is released in the private client repository, then uploaded by an authorised user to the external client store. The Coworker records the publication only after the user confirms it occurred.
+- **Confirmation-first status rule** — at the start of every material initiative or reporting session, after access is established and before the supplied status is used, the Coworker presents the latest available position it holds, identifies the source and date of that position, and asks: «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Prior chat, project knowledge, assistant memory, an earlier report, an older export, an initiative evidence file, a previously approved historical artefact, or a prior status snapshot is not current without Digital Lead confirmation.
 - **Pending confirmation** — the status applied to any position that has not been confirmed as current by the Digital Lead. When used, state which output, decision, report, or control move is affected.
-- **Physical client-system write-back** — a required update to Jira, SharePoint, or Omega 365 that only the Digital Lead or an authorised user performs. Claude prepares the text and labels it `Recommended update — requires Digital Lead approval and physical update in the client system.` A write-back may be marked complete only when the Digital Lead explicitly confirms the physical update occurred; otherwise it is `Pending`, `Deferred`, or `Not applicable`.
-- **Update-once rule** — a confirmed update received in any initiative, bi-weekly, or monthly session must first be reconciled into the affected Initiative Evidence and Decision File before any report is generated. No material fact may remain only in a chat, a reporting thread, a previous report, an input template, Claude Project knowledge, or assistant memory. Reports are controlled outputs and snapshots, not parallel sources of truth.
-- **Omega 365** — the client-facing action-management system. Claude references Omega 365 actions and prepares write-back text but has no live connection and does not maintain a duplicate action register.
+- **Physical client-system write-back** — a required update to a client system outside the private working repository. Only the Digital Lead or an authorised user performs it unless the client profile explicitly authorises a governed integration. The Coworker prepares the text and labels it `Recommended update — requires Digital Lead approval and physical update in the client system.`
+- **Update-once rule** — a confirmed update received in any initiative, bi-weekly, or monthly session must first be reconciled into the affected Initiative Evidence and Decision File and PEP/control record before a report is generated. No material fact may remain only in chat, project knowledge, assistant memory or a report.
+- **Client action-management system** — the action system, if any, named in the bound client profile. The Coworker must not assume a specific product globally.
 - **Weekly delivery-control touchpoint** — an internal delivery-control / operational delivery cadence term. It does not create a weekly programme report, a weekly reporting thread, an additional programme-status record, or an additional coworker. The only formal reporting cycles are bi-weekly programme reporting and monthly leadership reporting.
 
 ## Interactive Governed Session Terminology
@@ -156,12 +209,12 @@ The interactive session model is governed by `00_system_control/12_INTERACTIVE_G
 
 - **Interactive Governed Session** — a material governed coworker session run under the mandatory interactive sequence in `12`: Runtime Access Confirmation Gate → Client Context Gate → Confirmation-First Status Gate → Initiative Reconciliation Gate → Required Inputs Gate → Live Session Status Board → stage work → governance / evidence test → human decision → controlled update recommendations → closeout / suspension / handover → Digital Lead actions required.
 - **Runtime Access Confirmation Gate** — the in-session gate at which the coworker states which current repository authority files and which supplied exports, snapshots, and evidence records it can and cannot access, whether the prompt alone is sufficient, and whether synced knowledge may be stale. It confirms access only; it does not decide that a business position is current — that is settled at the Confirmation-First Status Gate. It is not the build-time repository access check performed by an engineering tool.
-- **Client Context Gate** — the proportionate gate confirming the applicable controlled client-context source (profile, benchmark, maturity register, roadmap, ecosystem, strategy, governance artefact register, or other approved client record). It must not be satisfied from memory, synced knowledge, or chat history. Its detailed model is a future placeholder.
-- **Initiative Reconciliation Gate** — the gate at which the coworker reconciles the requested initiative and unresolved governance obligations against the available read-source hierarchy in the no-live-connection client workspace (latest confirmed Initiative Evidence and Decision File → current Jira export or snapshot supplied in-session → other supplied controlled record → access gap). Claude has no live client-system connection and must not imply one. The reconciled position is not treated as current until the confirmation-first status rule is satisfied.
+- **Client Context Gate** — the gate that verifies the client binding and reads the applicable controlled client profile, source-of-truth map, method baseline and initiative home. It must not be satisfied from memory, synced knowledge or chat history.
+- **Initiative Reconciliation Gate** — the gate at which the Coworker reconciles the requested initiative and unresolved obligations against the bound client's source hierarchy: current Initiative Evidence and Decision File and PEP/control record → current permitted system export or snapshot → other supplied controlled record → access gap. The reconciled position is not current until the confirmation-first status rule is satisfied.
 - **Required Inputs Gate** — the gate producing one consolidated, batched input table (statuses: Present / Missing / Stale / Pending confirmation / Accepted gap / Not applicable) before any substantive stage output is treated as controlled-ready.
 - **Live Session Status Board** — the visible session board created at spin-up and refreshed on every material exchange (item statuses: Not started / In progress / Awaiting Digital Lead / Awaiting external input / Pending evidence / Complete / Accepted gap / Not applicable).
 - **Digital Lead actions required** — the standing action block (Action / Owner / Required by or trigger / Consequence if not completed) that ends every substantive governed-session response. Where none applies, state `No Digital Lead action required at this point.`
-- **Initiative Control Record** — the reusable schema (`13`) for initiative control fields. The target-state live record is Jira; approved artefacts and evidence are in SharePoint / the controlled client workspace; GitHub holds the schema only. No permanent live per-initiative ledger is permitted in GitHub.
+- **Initiative Control Record** — the reusable schema (`13`) for initiative control fields. The client profile selects its live implementation. The public method repository holds the schema only; the private client working authority may hold the live record where selected.
 - **Session state** — the controlled state of a governed session: Not started / Active / Suspended — awaiting evidence / Pending Digital Lead decision / Pending external approval / Ready for closeout / Closed and handed over. "Open chat thread" is not a governance status.
 - **Suspended — awaiting evidence** — a controlled session state in which the session is paused pending evidence; it remains visible at future Initiative Reconciliation Gates and does not automatically block unrelated work.
 - **Accepted gap** — a missing input, context, reconciliation, or evidence item that the Digital Lead has explicitly accepted so the session may proceed, recorded with the affected outputs, required artefact, owner, and review point.
@@ -170,7 +223,7 @@ The interactive session model is governed by `00_system_control/12_INTERACTIVE_G
 - **Candidate change control** — a recommendation to modify a live initiative arising from the Cross-Initiative Impact Check or a scope change. Scope must not be silently absorbed into a live initiative; the Digital Lead decides the final treatment. The coworker may recommend but cannot change scope or route.
 - **Freshness status** — the event / cadence-based status of an information item: Current / Revalidation due / Stale / Superseded / Pending confirmation / Not applicable. There is no universal arbitrary staleness period; freshness rules are event / cadence based per `07`.
 - **Revalidation due** — a freshness status indicating that a cadence or event (for example a fortnightly delivery cycle or a material change) requires the item to be revalidated before it is relied on.
-- **Controlled write-back** — the proposed controlled update produced at closeout covering the initiative's lifecycle position, gate status, decision outcome, evidence, actions, accepted gaps, linked artefacts, the required Initiative Evidence and Decision File update, and the required Jira, SharePoint, and Omega 365 physical write-backs. Physical client-system write-backs are labelled `Recommended update — requires Digital Lead approval and physical update in the client system.`; the Initiative Evidence and Decision File update and any reusable GitHub authority-file update are labelled `Recommended update — requires Digital Lead approval.` No material governed session is closed until it has been proposed and the Digital Lead has approved, deferred, or accepted the gap.
+- **Controlled write-back** — the proposed controlled update produced at closeout covering lifecycle position, gate status, decision outcome, evidence, actions, accepted gaps, linked artefacts, the Initiative Evidence and Decision File and PEP/control updates, and any external physical write-backs. No material governed session is closed until it has been proposed and the Digital Lead has approved, deferred or accepted the gap.
 - **Expected maturity impact** — the intended capability improvement identified during Hopper, initiation or approval.
 - **Provisional maturity impact** — an evidence-led maturity movement proposed at delivery closeout from delivered capability, acceptance, go-live and ownership evidence; not yet a confirmed live update where adoption or embedded-use evidence is required.
 - **Pending adoption evidence** — delivery evidence exists but operational use, ownership, adoption or benefit evidence remains outstanding.

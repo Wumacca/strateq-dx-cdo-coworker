@@ -10,15 +10,16 @@
 
 | File / Folder | Description |
 |---|---|
-| `CLAUDE.md` | Role definition, operating authority, required behaviour, prohibited behaviour, and model guidance. Primary coworker instruction file. |
+| `AGENTS.md` / `CLAUDE.md` | Model-agnostic entry point and compatibility instruction file. |
 | `README.md` | Repository overview and entry-point index. |
 | `00_system_control/` | System control files: lifecycle map, operating rules, controlled vocabulary, coworker handover model, knowledge capture rules, governed workflow looping standard, coworker router, interactive governed session protocol, initiative control record schema, and client workspace/reporting protocol. |
 | `00_system_control/CONTROLLED_VOCABULARY.md` | Controlled terminology for the programme. |
 | `00_system_control/FOLDER_MAP.md` | Folder structure reference. |
 | `00_system_control/OPERATING_RULES.md` | Binding operating rules for all coworker sessions. |
 | `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` | **Machine / authority file.** Global authority for how material coworker sessions run interactively. |
-| `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` | **Machine / authority file.** Reusable schema for initiative control fields. Jira remains the target-state live record. |
-| `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` | **Machine / authority file.** Governs the client Claude Project structure, no-live-client-system boundary, confirmation-first rule, initiative evidence continuity, and reporting-to-evidence write-back. |
+| `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` | **Machine / authority file.** Reusable schema for initiative control fields; each client profile selects its implementation. |
+| `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` | **Machine / authority file.** Governs client AI-workspace structure, confirmation-first control, initiative continuity and reporting write-back. |
+| `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md` | **Machine / authority file.** Governs one-client binding, repository allowlists and zero client crossover. |
 | `05_source_of_truth/` | Source-of-truth governance model. |
 | `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` | Defines how digital artefacts are governed, classified, and updated. |
 | `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` | **Human-facing navigation manual — non-authoritative.** Explains the governed lifecycle. |
@@ -46,6 +47,7 @@
 | `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md` | Governing model for Hopper Portfolio Readiness Review. |
 | `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` | Authority for the formal DRB-facing Completed Initiation Form. |
 | `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md` | Governing model for the Capex Request Session. |
+| `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md` | Governing model for authorised mobilisation, live delivery, ownership and client-control planning. |
 | `03_process_mapping/01_PROCESS_MAPPING_MATRIX_INPUT_RULES.md` | Input rules for process mapping sessions. |
 | `03_process_mapping/02_CREATE_PROCESS_MAPPING_PACK.md` | Process for creating a process mapping pack. |
 | `03_process_mapping/03_BLUEWORKS_BUILD_BRIEF_RULES.md` | Rules for Blueworks build briefs. |
@@ -69,6 +71,10 @@
 | `02_coworker_artifact_interface/03_DECISION_FEEDBACK_TEMPLATES.md` | Templates for decision feedback capture. |
 | `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` | Reusable client-copy template for the AI-readable initiative evidence and decision continuity file. It is not a live GitHub initiative record. |
 | `02_coworker_artifact_interface/05_BIWEEKLY_PROGRAMME_UPDATE_INPUT_TEMPLATE.md` | Structured Digital Lead input for confirming or correcting initiative positions before bi-weekly reporting. |
+| `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md` | Controlled Artefact 1 Rev1 reporting model. |
+| `02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md` | Controlled model for Initiative Delivery Setup. |
+| `02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md` | Reusable blank Initiative Delivery Setup template. |
+| `.codex/skills/strateq-dx-live-delivery/` | Reusable Live Delivery Coworker entry point; routes to authority files and contains no client data. |
 
 ---
 
@@ -76,11 +82,10 @@
 
 - There are exactly two client-project lifecycle coworkers: the Hopper Lifecycle Coworker and the Live Delivery Coworker. The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker.
 - DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and reporting are governed stages, controls, or modes, not separate coworkers or threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker.
-- Each initiative runs in one continuous thread (`HOP` → `LIVE` → `CLOSED`); the only non-initiative threads are `90 | Bi-Weekly Programme Reporting` and `91 | Monthly Leadership Reporting`.
-- Jira remains the client-facing initiative and delivery-status system.
-- SharePoint remains the organisational source-of-record artefact store.
-- Omega 365 remains the action-management system.
-- Claude has no permitted live connection to those client systems and never claims it has read or updated one.
-- Claude works from the single AI-readable Initiative Evidence and Decision File and requires Digital Lead confirmation before treating status as current.
+- Each initiative runs in one continuous thread; the bound client profile sets its exact naming convention and the two reporting-thread names.
+- The public method repository contains no client data and is read-only during client work.
+- Each client has a separate private working-authority repository; client folders or branches in the public method repository are prohibited.
+- Only systems and destinations named in the bound client profile may be read or written.
+- The Coworker works from the Initiative Evidence and Decision File plus the PEP/client-control record and requires Digital Lead confirmation before treating status as current.
 - Confirmed reporting updates must be written back to the affected initiative evidence and decision files before programme reporting is finalised.
-- GitHub holds reusable methods and templates only; it must not become a parallel live Jira portfolio, an Omega 365 action register, or a programme-memory ledger.
+- External publication remains a separate governed act and is not inferred from release in the private client repository.

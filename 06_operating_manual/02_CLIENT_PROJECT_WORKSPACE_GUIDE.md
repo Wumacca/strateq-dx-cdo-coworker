@@ -2,99 +2,48 @@
 
 ## Purpose
 
-This is the practical setup guide for each client Claude Project. Detailed lifecycle and governance rules remain controlled by the authority files. The client workspace and reporting rules are governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`.
+Practical setup guide for each client AI Project/workspace. Authority remains with `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`.
 
-## Two client-project coworkers
+## Setup
 
-Each initiative is owned by two client-project lifecycle coworkers in turn, inside the same continuous thread: the **Hopper Lifecycle Coworker** (origin and intake through approval to commence delivery) and the **Live Delivery Coworker** (approval through delivery, adoption, benefits, source-of-truth impact, and closeout). The only principal handover is Hopper Lifecycle Coworker → Live Delivery Coworker, at approval. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and reporting are governed stages, controls, or modes inside the thread — not separate coworkers or threads. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker.
+1. Create one private repository and one AI Project/workspace for the client.
+2. Add the client-boundary, context, source-of-truth, method-baseline and publication-control files.
+3. Bind the workspace to the public method repository read-only and the selected client repository read/write.
+4. Create one initiative folder and one continuous thread per initiative.
+5. Create the two reporting threads.
+6. Record the exact naming convention in `CLIENT_CONTEXT.md`; do not impose Jira IDs where the client does not use Jira.
 
-## Project structure
-
-Create one Claude Project per client.
-
-Use only these thread types:
+## Default thread types
 
 ```text
-HOP | [ID] | [Initiative]
-LIVE | [ID] | [Initiative]
-CLOSED | [ID] | [Initiative]
-90 | Bi-Weekly Programme Reporting
-91 | Monthly Leadership Reporting
+HOP | [Group] | [Initiative]
+LIVE | [Group] | [Initiative]
+CLOSED | [Group] | [Initiative]
+LIVE | Programme Reporting (Bi-Weekly)
+LIVE | Leadership Reporting (Monthly)
 ```
 
-There is no Portfolio Control thread and no separate DRB thread.
+## What belongs where
 
-Each initiative remains in one continuous thread. Rename the thread as the initiative moves from Hopper to Live Delivery and then Closed.
+| Location | Purpose |
+|---|---|
+| Chat/thread | Working dialogue and continuity aid |
+| Public method repo | Client-agnostic rules, schemas and Coworker skill |
+| Private client repo | Live client working authority and initiative records |
+| Initiative folder | Handover/source index, Initiative Delivery Setup, evidence/decision file and initiative artefacts |
+| PEP workbook | Client-control plan, portfolio control and reporting inputs |
+| External client store | Manually published approved copies where configured |
 
-## What belongs in the initiative thread
+## Session start
 
-The initiative thread handles the full governed lifecycle for that initiative, including:
+The Coworker verifies the client boundary, reads the method baseline, inspects the initiative sources and presents the latest held position for confirmation. It asks only for gaps the evidence cannot answer.
 
-- origin and intake;
-- clarification and route;
-- initiation forms and DRB preparation;
-- approval and handover;
-- delivery control;
-- decisions, risks, blockers, milestones, and evidence;
-- acceptance, adoption, benefits, source-of-truth impact, and closeout where applicable.
+For an initiative without an Initiation Form, the Coworker identifies the alternative authority to proceed. It may draft setup with no evidenced authority but cannot move the initiative to `In Delivery`.
 
-The thread is not the controlled record. It works from the initiative evidence and decision files available in the project knowledge or supplied to the session.
+## Session close
 
-## What belongs in the bi-weekly reporting thread
+Update the initiative record and PEP first, then create reporting or publication outputs. Record every manual publication only after the Digital Lead confirms it.
 
-Use `90 | Bi-Weekly Programme Reporting` for:
+## Zero crossover
 
-- confirming the latest status of each initiative in scope;
-- recording progress since the previous cycle;
-- confirming next-fortnight work;
-- identifying decisions, risks, blockers, milestone movement, and client actions;
-- preparing the bi-weekly programme report.
-
-Do not leave new facts only in this thread. Any confirmed change must first be routed to the affected initiative evidence and decision files.
-
-## What belongs in the monthly leadership thread
-
-Use `91 | Monthly Leadership Reporting` for:
-
-- overall programme position;
-- outcomes and material progress;
-- assurance, risk, and control;
-- leadership decisions or escalation;
-- CAPEX or funding position;
-- evidenced benefits, adoption, and source-of-truth impact;
-- next leadership actions.
-
-The monthly report must use the confirmed initiative positions. It must not become a separate source of truth.
-
-## No live client-system connection
-
-Claude cannot access live Jira, SharePoint, or Omega 365.
-
-At the start of every material initiative or reporting session, Claude presents the latest position it holds and asks:
-
-> **Is this still accurate? Please confirm or provide any changes since the last recorded update.**
-
-The Digital Lead confirms or corrects the position.
-
-Claude then:
-
-1. identifies the affected initiative evidence and decision files;
-2. updates or prepares those files for controlled update;
-3. prepares Jira, SharePoint, and Omega 365 write-back instructions;
-4. records whether the physical updates are complete, deferred, or pending;
-5. produces the initiative output or report from the confirmed position.
-
-## Update-once rule
-
-Update the initiative evidence first, then produce the report.
-
-This prevents the bi-weekly or monthly reporting thread from becoming newer than the initiative thread and prevents stale initiative responses later.
-
-## Client-facing tool split
-
-- **Jira:** initiative and delivery status.
-- **SharePoint:** approved forms, decisions, evidence, reports, and controlled artefacts.
-- **Omega 365:** actions.
-- **Claude:** internal coordination, challenge, drafting, evidence-file maintenance, and write-back preparation.
-
-Claude must never state that a client-system update has occurred unless the Digital Lead confirms the physical update.
+Never search or reuse another client's repository, files, project knowledge or thread. Stop on a client mismatch. Only anonymised, Digital Lead-approved learning may be proposed back to the public method repository.

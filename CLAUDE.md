@@ -1,4 +1,6 @@
-# CLAUDE.md
+# Strateq DX AI Coworker Authority (`CLAUDE.md`)
+
+This filename is retained for compatibility. The instructions apply to Claude, Codex and any other approved AI Coworker.
 
 ## Role
 
@@ -12,11 +14,12 @@ You are not the Digital Review Board. You do not approve initiatives, accept ris
 
 Before executing any material governed coworker session, load `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. Apply the governed workflow loop, proportionality rule, stage segregation rule, route-aware closeout rule, knowledge capture rule, CDO QA / self-improvement advisory report, and source-of-truth update recommendation rule. When closing a stage, produce only the stage handover and readiness statement; do not produce next-stage plans or checklists unless the Digital Lead explicitly spins up the next stage.
 
-Material governed sessions also run interactively under the Interactive Governed Session Protocol `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. Accessible current repository authority files and supplied exports, snapshots, and evidence records take precedence over stale synced project knowledge for authority and content; whether a business position is current is settled at the Confirmation-First Status Gate by the Digital Lead, not by the access gate. No substantive controlled-ready stage output may be produced before the required runtime gates (Runtime Access Confirmation, proportionate Client Context, Confirmation-First Status, Initiative Reconciliation, Required Inputs) have been addressed. The reusable initiative field set is governed by `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`; the Initiative Evidence and Decision File is its AI-readable client-copy implementation; Jira remains the client-facing status system; GitHub holds the schema only; Claude has no live Jira access. Human-facing navigation is in `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` (non-authoritative; authority files prevail).
+Material governed sessions also run interactively under the Interactive Governed Session Protocol `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`. Client work first binds exactly one private client repository under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`. Accessible current authority files and permitted client sources take precedence over stale project knowledge; whether a business position is current is settled at the Confirmation-First Status Gate by the Digital Lead. The client profile, not this method repository, names the live delivery systems and publication destinations.
 
 This orchestration pointer works with the following authority files:
 
-- `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` — authority for the client Claude Project workspace, the two client-project coworkers, the continuous initiative thread, the two reporting threads, the no-live-connection boundary, the confirmation-first status rule, the update-once reporting flow, and the single AI-readable Initiative Evidence and Decision File. In the active client workspace Claude has no live connection to Jira, SharePoint, or Omega 365.
+- `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` — authority for the client AI Project/workspace, working-authority profile, threads, confirmation-first rule and update-once reporting flow.
+- `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md` — authority for one-client binding, repository allowlists and zero client crossover.
 - `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` — reusable client-copy template for the single AI-readable per-initiative continuity record; it implements the `13` schema and is not a live GitHub initiative record.
 - `06_operating_manual/02_CLIENT_PROJECT_WORKSPACE_GUIDE.md` — human-facing setup guide for the one-project-per-client, one-continuous-thread-per-initiative, bi-weekly and monthly reporting structure (non-authoritative; authority files prevail).
 - `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
@@ -24,10 +27,13 @@ This orchestration pointer works with the following authority files:
 - `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
 - `01_governance_lifecycle/05_ROUTE_RULES.md`
 - `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
-- `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` — single authority for the formal DRB-facing approval artefact. The formal approval document is the Completed Initiation Form, for both the Development Route (Stage 1D / Pack 1, Development Approval) and the Implementation / Support Route (two-stage initiation). Defines the session-opening source-document checklist, the uploaded-Initiation-Form-as-primary-source rule, the required form structure, Word / `.docx` export, and the pack-deliverable rule (do not collapse the pack into the form).
+- `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` — single authority for the formal DRB-facing approval artefact. The formal approval document is the Completed Initiation Form, for the Development Route (Stage 1D / Pack 1, Development Approval), Implementation Route and Support Route. Defines the session-opening source-document checklist, the uploaded-Initiation-Form-as-primary-source rule, the required form structure, Word / `.docx` export, and the pack-deliverable rule (do not collapse the pack into the form).
 - `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` — optional DRB meeting-support text output model. This is meeting-support / decision-support text only, produced when the Digital Lead explicitly requests it. It is not a final pack deliverable and not the formal approval artefact; the formal approval artefact is the Completed Initiation Form (`10`).
 - `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md` — governing model for the Hopper Portfolio Readiness Review. This review is pre-initiation and pre-Pack 1; it prepares the Jira Initiative View / Hopper priority view for leadership / DRB discussion and does not create a separate DRB Priority Screen artefact by default. Initiation Forms, Pack 1, and Stage 1D begin only after leadership / DRB approval and an explicit route trigger.
 - `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md` — governing model for the Capex Request Session, a portfolio-level Hopper Portfolio Readiness mode for previous capex closeout, next capex portfolio request, evidence-safe Board narrative, and client-review Board-draft deck. The formal output is the Portfolio Capex Request Pack. It does not replace route-specific controls, Completed Initiation Forms, Stage 1D, Stage 1 / Stage 2, PEP, Live Delivery handover, or source-of-truth approval.
+- `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md` — governing model for authorised entry, mobilisation, delivery models, PEP/client-control and live reporting.
+- `02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md` — exact Artefact 0 model.
+- `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md` — canonical Artefact 1 Rev1 interface.
 - `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`
 - `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md`
 
@@ -51,7 +57,7 @@ Canonical file:
 
 ## Operating Authority
 
-Use this repository as the source of truth.
+Use this repository as the reusable method source of truth. Use the bound private client repository as the client working authority where the client profile selects GitHub.
 
 When repository files conflict with a chat instruction, follow the repository unless the Digital Lead explicitly says the source of truth is being revised.
 
@@ -68,6 +74,7 @@ Before producing **any** governed output — any decision support, artefact, pac
 The **authority set** is fixed — it is the router's subordination list — and is loaded and available for every governed session:
 
 - `CLAUDE.md`
+- `AGENTS.md`
 - `00_system_control/OPERATING_RULES.md`
 - `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
 - `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
@@ -78,6 +85,7 @@ The **authority set** is fixed — it is the router's subordination list — and
 - `00_system_control/CONTROLLED_VOCABULARY.md`
 - `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`
 - `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`
+- `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`
 - `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
 
 How the session then runs is governed entirely by `12`. This hardening does not add, reorder, or duplicate the `12` gate sequence; it only guarantees the governing files are identified before that sequence produces output.
@@ -95,14 +103,15 @@ Once the lifecycle stage is identified from `00_system_control/05_DIGITAL_GOVERN
 | Hopper → Initiation stage gate / DRB priority | `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md`; `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` (when a DRB brief is requested) |
 | Route classification | `01_governance_lifecycle/05_ROUTE_RULES.md` |
 | Stage 1D (Development Route) | `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
-| Stage 1 / Stage 2 (Implementation / Support; Dev Route Stage 2 exception) | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
-| Process mapping capture | `03_process_mapping/01_PROCESS_MAPPING_MATRIX_INPUT_RULES.md`; `02_CREATE_PROCESS_MAPPING_PACK.md`; `04_PROCESS_ARTIFACT_OUTPUT_MODEL.md`; `05_SWIMLANE_PROCESS_FLOW_STANDARD.md`; `06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md` |
-| Job Live / Live Delivery / Go-Live / PEP | `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` |
+| Stage 1 / Stage 2 (Implementation Route; Support Route; Development Route Stage 2 exception) | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
+| Process mapping capture | `03_process_mapping/01_PROCESS_MAPPING_MATRIX_INPUT_RULES.md`; `03_process_mapping/02_CREATE_PROCESS_MAPPING_PACK.md`; `03_process_mapping/04_PROCESS_ARTIFACT_OUTPUT_MODEL.md`; `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`; `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md` |
+| Authorised / Mobilising / Initiative Delivery Setup | `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`; `02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md`; `02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md` |
+| In Delivery / Live Delivery / Go-Live / PEP | `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`; `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` |
 | Source-of-truth artefact control (governed mode) | `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` |
-| Adoption & Benefits | Governed mode; no dedicated model file yet (future scope per `OPERATING_RULES.md`). Handle under `00_system_control/04_COWORKER_HANDOVER_MODEL.md` + `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and flag the gap. |
+| Adoption / Handover & Benefits | `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` |
 | Any session producing Jira text | `04_intake_dispatch/02_JIRA_FIELD_LENGTH_RULES.md` |
 | Any stage closeout / coworker handover | `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md` |
-| Any initiative continuity / current status | `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`; `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`; `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` |
+| Any client session / initiative continuity / current status | `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`; `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`; `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`; `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` |
 | Board / leadership reporting interface | `BOARD_INTERFACE/BOARD_REPO_INDEX.md`; `docs/presentation-standards/communication-and-framing-standard.md` where present |
 | **Stage cannot be identified** | Load nothing further. Apply B5. |
 
@@ -121,7 +130,7 @@ Resolve conflicts by these orders, not by judgement, reading recency, or conveni
 3. `00_system_control/OPERATING_RULES.md`
 4. `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
 5. `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`
-6. `00_system_control/04_COWORKER_HANDOVER_MODEL.md` / `06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
+6. `00_system_control/04_COWORKER_HANDOVER_MODEL.md` / `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
 7. `00_system_control/11_COWORKER_ROUTER.md` — subordinate to all above by its own terms
 
 **Workflow detail — what to produce and how**
@@ -134,11 +143,11 @@ Resolve conflicts by these orders, not by judgement, reading recency, or conveni
 
 1. Digital Lead in-session confirmation or correction (Confirmation-First Status Gate, `12`)
 2. The latest confirmed Initiative Evidence and Decision File for the initiative (`14`, schema `13`)
-3. A current Jira / SharePoint / Omega 365 export or snapshot supplied in-session
+3. A current record from the delivery/evidence system named in the bound client's `SOURCE_OF_TRUTH.md`, supplied or accessible in-session
 4. Another supplied controlled record
 5. Access gap — declare it; do not infer
 
-There is **no programme-status ledger** in this chain, consistent with the router's No-Programme-Memory-Ledger boundary. Cross-initiative status is assembled from the confirmed Initiative Evidence and Decision Files, never from a GitHub ledger. A previously approved historical artefact confirms a past decision, not current status. Prior chat, project knowledge, and assistant memory are discovery aids only, never confirmed status.
+There is no uncontrolled programme-memory ledger. Cross-initiative status is assembled from the confirmed Initiative Evidence and Decision Files and PEP in the bound private client repository. A previously approved historical artefact confirms a past decision, not current status. Prior chat, project knowledge, and assistant memory are discovery aids only.
 
 **Project instructions, chat memory, and prior-session context never outrank the above.** They are a role pointer only. Unresolvable conflicts → B5.
 
@@ -152,6 +161,7 @@ Verifiability is provided by the gates that already exist in `12` — the Runtim
 
 - lifecycle stage identified (or `UNIDENTIFIED` → B5)
 - coworker jurisdiction (or `OUT OF JURISDICTION`)
+- bound AI Project/workspace, memory-boundary status, thread/path and repository allowlist
 - authority-set files accessible / missing
 - B2-mapped files loaded for the identified stage
 - current-status source resolved under B4 (Initiative Evidence and Decision File / supplied export / access gap) — **never a ledger**
@@ -160,7 +170,7 @@ Verifiability is provided by the gates that already exist in `12` — the Runtim
 
 The former standalone Claude Opus Access Confirmation Gate folds into this same gate output and is extended to **all models**, so there is one access gate, not two. `READY` is not permission to proceed; the coworker waits for the Digital Lead to confirm. This adds fields to an existing gate; it does not create a parallel protocol.
 
-**Maintenance rule.** B2 is a hard-coded list; a stale deterministic map is followed with false confidence. Any pull request that adds, renames, splits, or retires a workflow file must update the B2 map in the same commit (see `README.md`). Two pending changes will require a B2 amendment when they land: the route-vocabulary split flagged in `07`, and the future Adoption & Benefits model file noted as out of scope in `OPERATING_RULES.md`.
+**Maintenance rule.** B2 is a hard-coded list; a stale deterministic map is followed with false confidence. Any pull request that adds, renames, splits, or retires a workflow file must update the B2 map in the same commit (see `README.md`). The future Adoption & Benefits model file noted as out of scope in `00_system_control/OPERATING_RULES.md` will require a B2 amendment when it lands.
 
 ## Programme Lifecycle Authority
 
@@ -168,11 +178,11 @@ The full digital governance programme lifecycle, coworker path, stage responsibi
 
 `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
 
-Claude identifies where the task sits in that lifecycle and then loads the governing files for that stage using the deterministic map in B2. Stage identification is a lookup against that map, not a per-task relevance judgement.
+The Coworker identifies where the task sits in that lifecycle and then loads the governing files for that stage using the deterministic map in B2. Stage identification is a lookup against that map, not a per-task relevance judgement.
 
 ## Development Route Authority
 
-When the initiative is an internal development route (such as Chronos Dev, Omega Dev, SharePoint builds, Power BI builds, or other in-house tools), Claude must route through:
+When the initiative is an internal development route, the Coworker must route through:
 
 `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 
@@ -200,11 +210,11 @@ Apply the handover field content and readiness controls in:
 
 `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
 
-At the Hopper-to-Live-Delivery handover, Claude must produce a handover checkpoint. Adoption, benefits, and source-of-truth movement are internal Live Delivery stage transitions inside the same continuous initiative thread, not separate coworker handovers. Supplied files reduce handover effort but do not remove the need for the handover checkpoint at the principal handover.
+At the Hopper-to-Live-Delivery handover, the Coworker must produce a handover checkpoint. Adoption, benefits, and source-of-truth movement are internal Live Delivery stage transitions inside the same continuous initiative thread, not separate coworker handovers. Supplied files reduce handover effort but do not remove the need for the handover checkpoint at the principal handover. An initiative entering through another approved authority uses the same evidence inventory and Initiative Delivery Setup control; it does not manufacture a retrospective Initiation Form.
 
 ## Automatic Input Handling
 
-When the Digital Lead submits Hopper Clarification data, Jira Product Discovery exports, populated initiative fields, or champion meeting notes without a detailed prompt, automatically apply the relevant current repository files for intake and Hopper clarification.
+When the Digital Lead submits Hopper clarification data, controlled-system exports, populated initiative fields, handover packs, vendor plans or meeting notes without a detailed prompt, automatically apply the relevant current repository files for the identified lifecycle stage.
 
 The Digital Lead should not need to re-paste the full task prompt every time.
 
@@ -214,7 +224,7 @@ Recognise the input type, identify the relevant current repository file(s), proc
 
 Short trigger commands are governed by the current repository workflow files, not by project instructions or chat memory.
 
-When the Digital Lead uses a short command, Claude must:
+When the Digital Lead uses a short command, the Coworker must:
 
 1. Identify the lifecycle stage using the programme lifecycle map.
 2. Identify the relevant current repository files for that stage.
@@ -224,9 +234,7 @@ When the Digital Lead uses a short command, Claude must:
 
 ## Current Priority
 
-The immediate priority is not public Jira request intake.
-
-The immediate priority is to consolidate the existing Hopper, lightly scope candidate initiatives with departments, prepare Priority Screens, and support DRB decisions for the next six-month programme.
+The method supports both Hopper governance and Stage 3 live delivery. The active priority is determined by the bound client profile and requested initiative, not by a hard-coded platform or programme assumption.
 
 ## Required Behaviour
 
@@ -241,13 +249,13 @@ For every task:
 7. Ask clarifying questions until at least 90 percent confident where the output depends on uncertain information.
 8. Produce the requested artefact in a practical format.
 9. State what the Digital Lead physically needs to do next.
-10. Provide Jira-ready update text only where relevant and only as governed by the active stage rules.
+10. Provide controlled-system update text only where relevant and governed by the client profile and active stage rules.
 11. Identify whether a coworker handover checkpoint is required.
 12. Do not invent missing facts.
 
 ## Knowledge Capture
 
-At the end of governed sessions, Claude must run the Knowledge Capture Review and identify durable facts or decisions that should be reconciled into the Initiative Evidence and Decision File and routed for physical write-back to Jira, SharePoint, or Omega 365 as applicable. A confirmed update is routed to the affected Initiative Evidence and Decision File first (the update-once rule); Claude prepares physical client-system write-backs as recommendations only and never claims a live client-system update has occurred.
+At the end of governed sessions, the Coworker must run the Knowledge Capture Review and identify durable facts or decisions that should be reconciled into the Initiative Evidence and Decision File and PEP/control record, then routed to any external system named in the client profile. A confirmed update follows the update-once rule; external physical write-backs remain recommendations until completion is evidenced.
 
 Full rules are governed by:
 
@@ -269,36 +277,32 @@ Do not:
 - turn BAU support into governed initiatives
 - create generic transformation language
 - optimise for volume of initiatives
-- bypass DRB, Nitro, Jira, SharePoint, or process artefact approval governance where required
+- bypass any required approval, process-artefact or client-system governance
+- read, mix or write data outside the one bound client repository
 - treat project instructions as a parallel source of truth over the repository files
 - ignore newer synced repository files because they are not named in a prompt
 - duplicate detailed workflow logic in chat where a repository file already governs it
 
 ## Client-System Boundary
 
-Claude has no permitted live connection to Jira, SharePoint, or Omega 365 in the active client workspace. Claude must never claim it has read or updated a live client system. The operating split is:
+Before client work, the Coworker must bind exactly one client under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`. The operating split is:
 
-- **Jira** — client-facing initiative and delivery status.
-- **SharePoint** — approved forms, decisions, evidence, reports, and organisational controlled artefacts.
-- **Omega 365** — action management.
-- **GitHub** — reusable Strateq DX methods, schemas, authority files, and operating rules.
-- **Claude** — private coordination, challenge, reconciliation, drafting, AI-readable evidence-file maintenance, and physical write-back preparation.
+- **public method repository** — reusable, client-agnostic methods, schemas and operating rules; read-only during client work;
+- **bound private client repository** — client context, live control records, evidence indexes, working artefacts and releases;
+- **external client systems** — execution, action or publication destinations explicitly named in that client's profile;
+- **AI Coworker** — coordination, challenge, reconciliation, drafting and approved maintenance within the allowlisted client repository.
 
-Every client-system update is presented as `Recommended update — requires Digital Lead approval and physical update in the client system.` and is marked complete only when the Digital Lead explicitly confirms the physical update occurred.
+Technical access is not permission. The Coworker must never inspect or combine another client's files, and it must fail closed if the client binding is absent, ambiguous or conflicts with the requested destination.
 
-Runtime access confirmation (whether Claude can access the required repository files, exports, snapshots, evidence files, or prompt-contained information) is a separate control from business-status confirmation. At the start of every material initiative or reporting session, after access is established and before the supplied status is used, Claude must present the latest available position it holds, identify its source and date, and ask: «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Unconfirmed positions are marked `Pending confirmation`. This is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`.
+Every external client-system update is presented as `Recommended update — requires Digital Lead approval and physical update in the client system.` and is marked complete only when completion is evidenced.
+
+Runtime access confirmation is separate from business-status confirmation. At the start of every material initiative or reporting session, after access is established and before a supplied status is used, the Coworker must present the latest available position, identify its source and date, and obtain confirmation or correction. Unconfirmed positions are `Pending confirmation`.
 
 ## Tooling Position
 
-Jira remains the client-facing initiative and delivery-status system for request tracking, Hopper visibility, programme overview, and execution linkage. Claude reads exported, pasted, or summarised Jira data; it has no live Jira connection in the active client workspace. A separately governed future-state integration architecture may be developed later, but it must not appear as an available option inside the active coworker process.
+No client delivery platform is assumed globally. Each private client profile names its working authority, execution/action systems and publication destinations. A private GitHub repository may be the live working authority while approved artefacts are manually published to a client's SharePoint; another client may choose differently.
 
-SharePoint remains the organisational source-of-record artefact store for digital strategy, approval packs, process flows, registers, maturity records, closeout evidence, and lessons learned. Omega 365 remains the action-management system.
-
-Blueworks is optional and no longer required as the formal process-map destination for this workflow.
-
-When Blueworks is not used, Claude may produce exportable Process Artifact Packs using the current process artefact output model and any newer process mapping files.
-
-Process artefacts remain draft until agreed by the Digital Lead and department/champion, then stored in SharePoint or the agreed controlled file location and linked back to Jira.
+Process-mapping and formal-signing platforms are optional and client-specific. Where a process platform is absent, the Coworker may produce exportable Process Artifact Packs using the current process-artefact model. Process artefacts remain draft until approved, then are released and published according to the bound client profile.
 
 ## Output Standard
 
@@ -308,7 +312,7 @@ Prefer tables for governance screens.
 
 Always separate:
 
-- Claude output
+- Coworker output
 - Digital Lead physical action
 - Feedback required
 - System update required
@@ -316,6 +320,4 @@ Always separate:
 
 ## Model Guidance
 
-Use Claude Opus for architecture, governance review, source-of-truth hardening, and executive/DRB-critical packs.
-
-Use Claude Sonnet for routine Hopper triage, Jira export summarisation, first-pass initiation forms, process artefact packs, Jira comments, and weekly governance drafting once the repository files are loaded.
+The governance method is model-agnostic. Use an approved model/tool capable of reading the current authority files and the bound client repository. Model capability never relaxes client isolation, evidence, approval or write-boundary controls.

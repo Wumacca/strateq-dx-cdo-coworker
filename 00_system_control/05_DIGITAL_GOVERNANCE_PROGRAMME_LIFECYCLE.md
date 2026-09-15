@@ -10,17 +10,15 @@ Detailed workflow execution remains governed by the relevant stage-specific file
 
 ## Operating Principles
 
-Jira is the client-facing initiative and delivery-status system.
+The public GitHub repository is the client-agnostic method authority. Each private client repository and its `SOURCE_OF_TRUTH.md` define that client's live working records, delivery systems and manual publication destinations. Client data is prohibited from this repository.
 
-SharePoint is the organisational source-of-record artefact store.
+There are exactly two client-project lifecycle coworkers — the Hopper Lifecycle Coworker and the Live Delivery Coworker. The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker, at authority to commence delivery. Adoption, benefits, source-of-truth impact, and closeout are internal Live Delivery stage transitions inside the same continuous initiative thread. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and programme / leadership reporting are governed stages, controls, or modes, not separate coworkers. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker. The client workspace model is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`; zero-crossover control is governed by `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`.
 
-GitHub is the coworker operating-rule source of truth.
-
-There are exactly two client-project lifecycle coworkers — the Hopper Lifecycle Coworker and the Live Delivery Coworker. The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker, at approval to commence delivery. Adoption, benefits, source-of-truth impact, and closeout are internal Live Delivery stage transitions inside the same continuous initiative thread. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and programme / leadership reporting are governed stages, controls, or modes, not separate coworkers. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker. The client workspace, thread, reporting, and no-live-connection model is governed by `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`. Claude has no live connection to Jira, SharePoint, or Omega 365.
+An approved Initiation Form is one entry basis to Live Delivery, not the only one. An approved transition/enterprise mandate, contract/procurement approval, leadership instruction or existing-project adoption may also authorise mobilisation. `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md` governs this entry logic.
 
 Coworkers facilitate, draft, check, route, and prepare controlled artefacts.
 
-Coworkers do not approve initiatives, accept risk, approve cost, commit suppliers, or bypass DRB / Nitro / leadership approval.
+Coworkers do not approve initiatives, accept risk, approve cost, commit suppliers or bypass the client's approved decision / signing route.
 
 The principal coworker handover (Hopper Lifecycle → Live Delivery) requires a handover checkpoint under `00_system_control/04_COWORKER_HANDOVER_MODEL.md`. Internal stage transitions within a coworker's ownership are recorded in the Initiative Evidence and Decision File and do not require a coworker handover.
 
@@ -38,7 +36,7 @@ This lifecycle map is the **controlled process view**. The four-stage macro mode
 ### Supporting authority pointers
 
 - **Human-facing manual:** `06_operating_manual/01_DIGITAL_TRANSFORMATION_GOVERNANCE_AND_MANAGEMENT_MANUAL.md` — non-authoritative human navigation of this lifecycle.
-- **Initiative Control Record schema:** `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` is the reusable schema for initiative control fields; the Initiative Evidence and Decision File (`02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`) is its AI-readable client-copy implementation. Jira remains the client-facing initiative and delivery-status system; GitHub holds the schema only; Claude has no live Jira access.
+- **Initiative Control Record schema:** `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` is the reusable schema; the Initiative Evidence and Decision File is its client-copy implementation in the selected private client repository.
 - **Interactive Governed Session Protocol:** `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` — the interactive gates and session-state controls applied at every material session.
 
 ## Full Programme Lifecycle
@@ -52,20 +50,20 @@ This lifecycle map is the **controlled process view**. The four-stage macro mode
 | 5 | Light-Touch Department Scoping | Hopper Lifecycle Coworker | Clarify enough context to understand the need, source, likely value, and whether the item deserves DRB prioritisation discussion. | Jira fields, clarification notes, department/champion evidence. | Internal Hopper continuity note if item moves to Priority Screen. |
 | 6 | Hopper Priority Screen / Hopper Portfolio Readiness Review | Hopper Lifecycle Coworker | Prepare candidate initiatives for leadership / DRB prioritisation across the next programme window by organising the Jira Initiative View / Hopper priority view. This is the default meeting surface; no separate DRB Priority Screen document is produced by default. Governed by `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`. Pre-initiation and pre-Pack 1. | Jira Initiative View / Hopper priority view, Jira fields, scoring notes, department charter input, department summary. | Internal Hopper continuity note into leadership / DRB priority discussion. |
 | 7 | DRB Priority Discussion | Hopper Lifecycle Coworker + DRB | Decide whether an item is approved for Stage 1D or Stage 1, requires clarification, is deferred, rejected, BAU, or merged. | DRB notes, Jira status, decision record. | DRB decision checkpoint required before Stage 1D or Stage 1. |
-| 7A | Route Classification | Hopper Lifecycle Coworker | Classify the initiative as Development Route or Implementation / Support Route from the Jira Initiative Type field or screenshot before launching Stage 1D or Stage 1. | Initiative Type field, Jira screenshot. | Route confirmed before session opens. |
+| 7A | Route Classification | Hopper Lifecycle Coworker | Classify the initiative as Development Route, Implementation Route or Support Route from the configured delivery-system field or supplied evidence before launching Stage 1D or Stage 1. | Route field or supplied route evidence. | Route confirmed before session opens. |
 | 7B | Stage 1D: Development Route Hopper Clarification / DRB Approval to Commence Development Job | Hopper Lifecycle Coworker | Clarify the internal development initiative enough for DRB to approve commencement of the live development job. Stage 2 exception gate must be tested before final pack production. | Jira field values, Completed Initiation Form (Development Approval) per `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`, Scope Brief, swimlane specification and source-of-truth handover note where applicable, single-sheet Process Flow Capture Sheet if required; optional DRB meeting-support text only on explicit request. | Stage 1D closeout / Live Delivery handover required if no Stage 2 exception. Stage 1D to Stage 2 if exception gate triggered. |
-| 8 | Stage 1: Hopper Clarification / DRB Approval to Commence Initiation (Implementation / Support Route) | Hopper Lifecycle Coworker | Clarify the Hopper item enough for DRB to decide whether formal digital initiation should commence. Applies to Implementation / Support Route. | Jira field values, Completed Initiation Form per `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`, process mapping required decision, process mapping capture sheet if required; optional DRB meeting-support text only on explicit request. | Stage 1 closeout / Stage 2 readiness checkpoint required. |
+| 8 | Stage 1: Hopper Clarification / DRB Approval to Commence Initiation (Implementation Route or Support Route) | Hopper Lifecycle Coworker | Clarify the Hopper item enough for DRB to decide whether formal digital initiation should commence. Applies to the Implementation Route and Support Route. | Configured delivery-system values, Completed Initiation Form per `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`, process mapping required decision, process mapping capture sheet if required; optional DRB meeting-support text only on explicit request. | Stage 1 closeout / Stage 2 readiness checkpoint required. |
 | 9 | Process Mapping Capture | Hopper Lifecycle Coworker | Capture current and required process logic when process mapping is required. This is a capture sheet, not a final process flow. | Excel process mapping capture sheet, department notes, RACI, bottlenecks, future-state needs. | Feeds Stage 2. |
-| 10 | Stage 2: Digital Initiation / DRB Approval to Commence Job | Hopper Lifecycle Coworker | Build the formal initiation pack required for DRB to approve the initiative to become a live job. Applies to Implementation / Support Route, and to Development Route where Stage 2 exception gate is triggered. | Requirements list, vendor/developer review, process-flow specification, source-of-truth impact report, initiation approval summary, Jira update text. | Hopper-to-Live Delivery handover required at Stage 2 closeout. |
-| 11 | Implementation Form / Development Form | Hopper Lifecycle Coworker → Live Delivery Coworker | Convert approved initiation into a delivery-ready implementation or development route where required. | Implementation form, development form, Jira epic / delivery structure, approved requirements. | Handover to Live Delivery required. |
-| 12 | DRB Form Approval | DRB + Live Delivery Coworker | Confirm the delivery route, approved scope, cost, timing, owner, route, and controls before live delivery starts. | Approved form, Jira status, approval record. | Delivery start checkpoint required. |
-| 13 | Nitro / Leadership Sign-Off | Hopper Lifecycle Coworker (governance / capitalisation mode) + DRB + Leadership | Obtain higher-level approval where required by cost, risk, contract, capitalisation, or leadership threshold. | Nitro pack, leadership approval, capitalisation record. | Leadership decision checkpoint required. |
-| 14 | Job Live | Live Delivery Coworker | Move initiative into controlled delivery execution. | Jira live job, delivery plan, supplier/developer tasks, risks/actions, reporting cadence. | Live delivery operating checkpoint required. |
-| 15 | Live Delivery | Live Delivery Coworker | Track delivery, issues, vendor/developer progress, scope control, risks, blockers, and implementation evidence. | Jira delivery structure, weekly delivery-control touchpoint, risks/actions, delivery artefacts, implementation evidence. | Internal Live Delivery stage transition into go-live and adoption; recorded in the Initiative Evidence and Decision File. |
+| 10 | Stage 2: Digital Initiation / DRB Approval to Commence Job | Hopper Lifecycle Coworker | Build the formal initiation pack required for DRB to approve the initiative to become a live job. Applies to the Implementation Route and Support Route, and to the Development Route where the Stage 2 exception gate is triggered. | Requirements list, vendor/developer review, process-flow specification, source-of-truth impact report, initiation approval summary and configured delivery-system update text where applicable. | Hopper-to-Live Delivery handover required at Stage 2 closeout. |
+| 11 | Authority to Commence / Live Delivery Handover | Hopper Lifecycle Coworker → Live Delivery Coworker | Establish the evidenced authority to mobilise. This may be an approved Initiation Form or an approved alternative mandate. | Approval/mandate evidence, scope, handover, known gaps. | Principal handover to Live Delivery required where a Hopper stage exists; inherited projects record an exception entry. |
+| 12 | Mobilising / Initiative Delivery Setup | Live Delivery Coworker | Inspect the handover, resolve entry basis, delivery model, ownership, PEP/control structure, evidence and reporting. | `Initiative Delivery Setup`, PEP, Initiative Evidence and Decision File, source index. | Digital Lead approval required for `Mobilising → In Delivery`. |
+| 13 | Leadership / Formal Sign-Off | Hopper Lifecycle Coworker (governance / capitalisation mode) + decision body + leadership | Obtain higher-level approval where required by cost, risk, contract, capitalisation or leadership threshold. | Approval pack, leadership approval, capitalisation record. | Leadership decision checkpoint required. |
+| 14 | In Delivery | Live Delivery Coworker | Move the initiative into controlled execution after setup approval. | Client PEP/control plan, detailed-owner interface, RAID, decisions, changes, evidence and reporting cadence. | Live delivery operating checkpoint required. |
+| 15 | Live Delivery Control | Live Delivery Coworker | Track delivery, vendor/developer progress, scope, dependencies, risks, decisions, readiness and evidence. | PEP, Artefact 1 Rev1, controls, delivery artefacts and implementation evidence. | Internal transition into go-live and adoption/handover. |
 | 16 | Go-Live / Deployment | Live Delivery Coworker (go-live stage) | Confirm the solution is live, users are identified, support route exists, and adoption period can start. | Go-live record, user list, support model, training evidence, operational readiness. | Internal Live Delivery stage transition into adoption; recorded in the Initiative Evidence and Decision File. |
-| 17 | Adoption & Benefits | Live Delivery Coworker (adoption / benefits stage) | Confirm controlled use, competence, benefits evidence, ownership, support, and closeout readiness. | 30-day review, benefits evidence, adoption evidence, competence readiness, support ownership, closeout record. | Internal Live Delivery stage transition into source-of-truth impact and closeout. |
-| 18 | Source-of-Truth Artefact Control / Programme Governance Update | Live Delivery Coworker (source-of-truth control mode) | Identify affected controlled artefacts (SharePoint registers, strategy/guidance, maturity records, process maps, software ecosystem records, lessons learned, reporting) and prepare approved update recommendations and physical write-backs for the Digital Lead or authorised owner; record whether each physical update is completed, deferred, or pending. Claude does not directly update SharePoint, Jira, Omega 365, or any controlled client system. | SharePoint artefacts, process/register updates, source-of-truth impact closure, lessons learned, programme report. | Source-of-truth control mode closes the lifecycle inside the initiative thread or surfaces new Hopper candidates. |
-| 19 | PEP / Development Execution Where Applicable | Live Delivery Coworker + Delivery Owner | Manage approved implementation PEPs or development execution streams that sit within or after live delivery. | PEP / development execution plans, delivery controls, Jira execution tasks. | Internal Live Delivery stage transition: PEP / development execution remains owned by the Live Delivery Coworker and, on completion, transitions internally into go-live, adoption, benefits, source-of-truth impact, or closeout as applicable, recorded in the Initiative Evidence and Decision File. No additional coworker handover occurs. |
+| 17 | Adoption / Handover and Benefits | Live Delivery Coworker | Confirm controlled use, competence, ownership, support, benefits evidence and closeout readiness. | Adoption/handover evidence, 30-day review where applicable, support ownership, closeout record. | Digital Lead-approved internal transition toward closure. |
+| 18 | Source-of-Truth Impact and Closure | Live Delivery Coworker | Reconcile affected artefacts, residual obligations, lessons, publication/write-back status and closure evidence. | Private client repository, configured external publication records, process/register updates, lessons and final report. | Digital Lead closure decision or new Hopper candidate. |
+| 19 | Closed | Live Delivery Coworker | Preserve the final governed record and prevent uncontrolled further updates. | Closed initiative record, final evidence, publication register and archive reference. | No further lifecycle handover. |
 
 ## Capex Request Session (Cross-Cutting Portfolio Mode)
 
@@ -114,12 +112,12 @@ Responsible for:
 - light-touch department scoping
 - Hopper Priority Screen preparation
 - DRB priority discussion support
-- route classification (Development Route or Implementation / Support Route)
+- route classification (Development Route, Implementation Route or Support Route)
 - Stage 1D Development Route Hopper Clarification / DRB Approval to Commence Development Job
 - Stage 1D Scope Brief and Process Flow Capture Sheet
 - Stage 1D pack gate and Stage 2 exception gate
 - Stage 1D closeout and handover to Live Delivery (Development Route, no Stage 2 exception)
-- Stage 1 Hopper Clarification / DRB Approval to Commence Initiation (Implementation / Support Route)
+- Stage 1 Hopper Clarification / DRB Approval to Commence Initiation (Implementation Route or Support Route)
 - process mapping capture sheet issue when required
 - Stage 2 Digital Initiation / DRB Approval to Commence Job
 - requirements list preparation
@@ -150,8 +148,8 @@ Owns the same initiative after approval to commence (Stage 1D / Stage 2 / form a
 
 Responsible for:
 
-- delivery mobilisation
-- Jira epic / delivery structure
+- evidence-led mobilisation and `Initiative Delivery Setup`
+- PEP/client-control structure
 - developer/vendor coordination
 - delivery risk and issue tracking
 - delivery status reporting (weekly delivery-control touchpoints)
@@ -177,7 +175,7 @@ Post-go-live control handled inside the same initiative thread as an internal st
 
 A governed control mode applied within the initiative thread when lifecycle changes affect a controlled artefact, governed by `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. It is not a separate coworker. It concerns:
 
-- SharePoint artefact register
+- controlled artefact register
 - process flow register
 - software ecosystem register
 - integration register
@@ -197,23 +195,23 @@ When handling Hopper, Stage 1D, Stage 1, Stage 2, process mapping, DRB brief pre
 
 The Development Route Stage 1D model is the primary authority for Development Route initiatives.
 
-The two-stage initiation model is the primary authority for Stage 1 and Stage 2 (Implementation / Support Route, and Development Route Stage 2 exceptions).
+The two-stage initiation model is the primary authority for Stage 1 and Stage 2 (Implementation Route, Support Route, and Development Route Stage 2 exceptions).
 
 The coworker handover model is the primary authority for transitions between coworkers.
 
-The artefact governance model is the primary authority for Jira / SharePoint / source-of-truth boundaries.
+The artefact governance model and client isolation standard are the primary authorities for method/client/source-of-truth boundaries.
 
 ## Mandatory Handover Points
 
 The only mandatory client-project coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker, at approval to commence delivery. It takes one of two route-specific forms:
 
 1. Hopper Lifecycle Stage 1D closeout to Live Delivery (Development Route, no Stage 2 exception)
-2. Hopper Lifecycle Stage 2 closeout to Live Delivery (Implementation / Support Route, and Development Route where the Stage 2 exception is triggered)
+2. Hopper Lifecycle Stage 2 closeout to Live Delivery (Implementation Route, Support Route, and Development Route where the Stage 2 exception is triggered)
 
 The following are internal stage transitions or closeouts within a single coworker's ownership, recorded in the Initiative Evidence and Decision File, and are **not** coworker handovers:
 
 - Hopper Lifecycle Stage 1D to Stage 2 (Development Route, Stage 2 exception triggered)
-- Hopper Lifecycle Stage 1 closeout to Stage 2 readiness (Implementation / Support Route)
+- Hopper Lifecycle Stage 1 closeout to Stage 2 readiness (Implementation Route or Support Route)
 - Live Delivery go-live to adoption and benefits
 - Live Delivery adoption/benefits to source-of-truth impact and closeout
 

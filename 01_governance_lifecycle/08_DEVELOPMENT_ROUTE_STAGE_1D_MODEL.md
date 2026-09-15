@@ -4,27 +4,25 @@
 
 This file defines the governed route for internal development initiatives through Development Stage 1D.
 
-Internal development initiatives — such as Chronos, Omega, SharePoint internal builds, Power BI internal builds, or other in-house tools — may be approved to commence the live development job from a strengthened Development Stage 1D Pack, without requiring the full two-stage initiation route.
+An internal build or enhancement on a client-owned platform may be approved to commence from a strengthened Development Stage 1D Pack without requiring the full two-stage initiation route.
 
 Stage 2 must still be triggered where complexity, external supplier involvement, cost, security, architecture, immature scope, or DRB requirements demand deeper initiation.
 
 Development Route model: Stage 1D only, unless a Stage 2 exception trigger applies.
 
-Implementation / Support Route model: Stage 1 + Stage 2, governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+Implementation Route and Support Route model: Stage 1 + Stage 2, governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
 ## Route Classification
 
-Before launching any session, Claude must classify the initiative route from the Jira screenshot or Initiative Type field.
+Before launching any session, the Coworker must classify the initiative route from the bound initiative record or supplied controlled-system evidence.
 
 ### Development Route examples
 
-- Chronos Dev
-- Omega Dev
-- SharePoint internal build
-- Power BI internal build
-- any other in-house development tool or internal platform enhancement
+- internal application build
+- enhancement to a client-owned platform
+- internally managed automation or reporting build
 
-### Implementation / Support Route examples
+### Implementation Route and Support Route examples
 
 - third-party implementation
 - supplier-led support request
@@ -32,9 +30,9 @@ Before launching any session, Claude must classify the initiative route from the
 - option appraisal / quote comparison route
 - business case / funding route
 
-If the route is unclear, Claude must ask the Digital Lead before producing any outputs.
+If the route is unclear, the Coworker must ask the Digital Lead before producing any outputs.
 
-If the Initiative Type is clearly a Development Route, Claude must load and apply this file as the primary governing file, not `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+If the Initiative Type is clearly a Development Route, the Coworker must load and apply this file as the primary governing file, not `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
 ## Pre-Stage-1D Boundary
 
@@ -256,7 +254,7 @@ Claude must not approve the development job.
 
 Claude must not invent scope, milestones, activities, developer estimates, dependencies, or technical facts.
 
-Claude must not assume the route is Implementation / Support if the Initiative Type indicates a Development Route.
+Claude must not assume the route is Implementation Route or Support Route if the Initiative Type indicates a Development Route.
 
 Claude must not assume Stage 2 is required for Development Route unless an exception trigger applies.
 

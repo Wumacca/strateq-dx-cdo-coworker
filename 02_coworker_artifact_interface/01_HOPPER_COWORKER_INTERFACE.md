@@ -42,7 +42,7 @@ Hopper Consolidation Table:
 | Item | Apparent Type | Duplicate / Related Items | Business Area | System / Process Link | Issue Clarity | Missing Basic Info | Recommended Route | Suggested Consolidation Outcome | Department Questions | Jira Update |
 |---|---|---|---|---|---|---|---|---|---|---|
 
-Recommended Route values: `Development Route → Stage 1D`, `Implementation / Support Route → Stage 1 + Stage 2`, or `TBC`.
+Recommended Route values: `Development Route → Stage 1D`, `Implementation Route → Stage 1 + Stage 2`, `Support Route → Stage 1 + Stage 2`, or `TBC`.
 
 ### Digital Lead Physical Action
 
@@ -96,7 +96,7 @@ After DRB priority approval, route each item to the correct initiation stage.
 
 ### Development Route → Stage 1D
 
-For items confirmed as internal development (Chronos Dev, Omega Dev, SharePoint build, Power BI build, in-house tool).
+For items confirmed as an internal build or enhancement on a client-owned platform.
 
 Governed by: `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 
@@ -114,7 +114,7 @@ Governed by: `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
 - supply required inputs listed in Stage 1D Session Start Checklist
 - flag any known exception gate triggers before session begins
 
-### Implementation / Support Route → Stage 1 + Stage 2
+### Implementation Route or Support Route → Stage 1 + Stage 2
 
 For items confirmed as third-party implementation, supplier-led, SaaS onboarding, option appraisal, or business case routes.
 

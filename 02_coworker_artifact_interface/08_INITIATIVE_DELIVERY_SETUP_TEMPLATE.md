@@ -38,6 +38,8 @@
 | Success criteria |  |  | Missing |
 | Authority gap |  |  | Missing |
 
+**Entry basis — controlled values (use only):** `Digital Initiation Form`, `Transition / Enterprise Mandate`, `Contract / Procurement Approval`, `Leadership Instruction`, `Existing Live Project Adoption`, `Exception — Authority Not Evidenced`, `TBC`. Authoritative list: `00_system_control/CONTROLLED_VOCABULARY.md`. `No Digital Initiation Form` does not mean `No authority to proceed`. Where Digital is providing support to a transition or enterprise project without an initiation form, record the actual authority basis (typically `Transition / Enterprise Mandate` or `Leadership Instruction`) and record any residual `Authority gap`.
+
 If authority to proceed is not evidenced, retain this record in draft and state:
 
 > No approved mobilisation authority has been evidenced. Setup may proceed in draft, but the initiative cannot transition to In Delivery.
@@ -60,6 +62,8 @@ If authority to proceed is not evidenced, retain this record in draft and state:
 | Operational acceptance owner |  |  | Missing |
 | Go-live approval authority |  |  | Missing |
 
+**Delivery model — controlled values (use only):** `Development-led Delivery`, `Digital-led Implementation / Support`, `Vendor-led Implementation with Digital Client-side Assurance`, `TBC`. Authoritative list: `00_system_control/CONTROLLED_VOCABULARY.md`. Third-party vendor-led implementations — where an external vendor performs the implementation while Digital provides client-side assurance, RAID capture and reporting — are recorded as `Vendor-led Implementation with Digital Client-side Assurance`. Funding classification (`Capex`, `Opex`, transition / programme funding) is recorded independently and is not a delivery model.
+
 ## 4. Financial responsibility
 
 | Field | Controlled value | Evidence / reference | Status |
@@ -70,6 +74,8 @@ If authority to proceed is not evidenced, retain this record in draft and state:
 | Variation / expenditure approval authority |  |  | Missing |
 | Financial reporting audience |  |  | Missing |
 | Financial reporting cadence |  |  | Missing |
+
+**Digital financial-reporting basis — controlled values (use only):** `Full Cost Tracking`, `Summary Supplied by Budget Owner`, `Approved Variations Only`, `Emerging Cost Impacts / Exceptions Only`, `No Financial Reporting by Digital`, `TBC`. Authoritative list: `00_system_control/CONTROLLED_VOCABULARY.md`. The `Budget / cost owner` and the Digital financial-reporting basis are resolved independently. Confirm explicitly whether Digital is responsible for budget / cost management or whether that responsibility sits with the client project manager — this determines the reporting basis and what Digital must feed into programme and leadership reporting.
 
 ## 5. Governance and reporting
 

@@ -30,7 +30,12 @@ Use only:
 | Client ID | |
 | Initiative title | |
 | Delivery group | |
+| Assigned lifecycle coworker | Live Delivery Coworker |
+| Coworker commencement status | Not started / Active / Suspended — awaiting evidence / Pending Digital Lead decision / Pending external approval / Ready for closeout / Closed and handed over |
+| Coworker commencement date | |
+| Bound AI Project / workspace | |
 | Coworker thread name | `HOP / LIVE / CLOSED | [Group] | [Initiative]` |
+| Client-boundary gate result | |
 | Initiative origin | |
 | Originating artefact / reference | |
 | Requesting area | |

@@ -34,7 +34,7 @@ This protocol governs the **runtime** behaviour of a coworker inside a governed 
 
 ## Applicability
 
-This protocol applies to every material governed session as defined by the material session threshold in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, including Hopper intake, Hopper Portfolio Readiness, Pack 1 / Stage 1D, Implementation / Support initiation, Completed Initiation Form preparation or approval, Capex Request Sessions, material scope or change-control sessions, delivery reviews and closeout, source-of-truth impact reviews, and any adoption / benefits or maturity session once that lifecycle stage is reached.
+This protocol applies to every material governed session as defined by the material session threshold in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, including Hopper intake, Hopper Portfolio Readiness, Pack 1 / Stage 1D, Implementation Route or Support Route initiation, Completed Initiation Form preparation or approval, Capex Request Sessions, material scope or change-control sessions, delivery reviews and closeout, source-of-truth impact reviews, and any adoption / benefits or maturity session once that lifecycle stage is reached.
 
 Lightweight, non-governed exchanges (BAU support, minor clarification, routine drafting, exploratory discussion with no decision, approval, route, record or source-of-truth impact) use the lightweight closeout in `07` and are not required to run the full sequence. The gate depth must be proportionate to the session (see Client Context Gate proportionality below).
 
@@ -67,6 +67,7 @@ This is the runtime gate all material governed sessions must perform. It preserv
 
 At spin-up the coworker must state:
 
+- the bound AI Project/workspace, memory-boundary status, thread/path and repository allowlist;
 - which current repository authority files it can access;
 - which supplied exports, snapshots, and evidence records it can access;
 - which records are missing;
@@ -135,7 +136,7 @@ A **full** Client Context Gate is mandatory for:
 - Hopper intake;
 - Hopper Portfolio Readiness;
 - Pack 1 / Stage 1D;
-- Implementation / Support initiation;
+- Implementation Route or Support Route initiation;
 - Capex Request Sessions;
 - material scope or change-control sessions;
 - delivery closeout;

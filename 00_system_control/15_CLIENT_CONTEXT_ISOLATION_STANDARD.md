@@ -10,6 +10,8 @@ One client equals one private client repository and one bound working context. C
 
 The public Strateq DX method repository contains reusable method only. It must contain zero client data.
 
+The repository link is intentionally one-way: each private client's `METHOD_BASELINE.md` pins the approved public-method commit, while the public method repository never enumerates clients or links back to private client repositories. The client root instructions and `00_PROJECT_HOME.md` route the Coworker to that client's files and initiative paths.
+
 ## Session binding gate
 
 Before reading or creating client content, the coworker must resolve and state:
@@ -18,10 +20,12 @@ Before reading or creating client content, the coworker must resolve and state:
 |---|---|
 | Client ID | Exact ID from the client repository |
 | Client name | Exact controlled name |
-| Method repository | Approved read-only method repository |
+| AI Project / workspace | Exact controlled project or local workspace name |
+| Memory boundary | Project-only, disabled or not applicable; never cross-project/client memory |
+| Method repository | Approved read-only method repository and baseline commit |
 | Client repository | Exactly one approved private repository |
 | Write target | The bound client repository and active controlled branch |
-| Initiative path | One initiative folder, or an approved portfolio/reporting path |
+| Thread and initiative path | Exact active thread plus one initiative folder, or an approved portfolio/reporting path |
 | Prohibited sources | Every other client repository, workspace, attachment set and thread |
 
 No substantive work begins until the binding is complete.
@@ -40,13 +44,17 @@ During client work:
 The coworker must:
 
 1. verify the client marker in `CLIENT_BOUNDARY.md` before every material session;
-2. check each supplied source against the bound client and initiative;
-3. keep provenance for every fact used;
-4. search only inside the two allowed repositories and the sources supplied for the active client session;
-5. refuse cross-client comparisons unless the Digital Lead supplies an expressly anonymised, approved dataset in a non-client method workstream;
-6. abstract lessons before proposing a method update, removing names, identifiers, commercial terms, dates, locations and traceable client facts;
-7. require Digital Lead approval before an abstracted lesson is written to the method repository;
-8. reset the client binding before moving to another client.
+2. verify that the active AI Project/workspace and thread match the boundary marker;
+3. use project-only memory or disable memory where persistent memory could import context from another project/client;
+4. check each supplied source against the bound client and initiative;
+5. keep provenance for every fact used;
+6. search only inside the two allowed repositories and the sources supplied for the active client session;
+7. refuse cross-client comparisons unless the Digital Lead supplies an expressly anonymised, approved dataset in a non-client method workstream;
+8. abstract lessons before proposing a method update, removing names, identifiers, commercial terms, dates, locations and traceable client facts;
+9. require Digital Lead approval before an abstracted lesson is written to the method repository;
+10. reset the client binding before moving to another client.
+
+Project instructions and repository allowlists are procedural safeguards, not substitutes for technical access control. Where a connector or execution environment can access multiple client repositories, use repository-scoped credentials or an environment restricted to the bound client wherever the platform supports it. If another client's content appears in injected memory or session context, treat that as a boundary mismatch and stop without using or reproducing it.
 
 ## Contamination test
 
@@ -55,7 +63,9 @@ Stop immediately if any of the following occurs:
 - a source names a different client;
 - a repository or path is outside the allowlist;
 - the client identity is missing or ambiguous;
+- the active AI Project/workspace, memory boundary or thread does not match `CLIENT_BOUNDARY.md`;
 - content appears copied from another client;
+- another client's content appears in injected memory or session context;
 - a requested output would expose another client's facts;
 - a method change contains identifiable client data;
 - the coworker cannot establish provenance.
@@ -71,6 +81,7 @@ Record the source, mismatch and affected proposed output without reproducing the
 Each private client repository must contain:
 
 - `CLIENT_BOUNDARY.md`
+- `00_PROJECT_HOME.md`
 - `CLIENT_CONTEXT.md`
 - `SOURCE_OF_TRUTH.md`
 - `METHOD_BASELINE.md`
@@ -78,7 +89,9 @@ Each private client repository must contain:
 - root `AGENTS.md`
 - one controlled initiative folder per initiative
 
-`CLIENT_BOUNDARY.md` must state the exact client ID, repository, classification, allowed method repository, prohibited crossover rule and publication boundary.
+`CLIENT_BOUNDARY.md` must state the exact client ID, repository, classification, approved AI Project/workspace, memory boundary, allowed method repository and commit, prohibited crossover rule and publication boundary.
+
+`00_PROJECT_HOME.md` must state the exact AI Project/workspace name, purpose and client boundary, permitted shared sources, thread naming convention, live working authority and output locations. It is navigation only and must not become a parallel source of initiative status.
 
 ## Publication boundary
 
@@ -89,6 +102,7 @@ An external client store such as SharePoint may be a manual publication destinat
 Every material closeout records:
 
 - bound client and repository;
+- bound AI Project/workspace, memory-boundary status and thread/path;
 - source files used;
 - files changed;
 - method baseline commit;

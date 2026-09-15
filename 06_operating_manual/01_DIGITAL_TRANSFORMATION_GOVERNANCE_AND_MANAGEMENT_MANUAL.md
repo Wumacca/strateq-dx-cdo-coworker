@@ -196,7 +196,7 @@ The checklists in this manual are **expected checklists for human planning**. Th
 14. **Freshness obligations.** DRB / approval decision valid once formally recorded unless superseded.
 15. **Exit criteria.** Canonical DRB decision and route recorded; item ready for the correct route spin-up.
 16. **Closeout / handover.** Readiness statement into the route-correct next stage; each approved initiative gets its own route trigger.
-17. **What the coworker will ask for next.** Whether to spin up Stage 1D / Pack 1 or Implementation / Support initiation for the approved initiative.
+17. **What the coworker will ask for next.** Whether to spin up Stage 1D / Pack 1, Implementation Route initiation or Support Route initiation for the approved initiative.
 
 ---
 
@@ -222,13 +222,13 @@ The checklists in this manual are **expected checklists for human planning**. Th
 
 ---
 
-## Section 8 — Implementation / Support Initiation
+## Section 8 — Implementation Route and Support Route Initiation
 
-1. **Purpose.** Clarify a Hopper item enough for DRB to decide whether formal two-stage digital initiation should commence (Implementation / Support Route).
+1. **Purpose.** Clarify a Hopper item enough for DRB to decide whether formal two-stage digital initiation should commence (Implementation Route or Support Route).
 2. **What this stage owns.** Stage 1 clarification, process mapping decision, Stage 2 initiation pack preparation.
 3. **What this stage does not own.** Development Route Stage 1D, delivery mobilisation, or approval.
-4. **Entry criteria.** DRB approved an Implementation / Support item and the Digital Lead spins up the initiation session.
-5. **Exact spin-up command.** `Spin up the Implementation / Support initiation session for [initiative].`
+4. **Entry criteria.** DRB approved an Implementation Route or Support Route item and the Digital Lead spins up the initiation session.
+5. **Exact spin-up command.** `Spin up the [Implementation Route / Support Route] initiation session for [initiative].`
 6. **Authority files.** `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`; `01_governance_lifecycle/04_INITIATION_FORM_INTAKE_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`; `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`.
 7. **Overview workflow.** Access gate → full client context → reconciliation → required inputs → Stage 1 clarification → process mapping decision → Stage 2 initiation pack → closeout. Stages 1 and 2 must not be collapsed.
 8. **Required inputs.** Approved route trigger, business reason, system / process context, vendor / developer inputs where relevant.
@@ -398,7 +398,7 @@ The checklists in this manual are **expected checklists for human planning**. Th
 
 - `Spin up a Hopper Portfolio Readiness Review.`
 - `Spin up Pack 1 for [initiative ID / title].`
-- `Spin up the Implementation / Support initiation session for [initiative].`
+- `Spin up the [Implementation Route / Support Route] initiation session for [initiative].`
 - `Spin up the Capex Request Session.`
 - `Spin up Live Delivery for [initiative].`
 - `Resume the suspended session for [initiative].`

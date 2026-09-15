@@ -2,7 +2,7 @@
 
 ## Status
 
-Status: Submitted for CDO governance review as part of PR #3.
+Status: Approved method authority, subject to controlled repository release.
 
 Governed Workflow Looping is adopted as a **governance accelerator, not an automation shortcut**.
 

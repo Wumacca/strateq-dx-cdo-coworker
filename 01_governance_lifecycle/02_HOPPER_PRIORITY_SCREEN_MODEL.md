@@ -68,7 +68,7 @@ Priority screening supports DRB discussion.
 
 It must not automatically approve or reject an item.
 
-Business Priority Signal is qualitative only and must follow `CONTROLLED_VOCABULARY.md`.
+Business Priority Signal is qualitative only and must follow `00_system_control/CONTROLLED_VOCABULARY.md`.
 
 Claude must not invent numeric scores, weightings, or a 1–5 scale. Where a Digital Lead-approved scoring model, team-returned charter score, or Jira-entered score exists, Claude may organise, display, summarise, and challenge the score, but must not create or alter scores without Digital Lead approval.
 
@@ -111,7 +111,7 @@ Use this format:
 
 ## Business Priority Signal
 
-Use the labels from `CONTROLLED_VOCABULARY.md`:
+Use the labels from `00_system_control/CONTROLLED_VOCABULARY.md`:
 
 - High
 - Medium

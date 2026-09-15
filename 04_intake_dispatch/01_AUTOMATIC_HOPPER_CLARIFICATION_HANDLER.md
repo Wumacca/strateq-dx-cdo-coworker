@@ -42,7 +42,8 @@ Use the Route Classification table from `01_governance_lifecycle/08_DEVELOPMENT_
 | Signal | Likely Route |
 |---|---|
 | Internal build or enhancement on a client-owned platform | Development Route → Stage 1D |
-| Third-party implementation, supplier-led, SaaS onboarding, option appraisal, business case required | Implementation / Support Route → Stage 1 + Stage 2 |
+| Third-party implementation, supplier-led, SaaS onboarding or business case route sufficiently known | Implementation Route → Stage 1 + Stage 2 |
+| Solution route not yet selected and Digital support is required to select then implement | Support Route → Stage 1 + Stage 2 |
 | Unclear | Flag as TBC — ask Digital Lead before assigning route |
 
 Record the Recommended Route in the Hopper Consolidation Table.
@@ -112,7 +113,7 @@ Use this structure unless the user asks otherwise:
 | Item | Apparent Type | Duplicate / Related Items | Business Area | System / Process Link | Issue Clarity | Missing Basic Info | Recommended Route | Suggested Consolidation Outcome | Department Questions | Jira Update |
 |---|---|---|---|---|---|---|---|---|---|---|
 
-The Recommended Route column uses: `Development Route → Stage 1D`, `Implementation / Support Route → Stage 1 + Stage 2`, or `TBC`.
+The Recommended Route column uses: `Development Route → Stage 1D`, `Implementation Route → Stage 1 + Stage 2`, `Support Route → Stage 1 + Stage 2`, or `TBC`.
 
 ## Reminder Rule
 

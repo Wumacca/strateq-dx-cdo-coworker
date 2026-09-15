@@ -246,7 +246,7 @@ The initiative charter is a **pre-initiation input tool only**.
 
 ## Route Rules
 
-These route definitions classify the **treatment / route indication** for an item inside the Hopper Portfolio Readiness Review. They do not split or replace the active controlled route classification label `Implementation / Support Route` in `00_system_control/CONTROLLED_VOCABULARY.md`; the formal route-label split is owned by the initiation-form-route-hardening workstream and is not performed here.
+These route definitions classify the **treatment / route indication** for an item inside the Hopper Portfolio Readiness Review. They use the separate active route labels `Implementation Route` and `Support Route` in `00_system_control/CONTROLLED_VOCABULARY.md`.
 
 ### Development Epic
 

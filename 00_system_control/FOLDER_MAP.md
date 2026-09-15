@@ -32,7 +32,7 @@ Contains the cross-model entry instructions (`AGENTS.md`), deterministic authori
 Controls how the repository is organised and how AI Coworker support must behave. Includes the two-coworker client workspace and reporting protocol (`14`), client context isolation standard (`15`), interactive session protocol (`12`), initiative control record schema (`13`), router (`11`), and the handover, lifecycle, operating, knowledge-capture and vocabulary authority files. Client work must bind one private client repository before any client source is read or written.
 
 ### 01_governance_lifecycle
-Defines the governed Digital Governance / Digital Delivery lifecycle, starting with Hopper consolidation and priority screening, through route determination and initiation, into authorised mobilisation, live delivery, adoption / handover and closure. Stage 3 is governed by `12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`.
+Defines the governed Digital Governance / Digital Delivery lifecycle, starting with Hopper consolidation and priority screening, through route determination and initiation, into authorised mobilisation, live delivery, adoption / handover and closure. Stage 3 is governed by `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`.
 
 ### 02_coworker_artifact_interface
 Defines the working interface between the AI Coworker and the Digital Lead, including the single AI-readable Initiative Evidence and Decision File template (`04`), programme reporting input (`05`), Live Delivery Artefact 1 model (`06`), and Initiative Delivery Setup model and template (`07` and `08`).

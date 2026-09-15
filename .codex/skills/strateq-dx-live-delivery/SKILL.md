@@ -10,10 +10,11 @@ Use this skill as a routing and execution entry point. The repository authority 
 ## 1. Bind one client before reading sources
 
 1. Locate the public Strateq DX method repository and the requested private client repository.
-2. Read the method repository's `AGENTS.md`, then the private client repository's `AGENTS.md` and `CLIENT_BOUNDARY.md`.
-3. State the binding: Client ID; method repository and commit; private client repository; active branch; initiative or reporting path; permitted sources and destinations.
-4. Treat all other client repositories, project knowledge, attachments and threads as prohibited.
-5. Stop under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md` if the binding is missing, ambiguous or inconsistent.
+2. Read the method repository's `AGENTS.md`, then read only the proposed private client's `CLIENT_BOUNDARY.md`.
+3. Verify that the client ID, repository, AI Project/workspace, memory boundary and requested thread/path match the session. Only after that match may the private client's `AGENTS.md` or any other client file be opened.
+4. State the binding: Client ID; AI Project/workspace; memory-boundary status; method repository and commit; private client repository; active branch; initiative or reporting path; permitted sources and destinations.
+5. Treat all other client repositories, project knowledge, memories, attachments and threads as prohibited.
+6. Stop under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md` if the binding is missing, ambiguous or inconsistent.
 
 Technical access to a repository is not permission to read it.
 
@@ -23,11 +24,16 @@ Read the current versions of:
 
 - `CLAUDE.md`
 - `00_system_control/OPERATING_RULES.md`
+- `00_system_control/04_COWORKER_HANDOVER_MODEL.md`
+- `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md`
+- `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
+- `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
 - `00_system_control/11_COWORKER_ROUTER.md`
 - `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`
 - `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`
 - `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`
 - `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`
+- `00_system_control/CONTROLLED_VOCABULARY.md`
 - `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`
 - `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`
 - `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md`
@@ -35,7 +41,7 @@ Read the current versions of:
 - `02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md`
 - `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
 
-Then read the bound private client's `CLIENT_CONTEXT.md`, `SOURCE_OF_TRUTH.md`, `METHOD_BASELINE.md`, initiative home, source index, Initiative Delivery Setup, Initiative Evidence and Decision File and current PEP/control record.
+Then read the bound private client's `AGENTS.md`, `00_PROJECT_HOME.md`, `CLIENT_CONTEXT.md`, `SOURCE_OF_TRUTH.md`, `METHOD_BASELINE.md`, initiative home, source index, Initiative Delivery Setup, Initiative Evidence and Decision File and current PEP/control record.
 
 If an authority file is unavailable or conflicts with the method baseline, stop and report the exact gap.
 
@@ -106,6 +112,7 @@ Do not report Digital as budget owner when another party owns budget/cost contro
 State:
 
 - bound client and initiative;
+- bound AI Project/workspace, memory-boundary status and thread/path;
 - sources inspected and their evidence states;
 - files changed or proposed;
 - decisions confirmed and decisions still required;

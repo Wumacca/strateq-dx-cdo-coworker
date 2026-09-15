@@ -35,7 +35,7 @@ No client record is permitted in this public repository. No uncontrolled ledger 
 - Approved route
 - Priority
 
-Route labels must use the controlled labels in `00_system_control/CONTROLLED_VOCABULARY.md` (Development Route / Implementation / Support Route / TBC). This schema does not create or split route labels.
+Route labels must use the controlled labels in `00_system_control/CONTROLLED_VOCABULARY.md` (Development Route / Implementation Route / Support Route / TBC). This schema does not create or split route labels.
 
 ### 2. Lifecycle
 
@@ -143,6 +143,12 @@ Recommended relationship treatment uses the Cross-Initiative Impact Check outcom
 
 ### 10. Session control
 
+- Assigned lifecycle coworker
+- Coworker commencement status
+- Coworker commencement date
+- Bound AI Project/workspace
+- Bound thread name
+- Client-boundary gate result
 - Last governed session
 - Session type
 - Session state

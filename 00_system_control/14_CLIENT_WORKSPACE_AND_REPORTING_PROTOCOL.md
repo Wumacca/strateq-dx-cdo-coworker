@@ -8,7 +8,9 @@ This file is authoritative for client workspaces, working-authority selection, i
 
 Use one AI Project/workspace and one private repository per client. Do not place multiple clients in a shared repository, shared client project or client branch structure.
 
-The client repository must contain the controls listed in the isolation standard, including `CLIENT_BOUNDARY.md`, `CLIENT_CONTEXT.md`, `SOURCE_OF_TRUTH.md`, `METHOD_BASELINE.md`, `PUBLICATION_REGISTER.md` and root `AGENTS.md`.
+The client repository must contain the controls listed in the isolation standard, including `CLIENT_BOUNDARY.md`, `00_PROJECT_HOME.md`, `CLIENT_CONTEXT.md`, `SOURCE_OF_TRUTH.md`, `METHOD_BASELINE.md`, `PUBLICATION_REGISTER.md` and root `AGENTS.md`.
+
+The AI Project/workspace must be dedicated to one client. Its shared files and connected sources must contain only the public method repository and the bound client's permitted sources. Use project-only memory or disable memory wherever persistent memory could import another project's or client's context. Project instructions cannot compensate for a shared multi-client source or cross-project memory boundary.
 
 ## Thread model
 
@@ -55,11 +57,13 @@ For a GitHub-authority client, the private client repository is the live working
 At the start of every material client session, the Coworker must:
 
 1. bind the client and allowed repositories under the isolation standard;
-2. identify the lifecycle stage and mapped method files;
-3. inspect the initiative handover/source index and available evidence;
-4. state what is present, missing, stale, conflicting or pending confirmation;
-5. present the latest held position with its source and date;
-6. ask: **Is this still accurate? Please confirm or provide any changes since the last recorded update.**
+2. verify the active AI Project/workspace, memory boundary, thread and initiative path;
+3. identify the lifecycle stage and mapped method files;
+4. inspect the initiative handover/source index and available evidence;
+5. record or refresh Coworker commencement in the Initiative Evidence and Decision File;
+6. state what is present, missing, stale, conflicting or pending confirmation;
+7. present the latest held position with its source and date;
+8. ask: **Is this still accurate? Please confirm or provide any changes since the last recorded update.**
 
 Prior chat, project knowledge and model memory are discovery aids only. They cannot confirm current status.
 
@@ -96,6 +100,7 @@ Use the same reconciled records. Focus on outcomes, material progress, assurance
 Every material session ends with:
 
 - bound client and repository;
+- bound AI Project/workspace, memory-boundary status and thread/path;
 - confirmed changes and sources;
 - files changed or prepared;
 - decisions/evidence still missing;

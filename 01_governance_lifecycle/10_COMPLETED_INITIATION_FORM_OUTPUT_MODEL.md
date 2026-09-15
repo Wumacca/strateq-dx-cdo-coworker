@@ -4,7 +4,7 @@
 
 This file is the single authority for the formal DRB-facing approval artefact.
 
-The formal approval document produced for leadership / DRB approval is the **Completed Initiation Form**. This applies to both the Development Route (Stage 1D / Pack 1, Development Approval) and the Implementation / Support Route (full two-stage initiation).
+The formal approval document produced for leadership / DRB approval is the **Completed Initiation Form**. This applies to the Development Route (Stage 1D / Pack 1, Development Approval), Implementation Route and Support Route.
 
 Other files must hold short routing pointers to this file. They must not duplicate the full rules below.
 
@@ -54,7 +54,7 @@ The corrected Pack 1 / Stage 1D outputs are:
 
 The detailed Stage 1D rules remain governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
 
-### Implementation / Support Route or full two-stage initiation
+### Implementation Route or Support Route full two-stage initiation
 
 The equivalent formal approval output must also be called the **Completed Initiation Form**. The detailed rules remain governed by `01_governance_lifecycle/04_INITIATION_FORM_INTAKE_MODEL.md` and `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 

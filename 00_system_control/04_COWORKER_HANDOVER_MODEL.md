@@ -36,12 +36,12 @@ This coworker owns the route from Hopper to approved live job.
 It is responsible for:
 
 - Hopper clarification
-- route classification (Development Route or Implementation / Support Route)
+- route classification (Development Route, Implementation Route or Support Route)
 - Stage 1D Development Route DRB preparation and Scope Brief
 - Stage 1D process mapping capture sheet issue
 - Stage 1D pack gate and Stage 2 exception gate
 - Stage 1D closeout and handover to Live Delivery (Development Route, no Stage 2 exception)
-- Stage 1 DRB preparation (Implementation / Support Route)
+- Stage 1 DRB preparation (Implementation Route or Support Route)
 - Stage 1 process mapping capture sheet issue
 - Stage 2 initiation preparation
 - requirements list preparation
@@ -144,7 +144,7 @@ Every coworker handover must include:
 The only principal coworker handover is Hopper Lifecycle Coworker → Live Delivery Coworker, which occurs at approval to commence delivery. It takes one of these route-specific forms:
 
 - Hopper Lifecycle Stage 1D closeout to Live Delivery (Development Route, no Stage 2 exception)
-- Hopper Lifecycle Stage 2 closeout to Live Delivery (Implementation / Support Route, and Development Route where the Stage 2 exception is triggered)
+- Hopper Lifecycle Stage 2 closeout to Live Delivery (Implementation Route, Support Route, and Development Route where the Stage 2 exception is triggered)
 
 Stage 1D to Stage 2 (Development Route, exception triggered) is an internal escalation within the Hopper Lifecycle Coworker's ownership, not a coworker handover. Delivery → adoption/benefits → source-of-truth impact → closeout are internal Live Delivery stage transitions inside the same continuous initiative thread, recorded in the Initiative Evidence and Decision File; they are not coworker handovers. Programme-level artefact, strategy, reporting, approval, or maturity updates are handled through the reporting modes and the Digital Lead's governance authority, not through a coworker handover.
 

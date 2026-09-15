@@ -87,7 +87,7 @@ Use these exact labels when classifying initiative route:
 
 "Hybrid route" is not an approved route label and must not be used as an active route classification.
 
-> **Route-vocabulary split — complete.** The combined `Implementation / Support Route` label has been split into separate `Implementation Route` and `Support Route` controlled labels. `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`'s Implementation Route and Support Route closeout behaviour is no longer provisional. Any remaining reference to the combined `Implementation / Support Route` label elsewhere in this repository is a pending downstream-alignment item, not an active controlled label.
+> **Route-vocabulary split — complete.** The former combined route label has been retired. `Implementation Route` and `Support Route` are separate controlled labels, and the closeout behaviour in `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md` is authoritative.
 
 ## Stage 3 Live Delivery Labels
 

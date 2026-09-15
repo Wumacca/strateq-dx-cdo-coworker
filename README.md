@@ -6,6 +6,8 @@ This public repository is the client-agnostic authority for Strateq DX governanc
 
 Client facts, evidence, live records and branded artefacts belong in a separate private repository for each client. They must never be committed here. Client branches or folders inside this repository are not permitted isolation boundaries.
 
+Client repositories point one way to an approved method commit through their `METHOD_BASELINE.md`. This public repository must not maintain a client directory or links back to private client repositories.
+
 Mandatory standard: `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`.
 
 ## Core runtime

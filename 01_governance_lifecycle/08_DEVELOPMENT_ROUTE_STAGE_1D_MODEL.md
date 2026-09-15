@@ -10,7 +10,7 @@ Stage 2 must still be triggered where complexity, external supplier involvement,
 
 Development Route model: Stage 1D only, unless a Stage 2 exception trigger applies.
 
-Implementation / Support Route model: Stage 1 + Stage 2, governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+Implementation Route and Support Route model: Stage 1 + Stage 2, governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
 ## Route Classification
 
@@ -22,7 +22,7 @@ Before launching any session, the Coworker must classify the initiative route fr
 - enhancement to a client-owned platform
 - internally managed automation or reporting build
 
-### Implementation / Support Route examples
+### Implementation Route and Support Route examples
 
 - third-party implementation
 - supplier-led support request
@@ -254,7 +254,7 @@ Claude must not approve the development job.
 
 Claude must not invent scope, milestones, activities, developer estimates, dependencies, or technical facts.
 
-Claude must not assume the route is Implementation / Support if the Initiative Type indicates a Development Route.
+Claude must not assume the route is Implementation Route or Support Route if the Initiative Type indicates a Development Route.
 
 Claude must not assume Stage 2 is required for Development Route unless an exception trigger applies.
 

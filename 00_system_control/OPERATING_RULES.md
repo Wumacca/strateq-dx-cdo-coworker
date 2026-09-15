@@ -87,13 +87,13 @@ Hopper is light-touch priority screening.
 
 The Hopper Portfolio Readiness Review prepares the Jira Initiative View / Hopper priority view for leadership / DRB discussion. That view is the default meeting surface; a separate DRB Priority Screen document is not produced by default. The review is pre-initiation and pre-Pack 1, and is governed by `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md`. An initiative charter is a pre-initiation input tool only; it is not an Initiation Form and does not approve or commit anything. Initiation Forms, Pack 1, and Stage 1D begin only after leadership / DRB approval and an explicit per-initiative route trigger.
 
-From Hopper, approved items branch into one of two initiation routes:
+From Hopper, approved items follow one of two initiation paths across the three controlled route labels:
 
 - **Development Route → Stage 1D** is streamlined scoping and approval for an internal build or enhancement on a client-owned platform. Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`. It does not progress to Stage 2 unless a Stage 2 exception trigger is confirmed.
 
-- **Implementation / Support Route → Stage 1 + Stage 2** is formal two-stage due diligence for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+- **Implementation Route or Support Route → Stage 1 + Stage 2** is formal two-stage due diligence for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
-Initiation Form is the Stage 1 formal due diligence artefact for the Implementation / Support Route.
+Initiation Form is the Stage 1 formal due diligence artefact for the Implementation Route and Support Route.
 
 PEP / Development Execution is controlled delivery.
 

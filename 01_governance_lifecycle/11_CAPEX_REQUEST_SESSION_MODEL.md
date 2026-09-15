@@ -301,7 +301,7 @@ This strengthens, and does not replace, the existing Hopper Lifecycle Stage 1D /
 The handover checklist must include, per initiative:
 
 - initiative name / ID
-- approved route: Development Route / Implementation / Support Route / TBC
+- approved route: Development Route / Implementation Route / Support Route / TBC
 - approval basis
 - approval date and conditions
 - business justification

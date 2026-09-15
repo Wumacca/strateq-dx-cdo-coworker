@@ -6,10 +6,10 @@ This file defines the governed handoff from Hopper Priority Screen into the corr
 
 The stage gate prevents lightly screened ideas from moving into delivery without formal due diligence.
 
-From this gate, approved items branch into either:
+From this gate, approved items follow one of two initiation paths across the three controlled route labels:
 
 - **Development Route → Stage 1D** — for an internal build or enhancement on a client-owned platform. Governed by `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
-- **Implementation / Support Route → Stage 1 + Stage 2** — for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+- **Implementation Route or Support Route → Stage 1 + Stage 2** — for third-party implementations, supplier-led work, SaaS onboarding, option appraisal, or business case routes. Governed by `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
 
 ## Core Rule
 
@@ -37,7 +37,7 @@ Canonical DRB priority decision recorded
 If approved: Route Classification
 ↓
 ┌─────────────────────────────────────┬────────────────────────────────────────────────────┐
-│ Development Route                   │ Implementation / Support Route                     │
+│ Development Route                   │ Implementation Route or Support Route              │
 │ (internal build or enhancement on  │ (third-party, supplier, SaaS, option appraisal,    │
 │  a client-owned platform)           │  business case, uncertain architecture,            │
 │                                     │  material cost, supplier selection)                │
@@ -69,7 +69,7 @@ Before moving past this gate, Jira should show:
 
 - DRB priority decision
 - decision date
-- confirmed route: Development Route or Implementation / Support Route
+- confirmed route: Development Route, Implementation Route or Support Route
 - route condition, if known
 - sponsor / owner if known
 - department / digital champion if known
@@ -86,17 +86,17 @@ Do not:
 - treat unclear ownership as acceptable for progression
 - move BAU support into Stage 1D or Stage 1
 - apply Stage 1 + Stage 2 rules to a confirmed Development Route item
-- apply Stage 1D rules to a confirmed Implementation / Support Route item
+- apply Stage 1D rules to a confirmed Implementation Route or Support Route item
 
 ## AI Coworker Role
 
 AI may produce:
 
 - DRB decision summary
-- Route Classification recommendation (Development Route or Implementation / Support Route)
+- Route Classification recommendation (Development Route, Implementation Route or Support Route)
 - Jira update text
 - Stage 1D Session Start Checklist (Development Route only)
-- Initiation Form stage starter checklist (Implementation / Support Route only)
+- Initiation Form stage starter checklist (Implementation Route or Support Route only)
 - missing information list
 - department / vendor / developer question list
 
@@ -111,7 +111,7 @@ DRB priority decision recorded.
 
 Decision: [canonical DRB priority decision]
 Date: [date]
-Route: [Development Route → Stage 1D / Implementation / Support Route → Stage 1 + Stage 2 / TBC]
+Route: [Development Route → Stage 1D / Implementation Route → Stage 1 + Stage 2 / Support Route → Stage 1 + Stage 2 / TBC]
 Conditions: [conditions]
 Next stage: [next lifecycle stage / status]
 Owner / sponsor: [confirmed / TBC]
@@ -123,4 +123,4 @@ Notes: [short note]
 
 **Development Route:** The next stage begins when the item status is set to Stage 1D In Progress and the Digital Lead confirms the route. Load `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
 
-**Implementation / Support Route:** The next stage begins when the item status is changed to Initiation Form In Progress or equivalent, and the correct route is selected or prepared. Load `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+**Implementation Route or Support Route:** The next stage begins when the item status is changed to Initiation Form In Progress or equivalent, and the correct route is selected or prepared. Load `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.

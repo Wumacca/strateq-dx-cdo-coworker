@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The Initiation Form stage is the formal due diligence stage after Hopper priority approval **for the Implementation / Support Route**.
+The Initiation Form stage is the formal due diligence stage after Hopper priority approval **for the Implementation Route or Support Route**.
 
 It is used to prove that the correct delivery route has been selected before the initiative becomes live.
 
@@ -24,12 +24,12 @@ Initiation Form asks:
 
 ## Stage Position
 
-This flow applies to **Implementation / Support Route** items only.
+This flow applies to **Implementation Route or Support Route** items only.
 
 ```text
 DRB priority approval
 ↓
-Route confirmed: Implementation / Support Route
+Route confirmed: Implementation Route or Support Route
 ↓
 Initiation Form In Progress
 ↓

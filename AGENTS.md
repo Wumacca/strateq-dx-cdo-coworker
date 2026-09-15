@@ -24,11 +24,12 @@ For Live Delivery, this always includes:
 
 ## Client binding
 
-Client work is permitted only after the coworker has read the selected private client repository's `CLIENT_BOUNDARY.md` and stated the bound client ID, allowed repositories and write target. During a client session:
+Client work is permitted only after the coworker has read the selected private client repository's `CLIENT_BOUNDARY.md` and stated the bound client ID, AI Project/workspace, memory-boundary status, allowed repositories, thread/path and write target. During a client session:
 
 - this method repository is read-only;
 - exactly one private client repository is the write authority;
 - no other client source may be searched, opened, copied, compared or referenced;
+- cross-project/client memory must be disabled or project-only where the platform supports persistent memory;
 - any client mismatch, ambiguous source or unapproved repository is a stop condition.
 
 The coworker must fail closed under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`.

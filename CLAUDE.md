@@ -27,7 +27,7 @@ This orchestration pointer works with the following authority files:
 - `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
 - `01_governance_lifecycle/05_ROUTE_RULES.md`
 - `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`
-- `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` — single authority for the formal DRB-facing approval artefact. The formal approval document is the Completed Initiation Form, for both the Development Route (Stage 1D / Pack 1, Development Approval) and the Implementation / Support Route (two-stage initiation). Defines the session-opening source-document checklist, the uploaded-Initiation-Form-as-primary-source rule, the required form structure, Word / `.docx` export, and the pack-deliverable rule (do not collapse the pack into the form).
+- `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` — single authority for the formal DRB-facing approval artefact. The formal approval document is the Completed Initiation Form, for the Development Route (Stage 1D / Pack 1, Development Approval), Implementation Route and Support Route. Defines the session-opening source-document checklist, the uploaded-Initiation-Form-as-primary-source rule, the required form structure, Word / `.docx` export, and the pack-deliverable rule (do not collapse the pack into the form).
 - `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` — optional DRB meeting-support text output model. This is meeting-support / decision-support text only, produced when the Digital Lead explicitly requests it. It is not a final pack deliverable and not the formal approval artefact; the formal approval artefact is the Completed Initiation Form (`10`).
 - `01_governance_lifecycle/09_HOPPER_PORTFOLIO_READINESS_REVIEW_MODEL.md` — governing model for the Hopper Portfolio Readiness Review. This review is pre-initiation and pre-Pack 1; it prepares the Jira Initiative View / Hopper priority view for leadership / DRB discussion and does not create a separate DRB Priority Screen artefact by default. Initiation Forms, Pack 1, and Stage 1D begin only after leadership / DRB approval and an explicit route trigger.
 - `01_governance_lifecycle/11_CAPEX_REQUEST_SESSION_MODEL.md` — governing model for the Capex Request Session, a portfolio-level Hopper Portfolio Readiness mode for previous capex closeout, next capex portfolio request, evidence-safe Board narrative, and client-review Board-draft deck. The formal output is the Portfolio Capex Request Pack. It does not replace route-specific controls, Completed Initiation Forms, Stage 1D, Stage 1 / Stage 2, PEP, Live Delivery handover, or source-of-truth approval.
@@ -103,8 +103,8 @@ Once the lifecycle stage is identified from `00_system_control/05_DIGITAL_GOVERN
 | Hopper → Initiation stage gate / DRB priority | `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md`; `01_governance_lifecycle/06_DRB_BRIEF_OUTPUT_MODEL.md` (when a DRB brief is requested) |
 | Route classification | `01_governance_lifecycle/05_ROUTE_RULES.md` |
 | Stage 1D (Development Route) | `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
-| Stage 1 / Stage 2 (Implementation / Support; Dev Route Stage 2 exception) | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
-| Process mapping capture | `03_process_mapping/01_PROCESS_MAPPING_MATRIX_INPUT_RULES.md`; `02_CREATE_PROCESS_MAPPING_PACK.md`; `04_PROCESS_ARTIFACT_OUTPUT_MODEL.md`; `05_SWIMLANE_PROCESS_FLOW_STANDARD.md`; `06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md` |
+| Stage 1 / Stage 2 (Implementation Route; Support Route; Development Route Stage 2 exception) | `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`; `01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md` |
+| Process mapping capture | `03_process_mapping/01_PROCESS_MAPPING_MATRIX_INPUT_RULES.md`; `03_process_mapping/02_CREATE_PROCESS_MAPPING_PACK.md`; `03_process_mapping/04_PROCESS_ARTIFACT_OUTPUT_MODEL.md`; `03_process_mapping/05_SWIMLANE_PROCESS_FLOW_STANDARD.md`; `03_process_mapping/06_LIVE_PROCESS_MAPPING_SESSION_FACILITATOR.md` |
 | Authorised / Mobilising / Initiative Delivery Setup | `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`; `02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md`; `02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md` |
 | In Delivery / Live Delivery / Go-Live / PEP | `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`; `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md`; `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` |
 | Source-of-truth artefact control (governed mode) | `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` |
@@ -130,7 +130,7 @@ Resolve conflicts by these orders, not by judgement, reading recency, or conveni
 3. `00_system_control/OPERATING_RULES.md`
 4. `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`
 5. `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`
-6. `00_system_control/04_COWORKER_HANDOVER_MODEL.md` / `06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
+6. `00_system_control/04_COWORKER_HANDOVER_MODEL.md` / `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`
 7. `00_system_control/11_COWORKER_ROUTER.md` — subordinate to all above by its own terms
 
 **Workflow detail — what to produce and how**
@@ -161,6 +161,7 @@ Verifiability is provided by the gates that already exist in `12` — the Runtim
 
 - lifecycle stage identified (or `UNIDENTIFIED` → B5)
 - coworker jurisdiction (or `OUT OF JURISDICTION`)
+- bound AI Project/workspace, memory-boundary status, thread/path and repository allowlist
 - authority-set files accessible / missing
 - B2-mapped files loaded for the identified stage
 - current-status source resolved under B4 (Initiative Evidence and Decision File / supplied export / access gap) — **never a ledger**
@@ -169,7 +170,7 @@ Verifiability is provided by the gates that already exist in `12` — the Runtim
 
 The former standalone Claude Opus Access Confirmation Gate folds into this same gate output and is extended to **all models**, so there is one access gate, not two. `READY` is not permission to proceed; the coworker waits for the Digital Lead to confirm. This adds fields to an existing gate; it does not create a parallel protocol.
 
-**Maintenance rule.** B2 is a hard-coded list; a stale deterministic map is followed with false confidence. Any pull request that adds, renames, splits, or retires a workflow file must update the B2 map in the same commit (see `README.md`). Two pending changes will require a B2 amendment when they land: the route-vocabulary split flagged in `07`, and the future Adoption & Benefits model file noted as out of scope in `OPERATING_RULES.md`.
+**Maintenance rule.** B2 is a hard-coded list; a stale deterministic map is followed with false confidence. Any pull request that adds, renames, splits, or retires a workflow file must update the B2 map in the same commit (see `README.md`). The future Adoption & Benefits model file noted as out of scope in `00_system_control/OPERATING_RULES.md` will require a B2 amendment when it lands.
 
 ## Programme Lifecycle Authority
 

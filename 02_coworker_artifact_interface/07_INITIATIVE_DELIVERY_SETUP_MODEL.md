@@ -17,6 +17,8 @@ Establish the evidenced basis, responsibilities, controls and readiness required
 ### 1. Control header
 
 - Client ID and initiative identity
+- Assigned lifecycle Coworker, commencement status and date
+- Bound AI Project/workspace and thread name
 - Version, status, owner and review date
 - Bound private client repository and initiative path
 - Method baseline commit

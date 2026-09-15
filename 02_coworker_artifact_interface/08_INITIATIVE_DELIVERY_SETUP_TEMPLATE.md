@@ -10,6 +10,12 @@
 | Initiative ID |  |  | Missing |
 | Initiative title |  |  | Missing |
 | Delivery group |  |  | Missing |
+| Assigned lifecycle Coworker | Live Delivery Coworker | `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md` | Confirmed by method |
+| Coworker commencement status | Not started |  | Missing |
+| Coworker commencement date |  |  | Missing |
+| Bound AI Project / workspace |  |  | Missing |
+| Bound thread name |  |  | Missing |
+| Client-boundary gate result |  |  | Missing |
 | Version | Draft 0.1 |  | Draft |
 | Record owner |  |  | Missing |
 | Review date |  |  | Missing |
@@ -76,8 +82,10 @@ If authority to proceed is not evidenced, retain this record in draft and state:
 | Programme reporting |  |  |  |  | Missing |
 | Leadership reporting |  |  |  |  | Missing |
 
-**Reporting cut-off:**  
-**Position validator:**  
+**Reporting cut-off:**
+
+**Position validator:**
+
 **Escalation thresholds and route:**
 
 ## 6. Delivery-control structure
@@ -123,10 +131,13 @@ Use only these statuses: `Confirmed by evidence`, `Requires confirmation`, `Miss
 | Reporting and escalation route confirmed | Not met |  |  |  |
 | Material gaps accepted or resolved | Not met |  |  |  |
 
-**Digital Lead decision:** Pending  
-**Decision conditions:**  
-**Effective transition date:**  
-**First Artefact 1 mobilisation reference:**  
+**Digital Lead decision:** Pending
+
+**Decision conditions:**
+
+**Effective transition date:**
+
+**First Artefact 1 mobilisation reference:**
 
 This record closes only when the Digital Lead approves the transition from `Mobilising` to `In Delivery`.
 

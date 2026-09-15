@@ -7,6 +7,9 @@ This file defines the initial source-reference structure for the Strateq DX CDO 
 ## Folder Structure
 
 ```text
+AGENTS.md
+CLAUDE.md
+CHATGPT_PROJECT_INSTRUCTIONS.md
 00_system_control/
 01_governance_lifecycle/
 02_coworker_artifact_interface/
@@ -18,6 +21,10 @@ BOARD_INTERFACE/
 .codex/skills/
 docs/
 ```
+
+### Repository root
+
+Contains the cross-model entry instructions (`AGENTS.md`), deterministic authority and lifecycle map (`CLAUDE.md`), and the non-authoritative build-only ChatGPT Project description (`CHATGPT_PROJECT_INSTRUCTIONS.md`). The Project description routes users to repository authority and never replaces it.
 
 ## Folder Purposes
 

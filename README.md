@@ -42,6 +42,7 @@ The client profile names the actual delivery-control systems. Jira, SharePoint o
 
 - `AGENTS.md` — model/tool instructions and client-binding rule
 - `CLAUDE.md` — existing deterministic authority and stage map; applies to all models
+- `CHATGPT_PROJECT_INSTRUCTIONS.md` — non-authoritative, build-only Project description for the Strateq DX method workspace
 - `00_system_control/OPERATING_RULES.md`
 - `00_system_control/11_COWORKER_ROUTER.md`
 - `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`

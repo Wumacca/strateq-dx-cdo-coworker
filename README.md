@@ -40,6 +40,8 @@ The reusable runtime entry point is `.codex/skills/strateq-dx-live-delivery/`.
 
 The client profile names the actual delivery-control systems. Jira, SharePoint or any other platform is not assumed globally.
 
+A read-only display layer (for example a personal Mieruka cockpit and action log) may render live status from a derived projection of the governed records. Its specification is `02_coworker_artifact_interface/09_MIERUKA_AND_ACTION_DISPLAY_FEED_STANDARD.md`; the projection is generated from the Initiative Evidence and Decision File, holds no authority, and is never a second source of truth.
+
 ## Governing entry points
 
 - `AGENTS.md` — model/tool instructions and client-binding rule

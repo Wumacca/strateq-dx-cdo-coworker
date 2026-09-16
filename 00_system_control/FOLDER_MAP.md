@@ -13,6 +13,7 @@ CHATGPT_PROJECT_INSTRUCTIONS.md
 00_system_control/
 01_governance_lifecycle/
 02_coworker_artifact_interface/
+02_coworker_artifact_interface/blank_templates/
 03_process_mapping/
 04_intake_dispatch/
 05_source_of_truth/
@@ -36,6 +37,8 @@ Defines the governed Digital Governance / Digital Delivery lifecycle, starting w
 
 ### 02_coworker_artifact_interface
 Defines the working interface between the AI Coworker and the Digital Lead, including the single AI-readable Initiative Evidence and Decision File template (`04`), programme reporting input (`05`), Live Delivery Artefact 1 model (`06`), and Initiative Delivery Setup model and template (`07` and `08`).
+
+`blank_templates/` holds the client-agnostic binary delivery templates that the models above describe: the Strateq DX Live Delivery PEP workbook (`Strateq_DX_Live_Delivery_PEP_TEMPLATE.xlsx`) and the Digital Team Meeting Minutes document (`Digital_Team_Meeting_Minutes_TEMPLATE.docx`). These are the single canonical blank sources. Each client copies a template into its own private client repository and populates it there; the blank templates are never filled with client data in this public method repository.
 
 ### 03_process_mapping
 Defines how existing process matrices are converted into process mapping packs, Blueworks build briefs, bottleneck registers, and developer/vendor scope outputs.

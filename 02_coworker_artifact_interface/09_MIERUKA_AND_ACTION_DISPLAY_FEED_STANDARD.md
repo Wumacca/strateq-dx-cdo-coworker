@@ -139,7 +139,7 @@ Display labels and the milestone each stage represents (default spine):
     "live": {
       "label": "Live Delivery",
       "stages": [
-        { "stage": "commercial", "label": "Commercial", "milestone": "Contract signed and commercials agreed" }
+        { "stage": "commercial", "label": "Commercial", "short_label": "Comm", "milestone": "Contract signed and commercials agreed" }
       ]
     }
   },
@@ -155,7 +155,9 @@ Display labels and the milestone each stage represents (default spine):
 - One `spines.json` per client, in that client's repository. It carries no other client's configuration.
 - It must declare all three boards (`hopper`, `programme`, `live`). The `hopper` and `programme` spines reproduce the method-fixed spines in Section 5a; only `live` may differ.
 - `stage` keys are the join between configuration and feed: every `stage_vector` entry's `stage` must exist in that board's declared spine, in spine order. A `stage_vector` that does not match its board's spine is a feed defect, not a display problem to work around.
-- `label` and `milestone` are display strings only. Changing a label never changes a `stage` key; keys are stable identifiers.
+- `label`, `short_label` and `milestone` are display strings only. Changing any of them never changes a `stage` key; keys are stable identifiers.
+- **`short_label` is optional and exists because a wide board cannot show full column labels.** A matrix with eight or more stages has roughly 60-80px per column; a full label such as `Managed Services` does not fit and, left to the display, is clipped, wrapped or rotated — all of which degrade the board. `short_label` lets the client state the abbreviation it wants (6-8 characters is the practical limit), with `label` and `milestone` carried in the column tooltip.
+- **The display never invents an abbreviation.** Where `short_label` is absent the display falls back to `label` in full; if that does not fit, the column is under-configured and the remedy is to add a `short_label`, not to let the display truncate. A truncation the client did not choose is the display inventing presentation data, which Section 5c's spirit forbids as much as inventing a state.
 - `pep_types` carries the machine-readable form of the Section 5b templates, including any additional template the client profile declares.
 - Changing a spine or template is a controlled update requiring Digital Lead confirmation, and any initiative whose `stage_vector` no longer matches must be regenerated in the same controlled change.
 

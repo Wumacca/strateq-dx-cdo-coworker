@@ -32,9 +32,12 @@ The controlled architecture separates method and client records:
 - **Private client repository:** the live client working authority where the client profile selects GitHub. It contains the PEP, initiative records, working artefacts and release controls.
 - **Configured client systems:** optional status, action, evidence or publication systems named in the client profile. A platform is not assumed globally.
 - **External client store:** may be a manual publication destination without being a connected working source.
+- **Display and automation layers:** optional read-only cockpits, dashboards, boards and executing functions over the controlled records. They render and request; they hold no authority and are never a source.
 - **Coworkers:** reconcile permitted controlled sources and prepare controlled changes. They do not invent the current position or silently mutate records.
 
 There is no live per-initiative record in this public method repository. Client records are permitted only in the selected private client repository.
+
+Populated feeds, conformance fixtures, synthetic sample datasets and interface mockups are not method content either. A specification may carry an illustrative example inline, as the display feed standard does; standalone fixture, sample-data and mockup files belong in a scratch or test repository, not here.
 
 ## Update-Once Rule
 
@@ -80,6 +83,8 @@ The active governed scope includes Hopper and initiation plus Stage 3 mobilisati
 - invent missing evidence
 - bypass DRB or leadership sign-off
 - treat draft artefacts as approved records
+- author a repository change from a display or automation layer
+- apply a patch the Digital Lead has not confirmed
 
 ## Lifecycle Separation
 
@@ -115,9 +120,22 @@ Use only information from the bound client repository, sources supplied for that
 
 When a fact is missing, mark it as missing. Do not fill gaps with assumptions.
 
+## Display and Automation Layer Rule
+
+A display or automation layer over the controlled records — a cockpit, dashboard, board or executing function — reads and requests only. Separation of duties is fixed:
+
+1. the **display requests** a change;
+2. the **AI Coworker authors** it as a structured patch against the governed records;
+3. the **Digital Lead confirms** it;
+4. the **executing layer applies the confirmed patch verbatim**.
+
+A layer that infers, interprets or composes a repository change of its own has become an author and is out of bounds, as is applying a patch the Digital Lead has not confirmed. The contract — permitted operations, permitted target fields, atomicity and conflict handling — is `02_coworker_artifact_interface/09_MIERUKA_AND_ACTION_DISPLAY_FEED_STANDARD.md` Section 7a.
+
 ## Delivery-System Rule
 
 The client profile names the delivery tracking surface. Where Jira is selected, Jira-specific route files apply. Where it is not selected, the Coworker must not create Jira IDs, Jira text or Jira dependencies. For GitHub-authority live delivery, the PEP and initiative records in the private client repository provide the controlled client-side delivery view.
+
+Delivery phase and stage structures are client configuration in the same way. The method publishes a default delivery spine for board and progress views, but it is a default and not a mandate: where a client's declared delivery structure differs, that structure governs for that client. See `02_coworker_artifact_interface/09_MIERUKA_AND_ACTION_DISPLAY_FEED_STANDARD.md` Sections 5a.1 and 5a.2.
 
 ## Process-Mapping Platform Rule
 

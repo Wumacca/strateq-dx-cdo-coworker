@@ -99,7 +99,7 @@ collections have explicit meanings; neither means an inferred fact or deletion.
 | `mapping_version` | Approved status and lifecycle projection policy revision |
 | `source_manifest` | Source IDs, allowed locations, immutable revisions/hashes, source dates and release/approval evidence references; no credentials or artefact bodies |
 | `coverage` | Explicit `client` or `initiatives` scope and the exact included initiative IDs; omissions never mean removal |
-| `spines` | Versioned ordered stage definitions per board and approved route/PEP applicability rules |
+| `spines` | Versioned ordered stage profiles per board, with approved route/PEP applicability rules; each initiative references its selected profile/revision |
 | `initiatives` | Initiative projections described below |
 | `actions` | Client-scoped projections from the designated action authority |
 | `artifact_references` | Pointer-only evidence records and available download versions, with initiative links, reporting periods, immutable revisions and status |
@@ -111,7 +111,8 @@ pass the acceptance cases below before a feed is enabled.
 ## Initiative and stage projection
 
 Each initiative carries stable identity, title, initiative type, route, entry
-basis, delivery model, applicability-profile reference/revision, board, macro-stage,
+basis, delivery model, applicability-profile reference/revision, selected
+spine-profile ID/revision, board, macro-stage,
 lifecycle position, gate position, delivery owner, milestone, target finish,
 PEP reference, blockers and next control move where evidenced. Unknown optional
 values remain null with a gap reason; do not invent owners, dates or statuses.
@@ -123,12 +124,14 @@ a blanket initiative-level confirmation. Stage movements carry the approved
 decision reference. Blockers carry an ID, impact, owner or explicit owner gap,
 next action/reference and review point where known.
 
-`stage_vector` contains each configured stage once, in spine order, with:
+`stage_vector` contains each stage of the selected approved profile once, in
+that profile's spine order, with:
 
 - `stage`, resolved `applicability`, its rule/evidence basis and `state`:
   `complete`, `current`, `not_started` or `not_required`; where applicability
   remains `pending_resolution`, state is null and the UI shows To confirm;
 - separate `stage_health`, health basis, freshness and linked blocker/action IDs;
+- deliverable and acceptance-criterion references supporting that cell;
 - evidence references and a decision reference where a governed gate applies;
 - an approved non-applicability rule or explicit exception basis for `not_required`;
 - action links resolved from the canonical actions by initiative and stage.
@@ -145,6 +148,44 @@ transitions and exceptions additionally require recorded approval. Corrections
 or regressions require an explicit controlled decision, not a newer upload alone.
 
 ## Initiative-specific control applicability
+
+### Delivery definition before applicability
+
+The Coworker must first understand what the initiative is actually contracted or
+mandated to deliver. Use the confirmed delivery definition in
+`02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md` and
+`02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md`, or the
+equivalent controlled scope for the active lifecycle stage. Do not start with a
+generic implementation checklist and treat it as the initiative's scope.
+
+Resolve outcome, Digital's responsibilities, delivery approach, explicit
+exclusions, deliverables, acceptance criteria, necessary external dependencies,
+owners, acceptance authority and agreed targets/review triggers. Unknown criteria
+remain visible gaps. The confirmed profile references this controlled definition
+and the actual required gates, not just a broad initiative-type label.
+
+For an illustrative export-only initiative, the confirmed gates might be:
+
+| Possible gate | Evidence to agree for that initiative |
+|---|---|
+| Export requirements and authority agreed | Authorized scope, source, recipient, format and agreed data cut-off |
+| Extraction ready / produced | The required export, against the agreed extraction specification |
+| Export verified | Agreed completeness/integrity checks and disposition of exceptions |
+| Handover accepted | Evidence the designated recipient accepted the agreed deliverable |
+
+These are examples to tailor and confirm, not a newly mandated universal route.
+Target-system migration, data cleansing, transformation/mapping, full system
+UAT, cutover or hypercare may be N/A when excluded from the agreed scope. Export
+verification is still required where it is part of the acceptance criteria;
+marking migration N/A does not imply that the export can be unverified.
+
+An externally owned activity remains a dependency if this initiative needs it
+to deliver or obtain acceptance. Record that owner and dependency evidence
+without importing the other party's full implementation plan. The initiative's
+RAG describes its own agreed outcomes and dependencies, not the completion
+percentage or status of the entire parent programme.
+
+### Resolve applicable controls
 
 Resolve what is required before assessing completion or RAG. The same board
 column can be required for one initiative and not required for another. Its
@@ -198,6 +239,28 @@ Decision File and, for mobilisation, the applicable Initiative Delivery Setup.
 The app consumes that profile; it does not guess applicability from missing
 files, a free-text title or the selected board. Changes create a new controlled
 profile revision and preserve previously released historical snapshots.
+
+### Map actual delivery criteria to the board
+
+Bind every required delivery/acceptance criterion to an appropriate gate/cell
+and its evidence/actions in the selected stage profile. Several criteria may
+contribute to one gate, but a gate is not complete because only one criterion
+is satisfied. All mandatory criteria must be met, or any permitted conditional
+progression must carry the exact approval, outstanding obligation and review
+point. Every required criterion must remain discoverable from the matrix/drawer.
+
+Reuse a stage profile when it genuinely fits. Where a generic implementation
+spine misrepresents the work, configure an approved initiative-specific profile
+with meaningful gate names; do not label export handover as a system go-live.
+This changes the delivery display, not the governed macro-lifecycle or route.
+Group compatible profiles on a matrix and retain shared portfolio fields across
+profiles; do not force unrelated stage columns to have equivalent meanings.
+
+At each confirmed source update, reassess criterion progress, evidence, remaining
+work, blockers and dates, then produce the cell state/RAG and next action.
+Criteria changes must be controlled and versioned. Do not manufacture percentage
+complete by dividing generic stage counts, silently weaken criteria to obtain
+Green, or recreate historical reports with the latest profile.
 
 ## Mieruka cell assessment and roll-up
 
@@ -398,6 +461,7 @@ app must retain its working fixture path until the adapter is built and tested.
 | Single primary stage action reference | Retain all linked actions while selecting one primary action for display |
 | Existing records lack the complete export provenance | Add source/approval references, version checks and accepted-snapshot identity |
 | Stage cells lack a complete applicability decision and separate stage-health basis | Add the versioned initiative profile, per-control rule/evidence, explicit unresolved applicability and independent cell health |
+| Board spines are currently selected at client/board level | Resolve an initiative's approved stage-profile revision, map its deliverable/acceptance criteria and group compatible profiles without mislabelling stages |
 
 No app entity migration, source-profile change or live feed activation is authorized by
 opening this proposal. Implement and review those changes in the app workstream
@@ -413,6 +477,7 @@ existing controlled-update closeout; do not introduce another session protocol:
 | Changed position | Affected initiative/action fields and the source evidence |
 | Decision boundary | What is confirmed, proposed, approved, deferred or still missing |
 | Control applicability | Profile revision, required/N/A/unresolved controls, changed conditions and decision evidence |
+| Delivery criteria | Actual deliverables, completion/acceptance evidence, owned scope, necessary external dependencies and cell mapping |
 | Source write-back | Authority, exact revision and completed/pending status |
 | Feed handoff | Contract version, covered IDs, generated location and feed identity, or reason not generated |
 | Cockpit receipt | Accepted identity and timestamp, or pending/failed; never assumed |
@@ -462,6 +527,18 @@ Use synthetic fixtures and an isolated test destination, not real client writes:
     copying the overall initiative RAG across the row.
 23. A scope/profile change records its authority and re-evaluates applicability
     without closing actions or rewriting saved historical reports.
+24. An export-only synthetic initiative is assessed against its confirmed export
+    deliverables, checks and handover; excluded implementation activities do not
+    create false failures, missing artefacts or overdue actions.
+25. An externally owned prerequisite remains visible where needed for the
+    initiative's delivery; external ownership alone does not make it N/A.
+26. Every required acceptance criterion resolves to a suitable gate/cell and
+    source evidence; one completed criterion does not complete a multi-criterion
+    gate or imply that the parent programme has finished.
+27. Different approved delivery profiles render meaningful columns/groups;
+    export acceptance is not presented as target-system migration or go-live.
+28. Missing or changed delivery criteria require reconciliation and controlled
+    approval; they do not produce invented requirements or a silent Green result.
 
 Approval of this method proposal is separate from implementation sign-off.
 JSON Schema, contract tests, adapters, authorization and authenticated UI tests

@@ -239,6 +239,12 @@ and exception decisions. Required evidence, stage completion and stage RAG are
 assessed only after applicability. N/A is neither completion nor an accepted gap.
 This is a reference to governed configuration, not a second initiative record.
 
+That profile references the actual delivery definition: owned outcome, delivery
+approach, deliverables, acceptance criteria, explicit exclusions and necessary
+external dependencies. Retain criterion IDs and the approved stage-profile
+revision so each Mieruka cell can be traced to the work and evidence it represents.
+Initiative RAG assesses this defined work, not the entire parent programme.
+
 ## Boundary
 
 This schema adds no AI approval authority or numeric AI confidence scoring. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.

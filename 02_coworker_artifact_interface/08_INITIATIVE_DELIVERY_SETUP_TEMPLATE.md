@@ -96,6 +96,37 @@ If authority to proceed is not evidenced, retain this record in draft and state:
 
 ## 6. Delivery-control structure
 
+### Actual delivery definition
+
+Complete from the agreed scope and evidence before treating generic control
+areas below as delivery requirements. Rows are prompts to assess applicability,
+not a requirement to perform a full implementation on every initiative.
+
+| Delivery definition | Confirmed position / source |
+|---|---|
+| Outcome this initiative is responsible for | |
+| Digital's delivery and assurance responsibilities | |
+| Other parties' responsibilities and necessary dependencies | |
+| Explicit exclusions from this initiative | |
+| Delivery approach and actual completion point | |
+| Acceptance authority and criteria baseline reference | |
+| Control-applicability and board-profile reference/revision, where configured | |
+
+For each agreed deliverable, complete or reference the following in the existing
+PEP/control record; do not duplicate its detailed plan:
+
+| Deliverable ID / output | Acceptance criterion ID / definition of done | Owner / acceptance authority | Target / trigger | Evidence / source | Applicable gate / Mieruka cell, if enabled |
+|---|---|---|---|---|---|
+| | | | | | |
+
+If requirements are unresolved, record the question, owner and affected control.
+Separate genuinely non-applicable work from externally owned dependencies.
+An export-only initiative may end at accepted export handover; migration,
+cleansing, mapping and cutover are not implied by its parent programme's scope.
+Export completeness/integrity checks still follow the agreed acceptance criteria.
+
+### Applicable control areas
+
 | Control area | Required client control / milestone | Completion criteria | Owner | Evidence required | Status |
 |---|---|---|---|---|---|
 | Scope / requirements |  |  |  |  | Missing |
@@ -138,6 +169,14 @@ Use only these statuses: `Confirmed by evidence`, `Requires confirmation`, `Miss
 | Material gaps accepted or resolved | Not met |  |  |  |
 
 **Digital Lead decision:** Pending
+
+Confirm that the delivery definition, exclusions, acceptance criteria and actual
+gate profile match this initiative's responsibilities before approving readiness.
+Any unresolved criteria or accepted gaps retain their owner and review point.
+Where system go-live is outside the agreed scope, its specific authority/control
+can be N/A under the confirmed profile. The authority to accept this initiative's
+actual deliverable must still be identified; accepted export handover is not a
+claim that a target system or the parent programme is live.
 
 **Decision conditions:**
 

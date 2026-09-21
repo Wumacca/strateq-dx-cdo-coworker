@@ -38,6 +38,11 @@ Defines the governed Digital Governance / Digital Delivery lifecycle, starting w
 ### 02_coworker_artifact_interface
 Defines the working interface between the AI Coworker and the Digital Lead, including the single AI-readable Initiative Evidence and Decision File template (`04`), programme reporting input (`05`), Live Delivery Artefact 1 model (`06`), and Initiative Delivery Setup model and template (`07` and `08`).
 
+`09_COCKPIT_FEED_CONTRACT.md` is the approved versioned cockpit projection
+specification. Its client-adoption and activation gates preserve client isolation,
+source-of-truth ownership and human-approved stage progression. It does not
+introduce a live feed, a second initiative record or an additional coworker.
+
 `blank_templates/` holds the client-agnostic binary delivery templates that the models above describe: the Strateq DX Live Delivery PEP workbook (`Strateq_DX_Live_Delivery_PEP_TEMPLATE.xlsx`) and the Digital Team Meeting Minutes document (`Digital_Team_Meeting_Minutes_TEMPLATE.docx`). These are the single canonical blank sources. Each client copies a template into its own private client repository and populates it there; the blank templates are never filled with client data in this public method repository.
 
 ### 03_process_mapping

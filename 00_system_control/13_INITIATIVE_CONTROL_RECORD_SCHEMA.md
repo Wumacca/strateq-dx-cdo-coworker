@@ -221,6 +221,30 @@ Every governed-session closeout must propose, as recommendations for Digital Lea
 
 The Coworker must not treat the Initiative Evidence and Decision File as current where the confirmation-first status rule has not been satisfied or its freshness requires revalidation. Its authority is defined by the bound client's `SOURCE_OF_TRUTH.md`.
 
+## Cockpit projection
+
+`02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` defines
+how this record may feed a personal cockpit after client-baseline adoption and client-profile
+activation gates are satisfied. The projection preserves field-level evidence,
+confirmation and freshness; it does not replace this schema or the single
+Initiative Evidence and Decision File. Export metadata is generated, not a new
+manually maintained initiative register. A display RAG must not collapse stage
+approval, closure, blockers or pending confirmation into one status.
+
+For an activated feed profile, carry the reference and revision of the approved
+initiative-specific control-applicability profile. It resolves initiative type,
+route, entry authority, delivery model, scope and client requirements into
+required, not-required or unresolved controls, retaining rule/evidence references
+and exception decisions. Required evidence, stage completion and stage RAG are
+assessed only after applicability. N/A is neither completion nor an accepted gap.
+This is a reference to governed configuration, not a second initiative record.
+
+That profile references the actual delivery definition: owned outcome, delivery
+approach, deliverables, acceptance criteria, explicit exclusions and necessary
+external dependencies. Retain criterion IDs and the approved stage-profile
+revision so each Mieruka cell can be traced to the work and evidence it represents.
+Initiative RAG assesses this defined work, not the entire parent programme.
+
 ## Boundary
 
 This schema adds no AI approval authority or numeric AI confidence scoring. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.

@@ -107,6 +107,16 @@ No material fact may remain only in a chat, a reporting thread, a previous repor
 
 Required external physical write-backs are prepared as recommendations labelled `Recommended update — requires Digital Lead approval and physical update in the client system.` A write-back is complete only when the Digital Lead explicitly confirms it occurred or an approved integration provides verifiable evidence.
 
+### Optional cockpit feed closeout
+
+Where a released and client-approved cockpit export profile is active, include
+the feed handoff and receipt in the existing controlled-update closeout under
+`02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md`. Identify the approved
+source revision, covered records and accepted feed identity, or state what is
+pending, deferred or failed. An export or cockpit refresh must not be claimed when the
+required integration has not run. This is generated reporting from the same
+controlled records, not a parallel manual register or additional approval power.
+
 ## Confirmation versus file-update approval
 
 Digital Lead confirmation and controlled-file update approval are distinct:

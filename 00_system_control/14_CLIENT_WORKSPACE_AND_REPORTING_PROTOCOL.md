@@ -95,6 +95,27 @@ Cover current position, movement, next control move, next-period lookahead, RAID
 
 Use the same reconciled records. Focus on outcomes, material progress, assurance, risk, decision/escalation, evidenced financial/benefit/adoption significance and the next leadership action. The report never becomes a parallel source of truth.
 
+## Optional cockpit export profile
+
+The proposed `02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` governs
+the interface design for a generated personal-cockpit projection. It does not
+enable exports by default. After method release, the client profile must approve
+the destination, permitted summary fields, source authorities, action edit route,
+mapping version and freshness policy before implementation is activated.
+
+The cockpit must not become a second independently maintained initiative or
+client-action authority. A source-backed edit follows the existing controlled
+update route and is displayed as synchronized only after verified acknowledgment.
+Personal actions remain separate from client feeds. Any combined client-summary
+view requires explicit export permissions and an approved consultant-view policy;
+this section does not relax single-client AI sessions or the isolation standard.
+
+Working artefact updates are supplied in the bound AI initiative chat, not
+uploaded into the cockpit. The cockpit's Artefacts feature is a read-only
+initiative/period/version catalogue for already-produced files, including PEPs
+and initiative-level executive and leadership reports. Historical downloads
+preserve the selected released file; they do not regenerate it from current data.
+
 ## Session closeout
 
 Every material session ends with:

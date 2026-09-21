@@ -157,6 +157,12 @@ Include, where relevant:
 
 The Coworker may prepare an approved repository branch. The Digital Lead approves merge/release and performs or confirms external publication.
 
+For an activated cockpit export profile only, include generated-feed handoff and
+verified receipt in the session closeout under
+`02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md`. Reference the export
+and acknowledgment rather than copying its data into a second status table.
+Where the integration is absent, state `Not implemented`; do not claim a sync.
+
 ## 11. Reporting extract
 
 Use only confirmed information.

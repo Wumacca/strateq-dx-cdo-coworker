@@ -51,6 +51,19 @@ The client profile names the actual delivery-control systems. Jira, SharePoint o
 - `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`
 - `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`
 
+## Cockpit feed proposal
+
+`02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` proposes the versioned
+interface between approved client records and the personal cockpit. It separates
+stage approval, delivery health, blockers, action status and freshness. It is a
+review draft, not a live integration: client baseline/profile approval, executable
+schema, adapters and isolated tests are required before activation. Generated
+feeds are projections, never another manually maintained source of truth.
+Working-file uploads remain in the AI initiative chat. The proposed Artefacts
+feature selects initiative, artefact/report and reporting week for downloads of
+saved versions, including historical PEPs and initiative-level executive and
+leadership reports; it does not import or regenerate files.
+
 ## File-map maintenance
 
 Any pull request that adds, renames, splits or retires a governance file must update `CLAUDE.md` B2, `00_system_control/FOLDER_MAP.md` and this README in the same commit.

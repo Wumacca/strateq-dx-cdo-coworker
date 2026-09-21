@@ -221,6 +221,16 @@ Every governed-session closeout must propose, as recommendations for Digital Lea
 
 The Coworker must not treat the Initiative Evidence and Decision File as current where the confirmation-first status rule has not been satisfied or its freshness requires revalidation. Its authority is defined by the bound client's `SOURCE_OF_TRUTH.md`.
 
+## Cockpit projection
+
+The proposed `02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` defines
+how this record may feed a personal cockpit after its release and client-profile
+activation gates are satisfied. The projection preserves field-level evidence,
+confirmation and freshness; it does not replace this schema or the single
+Initiative Evidence and Decision File. Export metadata is generated, not a new
+manually maintained initiative register. A display RAG must not collapse stage
+approval, closure, blockers or pending confirmation into one status.
+
 ## Boundary
 
 This schema adds no AI approval authority or numeric AI confidence scoring. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.

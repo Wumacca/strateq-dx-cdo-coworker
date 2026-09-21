@@ -112,6 +112,7 @@ Once the lifecycle stage is identified from `00_system_control/05_DIGITAL_GOVERN
 | Any session producing Jira text | `04_intake_dispatch/02_JIRA_FIELD_LENGTH_RULES.md` |
 | Any stage closeout / coworker handover | `00_system_control/04_COWORKER_HANDOVER_MODEL.md`; `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md` |
 | Any client session / initiative continuity / current status | `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`; `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`; `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`; `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` |
+| Cockpit feed design / approved client export profile | `02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md`; `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`; `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`; `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`; `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`. Contract adoption requires its release and activation gates; this row does not authorize live export. |
 | Board / leadership reporting interface | `BOARD_INTERFACE/BOARD_REPO_INDEX.md`; `docs/presentation-standards/communication-and-framing-standard.md` where present |
 | **Stage cannot be identified** | Load nothing further. Apply B5. |
 

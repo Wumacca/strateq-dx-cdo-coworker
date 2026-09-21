@@ -32,10 +32,11 @@ When the Digital Lead uploads or updates an artefact (for example revised meetin
 
 ## Feed artefacts
 
-Three artefacts make up the feed, all held in the bound private client repository:
+Four artefacts make up the feed, all held in the bound private client repository:
 
 | Artefact | Location (private client repo) | Nature | Renders |
 |---|---|---|---|
+| `spines.json` | client-repo root (or the path named in the client profile) | **configuration** — the client's board spines and `pep_type` templates (Section 5a.2) | the board columns |
 | Initiative display front-matter | header block carried on each Initiative Evidence and Decision File | authored-with-record, confirmed values only | one Mieruka row |
 | `portfolio.json` | client-repo root (or the path named in the client profile) | **generated** roll-up of all initiative front-matter for that client | the Mieruka boards |
 | `actions.yaml` | client-repo root (or the path named in the client profile) | governed action projection / working action log | the action log |
@@ -104,9 +105,13 @@ Each initiative declares exactly one `board`. An initiative may move between boa
 
 The `hopper` and `programme` spines are derived from `00_system_control/05_DIGITAL_GOVERNANCE_PROGRAMME_LIFECYCLE.md` and the controlled Stage 3 labels, and are method-fixed.
 
+The spine a display renders is always read from the client's `spines.json` (Section 5a.2), never hard-coded into the display. The table above is the method default that a client's configuration reproduces or, for `live`, may override.
+
 ### Section 5a.1 — The live delivery spine is a default, not a mandate
 
-The `live` spine above is the **default reference delivery spine**. Where the bound client profile names a different delivery phase/milestone structure, that structure governs for that client and the client's own spine is declared in its `SOURCE_OF_TRUTH.md`. This standard does not impose a delivery methodology; it requires only that whatever spine a client uses is **fixed for the board** and declared, so the matrix stays comparable.
+The `live` spine above is the **default reference delivery spine**. Where the bound client profile names a different delivery phase/milestone structure, that structure governs for that client. The client's own spine is declared in its `SOURCE_OF_TRUTH.md` as the governed statement of record, and expressed machine-readably in that client's `spines.json` (Section 5a.2) for the display to read. Where the two disagree, `SOURCE_OF_TRUTH.md` governs and the conflict is surfaced to the Digital Lead.
+
+This standard does not impose a delivery methodology; it requires only that whatever spine a client uses is **fixed for the board**, declared, and machine-readable, so the matrix stays comparable.
 
 Display labels and the milestone each stage represents (default spine):
 
@@ -123,11 +128,42 @@ Display labels and the milestone each stage represents (default spine):
 | `hypercare` | Hypercare | Hypercare exit / transition to BAU |
 | `managed_svc` | Managed Services | Managed services operating model agreed |
 
+### Section 5a.2 — `spines.json` (the client's spine and template configuration)
+
+`spines.json` is the canonical machine-readable configuration for one client's board columns and `pep_type` templates. It is **configuration, not a projection**: it is authored alongside the client's declared method position, changes rarely, and is not regenerated at closeout like `portfolio.json`.
+
+```json
+{
+  "client_id": "DEMO-CLIENT",
+  "boards": {
+    "live": {
+      "label": "Live Delivery",
+      "stages": [
+        { "stage": "commercial", "label": "Commercial", "milestone": "Contract signed and commercials agreed" }
+      ]
+    }
+  },
+  "pep_types": {
+    "Fresh implementation": { "not_required": [] },
+    "Support selection and due diligence": { "not_required": ["integrations", "uat_env"] }
+  }
+}
+```
+
+**Rules.**
+
+- One `spines.json` per client, in that client's repository. It carries no other client's configuration.
+- It must declare all three boards (`hopper`, `programme`, `live`). The `hopper` and `programme` spines reproduce the method-fixed spines in Section 5a; only `live` may differ.
+- `stage` keys are the join between configuration and feed: every `stage_vector` entry's `stage` must exist in that board's declared spine, in spine order. A `stage_vector` that does not match its board's spine is a feed defect, not a display problem to work around.
+- `label` and `milestone` are display strings only. Changing a label never changes a `stage` key; keys are stable identifiers.
+- `pep_types` carries the machine-readable form of the Section 5b templates, including any additional template the client profile declares.
+- Changing a spine or template is a controlled update requiring Digital Lead confirmation, and any initiative whose `stage_vector` no longer matches must be regenerated in the same controlled change.
+
 ## Section 5b — `pep_type` template registry
 
 Initiatives on the `live` board differ in delivery shape. The spine stays fixed; the **`pep_type` template** declares which stages that shape actually uses. Stages a template does not use are projected as `not_required` — the black cell — so heterogeneous delivery types render on one consistent grid without widening it.
 
-Method-default templates (client-agnostic; a client profile may declare additional templates):
+Method-default templates (client-agnostic; a client profile may declare additional templates). The machine-readable form of these templates, for the display to read, is the `pep_types` block of that client's `spines.json` (Section 5a.2):
 
 | `pep_type` | Typical shape | Stages not used (default) |
 |---|---|---|
@@ -180,7 +216,7 @@ A generated roll-up for one client. Structure:
   "client_id": "DEMO-CLIENT",
   "feed_generated_at": "2026-09-16T00:00:00Z",
   "feed_source": "Initiative Evidence and Decision Files (schema 13); generated projection — not a source of truth",
-  "spines": { "note": "the board spines this feed was generated against (Section 5a); the client's own live spine where declared" },
+  "spines_ref": "spines.json",
   "initiatives": [
     { "...": "one object per initiative, exactly the front-matter fields in Section 5" }
   ]

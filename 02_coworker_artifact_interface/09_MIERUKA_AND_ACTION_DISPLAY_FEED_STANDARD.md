@@ -20,7 +20,7 @@ Give the Digital Lead a single visual cockpit — portfolio Mieruka, action mana
 
 1. **No second source of truth.** The feed never becomes a parallel initiative record, action register, or programme-memory ledger. It is a projection of the Initiative Evidence and Decision File and the governed action position. Schema `13` permits exactly one AI-readable per-initiative record; this standard does not create another.
 2. **The feed lives in the bound private client repository**, alongside the live records it projects — never in this public method repository, and never in a location that mixes clients.
-3. **One client per feed.** Under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md` there is no stored file that aggregates more than one client. A consultant's multi-client "desktop" view is composed **at display time** by the app reading each separately-bound client repository's own feed; it is never a combined file written into any repository. A display-layer cache is permitted only if partitioned per client, rebuildable from the repository, and never treated as authority.
+3. **One client per feed.** Under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md` there is no stored file that aggregates more than one client. A consultant's multi-client "desktop" view is composed **at display time** by the app reading each separately-bound client repository's own feed; it is never a combined file written into any repository. A display-layer cache is permitted only if partitioned per client, rebuildable from the repository, and never treated as authority. A cache may hold display fields only: artefact and PEP **bodies never enter it**. `artefacts[].ref` and `linked_pep` are pointers resolved against the repository when opened, so artefact content does not transit or rest in the display layer.
 4. **Confirmation-first is carried into the feed, not bypassed by it.** Every projected position carries its source, source date, Digital Lead confirmation status and freshness status. Positions that are `Pending confirmation`, `Stale`, `Revalidation due` or `Superseded` must be rendered as visibly flagged on the board itself, never as confirmed-current.
 5. **The feed invents nothing.** Every value is either copied from a confirmed governed field or is a mechanical roll-up (for example an open-action count or a stage-cell state) of governed fields. No invented costs, benefits, risks, owners, dates, health ratings, or scores. Delivery health and priority are copied confirmed field values, not AI calculations.
 6. **The feed is a controlled write-back, not an auto-update.** It is (re)generated at governed-session closeout under `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, proposed as a controlled update recommendation, and only written after Digital Lead approval. It is never silently mutated from ingested inputs.
@@ -223,6 +223,8 @@ A generated roll-up for one client. Structure:
 }
 ```
 
+**Point-in-time, and where history lives.** `portfolio.json` is a point-in-time projection: it is regenerated and overwritten, and carries no time series. It must not be extended into one, and no history table or snapshot store may be created alongside it — that would be a second source. Where a trend view is needed (action burndown, time-in-stage, "what is stalled"), it is derived from the **version history of `portfolio.json` in the client repository itself**, which already preserves every prior generation. History is read from the repository, never accumulated in the feed or the display layer.
+
 The display renders one matrix per `board`, rows filtered by `board`, columns from that board's spine, and one cell per `stage_vector` entry. It surfaces `current_blockers`, `open_actions_count`, `needs_action` cells, and flagged `confirmation_status` / `freshness`. `portfolio.json` contains exactly one client's initiatives; cross-client composition is display-time only.
 
 ## Section 7 — `actions.yaml` (the action log)
@@ -342,6 +344,7 @@ The request carries **no proposed edits** — only the fact of closure and what 
 - **Confirm-first is the default.** A patch applies only on explicit Digital Lead confirmation. A client may be switched to auto-apply for `action_closure` only, by explicit Digital Lead instruction recorded in that client's profile; external write-backs remain recommendations regardless.
 - **Confirmation fields move with the change.** Any field a patch alters has its `confirmation_status` and `last_confirmed_date` updated to reflect the confirmation event.
 - **The feed is regenerated after apply**, so the display re-projects the new confirmed position. The display does not patch its own cache into agreement.
+- **Only this contract is a permitted path to a governed change.** A display platform's own built-in model or in-app AI feature (an `InvokeLLM`-style convenience call) is not an AI Coworker under this standard: it does not author against the loaded authority files and does not return a validated patch. It may be used for non-governed convenience only — never to originate, approve or apply a change to a governed record.
 
 ### 7a.4 Permitted target sets
 

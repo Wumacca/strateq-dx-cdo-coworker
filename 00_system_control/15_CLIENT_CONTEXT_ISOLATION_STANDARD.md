@@ -93,6 +93,8 @@ Each private client repository must contain:
 
 `00_PROJECT_HOME.md` must state the exact AI Project/workspace name, purpose and client boundary, permitted shared sources, thread naming convention, live working authority and output locations. It is navigation only and must not become a parallel source of initiative status.
 
+`SOURCE_OF_TRUTH.md` must additionally name every **third-party processing location** where that client's content may rest or transit outside the client repository and the approved AI workspace — for example a hosted dashboard, display cache, automation platform or executing function. For each, it states what content may reach it, the retention and deletion position, and the Digital Lead's approval. Technical capability is not approval: a platform not named here is not a permitted processing location for that client, and a display or automation layer must hold display fields only unless the entry expressly permits more.
+
 ## Publication boundary
 
 An external client store such as SharePoint may be a manual publication destination without being a connected working source. The client repository remains the working authority until the client profile explicitly changes it. A publication is recorded only after the Digital Lead confirms the upload.

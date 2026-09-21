@@ -51,18 +51,25 @@ The client profile names the actual delivery-control systems. Jira, SharePoint o
 - `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`
 - `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`
 
-## Cockpit feed proposal
+## Cockpit feed contract
 
-`02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` proposes the versioned
+`02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` defines the versioned
 interface between approved client records and the personal cockpit. It separates
 stage approval, delivery health, blockers, action status and freshness. It is a
-review draft, not a live integration: client baseline/profile approval, executable
+released method specification, not a live integration: client baseline/profile approval, executable
 schema, adapters and isolated tests are required before activation. Generated
 feeds are projections, never another manually maintained source of truth.
-Working-file uploads remain in the AI initiative chat. The proposed Artefacts
+Working-file uploads remain in the AI initiative chat. The specified Artefacts
 feature selects initiative, artefact/report and reporting week for downloads of
 saved versions, including historical PEPs and initiative-level executive and
 leadership reports; it does not import or regenerate files.
+
+The Initiative Delivery Setup model and template (`07` and `08`) require the
+Coworker to establish each initiative's actual outcome, owned scope, exclusions,
+deliverables, acceptance criteria and external dependencies before choosing
+gates. Mieruka applicability and RAG follow that delivery definition. Existing
+client workspaces adopt these rules through a controlled `METHOD_BASELINE.md`
+update; this release does not rewrite their current records or enable a feed.
 
 ## File-map maintenance
 

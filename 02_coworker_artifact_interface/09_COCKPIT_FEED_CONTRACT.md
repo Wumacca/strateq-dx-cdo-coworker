@@ -2,13 +2,14 @@
 
 ## Status and scope
 
-**Proposed version:** `1.0.0`. **Release status:** Draft for Digital Lead review.
+**Contract version:** `1.0.0`. **Status:** Approved method specification for implementation; integration not activated.
 
 This is an interface specification, not an implemented exporter, JSON Schema,
-connector or approval to change live client records. It
-does not activate a cockpit integration. Adoption requires an approved method
-release, a pinned client method baseline, a client export profile and a tested
-consumer. Existing client work continues under its approved baseline.
+connector or approval to change live client records. The controlled merge
+releases this method specification; it does not activate a cockpit integration.
+Client adoption requires a controlled update to the pinned method baseline,
+an approved client export profile and a tested consumer. Existing client work
+continues under its approved baseline until that adoption is completed.
 
 The contract describes a generated, machine-readable projection of the bound
 client's controlled records for the consultant's personal cockpit. It creates
@@ -62,7 +63,7 @@ private authority. No global directory of client repositories is added here.
 Each export and AI job binds exactly one client. An all-client cockpit view needs
 explicit authorization for the selected summaries from each client profile and
 an approved consultant-view policy before real client data is enabled. This
-proposal does not grant that exception to the isolation standard. Such a view
+contract does not grant that exception to the isolation standard. Such a view
 does not permit an AI job to load several clients' evidence or prompts together.
 Personal actions are held separately and are never inserted into a client feed.
 
@@ -86,7 +87,7 @@ Digital Lead-confirmed position in the controlled working authority.
 
 ## Feed envelope
 
-The proposed JSON envelope contains these required fields. Null and empty
+The JSON envelope must contain these required fields. Null and empty
 collections have explicit meanings; neither means an inferred fact or deletion.
 
 | Field | Contract |
@@ -104,8 +105,8 @@ collections have explicit meanings; neither means an inferred fact or deletion.
 | `actions` | Client-scoped projections from the designated action authority |
 | `artifact_references` | Pointer-only evidence records and available download versions, with initiative links, reporting periods, immutable revisions and status |
 
-The executable JSON Schema and consumer adapter are subsequent implementation
-work after this proposal is approved. They must encode this specification and
+The executable JSON Schema and consumer adapter remain subsequent implementation
+work. They must encode this specification and
 pass the acceptance cases below before a feed is enabled.
 
 ## Initiative and stage projection
@@ -302,9 +303,11 @@ Retain the source's original `source_health` label and evidence. Project a
 separate `delivery_health`: `Green`, `Amber`, `Red`, `Not applicable` or null.
 Null means unassessed/unconfirmed, not Green and not Not applicable.
 
-The following mapping is proposed for approval, not an existing automatic rule:
+The following mapping defines the contract treatment. It must be implemented
+and adopted in the client mapping profile before use; it is not an active rule
+in the current app:
 
-| Source position | Proposed treatment |
+| Source position | Contract treatment |
 |---|---|
 | Confirmed `On Track` | Green, with source/rationale and current confirmation |
 | Confirmed `At Risk` | Amber, with source/rationale and current confirmation |
@@ -449,7 +452,7 @@ These internal snapshot controls do not authorize artefact imports or uploads.
 
 ## Compatibility with the existing cockpit
 
-This proposal is not a drop-in replacement for the current fixture feed. The
+This contract is not a drop-in replacement for the current fixture feed. The
 app must retain its working fixture path until the adapter is built and tested.
 
 | Current limitation | Required consumer work before activation |
@@ -463,9 +466,10 @@ app must retain its working fixture path until the adapter is built and tested.
 | Stage cells lack a complete applicability decision and separate stage-health basis | Add the versioned initiative profile, per-control rule/evidence, explicit unresolved applicability and independent cell health |
 | Board spines are currently selected at client/board level | Resolve an initiative's approved stage-profile revision, map its deliverable/acceptance criteria and group compatible profiles without mislabelling stages |
 
-No app entity migration, source-profile change or live feed activation is authorized by
-opening this proposal. Implement and review those changes in the app workstream
-after method approval; report schema, contract and browser tests separately.
+Releasing this method specification does not itself authorize an app entity
+migration, client source-profile change or live feed activation. Implement and
+review the consumer changes in the app workstream, and adopt client profiles
+through their controlled route. Report schema, contract and browser tests separately.
 
 ## Coworker closeout addition
 
@@ -540,6 +544,6 @@ Use synthetic fixtures and an isolated test destination, not real client writes:
 28. Missing or changed delivery criteria require reconciliation and controlled
     approval; they do not produce invented requirements or a silent Green result.
 
-Approval of this method proposal is separate from implementation sign-off.
+Approval of this method specification is separate from implementation sign-off.
 JSON Schema, contract tests, adapters, authorization and authenticated UI tests
 must supply runtime evidence before any real feed or download integration is enabled.

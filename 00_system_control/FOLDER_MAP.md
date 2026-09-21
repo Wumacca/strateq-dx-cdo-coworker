@@ -38,8 +38,8 @@ Defines the governed Digital Governance / Digital Delivery lifecycle, starting w
 ### 02_coworker_artifact_interface
 Defines the working interface between the AI Coworker and the Digital Lead, including the single AI-readable Initiative Evidence and Decision File template (`04`), programme reporting input (`05`), Live Delivery Artefact 1 model (`06`), and Initiative Delivery Setup model and template (`07` and `08`).
 
-`09_COCKPIT_FEED_CONTRACT.md` is the proposed versioned cockpit projection
-interface. Its approval and activation gates preserve client isolation,
+`09_COCKPIT_FEED_CONTRACT.md` is the approved versioned cockpit projection
+specification. Its client-adoption and activation gates preserve client isolation,
 source-of-truth ownership and human-approved stage progression. It does not
 introduce a live feed, a second initiative record or an additional coworker.
 

@@ -223,8 +223,8 @@ The Coworker must not treat the Initiative Evidence and Decision File as current
 
 ## Cockpit projection
 
-The proposed `02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` defines
-how this record may feed a personal cockpit after its release and client-profile
+`02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` defines
+how this record may feed a personal cockpit after client-baseline adoption and client-profile
 activation gates are satisfied. The projection preserves field-level evidence,
 confirmation and freshness; it does not replace this schema or the single
 Initiative Evidence and Decision File. Export metadata is generated, not a new

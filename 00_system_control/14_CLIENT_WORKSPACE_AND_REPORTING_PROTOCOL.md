@@ -97,9 +97,9 @@ Use the same reconciled records. Focus on outcomes, material progress, assurance
 
 ## Optional cockpit export profile
 
-The proposed `02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` governs
-the interface design for a generated personal-cockpit projection. It does not
-enable exports by default. After method release, the client profile must approve
+`02_coworker_artifact_interface/09_COCKPIT_FEED_CONTRACT.md` governs
+the interface specification for a generated personal-cockpit projection. It does not
+enable exports by default. After controlled adoption of the method baseline, the client profile must approve
 the destination, permitted summary fields, source authorities, action edit route,
 mapping version and freshness policy before implementation is activated.
 

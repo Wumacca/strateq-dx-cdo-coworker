@@ -231,6 +231,14 @@ Initiative Evidence and Decision File. Export metadata is generated, not a new
 manually maintained initiative register. A display RAG must not collapse stage
 approval, closure, blockers or pending confirmation into one status.
 
+For an activated feed profile, carry the reference and revision of the approved
+initiative-specific control-applicability profile. It resolves initiative type,
+route, entry authority, delivery model, scope and client requirements into
+required, not-required or unresolved controls, retaining rule/evidence references
+and exception decisions. Required evidence, stage completion and stage RAG are
+assessed only after applicability. N/A is neither completion nor an accepted gap.
+This is a reference to governed configuration, not a second initiative record.
+
 ## Boundary
 
 This schema adds no AI approval authority or numeric AI confidence scoring. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.

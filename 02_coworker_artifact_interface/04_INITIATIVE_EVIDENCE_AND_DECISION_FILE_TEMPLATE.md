@@ -163,6 +163,12 @@ verified receipt in the session closeout under
 and acknowledgment rather than copying its data into a second status table.
 Where the integration is absent, state `Not implemented`; do not claim a sync.
 
+The closeout also identifies the confirmed control-applicability profile and
+revision, any required/N/A/unresolved control changes, and the supporting rule
+or decision. Link to the applicable setup/profile rather than duplicating it.
+An enterprise mandate may replace the Initiation Form as the entry basis where
+the approved profile permits; it does not remove authority-to-proceed checks.
+
 ## 11. Reporting extract
 
 Use only confirmed information.

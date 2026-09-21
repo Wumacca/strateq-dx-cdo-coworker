@@ -110,7 +110,8 @@ pass the acceptance cases below before a feed is enabled.
 
 ## Initiative and stage projection
 
-Each initiative carries stable identity, title, route, board, macro-stage,
+Each initiative carries stable identity, title, initiative type, route, entry
+basis, delivery model, applicability-profile reference/revision, board, macro-stage,
 lifecycle position, gate position, delivery owner, milestone, target finish,
 PEP reference, blockers and next control move where evidenced. Unknown optional
 values remain null with a gap reason; do not invent owners, dates or statuses.
@@ -124,9 +125,12 @@ next action/reference and review point where known.
 
 `stage_vector` contains each configured stage once, in spine order, with:
 
-- `stage` and `state`: `complete`, `current`, `not_started` or `not_required`;
+- `stage`, resolved `applicability`, its rule/evidence basis and `state`:
+  `complete`, `current`, `not_started` or `not_required`; where applicability
+  remains `pending_resolution`, state is null and the UI shows To confirm;
+- separate `stage_health`, health basis, freshness and linked blocker/action IDs;
 - evidence references and a decision reference where a governed gate applies;
-- an explicit approved exemption basis for `not_required`;
+- an approved non-applicability rule or explicit exception basis for `not_required`;
 - action links resolved from the canonical actions by initiative and stage.
 
 There can be several actions for one stage. A UI `action_ref` may select a primary
@@ -137,8 +141,97 @@ Board placement and stage cells are display projections, not new governance
 stages. Macro-stages, route-specific gates and delivery milestones remain
 distinct. No date, RAG colour, action count, file upload or vendor percentage
 alone advances a stage. Completion requires the applicable evidence; governed
-transitions and exemptions additionally require recorded approval. Corrections
+transitions and exceptions additionally require recorded approval. Corrections
 or regressions require an explicit controlled decision, not a newer upload alone.
+
+## Initiative-specific control applicability
+
+Resolve what is required before assessing completion or RAG. The same board
+column can be required for one initiative and not required for another. Its
+absence must not create a false overdue action, blocker or Red assessment.
+
+The applicability profile uses independent dimensions, not a single type label:
+
+- initiative type and scope;
+- approved route and route-specific exception triggers;
+- entry basis and evidenced authority to proceed;
+- delivery model and the split of Digital, vendor and client responsibilities;
+- approved client requirements and the configured board/PEP controls.
+
+Use the existing route and mobilisation authorities, particularly
+`01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`,
+`01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md` and
+`02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md`.
+Do not create new route labels. Descriptive enterprise-project support is not
+automatically the controlled `Support Route`; confirm route independently.
+
+Each stage/control has `applicability` = `required`, `not_required` or
+`pending_resolution`, plus `rule_id`, `rule_version`, rationale, evidence
+references and the confirmed applicability-profile revision. Where a rule is
+conditional, record the condition and its evaluated inputs. Resolve it to
+required/not required only when the inputs and authority support that result;
+otherwise keep it pending. A required control can be not started or not yet due.
+
+For an explicit exception, also retain the approving authority, decision date,
+conditions and review trigger. Applying an already-approved method/profile rule
+does not require a new exception approval for every cell. Changing that rule or
+waiving an otherwise required control does require controlled approval.
+
+| Evidenced initiative context | Applicability treatment |
+|---|---|
+| Enterprise/transition-project support entered under a confirmed enterprise mandate or leadership instruction, with no separate Initiation Form requirement | Initiation Form is N/A under the approved entry profile; retain the mandate/decision evidence. Authority to proceed and applicable mobilisation controls still apply. |
+| Development Route through Stage 1D, with no Stage 2 exception and confirmed approval of that path | Stage 1D remains required; Stage 2 is N/A under the confirmed route rule. Existing DRB approval and Live Delivery handover controls remain. |
+| Development Route with an evidenced Stage 2 exception trigger | Stage 2 is required; do not inherit the no-exception N/A treatment. |
+| Implementation/Support Route entered through the formal initiation path | Apply the route's initiation requirements; an enterprise-support label does not remove them. |
+| Vendor-led implementation | Vendor ownership does not make client acceptance, interfaces or assurance controls N/A; resolve responsibilities and evidence references. |
+| Data/integration/testing control outside approved scope | N/A only where the approved profile establishes non-applicability; a missing document is insufficient. |
+| Type, entry authority, condition or scope unresolved | To confirm, with the unresolved question and owner; do not assume N/A or Green. |
+
+These examples apply existing method rules; they are not blanket waivers by
+initiative name. The absence of an Initiation Form may be legitimate; an
+unresolved authority-to-proceed gap still prevents entry to In Delivery.
+
+The bound coworker proposes and reconciles the profile at intake/spin-up and
+revisits it when route, scope, entry basis, responsibilities or method baseline
+changes. Carry its confirmed reference in the single Initiative Evidence and
+Decision File and, for mobilisation, the applicable Initiative Delivery Setup.
+The app consumes that profile; it does not guess applicability from missing
+files, a free-text title or the selected board. Changes create a new controlled
+profile revision and preserve previously released historical snapshots.
+
+## Mieruka cell assessment and roll-up
+
+Evaluate a cell in this order: applicability, completion/evidence/approval,
+confirmation/freshness, then the approved stage-health policy.
+
+| Cell position | Display and control behavior |
+|---|---|
+| Confirmed not required | Neutral N/A, `state: not_required`, `stage_health: Not applicable`; expose the reason and rule. Exclude from applicable-stage denominators. |
+| Applicability unresolved | To confirm, null state/health; expose missing evidence or decision. Show an unresolved count and do not claim full readiness. |
+| Required but not yet due | Not started/planned; assess risks only where evidenced. Not automatically Amber or Red. |
+| Required and evidence/approval complete | Complete marker with its evidence; completion does not determine initiative delivery RAG. |
+| Required with a current material risk or blocker | Show the evidenced stage RAG and separate blocker/action details under the approved severity policy. |
+| Previously assessed but now stale/unconfirmed | Show the dated last-confirmed position with a warning; no fresh Green or silently renewed N/A assertion. |
+
+An accepted gap is not N/A and not completion. Keep the required control, gap,
+owner, conditions and review point visible; any conditional progression must
+refer to the approving decision. A deferral is not non-applicability either.
+
+Stage health is separate from the initiative's overall `delivery_health`. Do not
+paint every stage with the initiative colour, average colours, or count N/A as
+completed work. Required gate failures and unresolved applicability remain
+visible even if an overall health assessment has been confirmed. Any roll-up
+must use a documented client-approved policy with contributing reasons; absent
+that policy, preserve the explicit confirmed overall assessment and exceptions.
+
+`stage_health` uses Green, Amber, Red, Not applicable or null. Reserve Not
+applicable for a confirmed non-applicable control. Null means no current health
+assessment and must not be rendered as Green. A completion marker is a separate
+visual indicator and is not itself a RAG assessment.
+
+Do not close linked actions solely because a profile now marks their stage N/A.
+Reconcile those actions through their authority and retain any remaining
+obligations. N/A is not a mechanism for hiding blockers or making progress rise.
 
 ## Delivery health, blockers and confirmation
 
@@ -304,6 +397,7 @@ app must retain its working fixture path until the adapter is built and tested.
 | Actions without an initiative are treated as personal | Distinguish client-scoped administrative actions from truly personal actions |
 | Single primary stage action reference | Retain all linked actions while selecting one primary action for display |
 | Existing records lack the complete export provenance | Add source/approval references, version checks and accepted-snapshot identity |
+| Stage cells lack a complete applicability decision and separate stage-health basis | Add the versioned initiative profile, per-control rule/evidence, explicit unresolved applicability and independent cell health |
 
 No app entity migration, source-profile change or live feed activation is authorized by
 opening this proposal. Implement and review those changes in the app workstream
@@ -318,6 +412,7 @@ existing controlled-update closeout; do not introduce another session protocol:
 |---|---|
 | Changed position | Affected initiative/action fields and the source evidence |
 | Decision boundary | What is confirmed, proposed, approved, deferred or still missing |
+| Control applicability | Profile revision, required/N/A/unresolved controls, changed conditions and decision evidence |
 | Source write-back | Authority, exact revision and completed/pending status |
 | Feed handoff | Contract version, covered IDs, generated location and feed identity, or reason not generated |
 | Cockpit receipt | Accepted identity and timestamp, or pending/failed; never assumed |
@@ -351,6 +446,22 @@ Use synthetic fixtures and an isolated test destination, not real client writes:
 15. Cross-client, revoked and unauthorized downloads are denied server-side.
 16. No artefact upload/import, replacement or regeneration route exists in the
     app; working-file updates remain in the AI initiative chat.
+17. Enterprise-project support with a confirmed alternative authority and an
+    approved no-form profile shows Initiation Form as N/A, while mobilisation
+    and authority-to-proceed checks still operate.
+18. Without evidenced authority, a missing Initiation Form does not authorize
+    entry to In Delivery; applicable unresolved gates remain visible.
+19. Development Route with and without a Stage 2 exception produces different
+    applicability; no blanket type label overrides a route-specific condition.
+20. Missing evidence, accepted gaps, deferred work and unknown applicability
+    never become N/A or completed automatically.
+21. N/A controls are excluded from applicable-stage totals; unresolved controls
+    prevent a false full-readiness claim, and future required stages are not
+    automatically Red merely because they have not started.
+22. Different stage risks produce independent cell RAG, with evidence, without
+    copying the overall initiative RAG across the row.
+23. A scope/profile change records its authority and re-evaluates applicability
+    without closing actions or rewriting saved historical reports.
 
 Approval of this method proposal is separate from implementation sign-off.
 JSON Schema, contract tests, adapters, authorization and authenticated UI tests

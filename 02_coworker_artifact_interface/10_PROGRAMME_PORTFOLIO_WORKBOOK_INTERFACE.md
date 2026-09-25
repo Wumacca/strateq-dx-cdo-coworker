@@ -6,7 +6,9 @@ Reusable method specification for the **Strateq DX Digital Programme Workbook** 
 
 `02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`
 
-The public method repository holds only the blank, client-agnostic template and these reusable rules. It must contain zero client data (`00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`). Each client copies the template into its own bound private client repository and populates it there.
+The public method repository holds only the blank, client-agnostic template and these reusable rules. It must contain zero client data (`00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`).
+
+This workbook is registered as `ART-PROGRAMME-WORKBOOK` in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`. A client repository does **not** keep an independent duplicate of the blank reusable template; it **references the central artefact revision through its `METHOD_BASELINE.md`** (Artefact ID + pinned revision + approving method commit) and holds only the **populated, client-specific output**, which is client data and stays client-side. Before any refresh or workbook update the Coworker runs the deterministic revision-handshake in `16` (bind one client → read the client baseline → read the registry → resolve the canonical artefact at the approved method commit → confirm revision and interface version match, approved and not superseded → record the resolved revision → fail closed on a stale, missing, ambiguous or incompatible baseline).
 
 ## Purpose
 
@@ -138,9 +140,10 @@ When the Digital Lead requests a refreshed version, the Coworker generates it **
 
 ## Versioning
 
-- The blank template in this repository is the single canonical client-agnostic source; it is never populated here.
-- Each client copies the template into its bound private client repository and versions its populated copy there under that client's controls.
-- A Coworker-generated refreshed workbook is a dated snapshot for a stated cut-off; it does not supersede the controlled records and is retained per the client's working-authority and artefact-governance rules.
+- The blank template in this repository is the single canonical client-agnostic source, registered as `ART-PROGRAMME-WORKBOOK` in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`; it is never populated here, and each approved change to the template or this interface increments its registry revision.
+- A client repository does **not** duplicate or hand-maintain the blank reusable template. It references the current approved revision through its `METHOD_BASELINE.md` and adopts a new revision only through a controlled, Digital-Lead-approved baseline update. The Coworker resolves the artefact by the revision-handshake in `16` at generation time; it does not fork the reusable blank per client.
+- What lives in the client repository is the **populated, client-specific output** — client data, versioned there under that client's controls.
+- A Coworker-generated refreshed workbook is a dated snapshot for a stated cut-off, produced from the resolved artefact revision and the confirmed controlled records; it does not supersede the controlled records and is retained per the client's working-authority and artefact-governance rules.
 
 ## Source-of-truth boundary
 
@@ -148,6 +151,7 @@ The workbook sits alongside, and never above, the controlled architecture in `00
 
 ## Governing-file dependencies
 
+- `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md` — registry entry `ART-PROGRAMME-WORKBOOK`, the revision-handshake resolution protocol and the client-adoption reference pattern.
 - `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` — Confirmation-First Status Gate and gate sequence.
 - `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` — the initiative fields the workbook projects.
 - `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` — confirmation-first reporting, update-once and reporting flow.

@@ -205,6 +205,18 @@ The client workspace, coworker, thread and reporting model is governed by `00_sy
 - **Client action-management system** — the action system, if any, named in the bound client profile. The Coworker must not assume a specific product globally.
 - **Weekly delivery-control touchpoint** — an internal delivery-control / operational delivery cadence term. It does not create a weekly programme report, a weekly reporting thread, an additional programme-status record, or an additional coworker. The only formal reporting cycles are bi-weekly programme reporting and monthly leadership reporting.
 
+## Reusable Artefact Registry Terminology
+
+The reusable-artefact registry and revision handshake are governed by `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`. Use these defined terms.
+
+- **Method Artefact Registry** — the authoritative list in `16` of reusable Strateq DX artefacts (templates, schemas, interfaces, workbooks), each with an Artefact ID, canonical path, interface/specification path, current approved revision, approving method commit, status, superseded revisions, compatibility notes and whether client adoption requires an explicit baseline update.
+- **Artefact ID** — the stable, unique identifier for a reusable artefact (for example `ART-PROGRAMME-WORKBOOK`). It does not change across revisions.
+- **Approved revision** — the `Current approved revision` (`r<N>`) of an artefact recorded in the registry at the approved method commit. "Latest" always means the latest approved revision, never an unpinned branch tip or an uploaded file.
+- **Approving method commit** — the commit on the method repository default branch at which an artefact revision was approved.
+- **Revision handshake** — the deterministic resolution in `16` performed before any generated refresh or populated artefact: bind one client → read the client `METHOD_BASELINE.md` → read the registry → resolve the canonical artefact at the approved method commit → confirm revision and interface/specification version match, approved and not superseded → record the resolved ID/revision/commit → fail closed on a stale, missing, ambiguous or incompatible baseline.
+- **Client baseline pin** — the per-artefact revision a client has adopted, recorded in that client's `METHOD_BASELINE.md`. It changes only through a Digital-Lead-approved baseline update, never automatically by the Coworker.
+- **Populated output** — the client-specific artefact produced from a resolved reusable artefact. It is client data, stored only in the bound client repository; it is never written back into the method repository, and it is not a duplicate of the reusable blank template.
+
 ## Interactive Governed Session Terminology
 
 The interactive session model is governed by `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`, the reusable initiative schema by `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`, and the freshness and maturity-impact vocabulary by `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`. Use these defined terms. They do not conflict with, and do not replace, the existing controlled vocabulary above.

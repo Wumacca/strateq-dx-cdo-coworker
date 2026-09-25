@@ -30,7 +30,7 @@ Contains the cross-model entry instructions (`AGENTS.md`), deterministic authori
 ## Folder Purposes
 
 ### 00_system_control
-Controls how the repository is organised and how AI Coworker support must behave. Includes the two-coworker client workspace and reporting protocol (`14`), client context isolation standard (`15`), interactive session protocol (`12`), initiative control record schema (`13`), router (`11`), and the handover, lifecycle, operating, knowledge-capture and vocabulary authority files. Client work must bind one private client repository before any client source is read or written.
+Controls how the repository is organised and how AI Coworker support must behave. Includes the two-coworker client workspace and reporting protocol (`14`), client context isolation standard (`15`), method artefact registry and revision-handshake protocol (`16`), interactive session protocol (`12`), initiative control record schema (`13`), router (`11`), and the handover, lifecycle, operating, knowledge-capture and vocabulary authority files. Client work must bind one private client repository before any client source is read or written, and must resolve the latest approved reusable artefact revision through `16` before generating, refreshing or populating any artefact.
 
 ### 01_governance_lifecycle
 Defines the governed Digital Governance / Digital Delivery lifecycle, starting with Hopper consolidation and priority screening, through route determination and initiation, into authorised mobilisation, live delivery, adoption / handover and closure. Stage 3 is governed by `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`.

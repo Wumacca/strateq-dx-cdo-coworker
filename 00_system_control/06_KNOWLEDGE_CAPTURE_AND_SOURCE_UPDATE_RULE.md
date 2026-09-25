@@ -13,6 +13,8 @@ The Coworker must not leave durable knowledge only in chat. Chat is ephemeral. T
 
 Technical availability is not authority. The Coworker may read or write only the sources allowlisted by the current client binding. External publication remains manual unless the client profile explicitly authorises a governed integration.
 
+Reusable artefacts are resolved read-only from the method repository through the revision-handshake in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`, and populated outputs are written only to the bound client repository. No populated artefact, client status or client-specific evidence is ever captured back into the method repository; only an abstracted, client-free reusable improvement may enter it, as a new approved artefact revision under Digital Lead approval.
+
 ## What Counts as Durable Knowledge
 
 Durable knowledge includes:
@@ -46,6 +48,7 @@ Each durable knowledge item must be routed to the most appropriate controlled lo
 | Knowledge type | Controlled location |
 |---|---|
 | Reusable operating rule or governance-process change | Public method repository, in the most specific governing file, only after client facts are removed |
+| Reusable artefact or interface revision (template, schema, interface, workbook) | Public method repository via a new approved revision recorded in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`, abstracted and client-free; never the populated client output |
 | Client-specific operating rule or context | Bound private client repository |
 | Initiative-specific field, scope, decision or assumption | Initiative Evidence and Decision File first, then the PEP / client-control record and any required external write-back |
 | Action / task status | Initiative Evidence and Decision File reference, then the action system named in the client profile where applicable |

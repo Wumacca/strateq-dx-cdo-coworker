@@ -103,9 +103,10 @@ reconciled against the controlled records, and the workbook never replaces the
 Initiative Evidence and Decision File, PEP/control record, approved action
 system, formal approval records, evidence registers or source-of-truth artefact
 governance. The single canonical blank, client-agnostic template is
-`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`;
-it is copied into a private client repository and populated there, never in this
-public method repository.
+`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`.
+The Coworker resolves the canonical template from the approved Strateq DX method
+commit and uses it to generate the populated client-side output. The reusable
+blank template is not stored or maintained in the client repository.
 
 ## File-map maintenance
 

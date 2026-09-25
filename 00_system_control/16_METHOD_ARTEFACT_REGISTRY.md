@@ -44,13 +44,13 @@ Before **every** Coworker-generated refresh, workbook update, or population of a
 
 1. **Bind exactly one client** under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`. If the binding is absent or ambiguous, stop (step 9).
 2. **Read that client's `METHOD_BASELINE.md`** (or the equivalent method-reference control named in the client profile): the approved method commit and the per-artefact pinned revisions the client has adopted.
-3. **Read this central registry** at the approved method commit.
+3. **Read this central registry** at the approved method commit. **If this registry file does not exist at that commit** — i.e. the client's approved method commit predates the introduction of `16_METHOD_ARTEFACT_REGISTRY.md`, or the required `Artefact ID` is not yet registered at that commit — treat the baseline as **stale/incompatible** and stop (step 9); do **not** fall back to reading the template at the stale commit, and do **not** assume the registry exists there. A baseline update to a method commit that contains this registry (and the required artefact row) is required first.
 4. **Resolve the canonical artefact** — the row for the required `Artefact ID` — reading the file at its `Canonical repository path` as of the approved method commit.
 5. **Compare** the client's pinned artefact revision with the registry's `Current approved revision`.
 6. **Confirm the interface/specification version matches** the resolved artefact revision (the `Interface / specification path` at the same revision).
 7. **Confirm the artefact is `Approved` and not `Superseded`.**
 8. **Record in the working session** the resolved `Artefact ID`, revision and `Approving method commit` used (surfaced in the `12` Runtime Access Confirmation Gate / Live Session Status Board).
-9. **Stop and ask the Digital Lead** (fail-closed, `CLAUDE.md` B5) if the client baseline is **stale** (pinned revision behind current approved), **missing**, **ambiguous**, **incompatible** (interface/spec version mismatch), or the artefact is **superseded/withdrawn**. Do not proceed on inference, do not silently upgrade the client's pinned revision, and do not ask-and-continue in the same turn.
+9. **Stop and ask the Digital Lead** (fail-closed, `CLAUDE.md` B5) if the client baseline is **stale** (pinned revision behind current approved, **or the approved method commit predates this registry / the artefact's registration**), **missing**, **ambiguous**, **incompatible** (interface/spec version mismatch), or the artefact is **superseded/withdrawn**. In every one of these cases the required next step is a Digital-Lead-approved baseline update to a method commit that contains this registry and the required approved artefact revision. Do not proceed on inference, do not read the artefact at a commit lacking the registry, do not silently upgrade the client's pinned revision, and do not ask-and-continue in the same turn.
 
 A pinned revision is only changed by an explicit, Digital-Lead-approved baseline update in the client repository — never automatically by the Coworker.
 

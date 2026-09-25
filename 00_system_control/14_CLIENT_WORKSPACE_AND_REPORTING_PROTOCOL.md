@@ -131,8 +131,10 @@ governs the Strateq DX Digital Programme Workbook — a governed human-facing
 programme/portfolio interface and working snapshot for contract and initiative
 management, lifecycle/current-step visibility, delivery milestones and
 open/overdue actions. The blank client-agnostic template is held in the method
-repository (`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`)
-and is copied into the bound private client repository and populated there.
+repository (`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`).
+The Coworker resolves the canonical template from the approved Strateq DX method
+commit and uses it to generate the populated client-side output; the reusable
+blank template is not stored or maintained in the client repository.
 
 An uploaded workbook is a supplied snapshot, not automatically current. Before
 any workbook value is used, apply the confirmation-first status rule, then

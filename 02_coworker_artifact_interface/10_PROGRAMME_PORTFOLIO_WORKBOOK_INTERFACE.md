@@ -50,15 +50,21 @@ The template contains four sheets. `Lists` is hidden and drives the dropdowns; t
 Programme-level roll-up. One row per initiative, grouped under its contract, showing the initiative and its current lifecycle step across the six macro steps (`1. Commercial Approval`, `2. Mobilising`, `3. In Delivery`, `4. UAT`, `5. Live`, `6. Adopted`). Values are pulled by formula from `Delivery Overview`; this sheet is read-mostly and is not the place to type status.
 
 > **Initiative currency rule (client copy).** In a populated client copy, the
-> initiative rows must always reflect the **latest list of initiatives currently
-> being worked, grouped by contract**. The generic `Initiative 1–3` labels in the
-> blank template are placeholders only; the Digital Lead replaces them with the
-> live initiatives, and every Coworker-generated refresh brings the rows current
-> against the confirmed controlled records — adding newly started initiatives
-> under their contract, and moving completed, closed or retired ones to their
-> correct lifecycle status rather than leaving stale entries. This currency rule
-> applies to the client copy; the public method repository keeps only the
-> client-agnostic placeholders.
+> initiative rows must be labelled with the **latest approved initiative names for
+> each contract** and must always reflect the **latest list of initiatives
+> currently being worked, grouped by contract**. Generic labels such as
+> `Initiative 1` must **not** appear in a populated workbook. Each initiative must
+> carry a **stable, unique identifier or approved delivery-system reference** (the
+> `Delivery-system ref` column, using the system named in the client's
+> `SOURCE_OF_TRUTH.md`) so it can be matched to its controlled record across
+> refreshes. The client working copy must be updated whenever the approved
+> contract initiative list changes: every Coworker-generated refresh brings the
+> rows current against the confirmed controlled records — adding newly approved
+> initiatives under their contract, and moving completed, closed or retired ones
+> to their correct lifecycle status rather than leaving stale entries. This
+> currency rule applies to the client copy only; the **blank template may retain
+> placeholder slots** (`Contract 1–3`, `Initiative 1–3`) and the public method
+> repository keeps only those client-agnostic placeholders.
 
 ### 2. `Delivery Overview`
 
@@ -122,6 +128,7 @@ An uploaded workbook is a **supplied snapshot; it is not automatically current.*
 - Lifecycle labels and milestone cells are **projections / signals, not proof** of approval or completion. `Released`/`Published`, approval and go-live are evidenced only in the controlled records and formal approval artefacts.
 - Blank cells do **not** automatically mean "not required"; an unpopulated cell is unknown until reconciled.
 - Manually entered action counts and typed statuses must **not** override reconciled action records from the approved action-management system.
+- A populated client copy must use the latest approved initiative names per contract with a stable, unique identifier or approved delivery-system reference for each initiative; generic placeholder labels (e.g. `Initiative 1`) must not remain in a populated workbook (see the Initiative currency rule).
 - Client adoption of this workbook as a working surface requires a client-specific source-of-truth decision recorded in that client's profile; it does not change any controlled record on its own.
 - The public method repository must contain only the blank template and these reusable method rules.
 

@@ -36,14 +36,25 @@ Controls how the repository is organised and how AI Coworker support must behave
 Defines the governed Digital Governance / Digital Delivery lifecycle, starting with Hopper consolidation and priority screening, through route determination and initiation, into authorised mobilisation, live delivery, adoption / handover and closure. Stage 3 is governed by `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`.
 
 ### 02_coworker_artifact_interface
-Defines the working interface between the AI Coworker and the Digital Lead, including the single AI-readable Initiative Evidence and Decision File template (`04`), programme reporting input (`05`), Live Delivery Artefact 1 model (`06`), and Initiative Delivery Setup model and template (`07` and `08`).
+Defines the working interface between the AI Coworker and the Digital Lead, including the single AI-readable Initiative Evidence and Decision File template (`04`), programme reporting input (`05`), Live Delivery Artefact 1 model (`06`), Initiative Delivery Setup model and template (`07` and `08`), and the programme/portfolio workbook interface (`10`).
 
 `09_COCKPIT_FEED_CONTRACT.md` is the approved versioned cockpit projection
 specification. Its client-adoption and activation gates preserve client isolation,
 source-of-truth ownership and human-approved stage progression. It does not
 introduce a live feed, a second initiative record or an additional coworker.
 
-`blank_templates/` holds the client-agnostic binary delivery templates that the models above describe: the Strateq DX Live Delivery PEP workbook (`Strateq_DX_Live_Delivery_PEP_TEMPLATE.xlsx`) and the Digital Team Meeting Minutes document (`Digital_Team_Meeting_Minutes_TEMPLATE.docx`). These are the single canonical blank sources. Each client copies a template into its own private client repository and populates it there; the blank templates are never filled with client data in this public method repository.
+`10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md` is the method specification for
+the Strateq DX Digital Programme Workbook — the governed human-facing
+programme/portfolio interface and working snapshot (contract and initiative
+management, lifecycle/current-step visibility, delivery milestones, open/overdue
+actions, owners, due dates, notes and delivery-system references). It defines the
+upload/reconciliation and Coworker-generated-refresh workflows, versioning,
+status safeguards and source-of-truth boundaries. The workbook is an interface
+and snapshot only; it never replaces the Initiative Evidence and Decision File,
+PEP/control record, approved action system, formal approval records, evidence
+registers or source-of-truth artefact governance.
+
+`blank_templates/` holds the client-agnostic binary delivery templates that the models above describe: the Strateq DX Live Delivery PEP workbook (`Strateq_DX_Live_Delivery_PEP_TEMPLATE.xlsx`), the Strateq DX Digital Programme Workbook (`Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`, described by `10`) and the Digital Team Meeting Minutes document (`Digital_Team_Meeting_Minutes_TEMPLATE.docx`). These are the single canonical blank sources. Each client copies a template into its own private client repository and populates it there; the blank templates are never filled with client data in this public method repository.
 
 ### 03_process_mapping
 Defines how existing process matrices are converted into process mapping packs, Blueworks build briefs, bottleneck registers, and developer/vendor scope outputs.

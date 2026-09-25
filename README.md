@@ -71,6 +71,24 @@ gates. Mieruka applicability and RAG follow that delivery definition. Existing
 client workspaces adopt these rules through a controlled `METHOD_BASELINE.md`
 update; this release does not rewrite their current records or enable a feed.
 
+## Programme / portfolio workbook interface
+
+`02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`
+specifies the Strateq DX Digital Programme Workbook — the governed human-facing
+programme/portfolio interface and working snapshot for contract and initiative
+management, lifecycle/current-step visibility, delivery milestones and
+open/overdue actions. It defines the upload/reconciliation and
+Coworker-generated-refresh workflows, versioning, status safeguards and
+source-of-truth boundaries. An uploaded workbook is a supplied snapshot, not
+automatically current: the Confirmation-First Status Gate applies, values are
+reconciled against the controlled records, and the workbook never replaces the
+Initiative Evidence and Decision File, PEP/control record, approved action
+system, formal approval records, evidence registers or source-of-truth artefact
+governance. The single canonical blank, client-agnostic template is
+`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`;
+it is copied into a private client repository and populated there, never in this
+public method repository.
+
 ## File-map maintenance
 
 Any pull request that adds, renames, splits or retires a governance file must update `CLAUDE.md` B2, `00_system_control/FOLDER_MAP.md` and this README in the same commit.

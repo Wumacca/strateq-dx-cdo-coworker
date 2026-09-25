@@ -49,6 +49,17 @@ The template contains four sheets. `Lists` is hidden and drives the dropdowns; t
 
 Programme-level roll-up. One row per initiative, grouped under its contract, showing the initiative and its current lifecycle step across the six macro steps (`1. Commercial Approval`, `2. Mobilising`, `3. In Delivery`, `4. UAT`, `5. Live`, `6. Adopted`). Values are pulled by formula from `Delivery Overview`; this sheet is read-mostly and is not the place to type status.
 
+> **Initiative currency rule (client copy).** In a populated client copy, the
+> initiative rows must always reflect the **latest list of initiatives currently
+> being worked, grouped by contract**. The generic `Initiative 1–3` labels in the
+> blank template are placeholders only; the Digital Lead replaces them with the
+> live initiatives, and every Coworker-generated refresh brings the rows current
+> against the confirmed controlled records — adding newly started initiatives
+> under their contract, and moving completed, closed or retired ones to their
+> correct lifecycle status rather than leaving stale entries. This currency rule
+> applies to the client copy; the public method repository keeps only the
+> client-agnostic placeholders.
+
 ### 2. `Delivery Overview`
 
 The primary working sheet. Structure:
@@ -116,7 +127,7 @@ An uploaded workbook is a **supplied snapshot; it is not automatically current.*
 
 ## Generated-output workflow
 
-When the Digital Lead requests a refreshed version, the Coworker generates it **from the reconciled, Digital-Lead-confirmed controlled records**, not from the raw uploaded snapshot. A generated workbook is a projection / snapshot for the requested cut-off; it carries its source and date, does not become a second source of truth, and does not perform any external write-back. External publication and any client-system write-back remain `Recommended update — requires Digital Lead approval and physical update in the destination system.` until completion is evidenced.
+When the Digital Lead requests a refreshed version, the Coworker generates it **from the reconciled, Digital-Lead-confirmed controlled records**, not from the raw uploaded snapshot. The refreshed initiative rows must satisfy the Initiative currency rule above — reflecting the latest live list of initiatives per contract, with new initiatives added under their contract and completed/closed/retired initiatives shown at their correct lifecycle status rather than left stale. A generated workbook is a projection / snapshot for the requested cut-off; it carries its source and date, does not become a second source of truth, and does not perform any external write-back. External publication and any client-system write-back remain `Recommended update — requires Digital Lead approval and physical update in the destination system.` until completion is evidenced.
 
 ## Versioning
 

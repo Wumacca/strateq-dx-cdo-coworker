@@ -71,6 +71,24 @@ gates. Mieruka applicability and RAG follow that delivery definition. Existing
 client workspaces adopt these rules through a controlled `METHOD_BASELINE.md`
 update; this release does not rewrite their current records or enable a feed.
 
+## Method artefact registry and revision handshake
+
+`00_system_control/16_METHOD_ARTEFACT_REGISTRY.md` is the authoritative registry
+of reusable artefacts (templates, schemas, interfaces, workbooks) and the
+deterministic revision-handshake protocol. Strateq DX is the single source of
+truth for these artefacts. Before any Coworker-generated refresh or populated
+artefact, the Coworker binds one client, reads that client's `METHOD_BASELINE.md`,
+reads the registry, resolves the latest **approved** artefact revision at the
+approved method commit, confirms the interface/specification version matches and
+the artefact is approved and not superseded, records the resolved
+ID/revision/commit, and fails closed on a stale, missing, ambiguous or
+incompatible baseline. "Latest" means the latest approved revision — never an
+unpinned branch or an uploaded file. A client repository references the central
+artefact revision through its `METHOD_BASELINE.md`; it does not duplicate the
+reusable blank. Populated outputs stay client-side, and no client data is ever
+written back into Strateq DX, which is read-only during client work. The file
+includes a client-agnostic client-adoption reference pattern.
+
 ## Programme / portfolio workbook interface
 
 `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`
@@ -85,9 +103,10 @@ reconciled against the controlled records, and the workbook never replaces the
 Initiative Evidence and Decision File, PEP/control record, approved action
 system, formal approval records, evidence registers or source-of-truth artefact
 governance. The single canonical blank, client-agnostic template is
-`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`;
-it is copied into a private client repository and populated there, never in this
-public method repository.
+`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`.
+The Coworker resolves the canonical template from the approved Strateq DX method
+commit and uses it to generate the populated client-side output. The reusable
+blank template is not stored or maintained in the client repository.
 
 ## File-map maintenance
 

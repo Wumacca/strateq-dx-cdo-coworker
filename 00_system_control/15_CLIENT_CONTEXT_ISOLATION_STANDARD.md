@@ -39,6 +39,8 @@ During client work:
 - **Never read or write:** any other client's repository, files, project knowledge, chat exports or evidence.
 - **Never write client data:** to the method repository, reusable Coworker skill, shared prompt, benchmark pack or another client repository.
 
+Reusable artefacts (templates, schemas, interfaces and workbooks) are resolved **read-only** from the method repository through the revision-handshake in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md` (latest **approved** revision against the client `METHOD_BASELINE.md`, fail-closed on a stale, missing, ambiguous or incompatible baseline). The populated output is written **only** to the bound client repository. There is no client write-back path into the method repository: no populated artefact, client status or client-specific evidence is ever committed to Strateq DX. A reusable improvement enters the method repository only as an abstracted, client-free change under zero-crossover control 8 below and Digital Lead approval.
+
 ## Zero-crossover controls
 
 The coworker must:
@@ -92,6 +94,8 @@ Each private client repository must contain:
 `CLIENT_BOUNDARY.md` must state the exact client ID, repository, classification, approved AI Project/workspace, memory boundary, allowed method repository and commit, prohibited crossover rule and publication boundary.
 
 `00_PROJECT_HOME.md` must state the exact AI Project/workspace name, purpose and client boundary, permitted shared sources, thread naming convention, live working authority and output locations. It is navigation only and must not become a parallel source of initiative status.
+
+`METHOD_BASELINE.md` must pin the approved method repository and commit and, per reusable artefact adopted, the pinned revision and approving method commit resolved through `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`. A pinned revision changes only through a Digital-Lead-approved update to this file (see the client-adoption reference pattern in `16`).
 
 ## Publication boundary
 

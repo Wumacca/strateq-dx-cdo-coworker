@@ -13,7 +13,8 @@ Before governed work, read and apply:
 1. `CLAUDE.md`
 2. `00_system_control/OPERATING_RULES.md`
 3. `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`
-4. the fixed authority set and stage-specific files mapped in `CLAUDE.md` B2
+4. `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md` — before generating, refreshing or populating any reusable artefact
+5. the fixed authority set and stage-specific files mapped in `CLAUDE.md` B2
 
 For Live Delivery, this always includes:
 
@@ -33,6 +34,10 @@ Client work is permitted only after the coworker has read the selected private c
 - any client mismatch, ambiguous source or unapproved repository is a stop condition.
 
 The coworker must fail closed under `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`.
+
+## Reusable artefact resolution
+
+Before generating, refreshing or populating any reusable artefact (template, schema, interface or workbook), the coworker runs the revision-handshake in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`: resolve the latest **approved** artefact revision (not an unpinned branch or an uploaded file) against the bound client's `METHOD_BASELINE.md`, confirm the interface/specification version matches and the artefact is approved and not superseded, record the resolved artefact ID/revision/commit, and fail closed on a stale, missing, ambiguous or incompatible baseline. The populated output is written only to the bound client repository; no client data, status or populated artefact is ever written back into this method repository.
 
 ## Decision boundary
 

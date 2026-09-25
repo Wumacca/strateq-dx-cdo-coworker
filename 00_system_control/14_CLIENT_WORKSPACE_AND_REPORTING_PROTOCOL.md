@@ -42,6 +42,7 @@ The client profile must name the authority for each record type. No platform is 
 | Record type | Required client-profile decision |
 |---|---|
 | Reusable method | Approved Strateq DX method repository and commit |
+| Reusable artefact adoption | Per-artefact pinned revision in the client `METHOD_BASELINE.md`, resolved through `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md` |
 | Live client working record | Exact private client repository/path or approved client system |
 | Initiative evidence and decisions | Exact initiative file/path |
 | PEP/client-control plan | Exact workbook/path |
@@ -52,6 +53,12 @@ The client profile must name the authority for each record type. No platform is 
 
 For a GitHub-authority client, the private client repository is the live working authority. An external SharePoint library may be a manual publication destination only. The Coworker does not claim a publication until the Digital Lead confirms it and the Publication Register is updated.
 
+## Reusable artefact resolution and write boundary
+
+Reusable artefacts (templates, schemas, interfaces and workbooks) are the single source of truth in the Strateq DX method repository. Before generating, refreshing or populating any reusable artefact for the bound client, the Coworker runs the revision-handshake in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`: it reads the client `METHOD_BASELINE.md`, resolves the latest **approved** artefact revision from the central registry at the approved method commit, confirms the interface/specification version matches and the artefact is approved and not superseded, records the resolved artefact ID/revision/commit, and fails closed on a stale, missing, ambiguous or incompatible baseline. "Latest" is the current approved revision, never an unpinned branch or an uploaded file.
+
+The client repository references the central artefact revision through its `METHOD_BASELINE.md`; it does not keep an independent duplicate of the reusable blank. Only the **populated, client-specific output** is stored client-side. No client data, status or populated artefact is written back to the method repository, which is read-only during client work. A pinned artefact revision changes only through a Digital-Lead-approved `METHOD_BASELINE.md` update.
+
 ## Runtime client gate
 
 At the start of every material client session, the Coworker must:
@@ -59,11 +66,12 @@ At the start of every material client session, the Coworker must:
 1. bind the client and allowed repositories under the isolation standard;
 2. verify the active AI Project/workspace, memory boundary, thread and initiative path;
 3. identify the lifecycle stage and mapped method files;
-4. inspect the initiative handover/source index and available evidence;
-5. record or refresh Coworker commencement in the Initiative Evidence and Decision File;
-6. state what is present, missing, stale, conflicting or pending confirmation;
-7. present the latest held position with its source and date;
-8. ask: **Is this still accurate? Please confirm or provide any changes since the last recorded update.**
+4. where the session will generate, refresh or populate a reusable artefact, run the revision-handshake in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md` (resolve the latest approved artefact revision against the client `METHOD_BASELINE.md`; fail closed on a stale, missing, ambiguous or incompatible baseline);
+5. inspect the initiative handover/source index and available evidence;
+6. record or refresh Coworker commencement in the Initiative Evidence and Decision File;
+7. state what is present, missing, stale, conflicting or pending confirmation;
+8. present the latest held position with its source and date;
+9. ask: **Is this still accurate? Please confirm or provide any changes since the last recorded update.**
 
 Prior chat, project knowledge and model memory are discovery aids only. They cannot confirm current status.
 
@@ -123,8 +131,10 @@ governs the Strateq DX Digital Programme Workbook — a governed human-facing
 programme/portfolio interface and working snapshot for contract and initiative
 management, lifecycle/current-step visibility, delivery milestones and
 open/overdue actions. The blank client-agnostic template is held in the method
-repository (`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`)
-and is copied into the bound private client repository and populated there.
+repository (`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`).
+The Coworker resolves the canonical template from the approved Strateq DX method
+commit and uses it to generate the populated client-side output; the reusable
+blank template is not stored or maintained in the client repository.
 
 An uploaded workbook is a supplied snapshot, not automatically current. Before
 any workbook value is used, apply the confirmation-first status rule, then

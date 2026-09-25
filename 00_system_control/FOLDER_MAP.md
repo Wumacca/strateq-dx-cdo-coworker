@@ -30,7 +30,7 @@ Contains the cross-model entry instructions (`AGENTS.md`), deterministic authori
 ## Folder Purposes
 
 ### 00_system_control
-Controls how the repository is organised and how AI Coworker support must behave. Includes the two-coworker client workspace and reporting protocol (`14`), client context isolation standard (`15`), interactive session protocol (`12`), initiative control record schema (`13`), router (`11`), and the handover, lifecycle, operating, knowledge-capture and vocabulary authority files. Client work must bind one private client repository before any client source is read or written.
+Controls how the repository is organised and how AI Coworker support must behave. Includes the two-coworker client workspace and reporting protocol (`14`), client context isolation standard (`15`), method artefact registry and revision-handshake protocol (`16`), interactive session protocol (`12`), initiative control record schema (`13`), router (`11`), and the handover, lifecycle, operating, knowledge-capture and vocabulary authority files. Client work must bind one private client repository before any client source is read or written, and must resolve the latest approved reusable artefact revision through `16` before generating, refreshing or populating any artefact.
 
 ### 01_governance_lifecycle
 Defines the governed Digital Governance / Digital Delivery lifecycle, starting with Hopper consolidation and priority screening, through route determination and initiation, into authorised mobilisation, live delivery, adoption / handover and closure. Stage 3 is governed by `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`.
@@ -54,7 +54,7 @@ and snapshot only; it never replaces the Initiative Evidence and Decision File,
 PEP/control record, approved action system, formal approval records, evidence
 registers or source-of-truth artefact governance.
 
-`blank_templates/` holds the client-agnostic binary delivery templates that the models above describe: the Strateq DX Live Delivery PEP workbook (`Strateq_DX_Live_Delivery_PEP_TEMPLATE.xlsx`), the Strateq DX Digital Programme Workbook (`Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`, described by `10`) and the Digital Team Meeting Minutes document (`Digital_Team_Meeting_Minutes_TEMPLATE.docx`). These are the single canonical blank sources. Each client copies a template into its own private client repository and populates it there; the blank templates are never filled with client data in this public method repository.
+`blank_templates/` holds the client-agnostic binary delivery templates that the models above describe: the Strateq DX Live Delivery PEP workbook (`Strateq_DX_Live_Delivery_PEP_TEMPLATE.xlsx`), the Strateq DX Digital Programme Workbook (`Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`, described by `10`) and the Digital Team Meeting Minutes document (`Digital_Team_Meeting_Minutes_TEMPLATE.docx`). These are the single canonical blank sources. The Coworker resolves a canonical template from the approved Strateq DX method commit (revision-handshake in `16`) and uses it to generate the populated client-side output; the reusable blank templates are not stored or maintained in client repositories, and are never filled with client data in this public method repository.
 
 ### 03_process_mapping
 Defines how existing process matrices are converted into process mapping packs, Blueworks build briefs, bottleneck registers, and developer/vendor scope outputs.

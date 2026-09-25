@@ -54,6 +54,47 @@ Before **every** Coworker-generated refresh, workbook update, or population of a
 
 A pinned revision is only changed by an explicit, Digital-Lead-approved baseline update in the client repository — never automatically by the Coworker.
 
+### Decision flow
+
+Client-agnostic. "Client" is whichever single client is bound for the session; no client is named in this method file.
+
+```text
+  before every refresh / workbook update / artefact population
+                              │
+                              ▼
+        [1] bind exactly one client
+                              │
+                              ▼
+        [2] read client METHOD_BASELINE.md (approved method commit + pinned revisions)
+                              │
+                              ▼
+        [3] resolve registry + approved artefact revision
+            at the approved method commit
+                              │
+                              ▼
+        [4] compare client pin vs central approved revision
+            (and interface/specification version)
+                              │
+        ┌─────────────────────┴─────────────────────┐
+        │                                            │
+   registry or artefact MISSING at the           matched AND
+   pinned commit, or STALE / AMBIGUOUS /         approved (not
+   INCOMPATIBLE / SUPERSEDED                      superseded)
+        │                                            │
+        ▼                                            ▼
+  STOP — ask the Digital Lead (fail-closed)     [5] read the canonical central template
+  require a baseline update to a method             (read-only, at the approved commit)
+  commit that contains the registry and             │
+  the required approved artefact revision;          ▼
+  do NOT read the template at that commit       [6] populate with bound-client data only
+  and do NOT assume the registry exists there       │
+                                                     ▼
+                                                [7] save ONLY the populated output in the
+                                                    client repository (never back to Strateq DX)
+```
+
+The left branch is the fail-closed path required by section 2 step 9 and `CLAUDE.md` B5. Absence of the registry or the required artefact at the client's pinned method commit is a **stale/incomplete baseline** and takes the left branch: it is never a reason to fall back to reading the template at that commit.
+
 ## 3. "Latest" means latest **approved** revision
 
 "Latest" is the `Current approved revision` recorded in this registry at the approved method commit. It is **not** the tip of an unpinned `main`, a work-in-progress branch, a draft, or an arbitrary file a user uploads into a session. An uploaded workbook is a supplied snapshot for reconciliation (`02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`), never the reusable artefact source.

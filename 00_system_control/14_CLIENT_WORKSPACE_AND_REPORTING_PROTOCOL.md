@@ -116,6 +116,32 @@ initiative/period/version catalogue for already-produced files, including PEPs
 and initiative-level executive and leadership reports. Historical downloads
 preserve the selected released file; they do not regenerate it from current data.
 
+## Programme / portfolio workbook interface
+
+`02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`
+governs the Strateq DX Digital Programme Workbook — a governed human-facing
+programme/portfolio interface and working snapshot for contract and initiative
+management, lifecycle/current-step visibility, delivery milestones and
+open/overdue actions. The blank client-agnostic template is held in the method
+repository (`02_coworker_artifact_interface/blank_templates/Strateq_DX_Digital_Programme_Workbook_TEMPLATE.xlsx`)
+and is copied into the bound private client repository and populated there.
+
+An uploaded workbook is a supplied snapshot, not automatically current. Before
+any workbook value is used, apply the confirmation-first status rule, then
+reconcile the workbook against the controlled records (Initiative Evidence and
+Decision File, PEP/control record, minutes, the approved action system and other
+approved evidence) and classify each difference (unchanged, proposed update, new
+record, missing record, conflict, stale value, unresolved identity). Confirmed
+changes are reconciled into the controlled records under the update-once rule
+before any report or refreshed workbook is generated. The Coworker does not
+silently overwrite controlled records; lifecycle labels and milestone cells are
+projections, not proof of approval or completion; blank cells do not mean "not
+required"; and manually entered action counts do not override reconciled action
+records. A Coworker-generated refreshed workbook is a dated snapshot produced from
+the confirmed controlled records and never becomes a parallel source of truth.
+Client adoption of the workbook as a working surface requires a client-specific
+source-of-truth decision in the client profile.
+
 ## Session closeout
 
 Every material session ends with:

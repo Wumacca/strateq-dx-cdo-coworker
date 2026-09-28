@@ -163,3 +163,62 @@ The workbook sits alongside, and never above, the controlled architecture in `00
 ## Boundary
 
 The Coworker may inspect, reconcile, classify, draft and prepare a refreshed workbook within the bound client's approved branch. It cannot approve governance decisions, stage transitions, acceptance or go-live, cannot treat the workbook as a controlled record, and cannot state that an external publication or write-back occurred without Digital Lead confirmation.
+
+---
+
+# Revision r2
+
+r2 is registered in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md` (r1 superseded). Adoption requires an explicit client baseline update. The workbook remains an interface and projection; the controlled records govern.
+
+## r2 structure additions
+
+- **Delivery Overview** gains, immediately after **Delivery-system ref**: a **Lifecycle status** column (dropdown from the controlled Status vocabulary) and a **RAG** column (Green / Amber / Red; blank = gap). Lifecycle and RAG no longer live in the Notes prefix (the r1 workaround).
+- **RAID (Open)** count column added to Delivery Overview, counting the initiative's open RAID entries.
+- **Programme-level (no-contract) group** added, for initiatives and actions not owned by a contract.
+- **Programme Overview** mirrors Lifecycle status and RAG.
+- **Action blocks are 20 rows** per initiative.
+- New **RAID sheet** — a single filterable register (AutoFilter; filter by initiative). Columns: RAID ID, Type (Risk / Assumption / Issue / Dependency), Initiative, Description, Owner, Raised, Priority, Status, Due / review, Notes.
+- Colours are applied by conditional formatting (step states, RAG, status, priority); dropdowns are native list validations.
+
+## PEP-baseline precondition and Not-required rule
+
+A delivery step (**Work Delivered → Adoption**) is set from the PEP **only where a PEP baseline exists** for that initiative. **With no PEP baseline, delivery steps are gaps (blank), never `● Not required`.** The N/R rule applies **only inside a baselined PEP**: a step with no mapped milestone in the baseline is `● Not required` and progression moves to the next step; the basis is recorded in Notes (`N/R: [step] — no PEP milestone, [PEP ref] rev [n]`), and the PEP-milestone-to-step mapping is recorded in the Initiative Evidence and Decision File (`00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` / `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md`). Reinstating a step from N/R requires Digital Lead confirmation.
+
+## Status crosswalk (controlled vocabulary → workbook)
+
+| Controlled status | Workbook representation |
+|---|---|
+| Hopper / initiation statuses (Hopper Backlog, Initiation Form in Progress) | Lifecycle = that status; steps typically all gap (pre-delivery) |
+| DRB outcomes | Not a lifecycle value; recorded in the initiative record; may unlock Mobilising |
+| Mobilising | Lifecycle = Mobilising; mobilisation steps (LA→PEP Build) from approval/contract/kick-off evidence |
+| In Delivery | Lifecycle = In Delivery; delivery steps from the baselined PEP |
+| Operational / Live | Lifecycle = Operational / Live; delivery steps largely Complete |
+| Paused (On Hold) | Lifecycle = Paused; **progression frozen** — steps hold their last state; RAG typically Amber/Red |
+| Closed / Retired | Lifecycle = Closed / Retired; **every step Complete or Not required, plus a closeout reference** in Notes |
+| Delivery health | RAG column (Green / Amber / Red); blank = gap |
+
+## Source-feed matrix
+
+Every source that can change a workbook field, the master updated first, and the confirmation required. The workbook is refreshed from the reconciled masters; it is never edited ahead of them.
+
+| Source | Fields it may change | Master updated first | Confirmation required |
+|---|---|---|---|
+| Hopper / DRB decision | Lifecycle, presence of row | Initiative Evidence and Decision File | Digital Lead / DRB decision record |
+| Initiation / authority to proceed | Lifecycle, Leadership Approval step | Initiative Evidence and Decision File; Completed Initiation Form | Digital Lead confirmation |
+| Contract / vendor evidence | Vendor Onboarded step, delivery-system ref | Initiative Evidence and Decision File | Documentary evidence |
+| Initiative Delivery Setup + In-Delivery approval | Lifecycle → In Delivery; Project kick-off / PEP Build | Initiative Delivery Setup; Initiative Evidence and Decision File | Digital Lead stage-transition decision |
+| PEP revision | Delivery steps (Work Delivered→Adoption); Current Step | PEP / client-control record | Digital Lead-approved PEP baseline |
+| Meeting minutes | Actions, RAID entries, notes | Originating action / RAID logs | Minutes confirmed |
+| Digital Lead thread update | Any confirmed field | Affected master (initiative file / PEP / logs) | Confirmation-First Status Gate |
+| Evidence upload | Step evidence, RAG basis | Initiative Evidence and Decision File | Digital Lead confirmation |
+| Delivery-system export | Actions/status where the client profile names a system | Approved action system / initiative file | Reconciliation + confirmation |
+| Bi-weekly input / Artefact 1 | Reported position (snapshot) | Initiative files + PEP (update-once) | Reporting cut-off confirmation |
+| Pause / resume / closure decision | Lifecycle (Paused / Closed-Retired); progression freeze | Initiative Evidence and Decision File | Digital Lead decision + closeout reference |
+
+## Reporting chain
+
+`PEP / client-control records → Initiative Evidence and Decision File → Digital Programme Workbook → Artefact 1 and programme / leadership reporting` (also stated in `01_governance_lifecycle/12_STAGE_3_LIVE_DELIVERY_CONTROL_MODEL.md`). The workbook sits between the controlled records and the reports; it never becomes a parallel source.
+
+## Workbook impact check
+
+Every material governed session that confirms a change to an initiative's status, step evidence or actions ends its closeout / write-back (`00_system_control/07_...`, `12`) with either **`No workbook impact`** or a **proposed Digital Programme Workbook change**.

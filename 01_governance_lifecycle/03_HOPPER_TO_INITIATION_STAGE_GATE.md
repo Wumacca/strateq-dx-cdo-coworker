@@ -124,3 +124,8 @@ Notes: [short note]
 **Development Route:** The next stage begins when the item status is set to Stage 1D In Progress and the Digital Lead confirms the route. Load `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
 
 **Implementation Route or Support Route:** The next stage begins when the item status is changed to Initiation Form In Progress or equivalent, and the correct route is selected or prepared. Load `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+
+
+## Digital Programme Workbook impact check (r2)
+
+Every material governed session that confirms a change to an initiative's status, step evidence or actions ends its closeout / write-back with either `No workbook impact` or a proposed Digital Programme Workbook change (`ART-PROGRAMME-WORKBOOK`, governed by `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`, registered in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`). The workbook is a projection and interface; the controlled records govern and are updated first.

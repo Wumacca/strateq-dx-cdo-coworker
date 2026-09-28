@@ -377,3 +377,7 @@ Before any Coworker-generated refresh or population of a reusable artefact (temp
 ## Boundary
 
 Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. Where this file and an authority file appear to conflict, surface the conflict to the Digital Lead before producing final output.
+
+## Digital Programme Workbook impact check (r2)
+
+For the scenarios whose closeouts confirm a change to an initiative's status, step evidence or actions — router rows 7 and 8 (confirmed initiative-position / Hopper-status updates), 13 and 14 (delivery evidence and reporting), and 16 (workbook upload / refresh) — the closeout / write-back states either `No workbook impact` or a proposed Digital Programme Workbook change (`ART-PROGRAMME-WORKBOOK`, governed by `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`, registered in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`). The workbook is a projection; controlled records govern.

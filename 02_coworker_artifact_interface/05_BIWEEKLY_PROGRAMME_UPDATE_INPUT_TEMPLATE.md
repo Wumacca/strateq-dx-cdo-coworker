@@ -57,3 +57,8 @@ The coworker must:
 No material update may remain only in this template or the reporting thread.
 
 Where the Digital Lead has confirmed a position but the evidence-file or client-system write-back remains pending, state that clearly in the report and carry the physical action forward.
+
+
+## Digital Programme Workbook impact check (r2)
+
+Every material governed session that confirms a change to an initiative's status, step evidence or actions ends its closeout / write-back with either `No workbook impact` or a proposed Digital Programme Workbook change (`ART-PROGRAMME-WORKBOOK`, governed by `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`, registered in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`). The workbook is a projection and interface; the controlled records govern and are updated first.

@@ -132,3 +132,11 @@ The first Artefact 1 record after mobilisation carries the approved `Initiative 
 ## Boundary
 
 The Coworker drafts, reconciles, validates and recommends. It does not approve a stage, scope, budget, variation, acceptance or go-live decision.
+
+## Reporting chain and Digital Programme Workbook (r2)
+
+The live-delivery reporting chain is:
+
+`PEP / client-control records → Initiative Evidence and Decision File → Digital Programme Workbook → Artefact 1 and programme / leadership reporting`
+
+The Digital Programme Workbook (`ART-PROGRAMME-WORKBOOK`, governed by `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`) sits between the controlled records and the reports as a projection; it never becomes a parallel source of truth. Every material closeout / write-back states either `No workbook impact` or a proposed workbook change. Delivery steps are set from a baselined PEP only; with no PEP baseline they are gaps, never `Not required`.

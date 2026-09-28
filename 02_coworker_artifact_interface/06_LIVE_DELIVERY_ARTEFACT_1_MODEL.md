@@ -49,3 +49,8 @@ The first Artefact 1 record after approval to enter delivery includes the approv
 ## Approval boundary
 
 The Coworker prepares the record. Meeting owners confirm content, and the Digital Lead approves governed changes or escalation. Artefact 1 cannot approve scope, cost, acceptance, go-live or lifecycle transitions.
+
+
+## Digital Programme Workbook impact check (r2)
+
+Every material governed session that confirms a change to an initiative's status, step evidence or actions ends its closeout / write-back with either `No workbook impact` or a proposed Digital Programme Workbook change (`ART-PROGRAMME-WORKBOOK`, governed by `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`, registered in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`). The workbook is a projection and interface; the controlled records govern and are updated first.

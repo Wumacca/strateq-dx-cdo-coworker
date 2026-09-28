@@ -159,3 +159,8 @@ Next steps if approved:
 ## Boundary
 
 DRB meeting-support text supports the decision discussion. It does not approve the initiative and it is not the formal approval artefact. The formal approval artefact is the Completed Initiation Form (`01_governance_lifecycle/10_COMPLETED_INITIATION_FORM_OUTPUT_MODEL.md`).
+
+
+## Digital Programme Workbook impact check (r2)
+
+Every material governed session that confirms a change to an initiative's status, step evidence or actions ends its closeout / write-back with either `No workbook impact` or a proposed Digital Programme Workbook change (`ART-PROGRAMME-WORKBOOK`, governed by `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`, registered in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`). The workbook is a projection and interface; the controlled records govern and are updated first.

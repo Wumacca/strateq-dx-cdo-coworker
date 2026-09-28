@@ -163,3 +163,8 @@ Coworkers must not assume another coworker has already approved, updated, or pub
 Coworkers must not rely on chat memory where the bound client repository or configured client system should hold the controlled record.
 
 Coworkers must ask what files, registers, or artefacts they need before continuing if continuity is unclear.
+
+
+## Digital Programme Workbook impact check (r2)
+
+Every material governed session that confirms a change to an initiative's status, step evidence or actions ends its closeout / write-back with either `No workbook impact` or a proposed Digital Programme Workbook change (`ART-PROGRAMME-WORKBOOK`, governed by `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`, registered in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`). The workbook is a projection and interface; the controlled records govern and are updated first.

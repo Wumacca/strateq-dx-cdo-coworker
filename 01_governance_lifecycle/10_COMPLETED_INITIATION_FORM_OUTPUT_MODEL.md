@@ -153,3 +153,8 @@ The Completed Initiation Form export must be Word-compatible / `.docx` where pos
 ## Boundary
 
 The Completed Initiation Form prepares the decision and supports DRB approval. It does not approve the initiative. Leadership / DRB approval creates the Approved Route Trigger; after approval each initiative follows its correct route under `01_governance_lifecycle/05_ROUTE_RULES.md` and `01_governance_lifecycle/03_HOPPER_TO_INITIATION_STAGE_GATE.md`.
+
+
+## Digital Programme Workbook impact check (r2)
+
+Every material governed session that confirms a change to an initiative's status, step evidence or actions ends its closeout / write-back with either `No workbook impact` or a proposed Digital Programme Workbook change (`ART-PROGRAMME-WORKBOOK`, governed by `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`, registered in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`). The workbook is a projection and interface; the controlled records govern and are updated first.

@@ -248,3 +248,8 @@ Initiative RAG assesses this defined work, not the entire parent programme.
 ## Boundary
 
 This schema adds no AI approval authority or numeric AI confidence scoring. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.
+
+
+## Digital Programme Workbook impact check (r2)
+
+Every material governed session that confirms a change to an initiative's status, step evidence or actions ends its closeout / write-back with either `No workbook impact` or a proposed Digital Programme Workbook change (`ART-PROGRAMME-WORKBOOK`, governed by `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`, registered in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`). The workbook is a projection and interface; the controlled records govern and are updated first.

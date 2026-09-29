@@ -146,3 +146,7 @@ Every artefact should make clear:
 5. What physical action the Digital Lead must take
 6. What controlled file, delivery system, process-mapping system, signing route or publication destination update is required
 7. What triggers the next lifecycle stage
+
+## Central Live Status control
+
+For every client, the single user-facing intake is the central Live Status thread/equivalent defined in `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md`. It reads the client branch registry before processing. No write proceeds when the referenced branch is missing, stale, divergent, undocumented or ambiguous; the required binding decision is recorded first. Mixed updates are separated into independently reconciled change sets and committed to their canonical initiative/workstream branches. Reporting uses only merged or explicitly exposed controlled records and the approved workbook/source-of-truth position. Destructive branch operations and external updates remain approval-gated.

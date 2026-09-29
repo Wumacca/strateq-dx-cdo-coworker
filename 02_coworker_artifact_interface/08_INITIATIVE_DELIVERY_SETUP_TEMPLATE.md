@@ -191,3 +191,7 @@ This record closes only when the Digital Lead approves the transition from `Mobi
 | Version | Date | Change | Prepared by | Digital Lead decision | Evidence / commit |
 |---|---|---|---|---|---|
 | Draft 0.1 |  | Initial setup | AI Coworker | Pending |  |
+
+## Central Live Status and branch registry fields
+
+Add these setup rows: Central Live Status thread/equivalent; client branch registry path/ref; controlled initiative/workstream path; canonical branch; status versus reporting source; duplicate/stale/non-canonical branches; reporting visibility; last verified date; blocker/decision required; safe next action; programme action tracker and thread tracker references. Mark setup incomplete until all are confirmed.

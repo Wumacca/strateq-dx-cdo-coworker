@@ -73,3 +73,7 @@ Comments:
 ## Usage Rule
 
 Feed back facts only. Do not rewrite the initiative based on assumptions. If something is still unclear, mark it as TBC.
+
+## Central Live Status intake header
+
+For client submissions, prepend the Central Live Status header from interface 11: client, update date/sender/type, initiative/workstream reference(s), evidence links, requested decision/safe next action, registry path/ref and last registry verification. The central thread routes the submission; it does not replace the controlled initiative record.

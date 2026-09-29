@@ -248,3 +248,7 @@ Initiative RAG assesses this defined work, not the entire parent programme.
 ## Boundary
 
 This schema adds no AI approval authority or numeric AI confidence scoring. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.
+
+## Central intake and branch binding fields
+
+Every EIDF must identify the controlled initiative/workstream path, canonical working branch, client branch-registry row/reference, last branch verification, branch status versus the approved reporting source, duplicate/stale/non-canonical branch disposition, reporting visibility and safe next action. The central Live Status thread may link and route an update, but the EIDF remains the controlled initiative record. A reportable position requires reconciliation to the approved reporting source.

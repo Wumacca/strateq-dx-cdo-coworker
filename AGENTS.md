@@ -46,3 +46,7 @@ The coworker may inspect, reconcile, draft, validate and prepare controlled chan
 ## File-map maintenance
 
 Any pull request that adds, renames, splits or retires a governance file must update `CLAUDE.md` B2, `00_system_control/FOLDER_MAP.md` and the root `README.md` in the same change.
+
+## Central Live Status default
+
+The central Live Status thread and client-level branch registry are mandatory reusable controls for every client workspace. Before writing from a central-thread update, read the registry and bind each initiative/workstream to its controlled path and canonical branch. Stop on missing, stale, divergent, undocumented or ambiguous bindings; split mixed updates into separate controlled change sets; and keep reporting visibility behind the approved reporting source. The public method repository must remain client-agnostic.

@@ -176,6 +176,26 @@ Physical write-backs are prepared as recommendations; only the Digital Lead or a
 
 Session state uses the controlled session states in `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md` (Not started / Active / Suspended — awaiting evidence / Pending Digital Lead decision / Pending external approval / Ready for closeout / Closed and handed over).
 
+### 10b. Context and Control Layer — mandatory
+
+Every client-copy Initiative Evidence and Decision File must implement the Context and Control Layer standard (`00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md`). The following fields are mandatory for a position to be represented as current:
+
+- Context and Control Pack reference/status
+- As-of position and as-of date/time
+- Lifecycle position, route and responsible Coworker
+- Delivery/governance status and health
+- Latest source/path and source date
+- Last verified date/time and verification owner
+- Digital Lead confirmation status and last confirmation date
+- Freshness status
+- State limitations, open blocker/decision and next control move
+- Last control-check run and outcomes
+- Open fail-closed findings and remediation status
+- Drift-audit ID, status, scope and next review point
+- Source-of-truth, branch/path and recovery references where applicable
+
+A missing, stale, conflicting or unverified field must be represented as `Pending confirmation`, `Stale`, `Accepted gap` or the applicable controlled status; it must not be silently inferred. This block is a required projection of the existing controlled records and is not a second initiative record.
+
 ### 11. Strategic and maturity alignment fields (future-state)
 
 These fields are reserved now for future alignment with the Client Digital Governance Profile and Maturity Improvement Loop models. They are **schema fields only**. Do not calculate maturity scores and do not update maturity positions in this workstream.
@@ -247,7 +267,7 @@ Initiative RAG assesses this defined work, not the entire parent programme.
 
 ## Boundary
 
-This schema adds no AI approval authority or numeric AI confidence scoring. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.
+This schema adds no AI approval authority or numeric AI confidence scoring. The Context and Control Layer adds no approval, merge, publication or automatic mutation authority. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.
 
 ## Central intake and branch binding fields
 

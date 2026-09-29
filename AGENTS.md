@@ -14,7 +14,8 @@ Before governed work, read and apply:
 2. `00_system_control/OPERATING_RULES.md`
 3. `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`
 4. `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md` — before generating, refreshing or populating any reusable artefact
-5. the fixed authority set and stage-specific files mapped in `CLAUDE.md` B2
+5. `00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md` — for context packs, verified current state, control checks and drift audits
+6. the fixed authority set and stage-specific files mapped in `CLAUDE.md` B2
 
 For Live Delivery, this always includes:
 

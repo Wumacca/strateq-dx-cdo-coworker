@@ -138,6 +138,10 @@ Every coworker handover must include:
 - required next action
 - files the receiving coworker must inspect
 - confidence level and remaining information gaps
+- Context and Control Pack reference
+- Verified Current State position, source, last verification and freshness status
+- control checks run, unresolved findings and drift-audit status
+- recovery / branch / version reference where applicable
 
 ## Handover Timing
 

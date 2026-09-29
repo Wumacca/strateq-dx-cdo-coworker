@@ -36,6 +36,12 @@ This registry is the authoritative list of reusable artefacts clients adopt and 
 | `ART-INITIATIVE-EVIDENCE-FILE` | Initiative Evidence and Decision File | `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` | `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` | `r1` | `bc1923c` | Approved | none | Client-copy implementation of the `13` schema; a schema change increments both and requires a baseline update. | Yes |
 | `ART-INITIATIVE-DELIVERY-SETUP` | Initiative Delivery Setup Template | `02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md` | `02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md` | `r1` | `bc1923c` | Approved | none | Artefact 0 (exact title). Section changes increment the revision and require a baseline update. | Yes |
 
+**Proposed revision pending Digital Lead release.** The branch `method/context-control-layer` proposes changes to the Initiative Evidence and Decision File schema/template. The current approved revision remains `r1` until the controlled release is approved and the approving method commit is known.
+
+| Artefact ID | Proposed revision | Change | Branch / PR position | Approval status |
+|---|---|---|---|---|
+| `ART-INITIATIVE-EVIDENCE-FILE` | `r2` | Mandatory Verified Current State and Context and Control audit projection | `method/context-control-layer` | Pending Digital Lead approval before release |
+
 **Registry maintenance.** This registry is an open set. Any pull request that adds, renames, retires or changes an approved revision of a reusable artefact **or** its interface must update this registry in the same commit, set the new `Approving method commit`, move the prior revision into `Superseded revisions`, and (where `CLAUDE.md` B2 maps the artefact's interface) update B2, `00_system_control/FOLDER_MAP.md` and `README.md`. A `Superseded` artefact must not be resolved for new client work.
 
 ## 2. Deterministic artefact-resolution protocol (revision handshake)

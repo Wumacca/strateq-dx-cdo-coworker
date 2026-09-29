@@ -50,6 +50,7 @@ The client profile names the actual delivery-control systems. Jira, SharePoint o
 - `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`
 - `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`
 - `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`
+- `00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md`
 
 ## Cockpit feed contract
 
@@ -107,6 +108,12 @@ governance. The single canonical blank, client-agnostic template is
 The Coworker resolves the canonical template from the approved Strateq DX method
 commit and uses it to generate the populated client-side output. The reusable
 blank template is not stored or maintained in the client repository.
+
+## Context and control layer
+
+`00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md` defines the reusable Context and Control Pack, mandatory Verified Current State block, deterministic control-check catalogue and drift-audit scorecard. It is a cross-cutting control layer over the existing Initiative Evidence and Decision File, PEP, action, evidence, branch and source-of-truth records. It does not create a second initiative record, programme ledger, additional Coworker or automatic approval path.
+
+Each client adopts the standard through its controlled method baseline. Populated context packs, current-state blocks and audit scorecards remain client-side; the public method repository contains only the client-agnostic standard and blank structure.
 
 ## File-map maintenance
 

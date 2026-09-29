@@ -115,3 +115,9 @@ Any pull request that adds, renames, splits or retires a governance file must up
 ## Executive communication
 
 Executive and Board-facing outputs follow `docs/presentation-standards/communication-and-framing-standard.md`.
+
+## Central Live Status default
+
+Every client workspace uses one central `Live Status` thread/equivalent as the single user-facing intake for status, decisions, actions, RAID, initiative/workstream context and uploaded artefacts. The thread reads the client-level branch registry before processing, routes to each controlled initiative/workstream path and branch, stops on an unbound or ambiguous branch, and splits mixed updates into separate commits. Controlled initiative records remain distinct. Reporting and workbook outputs use reconciled controlled records plus the approved source-of-truth position and become visible only after merge to the approved reporting source or client-approved exposure.
+
+The reusable standard and interface are `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md` and `02_coworker_artifact_interface/11_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_REGISTRY_INTERFACE.md`. Existing client workspaces require a controlled adoption update; this method change does not rewrite client records.

@@ -167,3 +167,7 @@ The Coworker may inspect, reconcile, classify, draft and prepare a refreshed wor
 ## Central Live Status source and branch visibility
 
 Before parsing or refreshing a workbook, read the client branch registry and reconcile every referenced initiative/workstream to its controlled record and canonical branch. Generate outputs only from latest reconciled controlled records plus the approved live workbook/source-of-truth position. Changes on an initiative branch remain branch-only until merged to the approved reporting source (normally `main`) or explicitly exposed by client-approved process. Mixed central-thread updates must never be collapsed into one workbook branch or one initiative record.
+
+## Refresh and reporting authorization
+
+A workbook refresh or programme-reporting update requires explicit authorisation from the bound client controls after branch registry and source rechecks. Branch-only records may remain valid working inputs for their initiative but must not be included in programme reporting until merged to `main` or explicitly exposed to the approved reporting source. The refresh must record branch-only versus reporting-visible positions and cannot delete or rewrite controlled history.

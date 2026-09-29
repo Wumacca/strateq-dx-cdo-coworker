@@ -238,3 +238,7 @@ The programme lifecycle map defines where the work sits.
 The relevant stage file defines what must be produced.
 
 The coworker must not produce artefacts outside the active lifecycle stage unless the Digital Lead explicitly instructs it to do so.
+
+## Central Live Status default
+
+Across all lifecycle stages, client-facing status and evidence enters through one central Live Status thread/equivalent. Before substantive processing, the coworker reads the client-level initiative/workstream branch registry and binds each reference to its controlled path and canonical branch. New initiatives/workstreams require path, branch, registry, tracker and routing setup. Mixed updates are split by initiative/workstream; reporting uses reconciled records visible on the approved reporting source.

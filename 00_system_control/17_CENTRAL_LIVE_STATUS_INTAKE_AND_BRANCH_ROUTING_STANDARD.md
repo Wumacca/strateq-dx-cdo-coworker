@@ -79,3 +79,32 @@ Every central-thread session closes with the registry rows checked, change sets 
 - `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`
 - `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`
 - `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`
+
+## Mandatory pre-processing recheck
+
+After reading the branch registry and before accepting a live update, recheck the relevant:
+
+1. canonical branch and its current head/state versus `main`;
+2. initiative/workstream controlled home/path;
+3. source index or artefact index;
+4. Initiative Delivery Setup file;
+5. Initiative Evidence and Decision File;
+6. RAID and action log.
+
+Record the refs and verification time in the intake closeout. If any required source is missing or inconsistent, hold the update and enter binding resolution before writing.
+
+## Binding-resolution pass
+
+A binding-resolution pass is required for a missing, stale, divergent, undocumented or competing branch. It must:
+
+- inspect every candidate branch and identify branch-only commits;
+- preserve all controlled branch-only commits;
+- consolidate relevant data into one canonical branch only when the authorised client decision permits it;
+- mark duplicate, old or non-canonical branches as **no-routing** in the registry;
+- avoid branch deletion unless separately authorised and technically available;
+- avoid force-push, destructive rebases or history rewriting unless expressly authorised;
+- record what remains branch-only and what is reporting-visible after the pass.
+
+Live Status routing may resume only when the registry records one current canonical branch per initiative/workstream and no branch-level blocker remains. Housekeeping deletion is never a routing prerequisite.
+
+Workbook refreshes, programme reporting updates, Jira updates and SharePoint publication require explicit client-control authorisation even when the underlying branch is resolved.

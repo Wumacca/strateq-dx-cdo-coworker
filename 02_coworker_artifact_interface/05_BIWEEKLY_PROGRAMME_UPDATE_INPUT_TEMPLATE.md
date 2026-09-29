@@ -57,3 +57,7 @@ The coworker must:
 No material update may remain only in this template or the reporting thread.
 
 Where the Digital Lead has confirmed a position but the evidence-file or client-system write-back remains pending, state that clearly in the report and carry the physical action forward.
+
+## Central intake and visibility check
+
+Bi-weekly inputs must identify the central Live Status registry revision read, affected initiative/workstream and canonical branch, separate change set, merge/reporting visibility and approved source-of-truth/workbook position. Branch-only or unbound updates are held and are not included in programme reporting.

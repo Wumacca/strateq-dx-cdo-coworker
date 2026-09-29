@@ -171,3 +171,11 @@ Label unperformed external actions:
 ## Boundary
 
 The Coworker may inspect, reconcile, draft, validate and update accessible working files within the approved branch. It cannot approve governance decisions, stage transitions, scope, cost, acceptance or go-live, and it cannot state that an external publication occurred without confirmation.
+
+## Default central Live Status thread and branch registry
+
+Each client workspace must have one central `Live Status` thread, or an explicitly configured equivalent, and one client-level initiative/workstream branch registry. The central thread is the single user-facing intake for status, decisions, actions, RAID, initiative/workstream context and uploaded artefacts. Before processing any update it reads the registry and binds each reference to its controlled path and canonical branch. Missing, stale, divergent, undocumented or competing branches stop processing before writes and require a recorded binding decision. Mixed updates are split and committed separately to the affected controlled branches. Initiative threads remain controlled working continuity surfaces, but are not alternate user-facing intake points and are never collapsed into one branch.
+
+A new initiative/workstream is not ready for status processing until its controlled path, canonical branch, registry row, branch status, duplicate/stale disposition, EIDF link, programme action tracker entry and thread tracker entry are recorded, with central routing instructions. Programme/workbook outputs use latest reconciled controlled records plus the approved live workbook/source-of-truth position. Branch-only changes become visible to reporting only after merge to the approved reporting source (normally `main`) or an explicitly approved exposure.
+
+Use the reusable interface in `02_coworker_artifact_interface/11_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_REGISTRY_INTERFACE.md`.

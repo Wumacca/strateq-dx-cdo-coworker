@@ -377,3 +377,7 @@ Before any Coworker-generated refresh or population of a reusable artefact (temp
 ## Boundary
 
 Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. Where this file and an authority file appear to conflict, surface the conflict to the Digital Lead before producing final output.
+
+## Central Live Status routing (mandatory)
+
+The client-level `Live Status` thread is the default user-facing intake for status, decisions, actions, RAID, initiative/workstream context and uploaded artefacts. On every central-thread trigger, read `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md` and the client branch registry before processing. Bind every referenced item to its canonical path and branch; stop before writing when the registry row is missing, stale, divergent, undocumented or ambiguous. Split mixed updates into separate initiative/workstream change sets and route each to its own controlled branch. The central thread is a router and never a replacement for EIDF/PEP records or a programme ledger. Reporting is permitted only after the approved reporting source is current.

@@ -114,3 +114,7 @@ Every material closeout records:
 - release/publication status.
 
 No exception to client separation may be inferred by the coworker.
+
+## Central intake and branch registry controls
+
+The minimum private client workspace controls now include one central Live Status thread/equivalent, a client-level initiative/workstream branch registry, a programme action tracker and thread tracker. Each initiative/workstream retains one controlled folder/path and one canonical working branch. Registry rows must bind the item to its path and branch and record status versus the approved reporting source, duplicate/stale/non-canonical branches, reporting visibility, last verification, blocker/decision and safe next action. These controls remain client-side; no populated registry or client fact may enter the public method repository.

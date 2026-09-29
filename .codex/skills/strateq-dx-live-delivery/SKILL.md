@@ -122,3 +122,7 @@ State:
 - Digital Lead actions required.
 
 The Coworker may inspect, reconcile, draft, validate and prepare controlled changes. It never grants governance approval.
+
+## Central Live Status routing
+
+When invoked from a client Live Status thread/equivalent, read the client branch registry before any write, bind every initiative/workstream reference to its controlled path and canonical branch, and fail closed on missing, stale, divergent, undocumented or competing branches. Split mixed updates into separate branch-scoped change sets. Keep EIDF/PEP records distinct and expose status to reporting only after merge to the approved reporting source or client-approved process. Apply `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md` and interface 11.

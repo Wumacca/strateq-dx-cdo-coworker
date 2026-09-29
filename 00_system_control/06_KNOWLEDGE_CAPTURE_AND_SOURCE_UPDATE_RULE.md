@@ -136,3 +136,7 @@ The Coworker must not update controlled source-of-truth files without Digital Le
 The Coworker must not treat chat confirmation of a status position as sufficient authority to apply a controlled file update or claim an external client-system update occurred.
 
 Knowledge capture proposals are outputs for Digital Lead action, not self-authorised updates.
+
+## Central intake writeback
+
+Knowledge captured from the central Live Status thread is reconciled into the originating initiative/workstream EIDF and controlled records on that item's canonical branch. Mixed updates are split; no programme ledger is created. Reporting extracts wait for approved merge visibility.

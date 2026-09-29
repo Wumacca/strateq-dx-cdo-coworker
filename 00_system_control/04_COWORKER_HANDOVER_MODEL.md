@@ -163,3 +163,7 @@ Coworkers must not assume another coworker has already approved, updated, or pub
 Coworkers must not rely on chat memory where the bound client repository or configured client system should hold the controlled record.
 
 Coworkers must ask what files, registers, or artefacts they need before continuing if continuity is unclear.
+
+## Branch binding in handover
+
+Handover fields must include controlled initiative/workstream path, canonical branch, branch-registry row, last verification, branch status versus reporting source, duplicate/stale/non-canonical disposition, reporting visibility and safe next action. The receiving coworker reads the registry before accepting any central Live Status update; handover does not create a second record or branch.

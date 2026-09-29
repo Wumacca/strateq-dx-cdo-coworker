@@ -150,3 +150,11 @@ At resolution time the Coworker performs the section 2 handshake between each cl
 ## Boundary
 
 This registry adds no AI approval authority. The Coworker resolves, compares, records and fails closed; it does not approve a revision, upgrade a client baseline, merge/release a method change, or write client data into the method repository. Digital Lead approval governs every method-repository change and every client baseline update.
+
+## Central Live Status branch registry interface
+
+| Artefact ID | Artefact | Revision | Canonical interface | Approving method commit | Compatibility notes |
+|---|---|---:|---|---|---|
+| ART-CENTRAL-LIVE-STATUS-BRANCH-REGISTRY | Central Live Status intake and initiative/workstream branch registry | r1 | `02_coworker_artifact_interface/11_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_REGISTRY_INTERFACE.md` governed by `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md` | PR #26 release candidate; final approved method commit to be recorded at merge/release | Requires client-side registry, central Live Status thread, controlled initiative paths/branches and reporting-source visibility; no client data in the method repo |
+
+The central Live Status interface is approved only as a reusable method specification. Each client must create and maintain its populated registry, resolution notes and tracker references in its private repository. A client baseline must pin the approved method revision before activating the interface.

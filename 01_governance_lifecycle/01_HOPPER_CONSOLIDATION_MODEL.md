@@ -211,3 +211,7 @@ Update Jira to reflect:
 ## Next Lifecycle Trigger
 
 The next stage begins when a clean set of candidate items is confirmed as ready for Hopper Priority Screen.
+
+## Initiative/workstream creation binding
+
+When a Hopper item is promoted to an initiative/workstream, creation is not complete until the private client repository confirms its controlled path and canonical branch, adds the client-level branch-registry row, updates programme action/thread trackers and posts central Live Status routing instructions. Do not accept status writes before this binding gate passes.

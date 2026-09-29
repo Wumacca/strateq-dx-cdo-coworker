@@ -45,7 +45,7 @@ Where the workbook and any controlled record disagree, the controlled record gov
 
 ## Sheet structure
 
-The template contains four sheets. `Lists` is hidden and drives the dropdowns; the other three are working surfaces. Sheet names, structure, formulas and dropdowns are fixed method scaffolding — do not rename or restructure them when adopting the template; enter client content into the cells only.
+The template contains six sheets. `Closed Actions` is hidden and formula-driven; `Lists` is a visible control tab; the other four are working surfaces or reporting views. Sheet names, structure, formulas, hidden rows/columns, filters, validations, conditional formatting, merges and panes are fixed method scaffolding — do not rename or restructure them when adopting the template; enter client content into the designated input cells only.
 
 ### 1. `Programme Overview`
 
@@ -87,7 +87,7 @@ The primary working sheet. Structure:
 
 The action tracker, blocked into the same contract → initiative groups as `Delivery Overview`. Columns: `Action ID`, `Action`, `Owner`, `Due`, `Status`, `Notes`, `Overdue`. `Status` uses the **Action status** dropdown; `Due` takes a date; `Overdue` is computed (an action is overdue when it is dated, still open/in-progress/blocked, and past today). Group and sub-group header rows show live open/overdue counts by formula.
 
-### 4. `Lists` (hidden)
+### 4. `Closed Actions` (hidden)\n\nFormula-driven archive of actions whose status is `Done`, `Cancelled` or `Closed`. This sheet is retained as part of the controlled structure and must not be deleted, renamed or manually maintained.\n\n### 5. `RAID`\n\nThe RAID log, using the controlled `RAID type` vocabulary (`Risk`, `Assumption`, `Issue`, `Dependency`). It mirrors the contract → initiative grouping used by the workbook and computes open/overdue signals from the row-level status and due/review date. Detail rows are intentionally hidden where the controlled layout uses collapsible sections; preserve those hidden rows.\n\n### 6. `Lists` (visible)
 
 The controlled dropdown vocabulary and helper lists that drive validation:
 
@@ -132,7 +132,7 @@ An uploaded workbook is a **supplied snapshot; it is not automatically current.*
 - Manually entered action counts and typed statuses must **not** override reconciled action records from the approved action-management system.
 - A populated client copy must use the latest approved initiative names per contract with a stable, unique identifier or approved delivery-system reference for each initiative; generic placeholder labels (e.g. `Initiative 1`) must not remain in a populated workbook (see the Initiative currency rule).
 - Client adoption of this workbook as a working surface requires a client-specific source-of-truth decision recorded in that client's profile; it does not change any controlled record on its own.
-- The public method repository must contain only the blank template and these reusable method rules.
+- The public method repository must contain only the blank, client-agnostic template and these reusable method rules. Client-specific labels in the source workbook are replaced with neutral placeholders in the method copy; the populated controlled copy remains client-side.
 
 ## Generated-output workflow
 

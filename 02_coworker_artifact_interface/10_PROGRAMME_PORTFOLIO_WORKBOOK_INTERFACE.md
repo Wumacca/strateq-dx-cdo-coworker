@@ -163,3 +163,7 @@ The workbook sits alongside, and never above, the controlled architecture in `00
 ## Boundary
 
 The Coworker may inspect, reconcile, classify, draft and prepare a refreshed workbook within the bound client's approved branch. It cannot approve governance decisions, stage transitions, acceptance or go-live, cannot treat the workbook as a controlled record, and cannot state that an external publication or write-back occurred without Digital Lead confirmation.
+
+## Central Live Status source and branch visibility
+
+Before parsing or refreshing a workbook, read the client branch registry and reconcile every referenced initiative/workstream to its controlled record and canonical branch. Generate outputs only from latest reconciled controlled records plus the approved live workbook/source-of-truth position. Changes on an initiative branch remain branch-only until merged to the approved reporting source (normally `main`) or explicitly exposed by client-approved process. Mixed central-thread updates must never be collapsed into one workbook branch or one initiative record.

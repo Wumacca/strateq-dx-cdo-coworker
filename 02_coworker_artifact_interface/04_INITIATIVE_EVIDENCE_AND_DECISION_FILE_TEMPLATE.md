@@ -212,3 +212,7 @@ The Coworker may prepare or revise this file inside the bound client repository 
 ## Central Live Status and branch binding
 
 Add these control-header fields to every client copy: central Live Status thread/equivalent; controlled initiative/workstream path; canonical working branch; client branch-registry row; last branch verification; branch status versus approved reporting source; duplicate/stale/non-canonical branch disposition; reporting visibility; blocker/decision required; safe next action; programme action tracker and thread tracker references. Updates arriving through the central thread are reconciled into this EIDF on the originating branch. Mixed updates stay separate. Reporting extracts remain pending until the approved reporting source is current.
+
+## Branch resolution and source recheck fields
+
+Add to the control header/change log: registry revision read; canonical branch versus `main`; controlled home; source index; setup file; RAID/action log; verification date; candidate branches; preserved branch-only commits; authorised consolidation decision; no-routing branches; branch-only position; reporting-visible position; and blocker/safe next action. Do not mark the record reportable until the approved reporting source is current.

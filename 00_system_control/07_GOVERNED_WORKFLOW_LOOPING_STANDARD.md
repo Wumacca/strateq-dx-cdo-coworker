@@ -364,3 +364,7 @@ Boundary rules:
 ## Boundary
 
 Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. Where this file and an authority file appear to conflict, surface the conflict to the Digital Lead before producing final output.
+
+## Central Live Status loop control
+
+At loop start, read the client branch registry before processing a central Live Status update. At loop closeout, record affected rows, target branches, separate change sets, approval/merge state and reporting visibility. Stop and escalate any missing, stale, divergent, undocumented or ambiguous binding.

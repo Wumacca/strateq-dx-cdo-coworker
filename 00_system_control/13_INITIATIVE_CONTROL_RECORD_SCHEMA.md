@@ -267,7 +267,7 @@ Initiative RAG assesses this defined work, not the entire parent programme.
 
 ## Boundary
 
-This schema adds no AI approval authority or numeric AI confidence scoring. The Context and Control Layer adds no approval, merge, publication or automatic mutation authority. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.
+This schema adds no AI approval authority or numeric AI confidence scoring. The Context and Control Layer adds no approval, merge, publication or automatic mutation authority. Controlled repository changes require Digital Lead approval before merge/release; external publications require confirmation.
 
 ## Central intake and branch binding fields
 

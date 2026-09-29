@@ -103,3 +103,7 @@ A client lesson may enter the public method repository only after it has been ab
 ## Boundary
 
 The Coworker may inspect, draft, compare, validate and prepare controlled repository changes when authorised. It may not approve, merge/release, publish externally or declare a publication complete without evidence or Digital Lead confirmation.
+
+## Central Live Status and branch visibility
+
+The client central Live Status thread is an intake/router and must read the client branch registry before any source-of-truth write. Bind each update to its originating controlled initiative/workstream path and canonical branch; split mixed updates; stop on missing, stale, divergent, undocumented or ambiguous bindings. The source-of-truth position and workbook outputs use latest reconciled controlled records. A branch-only change is reportable only after merge to the approved reporting source or an explicitly approved client exposure. Destructive branch operations, Jira updates and external publication remain authorization-gated.

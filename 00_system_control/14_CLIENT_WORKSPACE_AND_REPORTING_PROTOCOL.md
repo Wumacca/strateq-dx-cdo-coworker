@@ -179,3 +179,9 @@ Each client workspace must have one central `Live Status` thread, or an explicit
 A new initiative/workstream is not ready for status processing until its controlled path, canonical branch, registry row, branch status, duplicate/stale disposition, EIDF link, programme action tracker entry and thread tracker entry are recorded, with central routing instructions. Programme/workbook outputs use latest reconciled controlled records plus the approved live workbook/source-of-truth position. Branch-only changes become visible to reporting only after merge to the approved reporting source (normally `main`) or an explicitly approved exposure.
 
 Use the reusable interface in `02_coworker_artifact_interface/11_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_REGISTRY_INTERFACE.md`.
+
+## Binding-resolution and update authorization
+
+For a missing, stale, divergent, undocumented or competing branch, the client session must run a binding-resolution pass: inspect candidate branches, preserve branch-only commits, consolidate to one canonical branch only when authorised, mark old/duplicate/non-canonical branches no-routing, avoid deletion unless separately authorised, avoid force-push/destructive history changes unless expressly authorised, and record branch-only versus reporting-visible results. Routing resumes only when one current canonical branch exists with no blocker.
+
+Jira updates, SharePoint publication, branch deletion, force-push, workbook refreshes and programme-reporting updates require express authorization in the client controls. A branch can be valid for controlled working records while remaining invisible to reporting until approved merge/exposure.

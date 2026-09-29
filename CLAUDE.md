@@ -327,3 +327,7 @@ Always separate:
 ## Model Guidance
 
 The governance method is model-agnostic. Use an approved model/tool capable of reading the current authority files and the bound client repository. Model capability never relaxes client isolation, evidence, approval or write-boundary controls.
+
+## B2 extension — central Live Status and branch routing
+
+For any client status, decision, action, RAID, artefact upload, initiative/workstream creation or programme/workbook reporting request, load `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md` and `02_coworker_artifact_interface/11_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_REGISTRY_INTERFACE.md` with `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`, `15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`, `13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`, `16_METHOD_ARTEFACT_REGISTRY.md` and the relevant stage files. The central Live Status thread reads the branch registry before writing, stops on an unbound or ambiguous branch, splits mixed updates by initiative/workstream, and reports only from reconciled controlled records that are visible on the approved reporting source.

@@ -78,3 +78,32 @@ Before accepting status updates for a newly created item, record:
 ## Central thread closeout
 
 Every update records the registry revision read, affected initiative/workstream rows, target branches, separate change sets, approval/merge state, tracker actions and unresolved decisions. The client Live Status thread may summarize linked outcomes but never stores a replacement EIDF or programme ledger.
+
+## Pre-processing recheck
+
+Before routing each update, record checks for:
+
+- canonical branch and state versus `main`;
+- controlled initiative/workstream home/path;
+- source index;
+- Initiative Delivery Setup file;
+- Initiative Evidence and Decision File;
+- RAID/action log.
+
+If a check is unavailable or conflicts with the registry, set the row to **blocked**, record the required decision and do not write.
+
+## Binding-resolution record
+
+Add these fields to the affected registry row or linked resolution note:
+
+- candidate branches inspected and refs;
+- branch-only commits preserved;
+- authorised consolidation decision and canonical target;
+- duplicate/stale/non-canonical branches marked **no-routing**;
+- deletion authorisation (normally “not authorised”);
+- force-push/destructive-history authorisation (normally “not authorised”);
+- branch-only position after resolution;
+- reporting-visible position after resolution;
+- resolver, decision owner, decision date and safe next action.
+
+Routing resumes only when exactly one current canonical branch is recorded and the row has no blocker. Old branch deletion is optional housekeeping and is never implied by a no-routing mark.

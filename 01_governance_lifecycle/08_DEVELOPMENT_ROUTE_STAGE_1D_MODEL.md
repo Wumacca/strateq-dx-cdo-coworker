@@ -261,3 +261,7 @@ Claude must not assume Stage 2 is required for Development Route unless an excep
 Claude must not skip the Stage 2 exception gate test before producing the final pack.
 
 Claude must ask the Digital Lead to confirm the route if it is unclear before producing any outputs.
+
+## Central intake and controlled branch prerequisite
+
+The Stage 1D entry pack must confirm the initiative/workstream controlled path, canonical branch, branch-registry row, programme action/thread tracker entries and central Live Status routing instruction. Mixed updates arriving through the central thread are split into initiative/workstream-specific change sets before evidence or decisions are written.

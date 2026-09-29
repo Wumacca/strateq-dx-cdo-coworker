@@ -19,7 +19,7 @@ Client data is prohibited from the public method repository. The zero-crossover 
 
 ## Core rule
 
-Every initiative must be checked for source-of-truth impact. If it creates, changes, replaces or retires a process, system, workflow, dashboard, integration, register, maturity finding or governance artefact, the Coworker identifies the affected controlled artefact and the required update.
+Every initiative must be checked for source-of-truth impact. Apply the Context and Control Layer standard (`00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md`) at the same control points so current state, evidence, branch/path, approval and recovery status are explicit before an artefact change is treated as controlled. If it creates, changes, replaces or retires a process, system, workflow, dashboard, integration, register, maturity finding or governance artefact, the Coworker identifies the affected controlled artefact and the required update.
 
 The Coworker does not approve the source of truth. The Digital Lead confirms when an artefact is agreed, released, published, superseded or retired.
 

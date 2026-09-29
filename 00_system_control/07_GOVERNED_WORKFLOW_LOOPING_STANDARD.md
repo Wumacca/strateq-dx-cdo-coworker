@@ -12,6 +12,8 @@ This file defines the operating discipline for every material governed coworker 
 
 It extends the existing authority files. It does not replace or duplicate them.
 
+The Context and Control Layer in `00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md` provides the reusable pack, mandatory Verified Current State block, deterministic control checks and drift-audit scorecard used by this loop.
+
 - `00_system_control/04_COWORKER_HANDOVER_MODEL.md` remains authoritative for handover field content and handover paths.
 - `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md` remains authoritative for knowledge capture and source-of-truth update routing.
 - This file (`07`) defines the governed workflow loop, the material session threshold, the proportionality rule, the stage segregation rule, the route-aware closeout rule, the AI permission boundary reminder, the advisory-only QA rule, and the Digital Lead approval gate.
@@ -37,6 +39,8 @@ Knowledge capture, CDO QA / self-improvement review, and source-of-truth update 
 For every material initiative or reporting session, client binding and the **confirmation-first status rule** precede the loop: after access is established and before any held position is used, the Coworker presents the latest available position, identifies its source and date, and asks «Is this still accurate? Please confirm or provide any changes since the last recorded update.» Unconfirmed positions are marked `Pending confirmation`. This is distinct from file/record access confirmation and is governed by `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`, `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` and `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`.
 
 ### Pre-Loop Access Confirmation
+
+Before the loop begins, load the Context and Control Layer standard and establish the applicable Context and Control Pack. The Verified Current State block must be complete enough to identify the held position, source, source date, last verification, confirmation status, freshness status and next control move; otherwise the affected position remains Pending confirmation or an accepted gap.
 
 Before the loop begins, every governed review or session must confirm access to the required method files and the one bound client source set, or confirm that the prompt itself contains sufficient information. If access or client binding is not confirmed, the loop must not proceed. Missing files, missing exports, missing source records, unclear authority or any cross-client ambiguity must be reported as access gaps.
 
@@ -298,6 +302,7 @@ Mandatory integration points from `12`:
 - **Live Session Status Board** — created at spin-up and refreshed on every material exchange.
 - **Digital Lead actions required** — a standing action block that ends every substantive governed-session response.
 - **Controlled session states** — Not started / Active / Suspended — awaiting evidence / Pending Digital Lead decision / Pending external approval / Ready for closeout / Closed and handed over. "Open chat thread" is not a governance status. A suspended session remains visible at future Initiative Reconciliation Gates and does not automatically block unrelated work.
+- **Context and Control Layer** — create or refresh the Context and Control Pack, run the applicable deterministic control checks, record any drift-audit finding and carry the Verified Current State into the status board and closeout.
 - **Closeout write-back** — no material governed session is closed until a controlled write-back has been proposed (labelled `Recommended update — requires Digital Lead approval.`) and the Digital Lead has approved it, explicitly deferred it, or accepted the remaining gap.
 
 The initiative fields reconciled, updated and handed over are governed by the reusable `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`. The public method repository holds the schema only. The bound private client repository implements the live record where its client profile selects GitHub; any external publication is separately controlled.

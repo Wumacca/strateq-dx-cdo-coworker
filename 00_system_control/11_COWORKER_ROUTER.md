@@ -46,6 +46,7 @@ The router is subordinate to, and must not override, the following authority fil
 - `02_coworker_artifact_interface/06_LIVE_DELIVERY_ARTEFACT_1_MODEL.md`
 - `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`
 - `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`
+- `00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md`
 - `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`
 
 There are exactly two client-project lifecycle coworkers — the Hopper Lifecycle Coworker and the Live Delivery Coworker. DRB, source-of-truth artefact control, adoption, benefits, capitalisation, maturity review, and programme / leadership reporting are governed stages, controls, or modes, not separate coworkers. Digital Governance & Strategy is a programme governance and control function, not a client-project coworker. The bound client profile determines permitted systems and connections.
@@ -96,10 +97,18 @@ Every material stage / session trigger invokes the Interactive Governed Session 
 3. Confirmation-First Status Gate
 4. Initiative Reconciliation Gate
 5. Required Inputs Gate
-6. Live Session Status Board
+6. Live Session Status Board, including Context and Control Pack, Verified Current State and applicable control-check results
 7. governed stage execution and closeout
 
 The held position cannot be reconciled or used as current until the Digital Lead has confirmed or corrected it at the Confirmation-First Status Gate. The coworker maintains the Live Session Status Board, ends substantive responses with the Digital Lead actions block, and closes only after a controlled write-back has been approved, deferred, or its gap accepted. The router resolves jurisdiction; `12` governs the interactive sequence. This rule creates no new coworker route.
+
+## Context and Control Layer
+
+The Context and Control Layer is a cross-cutting control mode used by both lifecycle Coworkers and by reporting or source-of-truth governance modes. It is not a third Coworker, a separate thread, a programme ledger or a parallel initiative record.
+
+For each material session, the router requires the Coworker to load `00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md`, establish or refresh the Context and Control Pack, verify the mandatory current-state block, run the applicable deterministic control checks and record the drift-audit status. The existing Initiative Evidence and Decision File, PEP, action system, evidence register, branch registry and source-of-truth records remain the authoritative records for their assigned fields.
+
+A missing, conflicting, stale or unverified Verified Current State blocks use of the affected position as current. Client-boundary or branch-binding failures remain fail-closed. The Coworker proposes remediation; the Digital Lead decides and approves controlled updates.
 
 ## Coworker Jurisdictions
 
@@ -365,6 +374,7 @@ Tool access does not create approval authority. The boundary is governed by `00_
 | 14 | User asks for bi-weekly or leadership reporting | Live Delivery Coworker in reporting mode | In Delivery / Adoption / Handover | Stage 3 model; Artefact 1 model; `14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md` | Evidence-led programme or leadership report derived from initiative files and PEP | Creating facts in the report; reporting Digital as budget owner where it is not; treating the report as the live plan | Digital Lead validates the reporting cut-off position |
 | 15 | User supplies no governed handover or authority evidence | Live Delivery Coworker | Mobilising — draft only | Stage 3 model; Initiative Delivery Setup model | State missing basis; inventory available evidence; ask one consolidated mobilisation questionnaire; create draft setup with gaps | Retrospective fabrication; progression to In Delivery; implied approval | Digital Lead must evidence/confirm authority and approve the gate |
 | 16 | Digital Lead uploads a programme/portfolio workbook, or asks for a refreshed one | Live Delivery Coworker in reporting/portfolio mode | In Delivery / Adoption / Handover (cross-initiative) | `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md`; `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`; `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`; `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`; `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`; `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` | Revision-handshake resolution of `ART-PROGRAMME-WORKBOOK` (latest approved revision vs client baseline); Confirmation-First Status Gate; reconcile workbook against controlled records; classify differences (unchanged / proposed update / new / missing / conflict / stale / unresolved identity); recommended controlled updates; a refreshed workbook generated from confirmed records and saved only client-side | Using an unpinned or uploaded file as the artefact source; proceeding on a stale/missing/ambiguous/incompatible baseline; treating the uploaded snapshot as current; silently overwriting controlled records; letting typed action counts override reconciled action records; writing any populated workbook or client status back into Strateq DX | Digital Lead confirms current status, approves each controlled update, and approves any client baseline revision change |
+| 17 | Any material session requires context, current-state and drift control | The Coworker already routed for the applicable lifecycle stage or governed mode | Cross-cutting | `00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md`; `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`; `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`; `00_system_control/15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`; `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md` | Context and Control Pack; mandatory Verified Current State; deterministic control-check record; drift-audit scorecard; remediation recommendation | New Coworker, parallel initiative record, programme-memory ledger, automatic approval or unverified current-state claim | Digital Lead approves controlled updates, accepts/defer gaps or decides stage progression |
 
 ## No Programme-Memory Ledger
 

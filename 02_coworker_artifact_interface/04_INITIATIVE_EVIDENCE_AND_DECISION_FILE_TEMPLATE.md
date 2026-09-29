@@ -59,6 +59,13 @@ Use only:
 | Last confirmed by Digital Lead | |
 | Last confirmation date | |
 | File version / date | |
+| Context and Control Pack status / reference | |
+| Verified Current State status | Current / Pending confirmation / Stale / Accepted gap |
+| State as-of date/time | |
+| Last verified date/time / verifier | |
+| Freshness status | Current / Revalidation due / Stale / Superseded / Pending confirmation / Not applicable |
+| Last control-check run / outcome | |
+| Drift-audit ID / status / next review | |
 
 ## 2. Current confirmed position
 
@@ -69,6 +76,26 @@ State the current position in no more than five short points:
 - Current delivery / governance health:
 - Main issue requiring attention:
 - Next control move:
+
+## 2a. Verified Current State (mandatory)
+
+Complete this block before using any initiative position as current. It is the client-side implementation of `00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md`.
+
+| Field | Value |
+|---|---|
+| As-of position and date/time | |
+| Lifecycle position / current gate | |
+| Route / responsible Coworker | |
+| Delivery / governance status and health | |
+| Latest source/path and source date | |
+| Last verified date/time and verification owner | |
+| Digital Lead confirmation status / last confirmation | |
+| Freshness status | |
+| State limitations / accepted gaps | |
+| Open blocker or decision | |
+| Next control move | |
+
+If any required field is missing, stale, conflicting or unverified, mark the affected position `Pending confirmation`, `Stale` or `Accepted gap` and state the consequence. Do not infer current status from file dates, prior chat or historical approval.
 
 ## 3. Approval and decision position
 
@@ -193,6 +220,13 @@ Use only confirmed information.
 
 | Date | Confirmed change | Source | Files / systems affected | Digital Lead confirmation | Updated by |
 |---|---|---|---|---|---|
+
+## 13. Context and Control audit
+
+| Audit / check | Trigger or period | Result | Severity | Finding / evidence | Owner | Remediation / review point | Digital Lead disposition |
+|---|---|---|---|---|---|---|---|
+
+Record applicable control checks from `00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md`, including route/stage, current-state completeness, source/freshness, evidence, approval traceability, open obligations, source-of-truth impact, branch binding, client isolation and recovery/change traceability. This is an assurance projection over the existing records, not a second status or action register.
 
 ## Update-once rule
 

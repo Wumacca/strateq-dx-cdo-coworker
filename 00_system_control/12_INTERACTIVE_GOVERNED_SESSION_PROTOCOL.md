@@ -72,7 +72,8 @@ At spin-up the coworker must state:
 - which supplied exports, snapshots, and evidence records it can access;
 - which records are missing;
 - whether the prompt alone is sufficient;
-- whether any synced project knowledge may be stale.
+- whether any synced project knowledge may be stale;
+- whether the Context and Control Layer standard is loaded, the Verified Current State block is present, and the applicable control-check/drift status is recorded.
 
 This gate confirms access only. Accessible current repository authority files and supplied exports, snapshots, and evidence records take precedence over synced project knowledge for authority and content, but this gate must **not** decide that a business position is current — whether the held position is current is settled at the Confirmation-First Status Gate (gate 3) by the Digital Lead. This gate is the single Access Confirmation Gate defined in `CLAUDE.md` (B6), which applies to all models and folds in the former Opus-only gate; its output must additionally carry the fields B6 requires — lifecycle stage identified, coworker jurisdiction, the B2-mapped files loaded, and the current-status source resolved under B4 (never a ledger). The coworker must answer only with one of the access confirmation responses (access confirmed / access gap / prompt sufficient) and must not begin substantive stage work until the Digital Lead confirms proceed. Uncertain access is treated as an access gap.
 
@@ -159,7 +160,7 @@ This workstream does not create the Client Digital Governance Profile model and 
 
 Access confirmation (gate 1) and business-status confirmation are separate mandatory controls. Gate 1 confirms whether the coworker can access the required repository files, exports, snapshots, evidence files, or prompt-contained information. It does **not** confirm that the business status is current.
 
-At the start of every material initiative or reporting session, after access is established and before the supplied status is used, the coworker must:
+At the start of every material initiative or reporting session, after access is established and before the supplied status is used, the coworker must establish the Context and Control Pack and present its mandatory Verified Current State block, then:
 
 1. present the latest available position it holds;
 2. identify the source and date of that position;
@@ -323,6 +324,10 @@ Stage segregation applies: a closing stage hands over only what it agreed, deliv
 
 ---
 
+## Context and Control checks
+
+Before the governance and evidence test, run the applicable checks from `00_system_control/18_CONTEXT_AND_CONTROL_LAYER_STANDARD.md`. At minimum, record route/stage resolution, Verified Current State completeness, source/freshness, evidence, approval traceability, open-obligation ownership, source-of-truth impact, branch binding and client isolation. Record the result in the Live Session Status Board. A fail-closed result blocks the affected output or transition.
+
 ## 8. Governance and evidence test
 
 Apply the governance test and evidence / freshness model before any output is treated as controlled-ready. Freshness is event / cadence based (see `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`); there is no universal arbitrary staleness period. A stale item must identify the reason it is stale, the output or decision blocked, the owner, the evidence required, and the next review point.
@@ -383,6 +388,8 @@ No material governed session may be treated as closed until a controlled write-b
 - source-of-truth impacts;
 - maturity-impact position;
 - handover state;
+- Verified Current State and Context and Control Pack reference;
+- control-check results, drift-audit status and next review point;
 - next-stage trigger.
 
 Each recommendation must be labelled to match its repository or external destination target. The Coworker never implies an unverified update or publication.

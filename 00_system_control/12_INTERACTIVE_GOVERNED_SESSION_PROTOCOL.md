@@ -417,3 +417,7 @@ Do not use vague wording such as "review as required", "confirm when ready", or 
 ## Boundary
 
 Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. This protocol adds no AI approval authority, no numeric AI confidence scoring, and no uncontrolled Jira, SharePoint, GitHub or source-of-truth mutation authority.
+
+## Gate 2A — Central Live Status branch binding
+
+When work arrives through the client Live Status thread, insert this gate after Client Context Gate and before Confirmation-First Status Gate. Read the client-level branch registry, record its revision and last verification, bind every initiative/workstream reference to one controlled path and canonical branch, and compare each branch with the approved reporting source. Stop before any write if a branch is missing, stale, divergent, undocumented or ambiguous; record the blocker and required binding decision. For a mixed update, create separate change sets and commits per initiative/workstream. Continue the normal confirmation, reconciliation, approval and closeout gates only after binding succeeds. The Live Status thread remains an intake/router; it does not replace controlled initiative records.

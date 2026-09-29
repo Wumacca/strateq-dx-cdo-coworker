@@ -126,3 +126,7 @@ Drafting may continue where useful, but the record cannot approve `In Delivery` 
 ## Close rule
 
 Artefact 0 closes only when the Digital Lead records the `Mobilising → In Delivery` decision. The first Artefact 1 record carries the setup reference once.
+
+## Required central intake controls
+
+Initiative Delivery Setup must establish or confirm the controlled path, canonical working branch, branch-registry row, branch status versus reporting source, duplicate/stale/non-canonical disposition, programme action/thread tracker entries and central Live Status routing instruction before delivery updates are accepted.

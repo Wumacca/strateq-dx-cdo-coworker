@@ -421,3 +421,7 @@ Nothing in this file extends AI authority beyond the boundaries set in `00_syste
 ## Gate 2A — Central Live Status branch binding
 
 When work arrives through the client Live Status thread, insert this gate after Client Context Gate and before Confirmation-First Status Gate. Read the client-level branch registry, record its revision and last verification, bind every initiative/workstream reference to one controlled path and canonical branch, and compare each branch with the approved reporting source. Stop before any write if a branch is missing, stale, divergent, undocumented or ambiguous; record the blocker and required binding decision. For a mixed update, create separate change sets and commits per initiative/workstream. Continue the normal confirmation, reconciliation, approval and closeout gates only after binding succeeds. The Live Status thread remains an intake/router; it does not replace controlled initiative records.
+
+## Live Status source recheck
+
+Gate 2A must recheck, for each referenced initiative/workstream, the canonical branch versus `main`, controlled home/path, source index, setup file, EIDF and RAID/action log after reading the registry and before confirmation or any write. Record the refs and verification date. A failed recheck invokes the binding-resolution pass and holds all writes, reporting updates and workbook refreshes until the registry is clear.

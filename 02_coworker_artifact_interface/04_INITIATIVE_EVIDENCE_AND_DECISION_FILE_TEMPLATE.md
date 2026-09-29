@@ -208,3 +208,7 @@ No material initiative fact may remain only in a chat or reporting thread.
 ## Boundary
 
 The Coworker may prepare or revise this file inside the bound client repository when authorised. It must not claim an external publication or system update without evidence or Digital Lead confirmation.
+
+## Central Live Status and branch binding
+
+Add these control-header fields to every client copy: central Live Status thread/equivalent; controlled initiative/workstream path; canonical working branch; client branch-registry row; last branch verification; branch status versus approved reporting source; duplicate/stale/non-canonical branch disposition; reporting visibility; blocker/decision required; safe next action; programme action tracker and thread tracker references. Updates arriving through the central thread are reconciled into this EIDF on the originating branch. Mixed updates stay separate. Reporting extracts remain pending until the approved reporting source is current.

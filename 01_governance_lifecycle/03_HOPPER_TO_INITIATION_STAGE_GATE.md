@@ -124,3 +124,7 @@ Notes: [short note]
 **Development Route:** The next stage begins when the item status is set to Stage 1D In Progress and the Digital Lead confirms the route. Load `01_governance_lifecycle/08_DEVELOPMENT_ROUTE_STAGE_1D_MODEL.md`.
 
 **Implementation Route or Support Route:** The next stage begins when the item status is changed to Initiation Form In Progress or equivalent, and the correct route is selected or prepared. Load `01_governance_lifecycle/07_TWO_STAGE_DIGITAL_INITIATION_MODEL.md`.
+
+## Branch binding prerequisite
+
+Before route initiation work begins, bind the initiative/workstream to one controlled path and canonical branch in the client branch registry. Record branch status versus the approved reporting source, duplicate/stale/non-canonical branches, reporting visibility, last verification, blocker/decision and safe next action. A missing or ambiguous binding stops the gate.

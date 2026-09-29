@@ -116,3 +116,10 @@ Adoption / Handover
 ↓
 Closed / Retired
 ```
+
+## Central Live Status and branch registry
+
+| File | Role |
+|---|---|
+| `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md` | Default client-agnostic central Live Status intake, branch binding, mixed-update routing, visibility and prohibited operations |
+| `02_coworker_artifact_interface/11_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_REGISTRY_INTERFACE.md` | Reusable central thread starter and client-level initiative/workstream branch registry interface |

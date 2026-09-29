@@ -276,6 +276,31 @@ Freshness position uses the freshness statuses in `00_system_control/07_GOVERNED
 
 Questions must be batched. Do not drip-feed one question at a time unless an answer creates a genuinely new dependency.
 
+### Multiple-choice clarification gate
+
+When a required input, current-state confirmation, route, status, evidence position, approval, gap disposition, audit outcome, cadence, or next control move is missing or materially ambiguous, the coworker must pause the affected work and present the unresolved clarification questions through the platform-provided **multiple-choice input control / popup**.
+
+The clarification prompt must:
+
+- use mutually exclusive answer options wherever possible;
+- present no more than the small set of choices needed to resolve the decision, normally 2–3 options;
+- include the platform-provided free-text **Other / provide correction** option so the Digital Lead can correct the choices or supply a different answer;
+- batch the unresolved questions into one prompt where practical;
+- identify the consequence of each material choice when that consequence affects route, status, evidence, approval, control result or next action.
+
+The coworker must not proceed on a timeout, dismissal, skipped question, ambiguous response or assumed default. If any material clarification remains unanswered, keep the affected item \`Awaiting Digital Lead\` or \`Pending confirmation\` and repeat only the unresolved questions in the next multiple-choice prompt. Continue until the questions are answered, or the Digital Lead explicitly accepts a bounded gap or suspends the session.
+
+Record each answer in the Live Session Status Board and, where applicable, the Context and Control Pack:
+
+- question and answer option selected;
+- any free-text correction;
+- responder and timestamp;
+- source or confirmation basis;
+- consequence for the route, state, control result or next move;
+- resulting status and required action.
+
+This gate does not delegate approval authority to the coworker. A selected option resolves the stated clarification only; it does not approve a controlled change, merge, publication, scope change or stage transition.
+
 No substantive stage output may be treated as controlled-ready until mandatory inputs are Present or explicitly accepted as gaps by the Digital Lead.
 
 ---

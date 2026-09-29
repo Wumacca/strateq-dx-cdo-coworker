@@ -132,3 +132,7 @@ The first Artefact 1 record after mobilisation carries the approved `Initiative 
 ## Boundary
 
 The Coworker drafts, reconciles, validates and recommends. It does not approve a stage, scope, budget, variation, acceptance or go-live decision.
+
+## Central Live Status and branch gate
+
+During mobilisation, confirm the client central Live Status thread, branch registry and reporting source before reconciling delivery evidence. The initiative/workstream controlled path and canonical branch are required setup controls. Central-thread updates route through the registry, remain separate by initiative/workstream and become reportable only after merge to the approved reporting source or an explicitly approved exposure.

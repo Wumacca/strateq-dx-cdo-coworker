@@ -256,6 +256,19 @@ The waiver must appear in the Live Session Status Board, in Digital Lead actions
 
 ---
 
+### 4.4 Required-artifact inventory and portfolio coverage
+
+At initiative/thread creation and at each material status update, after client binding and branch binding pass and before substantive output:
+
+1. Resolve the required artifact set from the bound client's profile, source index, lifecycle stage and applicable method controls. Do not assume every artifact applies to every initiative.
+2. Present a batched artifact request table with: artifact name/type; canonical source/path; latest recorded version or update date; last verification date; freshness/status; whether the latest copy is accessible; and the action required (provide latest copy, confirm unchanged, clarify conflict, or mark not applicable).
+3. Ask the Digital Lead to provide the latest available copies or confirm that the recorded versions remain current. If a last-updated date cannot be verified, mark it unknown and ask; never infer freshness from an upload or conversation date.
+4. For a portfolio-wide output or a new initiative with cross-initiative impact, enumerate the in-scope initiatives/workstreams from the client branch registry and approved reporting source. Check each relevant item's canonical branch, latest EIDF/PEP or assigned control record, source dates, confirmation status, material obligations, dependencies and reporting visibility. State the scope, sources and items checked; identify exclusions, inaccessible threads, missing records and unresolved conflicts.
+5. Produce an artifact coverage index with controlled references, dates, freshness and reconciliation status. Link to canonical artifacts; do not duplicate their bodies or create another status ledger. Generate or refresh a workbook/report only after source reconciliation and the applicable client authorization.
+6. Ask clarifying questions through the multiple-choice clarification gate for any missing or materially ambiguous artifact, initiative relationship, status or scope. Do not proceed until the answer resolves the ambiguity or the Digital Lead accepts a bounded gap or suspends the affected work.
+
+The 95 percent operational-confidence threshold in CLAUDE.md is met only when every applicable required source has a verified disposition, each in-scope initiative is accounted for, current status has been confirmed, and no material ambiguity remains. If a required check is unavailable, the threshold is not met: keep the affected output pending or record an explicitly accepted gap. This threshold is a completeness judgement, not statistical certainty.
+
 ## 5. Required Inputs Gate
 
 At stage spin-up, produce one consolidated input table:
@@ -448,7 +461,7 @@ Do not use vague wording such as "review as required", "confirm when ready", or 
 
 ## Boundary
 
-Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. This protocol adds no AI approval authority, no numeric AI confidence scoring, and no uncontrolled Jira, SharePoint, GitHub or source-of-truth mutation authority.
+Nothing in this file extends AI authority beyond the boundaries set in `00_system_control/OPERATING_RULES.md`, `00_system_control/04_COWORKER_HANDOVER_MODEL.md`, `00_system_control/06_KNOWLEDGE_CAPTURE_AND_SOURCE_UPDATE_RULE.md`, `00_system_control/07_GOVERNED_WORKFLOW_LOOPING_STANDARD.md`, and `05_source_of_truth/01_DIGITAL_ARTEFACT_GOVERNANCE_MODEL.md`. This protocol adds no AI approval authority and no uncontrolled Jira, SharePoint, GitHub or source-of-truth mutation authority. The 95 percent operational-confidence threshold is a completeness gate, not a statistical confidence score.
 
 ## Gate 2A — Central Live Status branch binding
 

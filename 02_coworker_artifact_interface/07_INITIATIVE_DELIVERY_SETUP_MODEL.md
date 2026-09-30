@@ -67,7 +67,7 @@ Establish the evidenced basis, responsibilities, controls and readiness required
 
 ### 7. Evidence inventory
 
-Classify every required source as `Confirmed by evidence`, `Requires confirmation`, `Missing`, `Conflicting`, `Not applicable` or `Accepted gap` and record its provenance.
+Classify every required source as `Confirmed by evidence`, `Requires confirmation`, `Missing`, `Conflicting`, `Not applicable` or `Accepted gap` and record its provenance. For each applicable artifact, list its name/ID, canonical source/path, latest recorded version or update date, last verification date, freshness, availability and reconciliation disposition. At setup, ask the Digital Lead for the latest copies or confirmation that the listed versions remain current. Unknown dates and unavailable sources remain explicit gaps.
 
 ### 8. Readiness decision
 
@@ -80,6 +80,7 @@ Classify every required source as `Confirmed by evidence`, `Requires confirmatio
 ## Dynamic discovery rule
 
 The Coworker inspects the supplied handover first and asks only for information not answered by evidence. If no governed handover exists, it states that plainly and requests the available project record to date in one consolidated batch.
+For a new initiative/thread, the first request is an itemized artifact inventory derived from the client profile, source index and applicable lifecycle stage. Show the latest recorded update date and source for each item, ask for the latest version or confirmation it is unchanged, and ask one consolidated multiple-choice set for gaps or ambiguity. Before any programme-level output, complete and state the cross-initiative coverage check required by `00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md`.
 
 ### Establish the actual delivery definition
 
@@ -130,3 +131,4 @@ Artefact 0 closes only when the Digital Lead records the `Mobilising → In Deli
 ## Required central intake controls
 
 Initiative Delivery Setup must establish or confirm the controlled path, canonical working branch, branch-registry row, branch status versus reporting source, duplicate/stale/non-canonical disposition, programme action/thread tracker entries and central Live Status routing instruction before delivery updates are accepted.
+It must also link the EIDF artifact inventory and record that the latest-artifact request was answered, remains pending, or was accepted as a bounded gap. Do not mark setup complete while a required artifact's status or date is silently unknown.

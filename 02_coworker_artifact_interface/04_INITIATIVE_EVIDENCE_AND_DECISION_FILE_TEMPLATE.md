@@ -157,7 +157,7 @@ This table records references and the latest Digital Lead-confirmed position onl
 
 ## 8. Evidence and artefacts
 
-| Evidence / artefact | Purpose | Status | Location / reference | Last verified | Owner |
+| Evidence / artefact | Purpose / applicability | Status | Canonical location / reference | Latest version or update date | Last verified | Freshness / reconciliation | Owner / required action |
 |---|---|---|---|---|---|
 
 Include, where relevant:
@@ -168,6 +168,7 @@ Include, where relevant:
 - delivery and milestone evidence;
 - testing, acceptance, training, adoption, benefits, and closeout evidence;
 - source-of-truth impact record.
+- For each applicable artifact, record the latest known update date/version, last verification, freshness and whether the latest copy was supplied, confirmed unchanged, missing, conflicting, superseded or not applicable. Preserve unknown dates as Unknown until verified.
 
 ## 9. Source-of-truth impact
 
@@ -238,6 +239,15 @@ When an update is confirmed in an initiative, bi-weekly, or monthly reporting se
 4. generate reporting wording from the updated confirmed position.
 
 No material initiative fact may remain only in a chat or reporting thread.
+
+## Portfolio coverage check
+
+Complete when a new initiative affects other work or when preparing an all-initiative/programme output.
+
+| Registry/reporting-source revision and ref | In-scope initiative/workstream IDs | Latest EIDF/PEP/control refs and source dates checked | Reporting visibility | Missing/stale/conflicting/inaccessible/excluded items | Verifier / date |
+|---|---|---|---|---|---|
+
+Record links and verification outcomes, not copied initiative status. Each initiative's EIDF remains its own status authority. Do not claim portfolio completeness when the scope source, a required initiative record or its latest status is unavailable; ask for clarification or record an accepted gap.
 
 ## Boundary
 

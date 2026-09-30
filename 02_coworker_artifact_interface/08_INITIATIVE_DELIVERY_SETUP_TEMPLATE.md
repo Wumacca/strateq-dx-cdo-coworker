@@ -146,14 +146,16 @@ Do not reproduce a vendor's or developer's full detailed plan. Record only clien
 
 Use only these statuses: `Confirmed by evidence`, `Requires confirmation`, `Missing`, `Conflicting`, `Not applicable`, `Accepted gap`.
 
-| Required source / fact | Status | Source and date | Confirmed position | Gap / conflict | Owner | Review point |
+| Required source / artifact | Status | Canonical source/path | Latest version or update date | Last verified | Confirmed position / reconciliation | Gap / conflict / required action | Owner | Review point |
 |---|---|---|---|---|---|---|
-| Authority to proceed | Missing |  |  |  |  |  |
-| Approved scope | Missing |  |  |  |  |  |
-| Detailed owner plan | Missing |  |  |  |  |  |
-| Contract / SOW where applicable | Missing |  |  |  |  |  |
-| Current status / RAID / minutes | Missing |  |  |  |  |  |
-| Acceptance / go-live authority | Missing |  |  |  |  |  |
+| Authority to proceed | Missing |  |  |  |  |  |  |  |
+| Approved scope | Missing |  |  |  |  |  |  |  |
+| Detailed owner plan | Missing |  |  |  |  |  |  |  |
+| Contract / SOW where applicable | Missing |  |  |  |  |  |  |  |
+| Current status / RAID / minutes | Missing |  |  |  |  |  |  |  |
+| Acceptance / go-live authority | Missing |  |  |  |  |  |  |  |
+| Other client-profile/stage-required artifact | Requires confirmation |  | Unknown |  |  |  |  |  |
+At initiative/thread creation, list every applicable artifact from the client profile and source index. Record its latest known update date (or Unknown), ask the Digital Lead to provide the latest copy or confirm the recorded version is current, then record availability, freshness and reconciliation result. Do not infer that an artifact is current from the date it was uploaded to chat.
 
 ## 8. Readiness decision
 
@@ -193,5 +195,17 @@ This record closes only when the Digital Lead approves the transition from `Mobi
 | Draft 0.1 |  | Initial setup | AI Coworker | Pending |  |
 
 ## Central Live Status and branch registry fields
+## Artifact inventory and portfolio coverage
+
+Latest-artifact request sent:  
+Digital Lead response / confirmation date:  
+Artifact inventory location/ref:  
+Portfolio scope checked (registry revision / reporting source):  
+Initiatives/workstreams checked:  
+Missing, stale, inaccessible or conflicting items:  
+Accepted gaps / owner / review point:  
+Coverage verifier and date:  
+
+Do not mark this coverage complete while any applicable artifact or in-scope initiative lacks a disposition.
 
 Add these setup rows: Central Live Status thread/equivalent; client branch registry path/ref; controlled initiative/workstream path; canonical branch; status versus reporting source; duplicate/stale/non-canonical branches; reporting visibility; last verified date; blocker/decision required; safe next action; programme action tracker and thread tracker references. Mark setup incomplete until all are confirmed.

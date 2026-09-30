@@ -47,8 +47,12 @@ Creation or confirmation of an initiative/workstream is incomplete until the cli
 - programme action tracker and thread tracker updated;
 - EIDF/controlled initiative record linked;
 - central Live Status routing instruction posted.
+- expected artifact set resolved from the client profile, stage and source index;
+- latest recorded version/update date and last verification date listed for each applicable artifact;
+- Digital Lead asked to provide the latest copies or confirm recorded versions remain current;
+- artifact inventory and unresolved/missing/conflicting items recorded in the EIDF.
 
-The creation record must state the safe next action and the person who can approve a binding decision. Future updates are submitted to the central Live Status thread and are written to the originating initiative/workstream branch.
+The creation record must state the safe next action and the person who can approve a binding decision. Future updates are submitted to the central Live Status thread and are written to the originating initiative/workstream branch. The thread requests and inventories the applicable latest artifacts with source/path, latest recorded update date, last verification and disposition. It does not accept the new item as status-ready until required artifact gaps are supplied, clarified or explicitly accepted.
 
 ## Routing and commit behaviour
 
@@ -61,6 +65,7 @@ Branch names are descriptive implementation details. The registry's canonical br
 Programme, leadership and workbook outputs are generated only from latest reconciled controlled records and the approved live workbook/source-of-truth position. A change is visible to reporting only after it is merged to the approved reporting source, normally `main`, or explicitly exposed through a client-approved process. A change that exists only on an initiative branch is not a reportable current position.
 
 The workbook is a governed interface/snapshot. It does not override the branch registry, EIDF, PEP/control record, action system or formal approvals.
+For any programme-level output, the Coworker records the reporting-source and registry revision used, enumerates every in-scope initiative/workstream, verifies each latest confirmed status and artifact-source date, and reports missing, stale, inaccessible, conflicting or excluded items. The output points to canonical artifacts and states its coverage; it does not copy artifact contents into a parallel ledger.
 
 ## Prohibited operations
 

@@ -107,6 +107,7 @@ Route labels must use the controlled labels in `00_system_control/CONTROLLED_VOC
 ### 7. Evidence
 
 - Required artefacts
+- Artifact/source inventory: artifact name or ID, applicability, canonical source/path, latest recorded version or update date, last verification date, freshness status, reconciliation status and required action
 - Available evidence
 - Missing evidence
 - Evidence owner
@@ -276,3 +277,4 @@ Every EIDF must identify the controlled initiative/workstream path, canonical wo
 ## Resolution and visibility fields
 
 The EIDF must record the latest branch-resolution pass, candidate branches inspected, preserved branch-only commits, authorised consolidation decision, no-routing duplicate/stale/non-canonical branches, branch-only position, reporting-visible position and remaining blocker/decision. It must also record the pre-processing recheck of the initiative home, source index, setup file, EIDF and RAID/action log.
+For every applicable artifact, the EIDF records the canonical reference, latest recorded version/update date, last verification date, freshness and reconciliation status, and whether the latest copy was supplied, confirmed unchanged, missing, conflicting, superseded or not applicable. A portfolio-wide coverage check records the registry/reporting-source revision, in-scope initiative/workstream references, checked source dates and unresolved exclusions; detailed status remains in each initiative's own EIDF.

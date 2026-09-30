@@ -82,12 +82,17 @@ A Digital Initiation Form is one possible input. The Live Delivery Coworker must
 ## Initiative continuity record
 
 Each initiative has one Initiative Evidence and Decision File implementing `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`. It records the current confirmed position, decisions, evidence, gaps, source references and required write-backs. It is not a duplicate detailed plan or an uncontrolled programme ledger.
+At initiative/thread creation and every status update, the Coworker presents the expected artifact list with latest recorded update dates and asks for the latest copies or confirmation that the recorded versions remain current. Request new copies when an artifact is new, changed, missing, stale, conflicting or due for revalidation; otherwise record confirmation against the existing version. Record applicability, canonical source/path, version or update date, last verification, freshness and disposition in the EIDF artifact inventory. Unknown dates remain unknown until verified.
 
 ## Update-once rule
 
 A confirmed material change must first be reconciled into the affected initiative file and live client control records before a report is generated. No fact, decision, risk, milestone, evidence item or action status may remain only in a chat, prior report or model memory.
 
 ## Reporting flow
+
+### Portfolio completeness before programme or leadership output
+
+Before producing an output that represents multiple initiatives, enumerate its scope from the client branch registry and approved reporting source. Reconcile each in-scope initiative against its own latest confirmed EIDF and assigned PEP/control/action records; verify source dates, confirmation and reporting visibility. The output must state the scope and sources checked and identify missing, stale, inaccessible, conflicting or excluded items. Do not treat an initiative branch-only change as reportable until it is visible through the approved reporting process. The output is an index or snapshot with links/references to canonical artifacts; it does not create copies as new sources of truth.
 
 ### Bi-weekly programme reporting
 

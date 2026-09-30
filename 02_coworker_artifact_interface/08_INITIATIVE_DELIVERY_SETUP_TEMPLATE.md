@@ -195,6 +195,9 @@ This record closes only when the Digital Lead approves the transition from `Mobi
 | Draft 0.1 |  | Initial setup | AI Coworker | Pending |  |
 
 ## Central Live Status and branch registry fields
+
+Add these setup rows: Central Live Status thread/equivalent; client branch registry path/ref; controlled initiative/workstream path; canonical branch; status versus reporting source; duplicate/stale/non-canonical branches; reporting visibility; last verified date; blocker/decision required; safe next action; programme action tracker and thread tracker references. Mark setup incomplete until all are confirmed.
+
 ## Artifact inventory and portfolio coverage
 
 Latest-artifact request sent:  
@@ -207,5 +210,3 @@ Accepted gaps / owner / review point:
 Coverage verifier and date:  
 
 Do not mark this coverage complete while any applicable artifact or in-scope initiative lacks a disposition.
-
-Add these setup rows: Central Live Status thread/equivalent; client branch registry path/ref; controlled initiative/workstream path; canonical branch; status versus reporting source; duplicate/stale/non-canonical branches; reporting visibility; last verified date; blocker/decision required; safe next action; programme action tracker and thread tracker references. Mark setup incomplete until all are confirmed.

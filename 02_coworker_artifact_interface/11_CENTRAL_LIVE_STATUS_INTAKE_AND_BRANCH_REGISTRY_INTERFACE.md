@@ -24,6 +24,10 @@ Update type: status | decision | action | RAID | initiative/workstream context |
 Initiative/workstream reference(s):
 Source/evidence links:
 Requested decision or safe next action:
+Latest-artifact request: [provide latest copies or confirm recorded versions remain current]
+Artifact inventory/source index: [client-controlled path/ref and revision]
+Portfolio scope: [all registered / named initiatives / not applicable]
+Last coverage check: [UTC date/time, source revisions and verifier]
 
 Routing control:
 - Read the branch registry before processing.
@@ -67,7 +71,17 @@ Before accepting status updates for a newly created item, record:
 - [ ] EIDF/controlled initiative record linked;
 - [ ] programme action tracker and thread tracker updated;
 - [ ] central Live Status routing instruction posted;
+- [ ] expected artifact set resolved from the client profile, stage and source index;
+- [ ] latest recorded version/update date and last verification listed for each applicable artifact;
+- [ ] latest copies requested or current versions explicitly confirmed by the Digital Lead;
+- [ ] artifact inventory recorded in the EIDF, with gaps/conflicts/unknown dates dispositioned;
 - [ ] first update held until the binding gate passes.
+
+## Required-artifact and coverage record
+
+Maintain the artifact inventory in the initiative EIDF; the registry records only the canonical inventory reference and portfolio coverage control. For each applicable artifact, list name/ID, canonical path/ref, latest recorded version or update date, last verification, freshness status, availability, reconciliation result and next action. Keep unknown dates explicit. Do not add status values or artifact bodies to the branch registry.
+
+For a portfolio-wide update, record the registry revision, approved reporting-source ref, in-scope initiative/workstream IDs, latest EIDF/PEP or assigned control refs checked, source dates, reporting visibility, exceptions and verifier. Link to each initiative record; do not duplicate its status. Ask the Digital Lead for latest files or confirmation through the multiple-choice clarification control when required inputs or scope are missing or ambiguous.
 
 ## Controlled values
 

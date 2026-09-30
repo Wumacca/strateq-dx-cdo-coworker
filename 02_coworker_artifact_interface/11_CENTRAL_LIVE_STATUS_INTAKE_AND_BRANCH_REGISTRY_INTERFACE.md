@@ -1,7 +1,7 @@
 # Central Live Status Intake and Branch Registry Interface
 
 **Interface ID:** ART-CENTRAL-LIVE-STATUS-BRANCH-REGISTRY  
-**Revision:** r1  
+**Revision:** r2  
 **Status:** reusable client-copy interface; populate only in a private client repository  
 **Method authority:** `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md`
 

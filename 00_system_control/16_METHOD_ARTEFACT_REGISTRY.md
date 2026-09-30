@@ -36,6 +36,17 @@ This registry is the authoritative list of reusable artefacts clients adopt and 
 | `ART-INITIATIVE-EVIDENCE-FILE` | Initiative Evidence and Decision File | `02_coworker_artifact_interface/04_INITIATIVE_EVIDENCE_AND_DECISION_FILE_TEMPLATE.md` | `00_system_control/13_INITIATIVE_CONTROL_RECORD_SCHEMA.md` | `r2` | `25d3a12a89adfe1928f880725af8fd54a758fac0` | Approved | `r1` | Client-copy implementation of the `13` schema with mandatory Verified Current State and Context and Control audit projection; client baseline update required before use. | Yes |
 | `ART-INITIATIVE-DELIVERY-SETUP` | Initiative Delivery Setup Template | `02_coworker_artifact_interface/08_INITIATIVE_DELIVERY_SETUP_TEMPLATE.md` | `02_coworker_artifact_interface/07_INITIATIVE_DELIVERY_SETUP_MODEL.md` | `r1` | `bc1923c` | Approved | none | Artefact 0 (exact title). Section changes increment the revision and require a baseline update. | Yes |
 
+## Proposed method revisions pending Digital Lead review
+
+The following changes are present on branch codex/initiative-artifact-reconciliation and are not approved or client-adoptable until the pull request is approved and the registry is released through the controlled method process.
+
+| Artefact ID | Current approved revision | Proposed revision | Change | Adoption status |
+|---|---:|---:|---|---|
+| ART-INITIATIVE-EVIDENCE-FILE | r2 | r3 | Adds dated artifact inventory and portfolio coverage fields to the EIDF interface/schema | Pending approval; do not update client baselines |
+| ART-INITIATIVE-DELIVERY-SETUP | r1 | r2 | Adds latest-artifact intake and coverage controls to setup model/template | Pending approval; do not update client baselines |
+| ART-CENTRAL-LIVE-STATUS-BRANCH-REGISTRY | r1 | r2 | Adds latest-artifact request and coverage references to the central intake interface | Pending approval; do not update client baselines |
+
+
 **Latest controlled release.** `ART-INITIATIVE-EVIDENCE-FILE` revision `r2` was approved by the Digital Lead and released on method merge commit `25d3a12a89adfe1928f880725af8fd54a758fac0`. Existing client baselines remain on their pinned revision until explicitly updated through the revision handshake.
 
 **Registry maintenance.** This registry is an open set. Any pull request that adds, renames, retires or changes an approved revision of a reusable artefact **or** its interface must update this registry in the same commit, set the new `Approving method commit`, move the prior revision into `Superseded revisions`, and (where `CLAUDE.md` B2 maps the artefact's interface) update B2, `00_system_control/FOLDER_MAP.md` and `README.md`. A `Superseded` artefact must not be resolved for new client work.

@@ -158,7 +158,7 @@ This table records references and the latest Digital Lead-confirmed position onl
 ## 8. Evidence and artefacts
 
 | Evidence / artefact | Purpose / applicability | Status | Canonical location / reference | Latest version or update date | Last verified | Freshness / reconciliation | Owner / required action |
-|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 
 Include, where relevant:
 

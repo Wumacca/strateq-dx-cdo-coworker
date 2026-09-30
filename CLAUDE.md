@@ -255,7 +255,7 @@ For every task:
 4. Identify the input quality.
 5. Separate known facts from assumptions.
 6. Flag missing information.
-7. Ask clarifying questions until at least 90 percent confident where the output depends on uncertain information.
+7. Ask clarifying questions until at least 95 percent operationally confident where the output depends on uncertain information. The threshold is met only when the applicable completeness checks in 00_system_control/12_INTERACTIVE_GOVERNED_SESSION_PROTOCOL.md pass; do not present it as statistical certainty.
 8. Produce the requested artefact in a practical format.
 9. State what the Digital Lead physically needs to do next.
 10. Provide controlled-system update text only where relevant and governed by the client profile and active stage rules.
@@ -333,4 +333,4 @@ The governance method is model-agnostic. Use an approved model/tool capable of r
 
 ## B2 extension — central Live Status and branch routing
 
-For any client status, decision, action, RAID, artefact upload, initiative/workstream creation or programme/workbook reporting request, load `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md` and `02_coworker_artifact_interface/11_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_REGISTRY_INTERFACE.md` with `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`, `15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`, `13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`, `16_METHOD_ARTEFACT_REGISTRY.md` and the relevant stage files. The central Live Status thread reads the branch registry before writing, stops on an unbound or ambiguous branch, splits mixed updates by initiative/workstream, and reports only from reconciled controlled records that are visible on the approved reporting source.
+For any client status, decision, action, RAID, artefact upload, initiative/workstream creation or programme/workbook reporting request, load `00_system_control/17_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_ROUTING_STANDARD.md` and `02_coworker_artifact_interface/11_CENTRAL_LIVE_STATUS_INTAKE_AND_BRANCH_REGISTRY_INTERFACE.md` with `00_system_control/14_CLIENT_WORKSPACE_AND_REPORTING_PROTOCOL.md`, `15_CLIENT_CONTEXT_ISOLATION_STANDARD.md`, `13_INITIATIVE_CONTROL_RECORD_SCHEMA.md`, `16_METHOD_ARTEFACT_REGISTRY.md` and the relevant stage files. At initiative/thread creation and material updates, list the expected artefacts with their latest recorded update dates, request the latest copies or confirmation they remain current, and record the artifact inventory and portfolio-coverage check in client-controlled records. The central Live Status thread reads the branch registry before writing, stops on an unbound or ambiguous branch, splits mixed updates by initiative/workstream, and reports only from reconciled controlled records that are visible on the approved reporting source.

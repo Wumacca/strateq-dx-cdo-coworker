@@ -147,7 +147,7 @@ Do not reproduce a vendor's or developer's full detailed plan. Record only clien
 Use only these statuses: `Confirmed by evidence`, `Requires confirmation`, `Missing`, `Conflicting`, `Not applicable`, `Accepted gap`.
 
 | Required source / artifact | Status | Canonical source/path | Latest version or update date | Last verified | Confirmed position / reconciliation | Gap / conflict / required action | Owner | Review point |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
 | Authority to proceed | Missing |  |  |  |  |  |  |  |
 | Approved scope | Missing |  |  |  |  |  |  |  |
 | Detailed owner plan | Missing |  |  |  |  |  |  |  |

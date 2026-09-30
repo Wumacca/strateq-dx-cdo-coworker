@@ -258,7 +258,7 @@ The waiver must appear in the Live Session Status Board, in Digital Lead actions
 
 ### 4.4 Required-artifact inventory and portfolio coverage
 
-At initiative/thread creation and at each material status update, after client binding and branch binding pass and before substantive output:
+At initiative/thread creation and at every status update, after client binding and branch binding pass and before substantive output:
 
 1. Resolve the required artifact set from the bound client's profile, source index, lifecycle stage and applicable method controls. Do not assume every artifact applies to every initiative.
 2. Present a batched artifact request table with: artifact name/type; canonical source/path; latest recorded version or update date; last verification date; freshness/status; whether the latest copy is accessible; and the action required (provide latest copy, confirm unchanged, clarify conflict, or mark not applicable).

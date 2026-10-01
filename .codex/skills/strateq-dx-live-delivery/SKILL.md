@@ -98,6 +98,20 @@ Use the update-once rule: initiative records and PEP first, reports second. Curr
 
 Do not report Digital as budget owner when another party owns budget/cost control. Limit financial narrative to the basis recorded in Initiative Delivery Setup.
 
+## Workbook edit/output fidelity
+
+For a programme workbook, also read `02_coworker_artifact_interface/10_PROGRAMME_PORTFOLIO_WORKBOOK_INTERFACE.md` and resolve `ART-PROGRAMME-WORKBOOK` through the revision-handshake in `00_system_control/16_METHOD_ARTEFACT_REGISTRY.md`. For another client workbook, use only the bound client's approved workbook and method baseline.
+
+When the Digital Lead asks for a supplied Excel workbook to be modified and returned:
+
+- Modify the supplied workbook in place; do not recreate or rename worksheets.
+- Preserve all existing formatting, conditional formatting, data validation and dropdowns, merged cells, formulas, hidden sheets/rows/columns, filters, panes, and row-outline groups, including their expand/collapse state.
+- Preserve the existing status labels and dropdown vocabulary. Use the existing status fill shades and retain this mapping: green — Complete, Not required, Done, Cancelled; amber — In Progress; red — Blocked; grey — Not started, Open. Match case-insensitively and retain any existing display prefix or symbol; do not change the underlying labels to force a match.
+- Before delivery, reopen the saved workbook and verify the dropdowns, status colour rules and their ranges, and outline groups remain present on the relevant sheets (including Actions and RAID where present). Also check formulas and merged cells remain intact.
+- Use a workbook editor that can round-trip the features present. If the available editor would strip or alter an unsupported feature, do not save a degraded copy or claim the workbook is verified; report the specific limitation and use a compatible route.
+
+This is a workbook-preservation rule. It does not make the uploaded workbook current or change the source-of-truth, reconciliation, approval or revision-handshake requirements above.
+
 ## 6. Apply gates and approval boundaries
 
 - No evidenced authority: setup may remain draft; `In Delivery` is blocked.
